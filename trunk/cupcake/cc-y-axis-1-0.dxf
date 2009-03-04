@@ -47,7 +47,7 @@ Standard
   9
 $CLAYER
   8
-plate 2
+plate_cuts
   9
 $DIMEXO
  40
@@ -59,7 +59,7 @@ $DIMTXT
   9
 $CLAYER
   8
-plate_cuts
+documentation
   0
 ENDSEC
   0
@@ -991,9 +991,9 @@ documentation
  70
 0
  62
-7
+1
 420
-0
+16711680
   6
 CONTINUOUS
 370
@@ -3645,7 +3645,7 @@ ByLayer
  71
 1
  72
-0
+2
   1
 The\~seperation\~between\~the\~midlines\~of\~\Pthese\~two\~plates\~is\~13.14mm.
   7
@@ -3653,7 +3653,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -3685,7 +3685,7 @@ ByLayer
  71
 1
  72
-0
+2
   1
 Idler\~pulley\~assemby:\Ptwo\~mounting\~plates\Pone\~M8\~bolt\~with\~nut\Ptwo\~washers\Pone\~skate\~bearing
   7
@@ -3693,7 +3693,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -3725,7 +3725,7 @@ ByLayer
  71
 1
  72
-0
+2
   1
 Y\~axis\~motor\~mount:\Pspacer\~plate\~is\~closest\~to\~motor
   7
@@ -3733,7 +3733,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -3765,7 +3765,7 @@ ByLayer
  71
 1
  72
-0
+2
   1
 inner
   7
@@ -3773,7 +3773,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -3805,7 +3805,7 @@ ByLayer
  71
 1
  72
-0
+2
   1
 outer
   7
@@ -3813,7 +3813,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -3929,49 +3929,9 @@ ByLayer
  31
 0.0
   0
-MTEXT
-  5
-A3
-100
-AcDbEntity
-100
-AcDbMText
-  8
-plate_cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
--20.0
- 30
-0.0
- 40
-3.0
- 41
-100.0
- 71
-1
- 72
-0
-  1
-Distance\~from\~centerline\~of\~outer\~plate\~to\~centerline\Pof\~pulley\~is\~7.325mm.
-  7
-standard
- 50
-0.0
- 73
-1
- 44
-1.0
-  0
 LINE
   5
-A4
+A3
 100
 AcDbEntity
 100
@@ -3999,7 +3959,7 @@ ByLayer
   0
 LINE
   5
-A5
+A4
 100
 AcDbEntity
 100
@@ -4027,7 +3987,7 @@ ByLayer
   0
 LINE
   5
-A6
+A5
 100
 AcDbEntity
 100
@@ -4055,6 +4015,34 @@ ByLayer
   0
 LINE
   5
+A6
+100
+AcDbEntity
+100
+AcDbLine
+  8
+plate_cuts
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+19.5799999999999983
+ 20
+42.1599999999999966
+ 30
+0.0
+ 11
+19.5799999999999983
+ 21
+31.977247358851681
+ 31
+0.0
+  0
+LINE
+  5
 A7
 100
 AcDbEntity
@@ -4069,49 +4057,21 @@ plate_cuts
   6
 ByLayer
  10
-19.5799999999999983
+22.5799999999999983
  20
-42.1599999999999966
+31.977247358851681
  30
 0.0
  11
-19.5799999999999983
+22.5799999999999983
  21
-31.977247358851681
+42.1599999999999966
  31
 0.0
   0
 LINE
   5
 A8
-100
-AcDbEntity
-100
-AcDbLine
-  8
-plate_cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-22.5799999999999983
- 20
-31.977247358851681
- 30
-0.0
- 11
-22.5799999999999983
- 21
-42.1599999999999966
- 31
-0.0
-  0
-LINE
-  5
-A9
 100
 AcDbEntity
 100
@@ -4139,7 +4099,7 @@ ByLayer
   0
 LINE
   5
-AA
+A9
 100
 AcDbEntity
 100
@@ -4167,7 +4127,7 @@ ByLayer
   0
 ARC
   5
-AB
+AA
 100
 AcDbEntity
   8
@@ -4194,6 +4154,110 @@ AcDbArc
 97.8374797630842892
  51
 82.1625202369157108
+  0
+CIRCLE
+  5
+AB
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+skeleton
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+21.0799999999999983
+ 20
+21.0799999999999983
+ 30
+0.0
+ 40
+13.0
+  0
+MTEXT
+  5
+AC
+100
+AcDbEntity
+100
+AcDbMText
+  8
+documentation
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+80.0
+ 20
+-40.0
+ 30
+0.0
+ 40
+3.0
+ 41
+100.0
+ 71
+1
+ 72
+0
+  1
+Top\~of\~belt\~~35mm\~above\~floor.
+  7
+standard
+ 50
+0.0
+ 73
+1
+ 44
+1.0
+  0
+MTEXT
+  5
+AD
+100
+AcDbEntity
+100
+AcDbMText
+  8
+documentation
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+-20.0
+ 30
+0.0
+ 40
+3.0
+ 41
+100.0
+ 71
+1
+ 72
+2
+  1
+Distance\~from\~centerline\~of\~outer\~plate\~to\~centerline\Pof\~pulley\~is\~7.325mm.
+  7
+standard
+ 50
+0.0
+ 73
+0
+ 44
+1.0
   0
 ENDSEC
   0
@@ -4233,7 +4297,7 @@ E
   3
 AcDbVariableDictionary
 350
-AC
+AE
   0
 DICTIONARY
   5
@@ -4697,7 +4761,7 @@ Layout2
   0
 DICTIONARY
   5
-AC
+AE
 100
 AcDbDictionary
 281
@@ -4705,15 +4769,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-AE
+B0
   3
 HIDETEXT
 350
-AD
+AF
   0
 DICTIONARYVAR
   5
-AD
+AF
 100
 DictionaryVariables
 280
@@ -4723,7 +4787,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-AE
+B0
 100
 DictionaryVariables
 280
