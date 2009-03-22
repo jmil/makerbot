@@ -47,7 +47,7 @@ Standard
   9
 $CLAYER
   8
-inner
+clamp
   9
 $DIMEXO
  40
@@ -59,7 +59,7 @@ $DIMTXT
   9
 $CLAYER
   8
-0
+clamp
   0
 ENDSEC
   0
@@ -911,7 +911,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-7
+6
   0
 LAYER
   5
@@ -969,9 +969,9 @@ inner
  70
 0
  62
-1
+7
 420
-16711680
+0
   6
 CONTINUOUS
 370
@@ -991,9 +991,9 @@ outer
  70
 0
  62
-3
+7
 420
-65280
+0
   6
 CONTINUOUS
 370
@@ -1032,28 +1032,6 @@ AcDbSymbolTableRecord
 AcDbLayerTableRecord
   2
 clamp
- 70
-0
- 62
-7
-420
-0
-  6
-CONTINUOUS
-370
-0
-390
-F
-  0
-LAYER
-  5
-48
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-nut
  70
 0
  62
@@ -1271,30 +1249,6 @@ AcDbBlockTableRecord
 340
 26
   0
-BLOCK_RECORD
-  5
-49
-100
-AcDbSymbolTableRecord
-100
-AcDbBlockTableRecord
-  2
-M6_c-0
-340
-0
-  0
-BLOCK_RECORD
-  5
-4A
-100
-AcDbSymbolTableRecord
-100
-AcDbBlockTableRecord
-  2
-M6_c-1
-340
-0
-  0
 ENDTAB
   0
 ENDSEC
@@ -1409,79 +1363,179 @@ AcDbEntity
 100
 AcDbBlockEnd
   0
-BLOCK
-  5
-4B
-100
-AcDbEntity
-  8
-0
-100
-AcDbBlockBegin
-  2
-M6_c-0
- 70
-0
- 10
-0.0
- 20
-0.0
- 30
-0.0
-  3
-M6_c-0
-  1
-
-  0
-ENDBLK
-  5
-4C
-100
-AcDbEntity
-  8
-0
-100
-AcDbBlockEnd
-  0
-BLOCK
-  5
-4D
-100
-AcDbEntity
-  8
-0
-100
-AcDbBlockBegin
-  2
-M6_c-1
- 70
-0
- 10
-0.0
- 20
-0.0
- 30
-0.0
-  3
-M6_c-1
-  1
-
-  0
-ENDBLK
-  5
-4E
-100
-AcDbEntity
-  8
-0
-100
-AcDbBlockEnd
-  0
 ENDSEC
   0
 SECTION
   2
 ENTITIES
+  0
+CIRCLE
+  5
+48
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+11.0
+  0
+CIRCLE
+  5
+49
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+4.0
+  0
+CIRCLE
+  5
+4A
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+outer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+8.0
+  0
+CIRCLE
+  5
+4B
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+inner
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+11.0
+  0
+CIRCLE
+  5
+4C
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+inner
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+12.75
+  0
+CIRCLE
+  5
+4D
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+outer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+15.0
+  0
+CIRCLE
+  5
+4E
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+19.0
   0
 CIRCLE
   5
@@ -1491,7 +1545,7 @@ AcDbEntity
 100
 AcDbCircle
   8
-inner
+clamp
  62
 256
 370
@@ -1505,7 +1559,7 @@ ByLayer
  30
 0.0
  40
-8.5
+4.0
   0
 CIRCLE
   5
@@ -1515,7 +1569,7 @@ AcDbEntity
 100
 AcDbCircle
   8
-inner
+clamp
  62
 256
 370
@@ -1525,59 +1579,59 @@ ByLayer
  10
 0.0
  20
-0.0
+16.5
  30
 0.0
  40
-10.25
+1.5
   0
-INSERT
+CIRCLE
   5
 51
 100
 AcDbEntity
 100
-AcDbBlockReference
+AcDbCircle
   8
-nut
+clamp
  62
 256
 370
 -1
   6
 ByLayer
-  2
-M6_c-0
  10
-0.0
+-14.2894191624432398
  20
-0.0
+-8.2499999999999964
  30
 0.0
+ 40
+1.5
   0
-INSERT
+CIRCLE
   5
 52
 100
 AcDbEntity
 100
-AcDbBlockReference
+AcDbCircle
   8
-nut
+clamp
  62
 256
 370
 -1
   6
 ByLayer
-  2
-M6_c-1
  10
-0.0
+14.2894191624432327
  20
-0.0
+-8.2500000000000071
  30
 0.0
+ 40
+1.5
   0
 CIRCLE
   5
@@ -1587,174 +1641,6 @@ AcDbEntity
 100
 AcDbCircle
   8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-3.0
-  0
-CIRCLE
-  5
-54
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-8.4499999999999993
-  0
-CIRCLE
-  5
-55
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-outer
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-12.25
-  0
-CIRCLE
-  5
-56
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-13.75
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-57
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--11.9078493020360341
- 20
--6.8749999999999964
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-58
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-11.907849302036027
- 20
--6.8750000000000062
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-59
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-16.25
-  0
-CIRCLE
-  5
-5A
-100
-AcDbEntity
-100
-AcDbCircle
-  8
 outer-etch
  62
 256
@@ -1769,119 +1655,7 @@ ByLayer
  30
 0.0
  40
-10.25
-  0
-CIRCLE
-  5
-5B
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-outer-etch
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-8.4499999999999993
-  0
-CIRCLE
-  5
-5C
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-outer
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-6.5
-  0
-CIRCLE
-  5
-5D
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-2.9500000000000002
-  0
-MTEXT
-  5
-5E
-100
-AcDbEntity
-100
-AcDbMText
-  8
-0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-24.0
- 30
-0.0
- 40
-3.0
- 41
-100.0
- 71
-5
- 72
-0
-  1
-Idler\~Pulley\~for\~606\~Bearing\PMaterial:\~1/8"\~plywood
-  7
-standard
- 50
-0.0
- 73
-1
- 44
-1.0
+12.75
   0
 ENDSEC
   0
@@ -1921,7 +1695,7 @@ E
   3
 AcDbVariableDictionary
 350
-5F
+54
   0
 DICTIONARY
   5
@@ -2385,7 +2159,7 @@ Layout2
   0
 DICTIONARY
   5
-5F
+54
 100
 AcDbDictionary
 281
@@ -2393,15 +2167,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-61
+56
   3
 HIDETEXT
 350
-60
+55
   0
 DICTIONARYVAR
   5
-60
+55
 100
 DictionaryVariables
 280
@@ -2411,7 +2185,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-61
+56
 100
 DictionaryVariables
 280
