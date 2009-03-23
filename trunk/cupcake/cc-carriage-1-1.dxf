@@ -59,7 +59,7 @@ $DIMTXT
   9
 $CLAYER
   8
-documentation
+inner-clamp
   0
 ENDSEC
   0
@@ -7541,183 +7541,9 @@ ByLayer
  40
 1.5
   0
-LINE
-  5
-127
-100
-AcDbEntity
-100
-AcDbLine
-  8
-inner-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-280.0
- 20
-142.0
- 30
-0.0
- 11
-280.0
- 21
-138.0
- 31
-0.0
-  0
-LINE
-  5
-128
-100
-AcDbEntity
-100
-AcDbLine
-  8
-inner-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-271.9074901213794533
- 20
-142.0
- 30
-0.0
- 11
-280.0
- 21
-142.0
- 31
-0.0
-  0
-ARC
-  5
-129
-100
-AcDbEntity
-  8
-inner-clamp
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-271.9074901213794533
- 20
-147.0
- 30
-0.0
- 40
-5.0
-100
-AcDbArc
- 50
-223.9281846521813861
- 51
-270.0
-  0
-LINE
-  5
-12A
-100
-AcDbEntity
-100
-AcDbLine
-  8
-inner-clamp
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-280.0
- 20
-138.0
- 30
-0.0
- 11
-271.9074901213794533
- 21
-138.0
- 31
-0.0
-  0
-ARC
-  5
-12B
-100
-AcDbEntity
-  8
-inner-clamp
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-264.6405719300142323
- 20
-140.0
- 30
-0.0
- 40
-5.0899999999997476
-100
-AcDbArc
- 50
-43.9281846521815424
- 51
-316.0718153478184718
-  0
-ARC
-  5
-12C
-100
-AcDbEntity
-  8
-inner-clamp
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-271.9074901213794533
- 20
-133.0
- 30
-0.0
- 40
-5.0
-100
-AcDbArc
- 50
-90.0
- 51
-136.0718153478186139
-  0
 MTEXT
   5
-12D
+127
 100
 AcDbEntity
 100
@@ -7757,7 +7583,7 @@ standard
   0
 MTEXT
   5
-12E
+128
 100
 AcDbEntity
 100
@@ -7794,6 +7620,120 @@ standard
 1
  44
 1.0
+  0
+LINE
+  5
+129
+100
+AcDbEntity
+100
+AcDbLine
+  8
+inner-clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+264.6405719300142323
+ 20
+145.0899999999997476
+ 30
+0.0
+ 11
+280.0
+ 21
+145.0899999999997476
+ 31
+0.0
+  0
+LINE
+  5
+12A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+inner-clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+264.6405719300142323
+ 20
+134.9100000000002524
+ 30
+0.0
+ 11
+280.0
+ 21
+134.9100000000002524
+ 31
+0.0
+  0
+LINE
+  5
+12B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+inner-clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+280.0
+ 20
+145.0899999999997476
+ 30
+0.0
+ 11
+280.0
+ 21
+134.9100000000002524
+ 31
+0.0
+  0
+ARC
+  5
+12C
+100
+AcDbEntity
+  8
+inner-clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+264.6405719300142323
+ 20
+140.0
+ 30
+0.0
+ 40
+5.0899999999997467
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
   0
 ENDSEC
   0
@@ -7833,7 +7773,7 @@ E
   3
 AcDbVariableDictionary
 350
-12F
+12D
   0
 DICTIONARY
   5
@@ -8297,7 +8237,7 @@ Layout2
   0
 DICTIONARY
   5
-12F
+12D
 100
 AcDbDictionary
 281
@@ -8305,15 +8245,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-131
+12F
   3
 HIDETEXT
 350
-130
+12E
   0
 DICTIONARYVAR
   5
-130
+12E
 100
 DictionaryVariables
 280
@@ -8323,7 +8263,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-131
+12F
 100
 DictionaryVariables
 280
