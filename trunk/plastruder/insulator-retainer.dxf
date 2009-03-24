@@ -861,7 +861,7 @@ $ENDCAPS
   9
 $CLAYER
   8
-Steel Washer Template
+Insulator Retainer
   0
 ENDSEC
   0
@@ -1713,7 +1713,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-6
+7
   0
 LAYER
   5
@@ -1835,11 +1835,33 @@ AcDbLayerTableRecord
   2
 Steel Washer Template
  70
-1
+0
  62
--7
+7
 420
 0
+  6
+CONTINUOUS
+370
+0
+390
+F
+  0
+LAYER
+  5
+48
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Extruder
+ 70
+0
+ 62
+3
+420
+65280
   6
 CONTINUOUS
 370
@@ -2173,7 +2195,7 @@ ENTITIES
   0
 CIRCLE
   5
-48
+49
 100
 AcDbEntity
 100
@@ -2197,7 +2219,7 @@ ByLayer
   0
 CIRCLE
   5
-49
+4A
 100
 AcDbEntity
 100
@@ -2221,7 +2243,7 @@ ByLayer
   0
 CIRCLE
   5
-4A
+4B
 100
 AcDbEntity
 100
@@ -2245,7 +2267,7 @@ ByLayer
   0
 CIRCLE
   5
-4B
+4C
 100
 AcDbEntity
 100
@@ -2266,30 +2288,6 @@ ByLayer
 0.0
  40
 4.375
-  0
-CIRCLE
-  5
-4C
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Insulator Retainer
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-131.625
- 20
-136.600000000000307
- 30
-0.0
- 40
-1.45
   0
 CIRCLE
   5
@@ -2299,6 +2297,30 @@ AcDbEntity
 100
 AcDbCircle
   8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+131.625
+ 20
+136.600000000000307
+ 30
+0.0
+ 40
+1.45
+  0
+CIRCLE
+  5
+4E
+100
+AcDbEntity
+100
+AcDbCircle
+  8
 Drawings
  62
 256
@@ -2317,7 +2339,7 @@ ByLayer
   0
 CIRCLE
   5
-4E
+4F
 100
 AcDbEntity
 100
@@ -2339,361 +2361,9 @@ ByLayer
  40
 1.45
   0
-CIRCLE
-  5
-4F
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-120.801933517592289
- 20
-149.993409928297325
- 30
-0.0
- 40
-1.5
-  0
-LINE
+MTEXT
   5
 50
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-120.801933517592289
- 20
-151.493409928297325
- 30
-0.0
- 11
-120.801933517592289
- 21
-148.493409928297325
- 31
-0.0
-  0
-LINE
-  5
-51
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-119.3019335175922748
- 20
-149.993409928297325
- 30
-0.0
- 11
-122.301933517592289
- 21
-149.993409928297325
- 31
-0.0
-  0
-CIRCLE
-  5
-52
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-167.2094808214229715
- 20
-150.0000000000003126
- 30
-0.0
- 40
-1.5
-  0
-LINE
-  5
-53
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-167.2094808214229715
- 20
-151.5000000000003126
- 30
-0.0
- 11
-167.2094808214229715
- 21
-148.5000000000002558
- 31
-0.0
-  0
-LINE
-  5
-54
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-165.7094808214229715
- 20
-150.0000000000003126
- 30
-0.0
- 11
-168.7094808214229715
- 21
-150.0000000000002842
- 31
-0.0
-  0
-CIRCLE
-  5
-55
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-109.8000000000002956
- 30
-0.0
- 40
-1.5
-  0
-LINE
-  5
-56
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-111.3000000000002956
- 30
-0.0
- 11
-143.9999999999999716
- 21
-108.3000000000002672
- 31
-0.0
-  0
-LINE
-  5
-57
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-142.5
- 20
-109.8000000000002956
- 30
-0.0
- 11
-145.5000000000000284
- 21
-109.800000000000324
- 31
-0.0
-  0
-CIRCLE
-  5
-58
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Steel Washer Template
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-109.8000000000002956
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-59
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Insulator Retainer
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-136.600000000000307
- 30
-0.0
- 40
-31.5
-  0
-MTEXT
-  5
-5A
-100
-AcDbEntity
-100
-AcDbMText
-  8
-Insulator Retainer Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-146.0
- 20
-123.0
- 30
-0.0
- 40
-3.0
- 41
-100.0
- 71
-5
- 72
-2
-  1
-Insulator\~Retainer
-  7
-standard
- 50
-360.0
- 73
-1
- 44
-1.0
-  0
-CIRCLE
-  5
-5B
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-136.600000000000307
- 30
-0.0
- 40
-25.1999999999999993
-  0
-MTEXT
-  5
-5C
 100
 AcDbEntity
 100
@@ -2727,205 +2397,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
-CIRCLE
-  5
-5D
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-136.600000000000307
- 30
-0.0
- 40
-26.25
-  0
-CIRCLE
-  5
-5E
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-166.6465643089630646
- 20
-149.6750000000002956
- 30
-0.0
- 40
-4.375
-  0
-CIRCLE
-  5
-5F
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Insulator Retainer
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-166.6465643089630646
- 20
-149.6750000000002956
- 30
-0.0
- 40
-1.45
-  0
-CIRCLE
-  5
-60
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-121.364850030052196
- 20
-149.6684099282973079
- 30
-0.0
- 40
-4.375
-  0
-CIRCLE
-  5
-61
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Insulator Retainer
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-121.364850030052196
- 20
-149.6684099282973079
- 30
-0.0
- 40
-1.45
-  0
-CIRCLE
-  5
-62
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-110.4500000000003155
- 30
-0.0
- 40
-4.375
-  0
-CIRCLE
-  5
-63
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Insulator Retainer
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-110.4500000000003155
- 30
-0.0
- 40
-1.45
-  0
-CIRCLE
-  5
-64
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-144.0
- 20
-110.4500000000003155
- 30
-0.0
- 40
-4.3799999999999999
-  0
 LINE
   5
-65
+51
 100
 AcDbEntity
 100
@@ -2953,13 +2431,705 @@ ByLayer
   0
 LINE
   5
+52
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+144.0
+ 20
+136.600000000000307
+ 30
+0.0
+ 11
+144.0
+ 21
+162.850000000000307
+ 31
+0.0
+  0
+LINE
+  5
+53
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+175.0
+ 20
+153.2400000000003217
+ 30
+0.0
+ 11
+175.0
+ 21
+154.9400000000002535
+ 31
+0.0
+  0
+LINE
+  5
+54
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+175.0
+ 20
+144.4400000000002819
+ 30
+0.0
+ 11
+175.0
+ 21
+124.4000000000002899
+ 31
+0.0
+  0
+LINE
+  5
+55
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+175.0
+ 20
+154.9400000000002535
+ 30
+0.0
+ 11
+94.0
+ 21
+154.9400000000003672
+ 31
+0.0
+  0
+LINE
+  5
+56
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+175.0
+ 20
+153.2400000000003217
+ 30
+0.0
+ 11
+94.0
+ 21
+153.2400000000003502
+ 31
+0.0
+  0
+LINE
+  5
+57
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+175.0
+ 20
+144.4400000000002819
+ 30
+0.0
+ 11
+94.0
+ 21
+144.4400000000003388
+ 31
+0.0
+  0
+LINE
+  5
+58
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+175.0
+ 20
+136.600000000000307
+ 30
+0.0
+ 11
+94.0
+ 21
+136.600000000000307
+ 31
+0.0
+  0
+LINE
+  5
+59
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+175.0
+ 20
+124.4000000000002899
+ 30
+0.0
+ 11
+93.9999999999999858
+ 21
+124.4000000000003325
+ 31
+0.0
+  0
+LINE
+  5
+5A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+94.0
+ 20
+153.2400000000003502
+ 30
+0.0
+ 11
+94.0
+ 21
+154.9400000000003672
+ 31
+0.0
+  0
+LINE
+  5
+5B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+94.0
+ 20
+144.4400000000003388
+ 30
+0.0
+ 11
+93.9999999999999858
+ 21
+124.4000000000003325
+ 31
+0.0
+  0
+LINE
+  5
+5C
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+165.0
+ 20
+124.4000000000003041
+ 30
+0.0
+ 11
+165.0
+ 21
+154.9400000000002819
+ 31
+0.0
+  0
+LINE
+  5
+5D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+166.5
+ 20
+124.4000000000003041
+ 30
+0.0
+ 11
+166.5
+ 21
+154.9400000000002819
+ 31
+0.0
+  0
+LINE
+  5
+5E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Extruder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+163.5
+ 20
+124.4000000000003041
+ 30
+0.0
+ 11
+163.5
+ 21
+154.9400000000003104
+ 31
+0.0
+  0
+CIRCLE
+  5
+5F
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+144.0
+ 20
+149.0
+ 30
+0.0
+ 40
+1.45
+  0
+CIRCLE
+  5
+60
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+144.0
+ 20
+120.475000000000307
+ 30
+0.0
+ 40
+2.75
+  0
+CIRCLE
+  5
+61
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+144.0
+ 20
+120.475000000000307
+ 30
+0.0
+ 40
+1.45
+  0
+CIRCLE
+  5
+62
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+144.0
+ 20
+149.0
+ 30
+0.0
+ 40
+2.75
+  0
+LINE
+  5
+63
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+126.3517413772884055
+ 20
+141.8626270529081808
+ 30
+0.0
+ 11
+138.7267413772883913
+ 21
+154.2626270529078738
+ 31
+0.0
+  0
+LINE
+  5
+64
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+149.1680310158449458
+ 20
+154.365999945887495
+ 30
+0.0
+ 11
+162.0430310158449458
+ 21
+141.9659999458877735
+ 31
+0.0
+  0
+LINE
+  5
+65
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+162.696873031622232
+ 20
+131.9515277344414415
+ 30
+0.0
+ 11
+149.821873031622232
+ 21
+115.8265277344414557
+ 31
+0.0
+  0
+LINE
+  5
 66
 100
 AcDbEntity
 100
 AcDbLine
   8
-Drawings
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+138.0898455206274207
+ 20
+115.9393000507143796
+ 30
+0.0
+ 11
+125.7148455206274349
+ 21
+132.0643000507143938
+ 31
+0.0
+  0
+ARC
+  5
+67
+100
+AcDbEntity
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+144.0
+ 20
+149.0
+ 30
+0.0
+ 40
+7.4500000000000002
+100
+AcDbArc
+ 50
+46.076648541766879
+ 51
+135.0578161050104882
+  0
+ARC
+  5
+68
+100
+AcDbEntity
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+156.875
+ 20
+136.6000000000002785
+ 30
+0.0
+ 40
+7.4500000000000002
+100
+AcDbArc
+ 50
+321.3943977652275521
+ 51
+46.076648541766879
+  0
+ARC
+  5
+69
+100
+AcDbEntity
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+144.0
+ 20
+120.475000000000307
+ 30
+0.0
+ 40
+7.4500000000000002
+100
+AcDbArc
+ 50
+217.5041423602700945
+ 51
+321.3943977652275521
+  0
+ARC
+  5
+6A
+100
+AcDbEntity
+  8
+Insulator Retainer
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+131.625
+ 20
+136.600000000000307
+ 30
+0.0
+ 40
+7.4500000000000002
+100
+AcDbArc
+ 50
+135.0578161050104313
+ 51
+217.5041423602700661
+  0
+MTEXT
+  5
+6B
+100
+AcDbEntity
+100
+AcDbMText
+  8
+Insulator Retainer Text
  62
 256
 370
@@ -2969,25 +3139,141 @@ ByLayer
  10
 144.0
  20
-136.600000000000307
+125.5
  30
 0.0
- 11
-121.2668331506585275
- 21
-149.7250000000003638
- 31
+ 40
+2.0
+ 41
+100.0
+ 71
+5
+ 72
+2
+  1
+Insulator\PRetainer
+  7
+standard
+ 50
+360.0
+ 73
+0
+ 44
+1.0
+  0
+CIRCLE
+  5
+6C
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+143.9999999999999716
+ 20
+149.0000000000000284
+ 30
 0.0
+ 40
+1.5
   0
 LINE
   5
-67
+6D
 100
 AcDbEntity
 100
 AcDbLine
   8
-Drawings
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+143.9999999999999716
+ 20
+147.5000000000000284
+ 30
+0.0
+ 11
+144.0000000000000284
+ 21
+150.5000000000000568
+ 31
+0.0
+  0
+LINE
+  5
+6E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+145.4999999999999716
+ 20
+149.0000000000000284
+ 30
+0.0
+ 11
+142.4999999999999716
+ 21
+149.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+6F
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+143.9999999999999716
+ 20
+149.0000000000000284
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+70
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Steel Washer Template
  62
 256
 370
@@ -2997,15 +3283,91 @@ ByLayer
  10
 144.0
  20
-136.600000000000307
+120.4750000000002927
+ 30
+0.0
+ 40
+1.5
+  0
+LINE
+  5
+71
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+144.0
+ 20
+121.9750000000002927
  30
 0.0
  11
-166.7331668493415293
+143.9999999999999716
  21
-149.725000000000307
+118.9750000000002643
  31
 0.0
+  0
+LINE
+  5
+72
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+142.5
+ 20
+120.4750000000002927
+ 30
+0.0
+ 11
+145.5000000000000284
+ 21
+120.4750000000003212
+ 31
+0.0
+  0
+CIRCLE
+  5
+73
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+144.0
+ 20
+120.4750000000002927
+ 30
+0.0
+ 40
+1.5
   0
 ENDSEC
   0
@@ -3045,7 +3407,7 @@ E
   3
 AcDbVariableDictionary
 350
-68
+74
   0
 DICTIONARY
   5
@@ -3509,7 +3871,7 @@ Layout2
   0
 DICTIONARY
   5
-68
+74
 100
 AcDbDictionary
 281
@@ -3517,15 +3879,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-6A
+76
   3
 HIDETEXT
 350
-69
+75
   0
 DICTIONARYVAR
   5
-69
+75
 100
 DictionaryVariables
 280
@@ -3535,7 +3897,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-6A
+76
 100
 DictionaryVariables
 280
