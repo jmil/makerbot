@@ -39,24 +39,8 @@
 			<debuglevel>1</debuglevel>
 		</driver>
 		<warmup>
-			(homing routing)
-			G91
-			G92 X0 Y0 Z0
-			G1 Z10 F100	
-			M104 S220 T0
-			M108 S255
-			M6 T0
-			M101
-			G04 P10000
-			M103
-			G04 P10000
-			G1 Z-10 F100	
-			(ready to print)
 		</warmup>
 		<cooldown>
-			M104 S20
-			G91
-			G1 Z10 F50	
 		</cooldown>
 	</machine>
 </machines>
