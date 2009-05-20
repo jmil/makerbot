@@ -31,7 +31,7 @@
 #init up
 BOARD=`basename $1`
 VERSION=${2:-`date +%Y-%m-%d`}
-TO_DIR="reprap-$BOARD-$VERSION"
+TO_DIR="makerbot-$BOARD-$VERSION"
 FILELIST=""
 
 #directory structure
@@ -107,14 +107,6 @@ fi
 #create our source dir
 cp $BOARD/*.brd "$TO_DIR/eagle/";
 cp $BOARD/*.sch "$TO_DIR/eagle/";
-
-if [ -d ${BOARD}/exerciser ]
-then
-	svn export https://reprap.svn.sourceforge.net/svnroot/reprap/trunk/reprap/electronics/${BOARD}/exerciser "$TO_DIR/exerciser"
-	echo "Exporting exerciser scripts."
-else
-	echo "No exerciser directory found, bailing."
-fi
 
 #create our archive
 echo "Archiving..."
