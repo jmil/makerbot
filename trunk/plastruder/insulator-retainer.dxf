@@ -789,7 +789,7 @@ $PSVPSCALE
   9
 $CLAYER
   8
-RepRap Insulator Retainer Text
+CupCake Insulator Retainer
   9
 $DIMSHO
  70
@@ -861,7 +861,7 @@ $ENDCAPS
   9
 $CLAYER
   8
-CupCake Insulator Retainer
+Steel Washer Template
   0
 ENDSEC
   0
@@ -1791,9 +1791,9 @@ AcDbLayerTableRecord
   2
 Drawings
  70
-1
+0
  62
--5
+5
 420
 255
   6
@@ -1835,9 +1835,9 @@ AcDbLayerTableRecord
   2
 Steel Washer Template
  70
-1
+0
  62
--7
+7
 420
 0
   6
@@ -1857,9 +1857,9 @@ AcDbLayerTableRecord
   2
 Extruder
  70
-1
+0
  62
--3
+3
 420
 65280
   6
@@ -1879,9 +1879,9 @@ AcDbLayerTableRecord
   2
 RepRap Insulator Retainer
  70
-1
+0
  62
--7
+7
 420
 0
   6
@@ -1901,9 +1901,9 @@ AcDbLayerTableRecord
   2
 RepRap Insulator Retainer Text
  70
-1
+0
  62
--4
+4
 420
 65535
   6
@@ -5615,7 +5615,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -8975,6 +8975,166 @@ AcDbArc
  51
 90.0
   0
+CIRCLE
+  5
+13A
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+131.625
+ 20
+136.600000000000307
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+13B
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+156.875
+ 20
+136.6000000000002785
+ 30
+0.0
+ 40
+1.5
+  0
+LINE
+  5
+13C
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+131.625
+ 20
+138.100000000000307
+ 30
+0.0
+ 11
+131.625
+ 21
+135.100000000000307
+ 31
+0.0
+  0
+LINE
+  5
+13D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+133.125
+ 20
+136.600000000000307
+ 30
+0.0
+ 11
+130.125
+ 21
+136.600000000000307
+ 31
+0.0
+  0
+LINE
+  5
+13E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+156.875
+ 20
+138.1000000000002785
+ 30
+0.0
+ 11
+156.875
+ 21
+135.1000000000002785
+ 31
+0.0
+  0
+LINE
+  5
+13F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Steel Washer Template
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+155.375
+ 20
+136.6000000000002785
+ 30
+0.0
+ 11
+158.375
+ 21
+136.6000000000002785
+ 31
+0.0
+  0
 ENDSEC
   0
 SECTION
@@ -9013,7 +9173,7 @@ E
   3
 AcDbVariableDictionary
 350
-13A
+140
   0
 DICTIONARY
   5
@@ -9477,7 +9637,7 @@ Layout2
   0
 DICTIONARY
   5
-13A
+140
 100
 AcDbDictionary
 281
@@ -9485,15 +9645,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-13C
+142
   3
 HIDETEXT
 350
-13B
+141
   0
 DICTIONARYVAR
   5
-13B
+141
 100
 DictionaryVariables
 280
@@ -9503,7 +9663,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-13C
+142
 100
 DictionaryVariables
 280
