@@ -22,7 +22,7 @@ LOGO_HEIGHT=212.0
 
 def drawLogo(c):
     c.saveState()
-    w=LABEL_WIDTH*0.9
+    w=LABEL_WIDTH*0.8
     h=w*LOGO_HEIGHT/LOGO_WIDTH
     x=(LABEL_WIDTH-w)/2.0
     y=LABEL_HEIGHT-(h*2.0)
@@ -52,7 +52,7 @@ c = canvas.Canvas("hello.pdf",pagesize=letter)
 # sticker sheet: 8.25x10
 # page size: 8.5x11
 # translate up and over by .125,.5
-c.translate(0.125*inch,0.5*inch)
+c.translate(0.2*inch,0.4*inch)
 for x in range(LABEL_COLUMNS):
     for y in range(LABEL_ROWS):
         c.saveState()
