@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from optparse import OptionParser
 
 from reportlab.pdfgen import canvas
 from reportlab.rl_config import defaultPageSize
@@ -9,59 +10,126 @@ from reportlab.pdfbase.ttfonts import TTFont
 
 LABEL_ROWS = 5
 LABEL_COLUMNS = 2
-PAGE_HEIGHT = defaultPageSize[1]
-PAGE_WIDTH = defaultPageSize[0]
+
 LABEL_HEIGHT = 2*inch
 LABEL_WIDTH = 4*inch
 
 pdfmetrics.registerFont(TTFont('DesignerBlock', 'fonts/DESIB___.TTF'))
 pdfmetrics.registerFont(TTFont('Sans', 'fonts/FreeSans.ttf'))
+pdfmetrics.registerFont(TTFont('Barcode', 'fonts/IDAutomationC39S.ttf'))
 
-LOGO_WIDTH=2611.0
-LOGO_HEIGHT=212.0
+logoImage="makerbot-logo.png"
+logoSize=[2611.0,212.0]
 
-def drawLogo(c):
-    c.saveState()
-    w=LABEL_WIDTH*0.8
-    h=w*LOGO_HEIGHT/LOGO_WIDTH
-    x=(LABEL_WIDTH-w)/2.0
-    y=LABEL_HEIGHT-(h*2.0)
-    c.drawImage("makerbot-logo.png",x,y,width=w,height=h)
-    c.restoreState()
+class Label:
 
-def drawTitle(c,title,subtitle):
-    c.saveState()
-    y = LABEL_HEIGHT/2.0
-    x = LABEL_WIDTH/2.0
-    c.setFont('DesignerBlock',20)
-    c.drawCentredString(x,y,title)
-    c.setFont('DesignerBlock',18)
-    y -= 18
-    c.drawCentredString(x,y,subtitle)
-    c.restoreState()
+    def __init__(this, title, subtitle=None, url=None, code=None,
+                 size = [4*inch,2*inch]):
+        this.title = title
+        this.subtitle = subtitle
+        this.url = url
+        this.size = size
+        this.code = code
+        this.centerline = size[0]/2.0
+        this.spacing = 15
 
-def drawInstructions(c,url):
-    c.saveState()
-    y = LABEL_HEIGHT/2.0 - 35
-    x = LABEL_WIDTH/2.0
-    c.setFont('Sans',16)
-    c.drawCentredString(x,y,"Instructions: "+url)
-    c.restoreState()
+    def reset(this):
+        this.y = this.size[1] - (this.spacing*2)
 
-c = canvas.Canvas("hello.pdf",pagesize=letter)
-# sticker sheet: 8.25x10
-# page size: 8.5x11
-# translate up and over by .125,.5
-c.translate(0.2*inch,0.4*inch)
-for x in range(LABEL_COLUMNS):
-    for y in range(LABEL_ROWS):
+    def drawText(this,c,text,font,size):
+        (a,d) = pdfmetrics.getAscentDescent(font,size)
+        c.setFont(font,size)
+        this.y = this.y - a
+        c.drawCentredString(this.centerline,this.y,text)
+        this.y = this.y - d
+        this.y = this.y - this.spacing
+
+    def drawLogo(this,c):
         c.saveState()
-        if (x != 0):
-            c.translate(LABEL_WIDTH+(0.25*inch),0)
-        c.translate(0,y*LABEL_HEIGHT)
-        drawLogo(c)
-        drawTitle(c,"RepRap Motherboard v1.2","")
-        drawInstructions(c,"make.rrrf.org/rmb-1.2")
+        w=this.size[0]*0.75
+        h=w*logoSize[1]/logoSize[0]
+        x=(this.size[0]-w)/2.0
+        y=this.y - this.spacing
+        c.drawImage("makerbot-logo.png",x,y,width=w,height=h)
         c.restoreState()
-c.showPage()
-c.save()
+        this.y = this.y - this.spacing
+
+    def drawTitles(this,c):
+        c.saveState()
+        if this.title:
+            this.drawText(c,this.title,'DesignerBlock',20)
+        if this.subtitle:
+            this.drawText(c,this.subtitle,'DesignerBlock',18)
+        c.restoreState()
+
+    def drawInstructions(this,c):
+        if this.url:
+            c.saveState()
+            this.drawText(c,"Instructions: "+this.url,'Sans',16)
+            c.restoreState()
+
+    def drawBarcode(this,c):
+        if this.code:
+            c.saveState()
+            this.drawText(c,'*'+this.code+'*','Barcode',14)
+            c.restoreState()
+
+    def draw(this,context):
+        this.reset()
+        this.drawLogo(context)
+        this.drawTitles(context)
+        this.drawInstructions(context)
+        this.drawBarcode(context)
+
+
+
+if __name__ == '__main__':
+    parser = OptionParser()
+    parser.add_option("-t", "--title", dest="title",
+                      action="store",
+                      type="string",
+                      help="title of product (required)")
+    parser.add_option("-s", "--subtitle", dest="subtitle",
+                      action="store",
+                      type="string",
+                      help="subtitle of product")
+    parser.add_option("-u", "--url", dest="url",
+                      action="store",
+                      type="string",
+                      help="URL of instructions for product")
+    parser.add_option("-c", "--code", dest="code",
+                      action="store",
+                      type="string",
+                      help="barcode (alphanumerics only)")
+    parser.add_option("-o", "--output", dest="output",
+                      action="store",
+                      type="string",
+                      default="labels.pdf",
+                      help="output file name (default to labels.pdf)")
+    (options, args) = parser.parse_args()
+
+    # Validation please
+    if options.title == None:
+        print "Error: you must provide a title for the label."
+        parser.print_help()
+
+    c = canvas.Canvas(options.output,pagesize=letter)
+    # sticker sheet: 8.25x10
+    # page size: 8.5x11
+    # translate up and over by .125,.5
+    c.translate(0.2*inch,0.4*inch)
+    label=Label(options.title,
+                subtitle = options.subtitle,
+                url = options.url,
+                code = options.code)
+
+    for x in range(LABEL_COLUMNS):
+        for y in range(LABEL_ROWS):
+            c.saveState()
+            if (x != 0):
+                c.translate(LABEL_WIDTH+(0.25*inch),0)
+            c.translate(0,y*LABEL_HEIGHT)
+            label.draw(c)
+            c.restoreState()
+    c.showPage()
+    c.save()
