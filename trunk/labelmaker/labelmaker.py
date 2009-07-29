@@ -16,7 +16,7 @@ LABEL_WIDTH = 4*inch
 
 pdfmetrics.registerFont(TTFont('DesignerBlock', 'fonts/DESIB___.TTF'))
 pdfmetrics.registerFont(TTFont('Sans', 'fonts/FreeSans.ttf'))
-pdfmetrics.registerFont(TTFont('Barcode', 'fonts/IDAutomationC39S.ttf'))
+pdfmetrics.registerFont(TTFont('Barcode', 'fonts/IDAutomationHC39S.ttf'))
 
 logoImage="makerbot-logo.png"
 logoSize=[2611.0,212.0]
@@ -34,7 +34,7 @@ class Label:
         this.spacing = 15
 
     def reset(this):
-        this.y = this.size[1] - (this.spacing*2)
+        this.y = this.size[1] - this.spacing
 
     def drawText(this,c,text,font,size):
         (a,d) = pdfmetrics.getAscentDescent(font,size)
@@ -65,7 +65,7 @@ class Label:
     def drawInstructions(this,c):
         if this.url:
             c.saveState()
-            this.drawText(c,"Instructions: "+this.url,'Sans',16)
+            this.drawText(c,"Instructions: "+this.url,'Sans',14)
             c.restoreState()
 
     def drawBarcode(this,c):
@@ -75,6 +75,7 @@ class Label:
             c.restoreState()
 
     def draw(this,context):
+        # context.rect(0,0,this.size[0],this.size[1])
         this.reset()
         this.drawLogo(context)
         this.drawTitles(context)
@@ -114,10 +115,15 @@ if __name__ == '__main__':
         parser.print_help()
 
     c = canvas.Canvas(options.output,pagesize=letter)
+    GUTTER = 0.25 * inch
+    totalWidth = (LABEL_COLUMNS*LABEL_WIDTH)+((LABEL_COLUMNS-1)*GUTTER)
+    MARGIN_L = (letter[0] - totalWidth)/2.0
+    totalHeight = LABEL_ROWS*LABEL_HEIGHT
+    MARGIN_B = (letter[1] - totalHeight)/2.0
     # sticker sheet: 8.25x10
     # page size: 8.5x11
     # translate up and over by .125,.5
-    c.translate(0.2*inch,0.4*inch)
+    c.translate(MARGIN_L,MARGIN_B)
     label=Label(options.title,
                 subtitle = options.subtitle,
                 url = options.url,
@@ -126,9 +132,8 @@ if __name__ == '__main__':
     for x in range(LABEL_COLUMNS):
         for y in range(LABEL_ROWS):
             c.saveState()
-            if (x != 0):
-                c.translate(LABEL_WIDTH+(0.25*inch),0)
-            c.translate(0,y*LABEL_HEIGHT)
+            c.translate(x*(LABEL_WIDTH+GUTTER),y*LABEL_HEIGHT)
+
             label.draw(c)
             c.restoreState()
     c.showPage()
