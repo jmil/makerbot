@@ -1,0 +1,233 @@
+body {
+margin: 0 0;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 12px;
+color: #354f6d;
+background: #fbfaf6;
+}
+
+a, a:hover, a:visited, a:active {
+  color: #ac0000;
+  border: 0px;
+}
+
+a img {
+  border: 0px;
+}
+
+hr {
+border: none 0;
+border-top: 1px dashed #93a1b1;
+}
+#main_container {
+width: 1000px;
+background: #fff;
+margin: 0 auto;
+padding: 0 20px;
+background: url(/img/main-bg.gif) repeat-y;
+}
+.footer {
+background: url(/img/footer-bg.jpg) repeat-y;
+width: 1000px;
+margin: 0 auto;
+padding: 20px;
+font-size: 14px;
+color: #FFFFFF;
+}
+
+.footer a, .footer a:hover, .footer a:visited, .footer a:active {
+  color: #FFFFFF;
+}
+
+.header {
+background: url(/img/hdr-bg.jpg);
+height: 85px;
+width: 1000px;
+padding-top: 10px;
+}
+.header .logo-hdr {
+width: 235px;
+float: left;
+}
+.header .logo-hdr h1 {
+margin: 0 10px;
+background: url(/img/mb-logo.gif) no-repeat;
+text-indent:-9999px;
+height: 72px;
+}
+.header .robots {
+width: 425px;
+float: left;
+}
+.header .robots h2 {
+background: url(/img/mb-slogan.gif) no-repeat;
+text-indent:-9999px;
+height: 34px;
+margin-top: 39px;
+margin-left: 5px;
+}
+.header .store {
+float: right;
+padding-right: 25px;
+}
+.featured {
+background: url(/img/cupcake-bg.jpg) no-repeat;
+width: 748px;
+height: 300px;
+margin-top: 5px;
+margin-bottom: 5px;
+float: left; 
+}
+.top-right {
+background: url(/img/right-box.png) no-repeat;
+width: 248px;
+height: 300px;
+margin-top: 5px;
+float: right;
+}
+.btm-left {
+background:url(/img/btm-left-bg.jpg) no-repeat; 
+width: 496px;
+height: 224px;
+margin-right: 5px;
+float: left;
+}
+.btm-mid {
+background: url(/img/btm-mid-bg.jpg) no-repeat;
+width: 248px;
+height: 224px;
+margin-right: 0px;
+float: left;
+}
+.btm-right {
+background: url(/img/btm-right-bg.jpg) no-repeat;
+width: 248px;
+height: 224px;
+float: right;
+}
+.featured_content {
+position: relative;
+}
+.featured_content h3 {
+text-transform: uppercase;
+font-style:italic; 
+font-size:20px;
+color: #FFFFFF;
+width: 400px;
+padding: 8px 10px;
+}
+.featured_list {
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+color: #FFFFFF;
+list-style-image: url(/img/bullet.gif);
+width: 220px;
+padding-left: 55px;
+padding-top: 10px;
+}
+
+.featured_list li {
+padding-bottom: 10px;
+}
+
+.featured a {
+  text-decoration: none;
+}
+
+.cupcake {
+position: absolute;
+z-index:2;
+top: 50px;
+left: 595px;
+}
+.whats-hot {
+padding: 10px;
+margin: 0px;
+}
+.whats-hot h3 {
+background: url(/img/whats-hot.png) no-repeat;
+text-indent: -9999px;
+height: 11px;
+margin: 0;
+}
+
+.whats-hot img {
+  float: left;
+  margin: 0 10px 0px 10px;
+  border: 1px solid #393b3b;
+}
+
+.whats-hot a, .whats-hot a:visited {
+  color: #354f6d;
+  font-weight: bold;
+}
+
+.featured-item {
+  margin: 30px 0px;
+  clear: both;
+}
+
+.what-is {
+padding: 10px;
+}
+.what-is h3 {
+background: url(/img/what-is.png) no-repeat;
+text-indent: -9999px;
+height: 11px;
+margin: 0;
+}
+.what-is p {
+width: 300px;
+}
+.what-is strong {
+}
+.in-action {
+padding: 10px;
+}
+.in-action h3 {
+background: url(/img/in-action.png) no-repeat;
+text-indent: -9999px;
+height: 11px;
+margin: 0;
+}
+.twitter {
+padding: 10px;
+overflow: hidden;
+width: 226px;
+height: 202px;
+}
+
+.twitter ul {
+  padding-left: 0px;
+}
+
+.twitter li {
+  list-style-type: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #93a1b1;
+}
+.twitter h3 {
+background: url(/img/twitter.png) no-repeat;
+text-indent: -9999px;
+height: 11px;
+margin: 0;
+}
+
+/* Clearing
+
+---------------------------- */
+
+.clear { clear: both; }
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix { display: inline-block; }
+
+/* Hides from IE-mac \*/
+
+* html .clearfix { height: 1%; }
+
+.clearfix { display: block; }
+
+/* End hide from IE-mac */
