@@ -7,6 +7,12 @@
 	if ($subtitle) { $command .= " -s ".$subtitle; } 
 	if ($url) { $command .= " -u ".$url; }
 	if ($sku) { $command .= " -c ".$sku; }
+	
+	$filename = str_replace(" ", "-", $title);
+	$filename = preg_replace("/[^-a-zA-Z0-9]/", "", $filename);
+	$filename = strtolower($filename) . ".pdf";
+	
 	header("Content-Type: application/pdf");
+	header("Content-disposition: attachment; filename=$filename");
 	passthru($command);
 ?>
