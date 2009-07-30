@@ -1,6 +1,8 @@
 #!/usr/bin/python
 from optparse import OptionParser
 
+import sys
+
 from reportlab.pdfgen import canvas
 from reportlab.rl_config import defaultPageSize
 from reportlab.lib.units import inch
@@ -105,8 +107,8 @@ if __name__ == '__main__':
     parser.add_option("-o", "--output", dest="output",
                       action="store",
                       type="string",
-                      default="labels.pdf",
-                      help="output file name (default to labels.pdf)")
+                      default="-",
+                      help="output file name (use "-" for stdout)(defaults to stdout)")
     (options, args) = parser.parse_args()
 
     # Validation please
@@ -114,7 +116,10 @@ if __name__ == '__main__':
         print "Error: you must provide a title for the label."
         parser.print_help()
 
-    c = canvas.Canvas(options.output,pagesize=letter)
+    if (options.output == "-"):
+        c = canvas.Canvas(sys.stdout,pagesize=letter)
+    else:
+        c = canvas.Canvas(options.output,pagesize=letter)
     GUTTER = 0.25 * inch
     totalWidth = (LABEL_COLUMNS*LABEL_WIDTH)+((LABEL_COLUMNS-1)*GUTTER)
     MARGIN_L = (letter[0] - totalWidth)/2.0
