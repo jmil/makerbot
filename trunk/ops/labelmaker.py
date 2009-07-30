@@ -39,7 +39,12 @@ class Label:
         this.y = this.size[1] - this.spacing
 
     def drawText(this,c,text,font,size):
-        (a,d) = pdfmetrics.getAscentDescent(font,size)
+        # getAscentDescent doesn't take font sizes in the 
+        # old version of reportlab, so we'll do the conversion
+        # ourselves a la the version in svn.
+        (a,d) = pdfmetrics.getAscentDescent(font)
+        norm = size/1000.0
+        (a,d) = (a*norm,d*norm)
         c.setFont(font,size)
         this.y = this.y - a
         c.drawCentredString(this.centerline,this.y,text)
