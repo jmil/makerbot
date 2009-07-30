@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>LabelMaker</title>
+		<meta name="author" content="Adam Mayer" >
+		<meta name="generator" content="screem 0.16.1" >
+		<meta name="description" content="" >
+		<meta name="keywords" content="" >
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" >
+		<meta http-equiv="Content-Script-Type" content="text/javascript" >
+		<meta http-equiv="Content-Style-Type" content="text/css" >
+		<link rel="stylesheet" type="text/css" href="css/ops.css" >
+	</head>
+	<body>
+		<div id="formblock">
+		<form method="POST" action="labelmaker.php">
+			<label for="title">Title of product:</label><input type="text" name="title" id="title"></input><br/>
+			<label for="subtitle">Subtitle of product (if any):</label><input type="text" name="subtitle" id="subtitle"></input><br/>
+			<label for="url">Short URL of instructions:</label><input type="text" name="url" id="url"></input><br/>
+			<label for="sku">SKU (include "MB" for our products):</label><input type="text" name="sku" id="sku"></input><br/>
+			<input type="submit"/>
+		</form>
+		</div>
+	</body>
+</html>
