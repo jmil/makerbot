@@ -33,7 +33,7 @@ class Label:
         this.size = size
         this.code = code
         this.centerline = size[0]/2.0
-        this.spacing = 15
+        this.spacing = 10
 
     def reset(this):
         this.y = this.size[1] - this.spacing
@@ -49,7 +49,11 @@ class Label:
         this.y = this.y - a
         c.drawCentredString(this.centerline,this.y,text)
         this.y = this.y - d
-        this.y = this.y - this.spacing
+
+    def space(this,c,spacing=None):
+        if spacing == None:
+            spacing = this.spacing;
+        this.y = this.y - spacing
 
     def drawLogo(this,c):
         c.saveState()
@@ -59,7 +63,6 @@ class Label:
         y=this.y - this.spacing
         c.drawImage("makerbot-logo.png",x,y,width=w,height=h)
         c.restoreState()
-        this.y = this.y - this.spacing
 
     def drawTitles(this,c):
         c.saveState()
@@ -82,11 +85,14 @@ class Label:
             c.restoreState()
 
     def draw(this,context):
-        # context.rect(0,0,this.size[0],this.size[1])
+        #context.rect(0,0,this.size[0],this.size[1])
         this.reset()
         this.drawLogo(context)
+        this.space(context);
         this.drawTitles(context)
+        this.space(context);
         this.drawInstructions(context)
+        this.space(context);
         this.drawBarcode(context)
 
 
@@ -125,7 +131,7 @@ if __name__ == '__main__':
         c = canvas.Canvas(sys.stdout,pagesize=letter)
     else:
         c = canvas.Canvas(options.output,pagesize=letter)
-    GUTTER = 0.25 * inch
+    GUTTER = (3.0/16.0) * inch
     totalWidth = (LABEL_COLUMNS*LABEL_WIDTH)+((LABEL_COLUMNS-1)*GUTTER)
     MARGIN_L = (letter[0] - totalWidth)/2.0
     totalHeight = LABEL_ROWS*LABEL_HEIGHT
