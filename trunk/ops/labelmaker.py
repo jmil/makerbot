@@ -36,7 +36,7 @@ class Label:
         this.spacing = 10
 
     def reset(this):
-        this.y = this.size[1] - this.spacing
+        this.y = this.size[1] - (this.spacing + ((1.0/8.0)*inch))
 
     def drawText(this,c,text,font,size):
         # getAscentDescent doesn't take font sizes in the 
