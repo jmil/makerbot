@@ -108,7 +108,7 @@ if __name__ == '__main__':
                       action="store",
                       type="string",
                       default="-",
-                      help="output file name (use "-" for stdout)(defaults to stdout)")
+                      help='output file name (use "-" for stdout)(defaults to stdout)')
     (options, args) = parser.parse_args()
 
     # Validation please
