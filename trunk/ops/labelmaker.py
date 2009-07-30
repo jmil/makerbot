@@ -34,9 +34,10 @@ class Label:
         this.code = code
         this.centerline = size[0]/2.0
         this.spacing = 10
+        this.top = this.size[1]
 
     def reset(this):
-        this.y = this.size[1] - (this.spacing + ((1.0/8.0)*inch))
+        this.y = this.top
 
     def drawText(this,c,text,font,size):
         # getAscentDescent doesn't take font sizes in the 
@@ -47,7 +48,8 @@ class Label:
         (a,d) = (a*norm,d*norm)
         c.setFont(font,size)
         this.y = this.y - a
-        c.drawCentredString(this.centerline,this.y,text)
+        if this.doDraw:
+            c.drawCentredString(this.centerline,this.y,text)
         this.y = this.y - d
 
     def space(this,c,spacing=None):
@@ -61,7 +63,8 @@ class Label:
         h=w*logoSize[1]/logoSize[0]
         x=(this.size[0]-w)/2.0
         y=this.y - this.spacing
-        c.drawImage("makerbot-logo.png",x,y,width=w,height=h)
+        if this.doDraw:
+            c.drawImage("makerbot-logo.png",x,y,width=w,height=h)
         c.restoreState()
 
     def drawTitles(this,c):
@@ -84,8 +87,18 @@ class Label:
             this.drawText(c,'*'+this.code+'*','Barcode',14)
             c.restoreState()
 
+    def layout(this,context):
+        this.doDraw = 0
+        this.drawInternal(context)
+        height = this.top - this.y
+        this.top = this.spacing + this.size[1] - (this.y/2.0)
+
     def draw(this,context):
         #context.rect(0,0,this.size[0],this.size[1])
+        this.doDraw = 1
+        this.drawInternal(context)
+
+    def drawInternal(this,context):
         this.reset()
         this.drawLogo(context)
         this.space(context);
@@ -126,6 +139,7 @@ if __name__ == '__main__':
     if options.title == None:
         print "Error: you must provide a title for the label."
         parser.print_help()
+        sys.exit(1)
 
     if (options.output == "-"):
         c = canvas.Canvas(sys.stdout,pagesize=letter)
@@ -144,7 +158,7 @@ if __name__ == '__main__':
                 subtitle = options.subtitle,
                 url = options.url,
                 code = options.code)
-
+    label.layout(c)
     for x in range(LABEL_COLUMNS):
         for y in range(LABEL_ROWS):
             c.saveState()
