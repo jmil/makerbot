@@ -16,6 +16,7 @@
 
 	$db = open_db();
 
+	$id = $_POST['id'];
 	$title = $_POST['title'];
 	$subtitle = $_POST['subtitle'];
 	$url = $_POST['url'];
@@ -27,13 +28,22 @@
 	if ($sku) { $command .= " -c ".escapeshellarg($sku); }
 	if ($debug) { $command .= " --debug"; }
 	else {
+	  if ($id == -1) {
 	  // Add row to printed labels db
 	  $db->query("insert into product (title, subtitle, url, sku) values ('" . 
 	  		     sqlite_escape_string($title) . "', '" . 
 			     sqlite_escape_string($subtitle) . "', '" . 
 			     sqlite_escape_string($url) . "', '" . 
 			     sqlite_escape_string($sku) . "')");
-	}	   
+          } else {
+	  $db->query("update product set ".
+	  		     "title='".sqlite_escape_string($title) . "', " . 
+			     "subtitle='".sqlite_escape_string($subtitle) . "', " . 
+			     "url='".sqlite_escape_string($url) . "', " . 
+			     "sku='".sqlite_escape_string($sku) . "' " .
+			     "where id=".$id);
+          }
+	}
 
 	$filename = str_replace(" ", "-", $title);
 	$filename = preg_replace("/[^-a-zA-Z0-9]/", "", $filename);
