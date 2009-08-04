@@ -35,6 +35,7 @@ class Label:
         this.centerline = size[0]/2.0
         this.spacing = 10
         this.top = this.size[1]
+        this.debug = False
 
     def reset(this):
         this.y = this.top
@@ -94,7 +95,8 @@ class Label:
         this.top = this.spacing + this.size[1] - (this.y/2.0)
 
     def draw(this,context):
-        #context.rect(0,0,this.size[0],this.size[1])
+        if (this.debug):
+            context.rect(0,0,this.size[0],this.size[1])
         this.doDraw = 1
         this.drawInternal(context)
 
@@ -133,6 +135,10 @@ if __name__ == '__main__':
                       type="string",
                       default="-",
                       help='output file name (use "-" for stdout)(defaults to stdout)')
+    parser.add_option("--debug", dest="debug",
+                      action="store_true",
+                      default=False)
+
     (options, args) = parser.parse_args()
 
     # Validation please
@@ -158,6 +164,7 @@ if __name__ == '__main__':
                 subtitle = options.subtitle,
                 url = options.url,
                 code = options.code)
+    label.debug = options.debug
     label.layout(c)
     for x in range(LABEL_COLUMNS):
         for y in range(LABEL_ROWS):
