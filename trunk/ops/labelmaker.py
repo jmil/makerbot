@@ -33,17 +33,25 @@ class Label:
         this.size = size
         this.code = code
         this.centerline = size[0]/2.0
-        this.spacing = 10
+        this.spacing = 9
         this.top = this.size[1]
         this.debug = False
+        this.maxtextwidth=this.size[0]*0.86
 
     def reset(this):
         this.y = this.top
 
-    def drawText(this,c,text,font,size):
+    def drawText(this,c,text,font,size,maxwidth = -1):
         # getAscentDescent doesn't take font sizes in the 
         # old version of reportlab, so we'll do the conversion
         # ourselves a la the version in svn.
+        if maxwidth == -1:
+            maxwidth = this.maxtextwidth
+        if maxwidth != -1:
+            # adjust font size to handle maximum width
+            width = pdfmetrics.stringWidth(text, font, size) 
+            if (width > maxwidth):
+                size = float(size)*(float(maxwidth)/float(width))
         (a,d) = pdfmetrics.getAscentDescent(font)
         norm = size/1000.0
         (a,d) = (a*norm,d*norm)
@@ -71,9 +79,10 @@ class Label:
     def drawTitles(this,c):
         c.saveState()
         if this.title:
-            this.drawText(c,this.title,'DesignerBlock',20)
+            this.drawText(c,this.title,'DesignerBlock',22)
         if this.subtitle:
-            this.drawText(c,this.subtitle,'DesignerBlock',18)
+            this.y = this.y - (this.spacing / 3.0);
+            this.drawText(c,this.subtitle,'DesignerBlock',17)
         c.restoreState()
 
     def drawInstructions(this,c):
