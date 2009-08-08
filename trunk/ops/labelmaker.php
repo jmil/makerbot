@@ -44,7 +44,7 @@
 		$uri=rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 		$redir = "Location: http://$host$uri/labels.php";
 		if ($id != -1) {
-		   $redir = $redir + "?id=".$id;
+		   $redir = $redir . "?id=".$id;
 		}
 		header($redir);
 	}
@@ -72,8 +72,8 @@
 		passthru($command);
 	} else if ($_POST['store']) {
 	       store_in_db($db,$title,$subtitle,$url,$sku);
-	       $id = $db->lastInsertRowid();
-	       show_id($id);
+	       $rowid = $db->lastInsertRowid();
+	       show_id($rowid);
 	} else if ($_POST['update']) {
 	       update_in_db($db,$id,$title,$subtitle,$url,$sku);
 	       show_id($id);
