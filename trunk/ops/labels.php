@@ -85,6 +85,7 @@ while($n > 0) {
 			<?php } else { ?>
 			      <input type="submit" name="update" value="Update label template"/>
 			      <input type="submit" name="delete" value="Delete label template"/>
+			      <input type="submit" name="store" value="Create new label template"/>
 			<?php }  ?>
 
 		</form>
