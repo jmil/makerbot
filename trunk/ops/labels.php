@@ -40,22 +40,30 @@ if ($id == '') {
 	</head>
 	<body>
 	        <div id="formblock">
-		  <form method="GET" action="labels.php">
-		    <select name="id" id="id">
+		  <form method="GET" name="selectlabel" action="labels.php">
+		    <select name="id" id="id" onChange="this.form.submit()">
 <?php
-$q = $db->query('select id,title from product');
+$q = $db->query('select id,title,subtitle from product');
 $n = $q->numRows();
-print $n;
+if ($id == -1) {
+   print '<option value="-1" selected>-- Use existing label... --</option>\n';
+} else {
+   print '<option value="-1" selected>-- Create new label... --</option>\n';
+}
 while($n > 0) {
-  print $n;
-  print '<option value="'.$q->column('id').'">'.$q->column('title').'</option>';
+  $selected = "";
+  if ($q->column('id') == $id) { $selected = " selected"; }
+  print '<option value="'.$q->column('id').'"'.$selected.'>'.$q->column('title');
+  if ($q->column('subtitle')) {
+     print '/'.$q->column('subtitle');
+  }
+  print '</option>\n';
   $q->next();
   $n = $n-1;
 }
 
 ?>
 		    </select>
-		  <input type="submit" name="button" value="Load fields"/>
 		  </form>
 		</div>
 		<div id="formblock">
@@ -71,7 +79,14 @@ while($n > 0) {
 			<input type="text" name="sku" id="sku" value="<?= $sku ?>"></input><br/>
 			<label for="debug">Generate debug label:</label><input type="checkbox" name="debug" id="debug" value="true"></input><br/>
 
-			<input type="submit" name="button" value="Generate label"/>
+			<input type="submit" name="generate" value="Generate label"/>
+			<?php if ($id == -1) { ?>
+			      <input type="submit" name="store" value="Create label template"/>
+			<?php } else { ?>
+			      <input type="submit" name="update" value="Update label template"/>
+			      <input type="submit" name="delete" value="Delete label template"/>
+			<?php }  ?>
+
 		</form>
 		</div>
 	</body>
