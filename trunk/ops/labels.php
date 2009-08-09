@@ -18,7 +18,16 @@ $db = open_db();
 $id = $_GET['id'];
 if ($id == '') {
     $id = -1;
-} else {
+    // Lookup SKU
+    if ($_GET['sku'] != '') {
+       $q = $db->query("select id from product where sku='".$_GET['sku']."'");
+       if ($q->numRows() != 0) {
+       	  $id = $q->column('id');
+       }
+    }
+} 
+
+if ($id != -1) {
     $q = $db->query('select title,subtitle,url,sku from product where id='.$id);
     if ($q->numRows() != 0) {
         $title = $q->column('title');
@@ -40,6 +49,7 @@ if ($id == '') {
 	</head>
 	<body>
 	        <div id="formblock">
+		<h1>Name lookup</h1>
 		  <form method="GET" name="selectlabel" action="labels.php">
 		    <select name="id" id="id" onChange="this.form.submit()">
 <?php
@@ -67,6 +77,14 @@ while($n > 0) {
 		  </form>
 		</div>
 		<div id="formblock">
+		<h1>SKU lookup</h1>
+		  <form method="GET" name="selectlabel" action="labels.php">
+			<input type="submit" value="Lookup SKU"/>
+			<input type="text" name="sku" id="sku" value="<?= $sku ?>"></input>
+		  </form>
+		</div>
+		<div id="formblock" name="formblock">
+		<h1>Label contents</h1>
 		<form method="POST" action="labelmaker.php">
 			<input type="hidden" name="id" id="id" value="<?= $id ?>"/>
 			<label for="title">Title of product:</label>
