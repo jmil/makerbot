@@ -94,7 +94,7 @@ class Label:
     def drawBarcode(this,c):
         if this.code:
             c.saveState()
-            this.drawText(c,'*'+this.code+'*','Barcode',14)
+            this.drawText(c,'('+this.code+')','Barcode',14)
             c.restoreState()
 
     def layout(this,context):
