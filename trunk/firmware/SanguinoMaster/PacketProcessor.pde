@@ -225,6 +225,22 @@ void handle_query(byte cmd)
       }
     }
     break;
+  case HOST_CMD_CAPTURE_TO_FILE:
+    {
+      char filename[17];
+      int i = 0;
+      while (i < 16) {
+	uint8_t c = hostPacket.get_8(i+1);
+	if (c == 0) break;
+	filename[i++] = c;
+      }
+      filename[i] = 0;
+      hostPacket.add_8(start_capture(filename));
+    }
+    break;
+  case HOST_CMD_END_CAPTURE:
+    finish_capture();
+    break;
   default:
       hostPacket.unsupported();
   }

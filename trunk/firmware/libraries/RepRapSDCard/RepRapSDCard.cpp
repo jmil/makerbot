@@ -5,14 +5,34 @@
 #include "partition.h"
 #include <string.h>
 
+#ifdef USE_DYNAMIC_MEMORY
+#error Dynamic memory should be disabled for the RepRapSDCard implementation.
+#endif
 
 #if !USE_DYNAMIC_MEMORY
   struct partition_struct partition_handles[PARTITION_COUNT];
 #endif
 
-RepRapSDCard::RepRapSDCard(void)
+RepRapSDCard::RepRapSDCard() :
+  partition(NULL),
+  fs(NULL),
+  dd(NULL)
 {
-  //do nothing.
+}
+
+void RepRapSDCard::reset() {
+  if (dd != NULL) {
+    fat16_close_dir(dd);
+    dd = NULL;
+  }
+  if (fs != NULL) {
+    fat16_close(fs);
+    fs = NULL;
+  }
+  if (partition != NULL) {
+    partition_close(partition);
+    partition = NULL;
+  }
 }
 
 uint8_t RepRapSDCard::init_card(void)
@@ -20,12 +40,12 @@ uint8_t RepRapSDCard::init_card(void)
   return sd_raw_init();
 }
 
-uint8_t RepRapSDCard::isLocked(void)
+bool RepRapSDCard::isLocked(void)
 {
   return sd_raw_locked() == 0x00;
 }
 
-uint8_t RepRapSDCard::isAvailable(void)
+bool RepRapSDCard::isAvailable(void)
 {
   return sd_raw_available();
 }

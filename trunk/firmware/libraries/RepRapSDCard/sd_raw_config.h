@@ -82,11 +82,11 @@
     #define select_card() PORTB &= ~(1 << PB4)
     #define unselect_card() PORTB |= (1 << PB4)
 
-    #define configure_pin_available() DDRA &= ~(1 << DDA7)
-    #define configure_pin_locked() DDRA &= ~(1 << DDA3)
+    #define configure_pin_available() DDRB &= ~(1 << DDB3)
+    #define configure_pin_locked() DDRB &= ~(1 << DDB2)
 
-    #define get_pin_available() ((PINA >> PC7) & 0x01)
-    #define get_pin_locked() ((PINA >> PC3) & 0x01)
+    #define get_pin_available() ((PINB >> PB3) & 0x01)
+    #define get_pin_locked() ((PINB >> PB2) & 0x01)
 #elif defined(__AVR_ATmega64__) || \
       defined(__AVR_ATmega128__) || \
       defined(__AVR_ATmega169__)

@@ -258,11 +258,11 @@ uint8_t sd_raw_init()
  * \ingroup sd_raw
  * Checks wether a memory card is located in the slot.
  *
- * \returns 1 if the card is available, 0 if it is not.
+ * \returns true if the card is available, false if it is not.
  */
-uint8_t sd_raw_available()
+bool sd_raw_available()
 {
-    return get_pin_available() == 0x00;
+  return get_pin_available() == 0x00;
 }
 
 /**

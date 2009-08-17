@@ -13,23 +13,28 @@ uint8_t init_sd_card()
 {
   if (!sdcard.init_card()) {
     if (!sdcard.isAvailable()) {
+      sdcard.reset();
       return SD_ERR_NO_CARD_PRESENT;
     }
     else
     {
+      sdcard.reset();
       return SD_ERR_INIT_FAILED;
     }
   }
   else if (!sdcard.open_partition())
   {
+    sdcard.reset();
     return SD_ERR_PARTITION_READ;
   }
   else if (!sdcard.open_filesys())
   {
+    sdcard.reset();
     return SD_ERR_OPEN_FILESYSTEM;
   }
   else if (!sdcard.open_dir("/"))
   {
+    sdcard.reset();
     return SD_ERR_NO_ROOT;
   }
   else if (sdcard.isLocked())

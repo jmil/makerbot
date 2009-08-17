@@ -120,7 +120,7 @@ typedef uint8_t (*sd_raw_read_interval_handler_t)(uint8_t* buffer, uint32_t offs
 typedef uint16_t (*sd_raw_write_interval_handler_t)(uint8_t* buffer, uint32_t offset, void* p);
 
 uint8_t sd_raw_init();
-uint8_t sd_raw_available();
+bool sd_raw_available();
 uint8_t sd_raw_locked();
 
 uint8_t sd_raw_read(uint32_t offset, uint8_t* buffer, uint16_t length);

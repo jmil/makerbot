@@ -29,11 +29,11 @@
 /**
  * Controls allocation of memory.
  *
- * Set to 1 to use malloc()/free() for allocation of structures
- * like file and directory handles, set to 0 to use pre-allocated
+ * Define to use malloc()/free() for allocation of structures
+ * like file and directory handles.  Comment out to use pre-allocated
  * fixed-size handle arrays.
  */
-#define USE_DYNAMIC_MEMORY 0
+// #define USE_DYNAMIC_MEMORY 1
 
 /**
  * @}
