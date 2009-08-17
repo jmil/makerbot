@@ -8,10 +8,6 @@
  *  License: GPLv2
  *  Authors: Marius Kintel, Adam Mayer, and Zach Hoeken
  *
- *  Version History:
- *
- *  0001: Initial release of the protocol and firmware.
- *
  ***************************************************************************************/
 
 //a check to make sure we're compiling for the right firmware
@@ -30,6 +26,7 @@
 #include "RS485.h"
 #include "Variables.h"
 #include "Commands.h"
+#include "SDSupport.h"
 #ifdef USE_SD_CARD
 #include <RepRapSDCard.h>
 #endif

@@ -1,6 +1,5 @@
 #include <EEPROM.h>
-
-// Yep, this is actually -*- c++ -*-
+#include "SDSupport.h"
 
 // Prototype of fn defined in Tools.pde
 void send_tool_command(CircularBuffer::Cursor& cursor);
