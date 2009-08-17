@@ -164,4 +164,5 @@ uint8_t RepRapSDCard::write_file(File f, uint8_t *buff, uint8_t siz)
 void RepRapSDCard::close_file(File f)
 {
   fat16_close_file(f);
+  sd_raw_sync();
 }

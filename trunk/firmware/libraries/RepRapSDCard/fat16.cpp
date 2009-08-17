@@ -192,7 +192,6 @@ struct fat16_fs_struct* fat16_open(struct partition_struct* partition)
     {
         if(!fs->partition)
             break;
-
         ++fs;
     }
     if(i >= FAT16_FS_COUNT)
@@ -275,7 +274,7 @@ uint8_t fat16_read_header(struct fat16_fs_struct* fs)
                             ((uint32_t) buffer[0x16] << 8) |
                             ((uint32_t) buffer[0x17] << 16) |
                             ((uint32_t) buffer[0x18] << 24);
-    
+
     if(sectors_per_fat == 0)
         /* this is not a FAT16 */
         return 0;

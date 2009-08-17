@@ -55,10 +55,14 @@ uint8_t start_capture(char* filename)
   file = NULL;
   if (sdcard.create_file(filename)) {
     file = sdcard.open_file(filename);
+  } else {
+    file = sdcard.open_file(filename);
   }
+
   if (file == NULL) {
     return SD_ERR_GENERIC;
   }
+
   capturing = true;
   return SD_SUCCESS;
 }
