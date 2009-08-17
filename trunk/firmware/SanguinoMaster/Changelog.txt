@@ -1,0 +1,11 @@
+Sanguino3G Firmware v1.2
+
+Changes from v1.1:
+* Introduction of circular buffer cursors, allowing us to easily abort
+  processing of a command.
+* Reduced blocking waits, reducing the chance of build burps.
+* Added support for storing per-machine configuration data in the EEPROM.
+* Support for inverting individual axes via EEPROM configuration bits.
+* Better support for aborting and pausing builds.
+* Stops extruder on abort.
+
