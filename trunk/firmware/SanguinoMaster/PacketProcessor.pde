@@ -25,10 +25,11 @@ void process_host_packets()
   {
     if (Serial.available() > 0)
     {
-      digitalWrite(DEBUG_PIN, HIGH);
+      //digitalWrite(DEBUG_PIN, HIGH);
 
       //grab a byte and process it.
-      byte d = Serial.read();
+      byte d;
+      d = Serial.read();
       hostPacket.process_byte(d);
 
 #ifdef ENABLE_COMMS_DEBUG
@@ -44,13 +45,12 @@ void process_host_packets()
       if (hostPacket.getResponseCode() == RC_CRC_MISMATCH)
       {
         //host_crc_errors++;
+	digitalWrite(DEBUG_PIN, HIGH);
 
 #ifdef ENABLE_COMMS_DEBUG
         Serial.println("Host CRC Mismatch");
 #endif
       }
-
-      digitalWrite(DEBUG_PIN, LOW);
     }
 
     //are we sure we wanna break mid-packet?
@@ -72,16 +72,19 @@ void process_host_packets()
     // top bit high == bufferable command packet (eg. #128-255)
     if (b & 0x80)
     {
-      //do we have room?
-      if (commandBuffer.remainingCapacity() >= hostPacket.getLength())
-      {
-        //okay, throw it in the buffer.
-        for (byte i=0; i<hostPacket.getLength(); i++)
-          commandBuffer.append(hostPacket.get_8(i));
-      }
-      else
-      {
-        hostPacket.overflow();
+      if (is_capturing()) {
+	// Capture this to the SD card
+	capture_packet(hostPacket);
+      } else {
+	//do we have room?
+	if (commandBuffer.remainingCapacity() >= hostPacket.getLength()) {
+	  //okay, throw it in the buffer.
+	  for (byte i=0; i<hostPacket.getLength(); i++)
+	    commandBuffer.append(hostPacket.get_8(i));
+	} else {
+	  // Otherwise, we go on with an overflow packet.
+	  hostPacket.overflow();
+	}
       }
     }
     // top bit low == reply needed query packet (eg. #0-127)
@@ -241,6 +244,19 @@ void handle_query(byte cmd)
   case HOST_CMD_END_CAPTURE:
     finish_capture();
     break;
+  case HOST_CMD_PLAYBACK_CAPTURE:
+    {
+      char filename[17];
+      int i = 0;
+      while (i < 16) {
+	uint8_t c = hostPacket.get_8(i+1);
+	if (c == 0) break;
+	filename[i++] = c;
+      }
+      filename[i] = 0;
+      hostPacket.add_8(start_playback(filename));
+    }
+    break;
   default:
       hostPacket.unsupported();
   }
@@ -256,6 +272,15 @@ void handle_commands()
   long z;
   unsigned long step_delay;
   byte cmd;
+
+  if (is_playing()) {
+    while (commandBuffer.remainingCapacity() > 0 && playback_has_next()) {
+      commandBuffer.append(playback_next());
+    }
+  } else {
+    digitalWrite(DEBUG_PIN,LOW);
+  }
+
 
   //do we have any commands?
   if (commandBuffer.size() > 0)
@@ -399,6 +424,7 @@ void handle_commands()
 	}
       }
       default:
+	digitalWrite(DEBUG_PIN,HIGH);
         hostPacket.unsupported();
     }
     cursor.commit();

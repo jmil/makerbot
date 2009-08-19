@@ -49,7 +49,7 @@
  * \note When SD_RAW_WRITE_SUPPORT is 1, SD_RAW_SAVE_RAM will
  *       be reset to 0.
  */
-#define SD_RAW_SAVE_RAM 1
+#define SD_RAW_SAVE_RAM 0
 
 /* defines for customisation of sd/mmc port access */
 #if defined(__AVR_ATmega8__) || \

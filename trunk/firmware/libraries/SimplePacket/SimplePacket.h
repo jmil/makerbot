@@ -48,7 +48,7 @@ private:
   txFuncPtr txFunc;
 
 public:
-
+  const static int PACKET_OVERHEAD = 3;
   SimplePacket(txFuncPtr myPtr);
   void init();
 
