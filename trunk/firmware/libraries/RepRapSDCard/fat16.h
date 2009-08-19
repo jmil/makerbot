@@ -143,6 +143,8 @@ struct fat16_file_struct
     struct fat16_dir_entry_struct dir_entry;
     uint32_t pos;
     uint16_t pos_cluster;
+  /** True if the directory entry needs to be written to disk. */
+  bool de_dirty;
 };
 
 struct fat16_dir_struct

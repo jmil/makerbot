@@ -80,18 +80,9 @@ uint32_t finish_capture()
   return capturedBytes;
 }
 
-#define CAP_BUF 128
-
 void capture_byte(uint8_t b) {
-  static uint8_t buffer[CAP_BUF];
-  static uint8_t idx = 0;
-
   if (file != NULL) {
-    buffer[idx++] = b;
-    if (idx == CAP_BUF) {
-      sdcard.write_file(file, buffer, CAP_BUF);
-      idx = 0;
-    }
+    sdcard.write_file(file, &b, 1);
     ++capturedBytes;
   }
 }
@@ -109,7 +100,6 @@ bool has_more;
 void fetch_next_byte() {
   int16_t read = fat16_read_file(file, &next_byte, 1);
   has_more = read > 0;
-  if (!has_more) playing = false;
 }
 
 bool playback_has_next() {
@@ -122,7 +112,7 @@ uint8_t playback_next() {
   return rv;
 }
 
-int start_playback(char* filename) {
+uint8_t start_playback(char* filename) {
   uint8_t result = init_sd_card();
   if (result != SD_SUCCESS) {
     return result;
@@ -143,4 +133,10 @@ int start_playback(char* filename) {
 void playback_rewind(uint8_t bytes) {
   int32_t offset = -((int32_t)bytes);
   sdcard.seek_file(file, &offset, FAT16_SEEK_CUR);
+}
+
+void finish_playback() {
+  playing = false;
+  sdcard.close_file(file);
+  file = NULL;
 }

@@ -936,6 +936,14 @@ struct fat16_file_struct*  fat16_open_file(struct fat16_fs_struct* fs, const str
  */
 void fat16_close_file(struct fat16_file_struct* fd)
 {
+#if FAT16_BELAY_SIZE_UPDATE    
+  if (fd && fd->de_dirty) {
+    /* write directory entry */
+    if(!fat16_write_dir_entry(fd->fs, &fd->dir_entry)) {
+      fd->de_dirty = false;
+    }
+  }
+#endif
     if(fd)
 #if USE_DYNAMIC_MEMORY
         free(fd);
@@ -1151,6 +1159,7 @@ int16_t fat16_write_file(struct fat16_file_struct* fd, const uint8_t* buffer, ui
 
         /* update file size */
         fd->dir_entry.file_size = fd->pos;
+#if !FAT16_BELAY_SIZE_UPDATE    
         /* write directory entry */
         if(!fat16_write_dir_entry(fd->fs, &fd->dir_entry))
         {
@@ -1161,6 +1170,9 @@ int16_t fat16_write_file(struct fat16_file_struct* fd, const uint8_t* buffer, ui
             buffer_left = fd->pos - size_old;
             fd->pos = size_old;
         }
+#else
+	fd->de_dirty = true;
+#endif
     }
 
     return buffer_len - buffer_left;
@@ -1617,7 +1629,7 @@ uint8_t fat16_create_file(struct fat16_dir_struct* parent, const char* file, str
     /* find place where to store directory entry */
     if(!(dir_entry->entry_offset = fat16_find_offset_for_dir_entry(fs, parent, dir_entry)))
         return 0;
-    
+
     /* write directory entry to disk */
     if(!fat16_write_dir_entry(fs, dir_entry))
         return 0;

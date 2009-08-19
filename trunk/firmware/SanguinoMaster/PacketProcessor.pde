@@ -242,7 +242,7 @@ void handle_query(byte cmd)
     }
     break;
   case HOST_CMD_END_CAPTURE:
-    finish_capture();
+    hostPacket.add_32(finish_capture());
     break;
   case HOST_CMD_PLAYBACK_CAPTURE:
     {

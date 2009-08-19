@@ -65,6 +65,14 @@ void get_datetime(uint16_t* year, uint8_t* month, uint8_t* day, uint8_t* hour, u
 
 /**
  * \ingroup fat16_config
+ * Belay updating the file size descriptor and friends until the file is
+ * closed.
+ * Set to 1 to enable belaying action, or 0 to disable it.
+ */
+#define FAT16_BELAY_SIZE_UPDATE 1
+
+/**
+ * \ingroup fat16_config
  * Maximum number of filesystem handles.
  */
 #define FAT16_FS_COUNT 1
