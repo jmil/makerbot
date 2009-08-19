@@ -62,13 +62,13 @@ class BoxLabel:
         this.reset()
         context.saveState()
         c.translate(this.size[0]/2,0)
-        rackHuman = "rack %d shelf %d" % (this.rackNum,this.shelfNum)
-        rackBar = "rk-%03d-sh-%03d" % (this.rackNum,this.shelfNum)
+        rackHuman = "RACK %d SHELF %d" % (this.rackNum,this.shelfNum)
+        rackBar = "RK-%03d-SH-%03d" % (this.rackNum,this.shelfNum)
         this.drawBox(context,rackHuman,rackBar)
         c.translate(0,this.size[1]/2)
         this.drawBox(context,
-                     "Box #%d" % (this.boxNum),
-                     "box-%04d" % (this.boxNum))
+                     "BOX #%d" % (this.boxNum),
+                     "BOX-%04d" % (this.boxNum))
         context.restoreState()
 
 
