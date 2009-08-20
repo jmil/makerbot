@@ -53,7 +53,7 @@ if ($id != -1) {
 		  <form method="GET" name="selectlabel" action="labels.php">
 		    <select name="id" id="id" onChange="this.form.submit()">
 <?php
-$q = $db->query('select id,title,subtitle from product');
+$q = $db->query('select id,title,subtitle from product order by title,subtitle');
 $n = $q->numRows();
 if ($id == -1) {
    print '<option value="-1" selected>-- Use existing label... --</option>\n';
