@@ -55,6 +55,7 @@ void initialize()
   init_commands();
   init_steppers();
   init_tools();
+  sd_reset();
 }
 
 //start our hardware serial drivers

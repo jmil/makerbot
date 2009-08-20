@@ -77,6 +77,7 @@ uint32_t finish_capture()
     file = NULL;
     capturing = false;
   }
+  sdcard.reset();
   return capturedBytes;
 }
 
@@ -137,6 +138,13 @@ void playback_rewind(uint8_t bytes) {
 
 void finish_playback() {
   playing = false;
-  sdcard.close_file(file);
+  if (file != NULL) sdcard.close_file(file);
+  sdcard.reset();
   file = NULL;
+}
+
+void sd_reset() {
+  if (playing) finish_playback();
+  if (capturing) finish_capture();
+  sdcard.reset();
 }

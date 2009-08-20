@@ -65,4 +65,6 @@ void playback_rewind(uint8_t bytes);
 // halt; frees up resources.
 void finish_playback();
 
+void sd_reset();
+
 #endif // _SD_SUPPORT_H_
