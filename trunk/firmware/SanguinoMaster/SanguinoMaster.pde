@@ -32,7 +32,7 @@
 #endif
 
 //this is our firmware version.
-#define FIRMWARE_VERSION 102
+#define FIRMWARE_VERSION 103
 
 //set up our firmware for actual usage.
 void setup()
