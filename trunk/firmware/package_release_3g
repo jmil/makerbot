@@ -12,7 +12,7 @@ rm -rf "$TO_DIR"
 #directory structure
 echo "Exporting files..."
 mkdir "$TO_DIR"
-for exportDir in SanguinoMaster ArduinoSlaveExtruder gcode libraries testers
+for exportDir in SanguinoMaster ArduinoSlaveExtruder gcode libraries testers README.TXT
 do
     svn export $exportDir "$TO_DIR/$exportDir"
 done
