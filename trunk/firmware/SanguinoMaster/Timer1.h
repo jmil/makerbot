@@ -1,7 +1,7 @@
-// Yep, this is actually -*- c++ -*-
-
 #ifndef _TIMER1_H_
 #define _TIMER1_H_
+
+#include <avr/io.h>
 
 //these routines provide an easy interface for controlling timer1 interrupts
 

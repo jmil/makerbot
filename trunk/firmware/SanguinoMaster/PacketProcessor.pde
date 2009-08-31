@@ -130,27 +130,31 @@ void handle_query(byte cmd)
 
     case HOST_CMD_GET_POSITION:
       //send our position
-      hostPacket.add_32(current_steps.x);
-      hostPacket.add_32(current_steps.y);
-      hostPacket.add_32(current_steps.z);
+      {
+	const LongPoint& c = get_position();
+	hostPacket.add_32(c.x);
+	hostPacket.add_32(c.y);
+	hostPacket.add_32(c.z);
+      }
       hostPacket.add_8(get_endstop_states());
       break;
 
     case HOST_CMD_GET_RANGE:
-      //send our range
-      hostPacket.add_32(range_steps.x);
-      hostPacket.add_32(range_steps.y);
-      hostPacket.add_32(range_steps.z);
+      //get our range
+      {
+	const LongPoint& range = get_range();
+	hostPacket.add_32(range.x);
+	hostPacket.add_32(range.y);
+	hostPacket.add_32(range.z);
+      }
       break;
 
     case HOST_CMD_SET_RANGE:
       //set our range to what the host tells us
-      range_steps.x = (long)hostPacket.get_32(1);
-      range_steps.y = (long)hostPacket.get_32(5);
-      range_steps.z = (long)hostPacket.get_32(9);
-
-      //write it back to eeprom
-      write_range_to_eeprom();
+      set_range(LongPoint(
+			  (long)hostPacket.get_32(1),
+			  (long)hostPacket.get_32(5),
+			  (long)hostPacket.get_32(9)));
       break;
 
     case HOST_CMD_ABORT:
@@ -168,8 +172,7 @@ void handle_query(byte cmd)
         set_tool_pause_state(false);
 
         //resume stepping.
-        enable_needed_steppers();
-        enableTimer1Interrupt();
+	resume_stepping();
       }
       else
       {
@@ -180,8 +183,7 @@ void handle_query(byte cmd)
         set_tool_pause_state(true);
 
         //pause stepping
-        disableTimer1Interrupt();
-        disable_steppers();
+	pause_stepping();
       }
       break;
 
@@ -297,8 +299,8 @@ void handle_commands()
     cmd = cursor.read_8();
 
     // Do it later if it's a point queueing command and we don't have room yet.
-    if ((cmd == HOST_CMD_QUEUE_POINT_ABS /* || cmd == HOST_CMD_QUEUE_POINT_INC */) && 
-	pointBuffer.remainingCapacity() < POINT_SIZE) {
+    if (cmd == HOST_CMD_QUEUE_POINT_ABS && 
+	!point_buffer_has_room(POINT_SIZE)) {
       return;
     }
 
@@ -318,18 +320,13 @@ void handle_commands()
 	// Belay until we're at a good location.
 	if (!is_point_buffer_empty()) { return; }
 	cli();
-        target_steps.x = current_steps.x = (long)cursor.read_32();
-        target_steps.y = current_steps.y = (long)cursor.read_32();
-        target_steps.z = current_steps.z = (long)cursor.read_32();
+	set_position(LongPoint((long)cursor.read_32(),(long)cursor.read_32(),(long)cursor.read_32()));
 	sei();
         break;
 
       case HOST_CMD_FIND_AXES_MINIMUM:
 	// Belay until we're at a good location.
 	if (!is_point_buffer_empty()) { return; }
-
-        //no dda interrupts.
-        disableTimer1Interrupt();
 
         //which ones are we going to?
         flags = cursor.read_8();
@@ -342,17 +339,11 @@ void handle_commands()
           cursor.read_32(),
           cursor.read_16());
 
-        //turn on point seeking agian.
-        enableTimer1Interrupt();
-
         break;
 
       case HOST_CMD_FIND_AXES_MAXIMUM:
 	// Belay until we're at a good location.
 	if (!is_point_buffer_empty()) { return; }
-
-        //no dda interrupts.
-        disableTimer1Interrupt();
 
         //find them!
         seek_maximums(
@@ -361,9 +352,6 @@ void handle_commands()
           flags & 4,
           cursor.read_32(),
           cursor.read_16());
-
-        //turn on point seeking agian.
-        enableTimer1Interrupt();
 
         break;
 

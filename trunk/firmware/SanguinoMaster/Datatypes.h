@@ -20,6 +20,8 @@ public:
   int32_t x;
   int32_t y;
   int32_t z;
+  LongPoint() : x(0), y(0), z(0) {}
+  LongPoint(int32_t ix, int32_t iy, int32_t iz) : x(ix), y(iy), z(iz) {}
 };
 
 #define COMMAND_MODE_IDLE 0

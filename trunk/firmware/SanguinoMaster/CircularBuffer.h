@@ -12,7 +12,6 @@
 
 #include <stddef.h>
 #include <stdint.h>
-#include "Timer1.h"
 
 /**
  * This is an implementation of a simple in-memory circular

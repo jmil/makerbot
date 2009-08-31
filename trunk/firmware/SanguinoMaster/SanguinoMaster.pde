@@ -21,12 +21,12 @@
 
 #include "Configuration.h"
 #include "Datatypes.h"
-#include "Timer1.h"
 #include "CircularBuffer.h"
 #include "RS485.h"
 #include "Variables.h"
 #include "Commands.h"
 #include "SDSupport.h"
+#include "Steppers.h"
 #ifdef USE_SD_CARD
 #include <RepRapSDCard.h>
 #endif
@@ -95,8 +95,7 @@ void abort_print()
   abort_current_tool();
 
   //turn off steppers too.
-  disableTimer1Interrupt();
-  disable_steppers();
+  pause_stepping();
 
   commandBuffer.clear();
 

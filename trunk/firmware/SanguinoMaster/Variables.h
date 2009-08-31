@@ -9,30 +9,6 @@ SimplePacket slavePacket(rs485_tx);
 boolean is_machine_paused = false;
 boolean is_machine_aborted = false;
 
-//init our variables
-volatile long max_delta;
-
-volatile long x_counter;
-volatile bool x_direction;
-
-volatile long y_counter;
-volatile bool y_direction;
-
-volatile long z_counter;
-volatile bool z_direction;
-
-//our position tracking variables
-volatile LongPoint current_steps;
-volatile LongPoint target_steps;
-volatile LongPoint delta_steps;
-volatile LongPoint range_steps;
-
-volatile bool is_point_queue_empty = true;
-
-//our point queue variables
-uint8_t rawPointBuffer[POINT_QUEUE_SIZE * POINT_SIZE];
-CircularBuffer pointBuffer((POINT_QUEUE_SIZE * POINT_SIZE), rawPointBuffer);
-
 //buffer for our commands
 uint8_t underlyingBuffer[COMMAND_BUFFER_SIZE];
 CircularBuffer commandBuffer(COMMAND_BUFFER_SIZE, underlyingBuffer);
