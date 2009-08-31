@@ -21,7 +21,7 @@ done
 for distFile in `find "$TO_DIR" -name '*.dist'`
 do
     target=`echo $distFile | sed 's/.dist//'`
-    echo $distFile $target
+    mv $distFile $target
 done
 
 #create our archive
