@@ -40,6 +40,10 @@
 #define HOST_CMD_END_CAPTURE       15
 #define HOST_CMD_PLAYBACK_CAPTURE  16
 
+// Software reset, to workaround the problem in the v1.1 and
+// v1.2 motherboards that preclude hardware resets.
+#define HOST_CMD_RESET             17
+
 // These are our bufferable commands from the host
 // #define HOST_CMD_QUEUE_POINT_INC   128  // deprecated
 #define HOST_CMD_QUEUE_POINT_ABS   129

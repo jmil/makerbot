@@ -1,5 +1,6 @@
 #include <EEPROM.h>
 #include "SDSupport.h"
+#include <avr/wdt.h>
 
 // Prototype of fn defined in Tools.pde
 void send_tool_command(CircularBuffer::Cursor& cursor);
@@ -257,6 +258,10 @@ void handle_query(byte cmd)
       hostPacket.add_8(start_playback(filename));
     }
     break;
+  case HOST_CMD_RESET:
+    {
+      wdt_enable(WDTO_500MS);
+    }
   default:
       hostPacket.unsupported();
   }
