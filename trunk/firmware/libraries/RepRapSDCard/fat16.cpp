@@ -1736,3 +1736,38 @@ uint32_t fat16_cluster_offset(const struct fat16_fs_struct* fs, uint16_t cluster
 
     return fs->header.cluster_zero_offset + (uint32_t) (cluster_num - 2) * fs->header.cluster_size;
 }
+
+/**
+ * \ingroup fat16_fs
+ * Resizes an open file, truncating the cluster chain.  If the file is
+ * smaller than the size specified, nothing is changed.
+ * \returns The size of the file.
+ */
+uint8_t fat16_resize_file(struct fat16_file_struct* fd, uint32_t size)
+{
+  if (!fd) return 0;
+  if (fd->dir_entry.file_size <= size) return fd->dir_entry.file_size;
+
+  fd->dir_entry.file_size = size;
+  // Write back, or mark as dirty
+#if !FAT16_BELAY_SIZE_UPDATE    
+  /* write directory entry */
+  fat16_write_dir_entry(fd->fs, &fd->dir_entry);
+#else
+  fd->de_dirty = true;
+#endif
+  // Find final cluster
+  int cluster_num = fd->dir_entry.cluster;
+  uint16_t cluster_size = fd->fs->header.cluster_size;
+  if(!cluster_num) return 0;
+  while(size >= cluster_size)
+  {
+    size -= cluster_size;
+    cluster_num = fat16_get_next_cluster(fd->fs, cluster_num);
+    if(!cluster_num)
+      return -1;
+  }
+  // truncate dangling clusters
+  fat16_terminate_clusters(fd->fs, cluster_num);
+  return cluster_num;
+}
