@@ -29,6 +29,8 @@
 #include "Steppers.h"
 #include "Tools.h"
 #include "Version.h"
+#include "PSU.h"
+
 #ifdef USE_SD_CARD
 #include <RepRapSDCard.h>
 #endif

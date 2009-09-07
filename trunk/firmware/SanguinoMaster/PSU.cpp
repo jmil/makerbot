@@ -1,3 +1,7 @@
+#include "PSU.h"
+#include "Configuration.h"
+#include "WProgram.h"
+
 void init_psu()
 {
 #ifdef PS_ON_PIN
