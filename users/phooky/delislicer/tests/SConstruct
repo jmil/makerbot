@@ -1,0 +1,7 @@
+env = Environment()
+
+# add support for cpptest
+env.ParseConfig('pkg-config --cflags --libs libcpptest')
+
+env.Program(['Tests.cpp','PrimitiveTests.cpp'])
+
