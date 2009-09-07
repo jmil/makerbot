@@ -1,4 +1,19 @@
+#include "Tools.h"
+#include "Datatypes.h"
+#include "RS485.h"
+#include "Commands.h"
+#include "Version.h"
+#include "WProgram.h"
 #include "Utils.h"
+#include "Configuration.h"
+
+SimplePacket slavePacket(rs485_tx);
+
+uint8_t currentToolIndex = 0;
+unsigned long toolNextPing = 0;
+unsigned long toolTimeoutEnd = 0;
+
+extern uint8_t commandMode;
 
 //initialize our tools
 void init_tools()
@@ -21,7 +36,7 @@ void init_tools()
 }
 
 //ask a tool if its there.
-bool ping_tool(byte i)
+bool ping_tool(uint8_t i)
 {
   slavePacket.init();
 
@@ -32,7 +47,7 @@ bool ping_tool(byte i)
 }
 
 //initialize a tool to its default state.
-void init_tool(byte i)
+void init_tool(uint8_t i)
 {
   slavePacket.init();
 
@@ -42,7 +57,7 @@ void init_tool(byte i)
 }
 
 //select a tool as our current tool, and let it know.
-void select_tool(byte tool)
+void select_tool(uint8_t tool)
 {
   currentToolIndex = tool;
 
@@ -80,7 +95,7 @@ void check_tool_ready_state()
 }
 
 //ping the tool until it tells us its ready
-void wait_for_tool_ready_state(byte tool, int delay_millis, int timeout_seconds)
+void wait_for_tool_ready_state(uint8_t tool, int delay_millis, int timeout_seconds)
 {
   //setup some defaults
   if (delay_millis == 0)
@@ -108,7 +123,7 @@ void wait_for_tool_ready_state(byte tool, int delay_millis, int timeout_seconds)
 }
 
 //is our tool ready for action?
-bool is_tool_ready(byte tool)
+bool is_tool_ready(uint8_t tool)
 {
   slavePacket.init();
 
@@ -127,13 +142,13 @@ bool is_tool_ready(byte tool)
   return false;
 }
 
-void send_tool_query()
+void send_tool_query(SimplePacket& hostPacket)
 {
   //zero out our packet
   slavePacket.init();
 
   //load up our packet.
-  for (byte i=1; i<hostPacket.getLength(); i++)
+  for (uint8_t i=1; i<hostPacket.getLength(); i++)
     slavePacket.add_8(hostPacket.get_8(i));
 
   //send it and then get our response
@@ -141,7 +156,7 @@ void send_tool_query()
 
   //now load it up into the host. (skip the response code)
   //TODO: check the response code
-  for (byte i=1; i<slavePacket.getLength(); i++)
+  for (uint8_t i=1; i<slavePacket.getLength(); i++)
     hostPacket.add_8(slavePacket.get_8(i));
 }
 
@@ -155,15 +170,15 @@ void send_tool_command(CircularBuffer::Cursor& cursor)
   slavePacket.add_8(cursor.read_8());
 
   //load up our packet.
-  byte len = cursor.read_8();
-  for (byte i=0; i<len; i++)
+  uint8_t len = cursor.read_8();
+  for (uint8_t i=0; i<len; i++)
     slavePacket.add_8(cursor.read_8());
 
   //send it and then get our response
   send_packet();
 }
 
-void send_tool_simple_command(byte tool, byte command)
+void send_tool_simple_command(uint8_t tool, uint8_t command)
 {
   slavePacket.init();
   slavePacket.add_8(tool);
@@ -176,7 +191,7 @@ void abort_current_tool()
   send_tool_simple_command(currentToolIndex, SLAVE_CMD_ABORT);
 }
 
-boolean send_packet()
+bool send_packet()
 {
   //take it easy.  no stomping on each other.
   delayMicrosecondsInterruptible(50);
@@ -208,7 +223,7 @@ bool read_tool_response(int timeout)
     if (Serial1.available() > 0)
     {
       //grab a byte and process it.
-      byte d = Serial1.read();
+      uint8_t d = Serial1.read();
       slavePacket.process_byte(d);
 
       rs485_rx_count++;

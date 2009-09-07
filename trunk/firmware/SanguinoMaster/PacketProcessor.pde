@@ -1,9 +1,8 @@
 #include <EEPROM.h>
 #include "SDSupport.h"
+#include "Tools.h"
 #include <avr/wdt.h>
 
-// Prototype of fn defined in Tools.pde
-void send_tool_command(CircularBuffer::Cursor& cursor);
 
 //initialize the firmware to default state.
 inline void init_commands()
@@ -194,7 +193,7 @@ void handle_query(byte cmd)
 
     //WORKS
     case HOST_CMD_TOOL_QUERY:
-      send_tool_query();
+      send_tool_query(hostPacket);
       break;
 
   case HOST_CMD_IS_FINISHED:
@@ -378,20 +377,22 @@ void handle_commands()
         //get your temp in gear, you lazy bum.
         
         //what tool / timeout /etc?
-        currentToolIndex = cursor.read_8();
-        toolPingDelay = (unsigned int)cursor.read_16();
-        toolTimeout = (unsigned int)cursor.read_16();
-
-        //check to see if its ready now
-        if (!is_tool_ready(currentToolIndex))
-        {
-          //how often to ping?
-          toolNextPing = millis() + toolPingDelay;
-          toolTimeoutEnd = millis() + (toolTimeout * 1000);
-          
-          //okay, put us in ping-tool-until-ready mode
-          commandMode = COMMAND_MODE_WAIT_FOR_TOOL;
-        }
+	{
+	  uint8_t currentToolIndex = cursor.read_8();
+	  uint16_t toolPingDelay = (uint16_t)cursor.read_16();
+	  uint16_t toolTimeout = (uint16_t)cursor.read_16();
+	  
+	  //check to see if its ready now
+	  if (!is_tool_ready(currentToolIndex))
+	    {
+	      //how often to ping?
+	      toolNextPing = millis() + toolPingDelay;
+	      toolTimeoutEnd = millis() + (toolTimeout * 1000);
+	      
+	      //okay, put us in ping-tool-until-ready mode
+	      commandMode = COMMAND_MODE_WAIT_FOR_TOOL;
+	    }
+	}
         break;
 
       case HOST_CMD_TOOL_COMMAND:

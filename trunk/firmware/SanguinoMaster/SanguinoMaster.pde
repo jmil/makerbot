@@ -27,12 +27,11 @@
 #include "Commands.h"
 #include "SDSupport.h"
 #include "Steppers.h"
+#include "Tools.h"
+#include "Version.h"
 #ifdef USE_SD_CARD
 #include <RepRapSDCard.h>
 #endif
-
-//this is our firmware version.
-#define FIRMWARE_VERSION 104
 
 //set up our firmware for actual usage.
 void setup()
