@@ -3,5 +3,8 @@ env = Environment()
 # add support for cpptest
 env.ParseConfig('pkg-config --cflags --libs libcpptest')
 
+# add path for eigen library
+env.AppendUnique(CPPPATH=['/usr/include/eigen2'])
+
 env.Program(['Tests.cpp','PrimitiveTests.cpp'])
 
