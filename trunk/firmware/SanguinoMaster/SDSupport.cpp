@@ -48,6 +48,7 @@ uint8_t init_sd_card()
 
 uint8_t start_capture(char* filename) 
 {
+  sd_reset();
   uint8_t result = init_sd_card();
   if (result != SD_SUCCESS) {
     return result;
@@ -114,6 +115,7 @@ uint8_t playback_next() {
 }
 
 uint8_t start_playback(char* filename) {
+  sd_reset();
   uint8_t result = init_sd_card();
   if (result != SD_SUCCESS) {
     return result;
