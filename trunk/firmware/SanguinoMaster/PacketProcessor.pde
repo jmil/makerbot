@@ -263,6 +263,7 @@ void handle_query(byte cmd)
     {
       wdt_enable(WDTO_500MS);
     }
+    break;
   case HOST_CMD_NEXT_FILENAME:
     {
       uint8_t resetFlag = hostPacket.get_8(1);
@@ -284,6 +285,7 @@ void handle_query(byte cmd)
       }
       hostPacket.add_8(0);
     }
+    break;
   default:
       hostPacket.unsupported();
   }
@@ -438,9 +440,10 @@ void handle_commands()
 	  disable_steppers(x,y,z);
 	}
       }
-      default:
-	digitalWrite(DEBUG_PIN,HIGH);
-        hostPacket.unsupported();
+      break;
+    default:
+      digitalWrite(DEBUG_PIN,HIGH);
+      hostPacket.unsupported();
     }
     cursor.commit();
   }
