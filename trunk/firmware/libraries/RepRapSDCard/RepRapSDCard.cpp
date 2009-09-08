@@ -87,7 +87,7 @@ uint8_t RepRapSDCard::open_filesys(void)
   return 1;
 }
 
-uint8_t RepRapSDCard::open_dir(char *path)
+uint8_t RepRapSDCard::open_root()
 {
   // Open root directory
   struct fat16_dir_entry_struct rootdirectory;
@@ -167,3 +167,23 @@ void RepRapSDCard::close_file(File f)
   fat16_close_file(f);
   sd_raw_sync();
 }
+
+uint8_t RepRapSDCard::sd_scan_reset() {
+  fat16_reset_dir(dd);
+  return 0;
+}
+
+uint8_t RepRapSDCard::sd_scan_next(char* buffer, uint8_t bufsize) {
+  struct fat16_dir_entry_struct entry;
+  if (fat16_read_dir(dd, &entry)) {
+    int i;
+    for (i = 0; (i < bufsize-1) && entry.long_name[i] != 0; i++) {
+      buffer[i] = entry.long_name[i];
+    }
+    buffer[i] = 0;
+  } else {
+    buffer[0] = 0;
+  }
+  return 0;
+}
+

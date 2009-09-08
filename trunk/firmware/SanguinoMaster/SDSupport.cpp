@@ -33,7 +33,7 @@ uint8_t init_sd_card()
     sdcard.reset();
     return SD_ERR_OPEN_FILESYSTEM;
   }
-  else if (!sdcard.open_dir("/"))
+  else if (!sdcard.open_root())
   {
     sdcard.reset();
     return SD_ERR_NO_ROOT;
@@ -148,3 +148,17 @@ void sd_reset() {
   if (capturing) finish_capture();
   sdcard.reset();
 }
+
+uint8_t sd_scan_reset() {
+  sd_reset();
+  uint8_t rsp = init_sd_card();
+  if (rsp != SD_SUCCESS) {
+    return rsp;
+  }
+  return sdcard.sd_scan_reset();
+}
+
+uint8_t sd_scan_next(char* buffer, uint8_t bufsize) {
+  return sdcard.sd_scan_next(buffer, bufsize);
+}
+

@@ -67,4 +67,7 @@ void finish_playback();
 
 void sd_reset();
 
+uint8_t sd_scan_reset();
+uint8_t sd_scan_next(char* buffer, uint8_t bufsize);
+
 #endif // _SD_SUPPORT_H_

@@ -36,6 +36,7 @@
 #define HOST_CMD_READ_EEPROM    12
 #define HOST_CMD_WRITE_EEPROM   13
 
+// Commands for capturing build to a file on an SD card
 #define HOST_CMD_CAPTURE_TO_FILE   14
 #define HOST_CMD_END_CAPTURE       15
 #define HOST_CMD_PLAYBACK_CAPTURE  16
@@ -43,6 +44,10 @@
 // Software reset, to workaround the problem in the v1.1 and
 // v1.2 motherboards that preclude hardware resets.
 #define HOST_CMD_RESET             17
+
+// Retrieve the next filename from the SD card's root
+// directory.
+#define HOST_CMD_NEXT_FILENAME     18
 
 // These are our bufferable commands from the host
 // #define HOST_CMD_QUEUE_POINT_INC   128  // deprecated

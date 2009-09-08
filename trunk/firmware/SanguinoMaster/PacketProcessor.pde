@@ -263,6 +263,27 @@ void handle_query(byte cmd)
     {
       wdt_enable(WDTO_500MS);
     }
+  case HOST_CMD_NEXT_FILENAME:
+    {
+      uint8_t resetFlag = hostPacket.get_8(1);
+      uint8_t rspCode = 0;
+      if (resetFlag != 0) {
+	rspCode = sd_scan_reset();
+	if (rspCode != 0) {
+	  hostPacket.add_8(rspCode);
+	  hostPacket.add_8(0);
+	  break;
+	}
+      }
+      char fnbuf[16];
+      rspCode = sd_scan_next(fnbuf,16);
+      hostPacket.add_8(rspCode);
+      uint8_t idx;
+      for (idx = 0; (idx < 16) && (fnbuf[idx] != 0); idx++) {
+	hostPacket.add_8(fnbuf[idx]);
+      }
+      hostPacket.add_8(0);
+    }
   default:
       hostPacket.unsupported();
   }
