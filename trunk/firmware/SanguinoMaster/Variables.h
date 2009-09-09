@@ -1,31 +1,18 @@
-//this is the version of our host software
-unsigned int host_version = 0;
+#ifndef VARIABLES_H
+#define VARIABLES_H
 
-//these are our packet classes
-SimplePacket hostPacket(serial_tx);
+#include <stdint.h>
+
+//this is the version of our host software
+extern unsigned int host_version;
 
 //are we paused?
-boolean is_machine_paused = false;
-boolean is_machine_aborted = false;
-
-//buffer for our commands
-uint8_t underlyingBuffer[COMMAND_BUFFER_SIZE];
-CircularBuffer commandBuffer(COMMAND_BUFFER_SIZE, underlyingBuffer);
+extern bool is_machine_paused;
+extern bool is_machine_aborted;
 
 //how many queued commands have we processed?
 //this will be used to keep track of our current progress.
-unsigned long finishedCommands = 0;
-unsigned long finishedPoints = 0;
-uint8_t commandMode = COMMAND_MODE_IDLE;
+extern unsigned long finishedPoints;
+extern uint8_t commandMode;
 
-#ifdef USE_SD_CARD
-//SD CARD STUFF.
-RepRapSDCard card;
-File f;
-#endif
-
-//our buffer of bytes.
-#define BUFFSIZE 64
-char buffer[BUFFSIZE];
-byte bufferIndex = 0;
-byte error = 0;
+#endif // VARIABLES_H

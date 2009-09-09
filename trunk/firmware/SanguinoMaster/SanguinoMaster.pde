@@ -18,6 +18,7 @@
 //include some basic libraries.
 #include <WProgram.h>
 #include <SimplePacket.h>
+#include <EEPROM.h>
 
 #include "Configuration.h"
 #include "Datatypes.h"
@@ -30,6 +31,7 @@
 #include "Tools.h"
 #include "Version.h"
 #include "PSU.h"
+#include "PacketProcessor.h"
 
 #ifdef USE_SD_CARD
 #include <RepRapSDCard.h>
@@ -97,8 +99,6 @@ void abort_print()
 
   //turn off steppers too.
   pause_stepping();
-
-  commandBuffer.clear();
 
   //initalize everything to the beginning
   initialize();

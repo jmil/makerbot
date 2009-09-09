@@ -1,14 +1,34 @@
+#include "Configuration.h"
 #include <EEPROM.h>
 #include "SDSupport.h"
 #include "Tools.h"
 #include <avr/wdt.h>
+#include "RS485.h"
+#include "WProgram.h"
+#include "Commands.h"
+#include "Variables.h"
+#include "Version.h"
+#include "Steppers.h"
 
+// Hack until we completely kill PDEs: prototypes for methods in SanguinoMaster.pde
+void initialize();
+void abort_print();
+
+SimplePacket hostPacket(serial_tx);
+
+//buffer for our commands
+uint8_t underlyingBuffer[COMMAND_BUFFER_SIZE];
+CircularBuffer commandBuffer(COMMAND_BUFFER_SIZE, underlyingBuffer);
+
+unsigned long finishedCommands;
 
 //initialize the firmware to default state.
-inline void init_commands()
+void init_commands()
 {
   finishedCommands = 0;
 }
+
+void handle_query(byte cmd);
 
 //handle our packets.
 void process_host_packets()
@@ -447,4 +467,9 @@ void handle_commands()
     }
     cursor.commit();
   }
+}
+
+void clear_command_buffer()
+{
+  commandBuffer.clear();
 }
