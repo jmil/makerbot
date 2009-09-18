@@ -79,12 +79,12 @@ class SurfaceMill:
 
 def main(argv):
 
-	diameter = 3.125
+	diameter = 2.78
 	width = 0.0
 	height = 0.0
-	speed = 100.0
-	depth = -0.5
-	overlap = 0.1
+	speed = 350.0
+	depth = 0.0
+	overlap = 0.0
 	
 	try:
 		opts, args = getopt.getopt(argv, "h", ["help", "bit-diameter=", "width=", "height=", "speed=", "depth=", "overlap="])
@@ -108,7 +108,10 @@ def main(argv):
 			depth = float(arg)
 		elif opt == "--overlap":
 			overlap = float(arg)
-			
+	
+	if overlap <= 0:
+		overlap = diameter * 0.1
+	
 	if height <= 0:
 		print "Height must be greater than zero"
 		return
