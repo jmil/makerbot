@@ -1,5 +1,6 @@
+
 /*
- * Copyright (c) 2006-2007 by Roland Riegel <feedback@roland-riegel.de>
+ * Copyright (c) 2006-2009 by Roland Riegel <feedback@roland-riegel.de>
  *
  * This file is free software; you can redistribute it and/or modify
  * it under the terms of either the GNU General Public License version 2
@@ -8,7 +9,12 @@
  */
 
 #ifndef PARTITION_CONFIG_H
-#define PARTITION_CONFIG_G
+#define PARTITION_CONFIG_H
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /**
  * \addtogroup partition
@@ -29,6 +35,10 @@
 /**
  * @}
  */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

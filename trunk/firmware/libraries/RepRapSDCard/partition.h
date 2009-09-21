@@ -1,6 +1,6 @@
 
 /*
- * Copyright (c) 2006-2007 by Roland Riegel <feedback@roland-riegel.de>
+ * Copyright (c) 2006-2009 by Roland Riegel <feedback@roland-riegel.de>
  *
  * This file is free software; you can redistribute it and/or modify
  * it under the terms of either the GNU General Public License version 2
@@ -12,6 +12,13 @@
 #define PARTITION_H
 
 #include <stdint.h>
+#include "sd_raw_config.h"
+#include "partition_config.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /**
  * \addtogroup partition
@@ -73,7 +80,7 @@
  * \param[out] buffer The buffer into which to place the data.
  * \param[in] length The count of bytes to read.
  */
-typedef uint8_t (*device_read_t)(uint32_t offset, uint8_t* buffer, uint16_t length);
+typedef uint8_t (*device_read_t)(offset_t offset, uint8_t* buffer, uintptr_t length);
 /**
  * A function pointer passed to a \c device_read_interval_t.
  *
@@ -82,7 +89,7 @@ typedef uint8_t (*device_read_t)(uint32_t offset, uint8_t* buffer, uint16_t leng
  * \param[in] p An opaque pointer.
  * \see device_read_interval_t
  */
-typedef uint8_t (*device_read_callback_t)(uint8_t* buffer, uint32_t offset, void* p);
+typedef uint8_t (*device_read_callback_t)(uint8_t* buffer, offset_t offset, void* p);
 /**
  * A function pointer used to continuously read units of \c interval bytes
  * and call a callback function.
@@ -101,7 +108,7 @@ typedef uint8_t (*device_read_callback_t)(uint8_t* buffer, uint32_t offset, void
  * \returns 0 on failure, 1 on success
  * \see device_read_t
  */
-typedef uint8_t (*device_read_interval_t)(uint32_t offset, uint8_t* buffer, uint16_t interval, uint16_t length, device_read_callback_t callback, void* p);
+typedef uint8_t (*device_read_interval_t)(offset_t offset, uint8_t* buffer, uintptr_t interval, uintptr_t length, device_read_callback_t callback, void* p);
 /**
  * A function pointer used to write to the partition.
  *
@@ -109,7 +116,7 @@ typedef uint8_t (*device_read_interval_t)(uint32_t offset, uint8_t* buffer, uint
  * \param[in] buffer The buffer which to write.
  * \param[in] length The count of bytes to write.
  */
-typedef uint8_t (*device_write_t)(uint32_t offset, const uint8_t* buffer, uint16_t length);
+typedef uint8_t (*device_write_t)(offset_t offset, const uint8_t* buffer, uintptr_t length);
 /**
  * A function pointer passed to a \c device_write_interval_t.
  *
@@ -119,7 +126,7 @@ typedef uint8_t (*device_write_t)(uint32_t offset, const uint8_t* buffer, uint16
  * \returns The number of bytes put into \c buffer
  * \see device_write_interval_t
  */
-typedef uint16_t (*device_write_callback_t)(uint8_t* buffer, uint32_t offset, void* p);
+typedef uintptr_t (*device_write_callback_t)(uint8_t* buffer, offset_t offset, void* p);
 /**
  * A function pointer used to continuously write a data stream obtained from
  * a callback function.
@@ -138,7 +145,7 @@ typedef uint16_t (*device_write_callback_t)(uint8_t* buffer, uint32_t offset, vo
  * \returns 0 on failure, 1 on success
  * \see device_write_t
  */
-typedef uint8_t (*device_write_interval_t)(uint32_t offset, uint8_t* buffer, uint16_t length, device_write_callback_t callback, void* p);
+typedef uint8_t (*device_write_interval_t)(offset_t offset, uint8_t* buffer, uintptr_t length, device_write_callback_t callback, void* p);
 
 /**
  * Describes a partition.
@@ -181,11 +188,11 @@ struct partition_struct
      */
     uint8_t type;
     /**
-     * The offset in bytes on the disk where this partition starts.
+     * The offset in blocks on the disk where this partition starts.
      */
     uint32_t offset;
     /**
-     * The length in bytes of this partition.
+     * The length in blocks of this partition.
      */
     uint32_t length;
 };
@@ -196,6 +203,10 @@ uint8_t partition_close(struct partition_struct* partition);
 /**
  * @}
  */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
