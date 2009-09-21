@@ -93,6 +93,13 @@ void get_datetime(uint16_t* year, uint8_t* month, uint8_t* day, uint8_t* hour, u
 #define FAT_DIR_COUNT 2
 
 /**
+ * \ingroup fat_config
+ * Delay directory entry updates until file is closed.  This can boost
+ * performance significantly if write buffering is enabled.
+ */
+#define FAT_DELAY_DIR_UPDATE 1
+
+/**
  * @}
  */
 

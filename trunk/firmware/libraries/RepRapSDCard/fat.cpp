@@ -929,12 +929,20 @@ struct fat_file_struct* fat_open_file(struct fat_fs_struct* fs, const struct fat
  */
 void fat_close_file(struct fat_file_struct* fd)
 {
-    if(fd)
+  if(fd) {
+
+#if FAT_DELAY_DIR_UPDATE
+    /* write directory entry */
+    fat_write_dir_entry(fd->fs, &fd->dir_entry);
+#endif // FAT_DELAY_DIR_UPDATE
+
+
 #if USE_DYNAMIC_MEMORY
         free(fd);
 #else
         fd->fs = 0;
 #endif
+  }
 }
 
 /**
@@ -1138,10 +1146,13 @@ intptr_t fat_write_file(struct fat_file_struct* fd, const uint8_t* buffer, uintp
     /* update directory entry */
     if(fd->pos > fd->dir_entry.file_size)
     {
+#if !FAT_DELAY_DIR_UPDATE
         uint32_t size_old = fd->dir_entry.file_size;
+#endif // FAT_DELAY_DIR_UPDATE
 
         /* update file size */
         fd->dir_entry.file_size = fd->pos;
+#if !FAT_DELAY_DIR_UPDATE
         /* write directory entry */
         if(!fat_write_dir_entry(fd->fs, &fd->dir_entry))
         {
@@ -1152,6 +1163,7 @@ intptr_t fat_write_file(struct fat_file_struct* fd, const uint8_t* buffer, uintp
             buffer_left = fd->pos - size_old;
             fd->pos = size_old;
         }
+#endif // FAT_DELAY_DIR_UPDATE
     }
 
     return buffer_len - buffer_left;
