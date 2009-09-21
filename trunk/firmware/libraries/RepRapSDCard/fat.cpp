@@ -8,6 +8,9 @@
  * published by the Free Software Foundation.
  */
 
+#define __STDC_LIMIT_MACROS 1
+#include <stdint.h>
+
 #include "byteordering.h"
 #include "partition.h"
 #include "fat.h"
@@ -1488,7 +1491,7 @@ uint8_t fat_reset_dir(struct fat_dir_struct* dd)
  */
 uint8_t fat_dir_entry_read_callback(uint8_t* buffer, offset_t offset, void* p)
 {
-    struct fat_read_dir_callback_arg* arg = p;
+  struct fat_read_dir_callback_arg* arg = (struct fat_read_dir_callback_arg*)p;
     struct fat_dir_entry_struct* dir_entry = arg->dir_entry;
 
     arg->bytes_read += 32;
@@ -1753,7 +1756,7 @@ offset_t fat_find_offset_for_dir_entry(const struct fat_fs_struct* fs, const str
 uint8_t fat_write_dir_entry(const struct fat_fs_struct* fs, struct fat_dir_entry_struct* dir_entry)
 {
     if(!fs || !dir_entry)
-        return 0;
+      return 0;
     
 #if FAT_DATETIME_SUPPORT
     {
@@ -1843,7 +1846,7 @@ uint8_t fat_write_dir_entry(const struct fat_fs_struct* fs, struct fat_dir_entry
 
     /* write to disk */
     if(!device_write(offset + (uint16_t) lfn_entry_count * 32, buffer, sizeof(buffer)))
-        return 0;
+      return 0; // NOTE
     
     /* calculate checksum of 8.3 name */
     uint8_t checksum = buffer[0];
@@ -1960,7 +1963,7 @@ uint8_t fat_create_file(struct fat_dir_struct* parent, const char* file, struct 
     
     /* write directory entry to disk */
     if(!fat_write_dir_entry(fs, dir_entry))
-        return 0;
+      return 0;
     
     return 1;
 }

@@ -1,21 +1,21 @@
 #ifndef _REPRAPSDCARD_H_
 #define _REPRAPSDCARD_H_
 
+#include "sd-reader_config.h"
 #include "sd_raw.h"
 #include "sd_raw_config.h"
-#include "sd-reader_config.h"
 #include "partition.h"
 #include "partition_config.h"
-#include "fat16.h"
+#include "fat.h"
 
-typedef struct fat16_file_struct * File;
+typedef struct fat_file_struct * File;
 
 class RepRapSDCard
 {
   //private?
   struct partition_struct *partition;
-  struct fat16_fs_struct* fs;
-  struct fat16_dir_struct* dd;
+  struct fat_fs_struct* fs;
+  struct fat_dir_struct* dd;
 
  public:
   RepRapSDCard();
@@ -27,8 +27,9 @@ class RepRapSDCard
   uint8_t open_partition(void);
   uint8_t open_filesys(void);
   uint8_t open_root();
-  File open_file(char *name);
+  uint8_t open_file(char *name,File *file);
   void close_file(File f);
+  uint8_t delete_file(char *name);
   uint8_t create_file(char *name);
   uint8_t seek_file(File fd, int32_t *offset, uint8_t whence);
   uint8_t reset_file(File f);

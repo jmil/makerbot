@@ -666,7 +666,7 @@ uint8_t sd_raw_read_interval(offset_t offset, uint8_t* buffer, uintptr_t interva
 uint8_t sd_raw_write(offset_t offset, const uint8_t* buffer, uintptr_t length)
 {
     if(sd_raw_locked())
-        return 0;
+      return 0;
 
     offset_t block_address;
     uint16_t block_offset;
@@ -687,7 +687,7 @@ uint8_t sd_raw_write(offset_t offset, const uint8_t* buffer, uintptr_t length)
         {
 #if SD_RAW_WRITE_BUFFERING
             if(!sd_raw_sync())
-                return 0;
+                return 0; 
 #endif
 
             if(block_offset || write_length < 512)

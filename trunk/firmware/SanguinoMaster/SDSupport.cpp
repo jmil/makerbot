@@ -55,12 +55,18 @@ uint8_t start_capture(char* filename)
   }
   capturedBytes = 0L;
   file = NULL;
-  if (sdcard.create_file(filename)) {
-    file = sdcard.open_file(filename);
-  } else {
-    file = sdcard.open_file(filename);
+  // Always operate in truncation mode.
+  sdcard.delete_file(filename);
+  uint8_t rc = sdcard.create_file(filename);
+  if (rc == 0) {
+    return SD_ERR_FILE_NOT_FOUND;
+    //return rc;
   }
+  rc = sdcard.open_file(filename,&file);
 
+  if (rc == 0) {
+    return SD_ERR_PARTITION_READ;
+  }
   if (file == NULL) {
     return SD_ERR_GENERIC;
   }
@@ -100,7 +106,7 @@ uint8_t next_byte;
 bool has_more;
 
 void fetch_next_byte() {
-  int16_t read = fat16_read_file(file, &next_byte, 1);
+  int16_t read = fat_read_file(file, &next_byte, 1);
   has_more = read > 0;
 }
 
@@ -122,9 +128,9 @@ uint8_t start_playback(char* filename) {
   }
   capturedBytes = 0L;
   file = NULL;
-  file = sdcard.open_file(filename);
+  uint8_t rc = sdcard.open_file(filename, &file);
 
-  if (file == NULL) {
+  if (rc == 0 || file == NULL) {
     return SD_ERR_FILE_NOT_FOUND;
   }
 
@@ -135,7 +141,7 @@ uint8_t start_playback(char* filename) {
 
 void playback_rewind(uint8_t bytes) {
   int32_t offset = -((int32_t)bytes);
-  sdcard.seek_file(file, &offset, FAT16_SEEK_CUR);
+  sdcard.seek_file(file, &offset, FAT_SEEK_CUR);
 }
 
 void finish_playback() {

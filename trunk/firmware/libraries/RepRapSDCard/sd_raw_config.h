@@ -56,7 +56,7 @@ extern "C"
  * \note When SD_RAW_WRITE_SUPPORT is 1, SD_RAW_SAVE_RAM will
  *       be reset to 0.
  */
-#define SD_RAW_SAVE_RAM 1
+#define SD_RAW_SAVE_RAM 0
 
 /**
  * \ingroup sd_raw_config
@@ -77,6 +77,7 @@ extern "C"
     defined(__AVR_ATmega88__) || \
     defined(__AVR_ATmega168__) || \
     defined(__AVR_ATmega328__)
+#error "Unsupported platform."
     #define configure_pin_mosi() DDRB |= (1 << DDB3)
     #define configure_pin_sck() DDRB |= (1 << DDB5)
     #define configure_pin_ss() DDRB |= (1 << DDB2)
@@ -85,7 +86,9 @@ extern "C"
     #define select_card() PORTB &= ~(1 << PB2)
     #define unselect_card() PORTB |= (1 << PB2)
 #elif defined(__AVR_ATmega16__) || \
-      defined(__AVR_ATmega32__)
+      defined(__AVR_ATmega32__) || \
+      defined(__AVR_ATmega644__) || \
+      defined(__AVR_ATmega644P__)
     #define configure_pin_mosi() DDRB |= (1 << DDB5)
     #define configure_pin_sck() DDRB |= (1 << DDB7)
     #define configure_pin_ss() DDRB |= (1 << DDB4)
@@ -96,6 +99,7 @@ extern "C"
 #elif defined(__AVR_ATmega64__) || \
       defined(__AVR_ATmega128__) || \
       defined(__AVR_ATmega169__)
+#error "Unsupported platform."
     #define configure_pin_mosi() DDRB |= (1 << DDB2)
     #define configure_pin_sck() DDRB |= (1 << DDB1)
     #define configure_pin_ss() DDRB |= (1 << DDB0)
@@ -107,11 +111,11 @@ extern "C"
     #error "no sd/mmc pin mapping available!"
 #endif
 
-#define configure_pin_available() DDRC &= ~(1 << DDC4)
-#define configure_pin_locked() DDRC &= ~(1 << DDC5)
+#define configure_pin_available() DDRB &= ~(1 << DDB3)
+#define configure_pin_locked() DDRB &= ~(1 << DDB2)
 
-#define get_pin_available() ((PINC >> PC4) & 0x01)
-#define get_pin_locked() ((PINC >> PC5) & 0x01)
+#define get_pin_available() ((PINB >> PB3) & 0x01)
+#define get_pin_locked() (~(PINB >> PB2) & 0x01)
 
 #if SD_RAW_SDHC
     typedef uint64_t offset_t;
