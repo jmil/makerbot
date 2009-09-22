@@ -77,7 +77,6 @@ extern "C"
     defined(__AVR_ATmega88__) || \
     defined(__AVR_ATmega168__) || \
     defined(__AVR_ATmega328__)
-#error "Unsupported platform."
     #define configure_pin_mosi() DDRB |= (1 << DDB3)
     #define configure_pin_sck() DDRB |= (1 << DDB5)
     #define configure_pin_ss() DDRB |= (1 << DDB2)
@@ -99,7 +98,6 @@ extern "C"
 #elif defined(__AVR_ATmega64__) || \
       defined(__AVR_ATmega128__) || \
       defined(__AVR_ATmega169__)
-#error "Unsupported platform."
     #define configure_pin_mosi() DDRB |= (1 << DDB2)
     #define configure_pin_sck() DDRB |= (1 << DDB1)
     #define configure_pin_ss() DDRB |= (1 << DDB0)
