@@ -33,7 +33,7 @@
 #include "ThermistorTable.h"
 
 //this is our firmware version
-#define FIRMWARE_VERSION 0002
+#define FIRMWARE_VERSION 105
 
 //set up our firmware for actual usage.
 void setup()
