@@ -25,8 +25,8 @@ class WasherDriller:
 		self.current_y = 0
 		self.current_z = 0
 
-		self.drill_feedrate = 20
-		self.drill_start = 3
+		self.drill_feedrate = 10
+		self.drill_start = 1.5
 		self.drill_end = -1
 		
 		self.z_feedrate = 400
@@ -34,7 +34,7 @@ class WasherDriller:
 		self.safe_height = 15
 
 		self.row_locations = [27, 79, 131, 183]
-		self.column_locations = [27.5, 80.5, 133.5, 186.5, 239.5, 292.5]
+		self.column_locations = [22, 75, 128, 181, 234, 286]
 		self.holes = [[-12.375, 0], [0, 12.4], [12.875, 0], [0, -16.75]]
 
 	def generate(self):
