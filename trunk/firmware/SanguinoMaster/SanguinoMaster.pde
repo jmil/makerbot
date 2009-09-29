@@ -84,8 +84,6 @@ void loop()
     handle_commands();
   else if (commandMode == COMMAND_MODE_WAIT_FOR_TOOL)
     check_tool_ready_state();
-  
-  check_endstops();
 }
 
 // prototype of fn defined in Tools.pde

@@ -6,7 +6,6 @@
 
 /// Initialize the stepper driver state.
 void init_steppers();
-void check_endstops();
 void disable_steppers();
 void enable_steppers(bool x, bool y, bool z);
 void disable_steppers(bool x, bool y, bool z);
