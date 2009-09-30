@@ -1,3 +1,10 @@
+#include "Extruder.h"
+#include "Variables.h"
+#include "Configuration.h"
+#include "Timer1.h"
+#include "PacketProcessor.h"
+#include "ThermistorTable.h"
+
 // Yep, this is actually -*- c++ -*-
 void init_extruder()
 {
@@ -197,7 +204,7 @@ void cancellable_delay(unsigned int duration, byte state)
       motor1_reversal_count = max(0, motor1_reversal_count);
       motor1_reversal_count = min(MOTOR_FORWARD_DURATION, motor1_reversal_count);
 
-			//check for packets.
+      //check for packets.
       process_packets();
       
       //did we start up?  break!
@@ -271,6 +278,14 @@ void set_temperature(int temp)
   target_temperature = temp;
   max_temperature = (int)((float)temp * 1.1);
 }
+
+#ifdef THERMISTOR_PIN
+int read_thermistor();
+#endif // THERMISTOR_PIN
+
+#ifdef THERMOCOUPLE_PIN
+int read_thermocouple();
+#endif // THERMOCOUPLE_PIN
 
 /**
  *  Samples the temperature and converts it to degrees celsius.

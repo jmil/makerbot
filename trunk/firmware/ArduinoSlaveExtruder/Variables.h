@@ -1,48 +1,52 @@
+#ifndef VARIABLES_H
+#define VARIABLES_H
+
+#include "Datatypes.h"
+#include <Servo.h>
+#include "WProgram.h"
+
 //this is the version of our host software
-unsigned int master_version = 0;
+extern unsigned int master_version;
 
 //how many queued commands have we processed?
 //this will be used to keep track of our current progress.
-unsigned long finishedCommands = 0;
+extern unsigned long finishedCommands;
 
 //are we paused?
-boolean is_tool_paused = false;
+extern bool is_tool_paused;
 
-int current_temperature = 0;
-int target_temperature = 0;
-int max_temperature = 0;
-int heater_low = 64;
-int heater_high = 255;
+extern int current_temperature;
+extern int target_temperature;
+extern int max_temperature;
+extern int heater_low;
+extern int heater_high;
 
-MotorControlStyle motor1_control = MC_PWM;
-volatile MotorControlDirection motor1_dir = MC_FORWARD;
-volatile byte motor1_pwm = 0;
-volatile long motor1_target_rpm = 0;
-volatile long motor1_current_rpm = 0;
-boolean motor1_reversal_state = false;
-int motor1_reversal_count = 0;
+extern MotorControlStyle motor1_control;
+extern volatile MotorControlDirection motor1_dir;
+extern volatile byte motor1_pwm;
+extern volatile long motor1_target_rpm;
+extern volatile long motor1_current_rpm;
+extern bool motor1_reversal_state;
+extern int motor1_reversal_count;
 
-MotorControlStyle motor2_control = MC_PWM;
-MotorControlDirection motor2_dir = MC_FORWARD;
-byte motor2_pwm = 0;
-long motor2_target_rpm = 0;
-long motor2_current_rpm = 0;
+extern MotorControlStyle motor2_control;
+extern MotorControlDirection motor2_dir;
+extern byte motor2_pwm;
+extern long motor2_target_rpm;
+extern long motor2_current_rpm;
 
-Servo servo1;
-Servo servo2;
+extern Servo servo1;
+extern Servo servo2;
 
 //these are for the extruder PID
-volatile int speed_error = 0;              // extruder position / error variable.
-volatile int pGain = SPEED_INITIAL_PGAIN;  // Proportional gain
-volatile int iGain = SPEED_INITIAL_IGAIN;  // Integral gain
-volatile int dGain = SPEED_INITIAL_DGAIN;  // Derivative gain
-volatile int iMax = 500;                   // Integrator max
-volatile int iMin = -500;                  // Integrator min
-volatile int iState = 0;                   // Integrator state
-volatile int dState = 0;                   // Last position input
-
-//these are our packet classes
-SimplePacket masterPacket(rs485_tx);
+extern volatile int speed_error;        // extruder position / error variable.
+extern volatile int pGain;              // Proportional gain
+extern volatile int iGain;              // Integral gain
+extern volatile int dGain;              // Derivative gain
+extern volatile int iMax;               // Integrator max
+extern volatile int iMin;               // Integrator min
+extern volatile int iState;             // Integrator state
+extern volatile int dState;             // Last position input
 
 //variables to keep track of stepper state.
 const byte coil_a_enabled   = B10011001;
@@ -51,7 +55,9 @@ const byte coil_b_enabled   = B01100110;
 const byte coil_b_direction = B11110000;
 
 //what state are we in?
-volatile byte stepper_index = 0;
-volatile long stepper_ticks = 0;
-volatile byte stepper_high_pwm = 0;
-volatile byte stepper_low_pwm = 0;
+extern volatile byte stepper_index;
+extern volatile long stepper_ticks;
+extern volatile byte stepper_high_pwm;
+extern volatile byte stepper_low_pwm;
+
+#endif // VARIABLES_H

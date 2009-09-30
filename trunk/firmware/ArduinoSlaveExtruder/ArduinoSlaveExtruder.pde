@@ -30,7 +30,8 @@
 #include "Datatypes.h"
 #include "RS485.h"
 #include "Variables.h"
-#include "ThermistorTable.h"
+
+#include "Extruder.h"
 
 //this is our firmware version
 #define FIRMWARE_VERSION 105

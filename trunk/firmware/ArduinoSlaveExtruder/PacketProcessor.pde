@@ -1,5 +1,8 @@
 #include <EEPROM.h>
 
+//these are our packet classes
+SimplePacket masterPacket(rs485_tx);
+
 // Yep, this is actually -*- c++ -*-
 // These are our query commands from the host
 #define SLAVE_CMD_VERSION                0
