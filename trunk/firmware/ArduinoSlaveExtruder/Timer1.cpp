@@ -1,4 +1,7 @@
-// Yep, this is actually -*- c++ -*-
+#include "Timer1.h"
+#include "Variables.h"
+#include "Configuration.h"
+
 //these routines provide an easy interface for controlling timer1 interrupts
 
 //this handles the timer interrupt event

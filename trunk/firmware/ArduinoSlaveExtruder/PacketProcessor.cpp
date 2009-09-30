@@ -1,4 +1,12 @@
 #include <EEPROM.h>
+#include <SimplePacket.h>
+#include "RS485.h"
+#include "Variables.h"
+#include "Configuration.h"
+#include "Utils.h"
+#include "Version.h"
+#include "ArduinoSlaveExtruder.h"
+#include "Extruder.h"
 
 //these are our packet classes
 SimplePacket masterPacket(rs485_tx);
@@ -32,6 +40,9 @@ SimplePacket masterPacket(rs485_tx);
 #define SLAVE_CMD_ABORT                 24
 #define SLAVE_CMD_READ_FROM_EEPROM      25
 #define SLAVE_CMD_WRITE_TO_EEPROM       26
+
+void handle_query();
+void send_reply();
 
 //initialize the firmware to default state.
 void init_commands()

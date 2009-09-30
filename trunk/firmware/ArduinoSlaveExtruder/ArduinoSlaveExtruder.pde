@@ -23,18 +23,15 @@
 //include some basic libraries.
 #include <WProgram.h>
 #include <Servo.h>
-#include <SimplePacket.h>
 #include <stdint.h>
+#include <EEPROM.h>
+#include <SimplePacket.h>
 
 #include "Configuration.h"
 #include "Datatypes.h"
-#include "RS485.h"
 #include "Variables.h"
-
+#include "PacketProcessor.h"
 #include "Extruder.h"
-
-//this is our firmware version
-#define FIRMWARE_VERSION 105
 
 //set up our firmware for actual usage.
 void setup()

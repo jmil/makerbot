@@ -1,3 +1,5 @@
+#include "WProgram.h"
+
 void rs485_tx(byte b)
 {
   Serial.print(b, BYTE);
