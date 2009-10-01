@@ -34,10 +34,16 @@
 /****************************************************************************************
  * Define the PID behavior for the heater
  ****************************************************************************************/
+/// Set to true to use PID for temperature.  
+/// false uses the old on-off mechanism.
+#define TEMP_PID 1
+
 /// The interval between heater updates, in milliseconds.
-#define TEMP_UPDATE_INTERVAL 50
-/// Set to 1 to use PID for temperature.  0 uses the old on-off mechanism.
-#define TEMP_PID 0
+#define TEMP_UPDATE_INTERVAL 200
+#define TEMP_PID_INTEGRAL_DRIVE_MAX 110
+#define TEMP_PID_PGAIN 5.0
+#define TEMP_PID_IGAIN 0.1
+#define TEMP_PID_DGAIN 100.0
 
 /****************************************************************************************
  * Here's where you define the speed PID behavior for an encoder

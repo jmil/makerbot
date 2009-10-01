@@ -1,7 +1,7 @@
+#include "Configuration.h"
 #include "Extruder.h"
 #include "Heater.h"
 #include "Variables.h"
-#include "Configuration.h"
 #include "Timer1.h"
 #include "PacketProcessor.h"
 #include "ThermistorTable.h"

@@ -1,6 +1,7 @@
 #ifndef VARIABLES_H
 #define VARIABLES_H
 
+#include "Configuration.h"
 #include "Datatypes.h"
 #include <Servo.h>
 #include "WProgram.h"

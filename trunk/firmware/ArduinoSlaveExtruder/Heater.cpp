@@ -1,6 +1,6 @@
+#include "Configuration.h"
 #include "Heater.h"
 #include "Variables.h"
-#include "Configuration.h"
 #include "ThermistorTable.h"
 
 void set_temperature(int temp)
