@@ -4,10 +4,6 @@
 //this is the version of our host software
 unsigned int master_version = 0;
 
-//how many queued commands have we processed?
-//this will be used to keep track of our current progress.
-unsigned long finishedCommands = 0;
-
 //are we paused?
 bool is_tool_paused = false;
 

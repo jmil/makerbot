@@ -24,11 +24,6 @@ void close_valve();
 
 byte is_tool_ready();
 
-void set_temperature(int temp);
-int sample_temperature(byte pin);
-
-void manage_temperature();
-
 void manage_motor1_speed();
 
 #endif // EXTRUDER_H

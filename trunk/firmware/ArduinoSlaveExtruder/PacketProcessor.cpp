@@ -47,7 +47,6 @@ void send_reply();
 //initialize the firmware to default state.
 void init_commands()
 {
-  finishedCommands = 0;
   masterPacket.init();
 }
 
@@ -97,9 +96,6 @@ void process_packets()
 
         //send reply over RS485
         send_reply();
-
-        //how many have we processed?
-        finishedCommands++;
 
         //okay, we'll come back later.
         return;

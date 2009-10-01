@@ -8,10 +8,6 @@
 //this is the version of our host software
 extern unsigned int master_version;
 
-//how many queued commands have we processed?
-//this will be used to keep track of our current progress.
-extern unsigned long finishedCommands;
-
 //are we paused?
 extern bool is_tool_paused;
 

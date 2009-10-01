@@ -32,6 +32,7 @@
 #include "Variables.h"
 #include "PacketProcessor.h"
 #include "Extruder.h"
+#include "Heater.h"
 
 //set up our firmware for actual usage.
 void setup()
