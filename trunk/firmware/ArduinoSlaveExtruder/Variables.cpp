@@ -45,3 +45,19 @@ volatile byte stepper_index = 0;
 volatile long stepper_ticks = 0;
 volatile byte stepper_high_pwm = 0;
 volatile byte stepper_low_pwm = 0;
+
+boolean temp_control_enabled;
+unsigned long temp_prev_time; // ms
+
+#if TEMP_PID
+float temp_pGain;
+float temp_iGain;
+float temp_dGain;
+
+int  temp_dState;
+long temp_iState;
+float temp_iState_max; // set in update_windup
+float temp_iState_min; // set in update_windup
+#endif
+  
+

@@ -94,6 +94,7 @@ int sample_temperature(uint8_t pin)
   return raw;
 }
 
+int temp_update(int dt);
 
 /*!
  Manages motor and heater based on measured temperature:
@@ -102,17 +103,77 @@ int sample_temperature(uint8_t pin)
  */
 void manage_temperature()
 {
+  int output, dt;
+  unsigned long time;
+
   //make sure we know what our temp is.
   current_temperature = get_temperature();
+    
+  // ignoring millis rollover for now
+  time = millis();
+  dt = time - temp_prev_time;
 
-  //put the heater into high mode if we're not at our target.
-  if (current_temperature < target_temperature)
-    analogWrite(HEATER_PIN, heater_high);
-  //put the heater on low if we're at our target.
-  else if (current_temperature < max_temperature)
-    analogWrite(HEATER_PIN, heater_low);
-  //turn the heater off if we're above our max.
-  else
-    analogWrite(HEATER_PIN, 0);
+  if (dt > TEMP_UPDATE_INTERVAL)
+  { 
+    temp_prev_time = time;
+    output = temp_update(dt);
+    analogWrite(HEATER_PIN,output);
+  }
 }
+
+
+#if TEMP_PID
+int temp_update(int dt)
+{
+  int output;
+  int error;
+  float pTerm, iTerm, dTerm;
+  
+  if (temp_control_enabled) {
+    error = target_temperature - current_temperature;
+    
+    pTerm = temp_pGain * error;
+    
+    temp_iState += error;
+    temp_iState = constrain(temp_iState, temp_iState_min, temp_iState_max);
+    iTerm = temp_iGain * temp_iState;
+    
+    dTerm = temp_dGain * (current_temperature - temp_dState);
+    temp_dState = current_temperature;
+    
+    output = pTerm + iTerm - dTerm;
+    output = constrain(output, 0, 255);
+  } else {
+    output = 0;
+  }
+  return output;
+}
+ 
+void temp_pid_update_windup()
+{
+  temp_iState_min = -TEMP_PID_INTEGRAL_DRIVE_MAX/temp_iGain;
+  temp_iState_max =  TEMP_PID_INTEGRAL_DRIVE_MAX/temp_iGain;
+}
+
+# else
+int temp_update(int dt)
+{
+  int output;
+  
+  if (temp_control_enabled) {
+    //put the heater into high mode if we're not at our target.
+    if (current_temperature < target_temperature)
+      output = heater_high;
+    //put the heater on low if we're at our target.
+    else if (current_temperature < max_temperature)
+      output = heater_low;
+    //turn the heater off if we're above our max.
+    else
+      output = 0;
+  } else {
+    output = 0;
+  }
+  return output;
+}
+#endif /* TEMP_PID */
 

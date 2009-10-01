@@ -34,6 +34,16 @@ void init_extruder()
   pGain = SPEED_INITIAL_PGAIN;
   iGain = SPEED_INITIAL_IGAIN;
   dGain = SPEED_INITIAL_DGAIN;
+
+  temp_control_enabled = true;
+#if TEMP_PID
+  temp_iState = 0;
+  temp_dState = 0;
+  temp_pGain = TEMP_PID_PGAIN;
+  temp_iGain = TEMP_PID_IGAIN;
+  temp_dGain = TEMP_PID_DGAIN;
+  temp_pid_update_windup();
+#endif
 	
   //encoder pins are for reading.
   pinMode(ENCODER_A_PIN, INPUT);

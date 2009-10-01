@@ -56,4 +56,18 @@ extern volatile long stepper_ticks;
 extern volatile byte stepper_high_pwm;
 extern volatile byte stepper_low_pwm;
 
+extern boolean temp_control_enabled;
+extern unsigned long temp_prev_time; // ms
+
+#if TEMP_PID
+extern float temp_pGain;
+extern float temp_iGain;
+extern float temp_dGain;
+
+extern int  temp_dState;
+extern long temp_iState;
+extern float temp_iState_max; // set in update_windup
+extern float temp_iState_min; // set in update_windup
+#endif
+
 #endif // VARIABLES_H

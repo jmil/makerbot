@@ -32,6 +32,14 @@
 #define MOTOR_FORWARD_DURATION 300
 
 /****************************************************************************************
+ * Define the PID behavior for the heater
+ ****************************************************************************************/
+/// The interval between heater updates, in milliseconds.
+#define TEMP_UPDATE_INTERVAL 50
+/// Set to 1 to use PID for temperature.  0 uses the old on-off mechanism.
+#define TEMP_PID 0
+
+/****************************************************************************************
  * Here's where you define the speed PID behavior for an encoder
  ****************************************************************************************/
 //#define INVERT_QUADRATURE
@@ -88,3 +96,4 @@
 #define QUADRATURE_INCREMENT speed_error++;
 #define QUADRATURE_DECREMENT speed_error--;
 #endif
+
