@@ -2,6 +2,6 @@
 #define _VERSION_H_
 
 //this is our firmware version.
-#define FIRMWARE_VERSION 105
+#define FIRMWARE_VERSION 106
 
 #endif // _VERSION_H_
