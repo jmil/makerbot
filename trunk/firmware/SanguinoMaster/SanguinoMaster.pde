@@ -37,6 +37,9 @@
 #include <RepRapSDCard.h>
 #endif
 
+void init_serial();
+void initialize();
+
 //set up our firmware for actual usage.
 void setup()
 {
