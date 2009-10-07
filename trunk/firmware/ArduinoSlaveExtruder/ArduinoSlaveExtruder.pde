@@ -34,6 +34,9 @@
 #include "Extruder.h"
 #include "Heater.h"
 
+void init_serial();
+void initialize();
+
 //set up our firmware for actual usage.
 void setup()
 {
