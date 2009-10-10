@@ -100,10 +100,10 @@ class Arc:
         return self.clockwise
 
     def max(self):
-        return Point(self.p.x+self.radius,self.p.y+self.radius)
+        return Line(self.startPoint(),self.endPoint()).max()
 
     def min(self):
-        return Point(self.p.x-self.radius,self.p.y-self.radius)
+        return Line(self.startPoint(),self.endPoint()).min()
 
 class CxfLetter:
     def __init__(self,f = None):
@@ -221,7 +221,7 @@ class CxfFont:
                     
 startCode = """
 M106
-G4 P40
+G4 P100
 """
 
 stopCode = """
@@ -235,7 +235,7 @@ warmupSequence = """
 G21
 G90
 G92 X0 Y0 Z0
-G00 Z0 F1500.00
+G00 Z0 F1100.00
 """
 
 cooldownSequence = """
@@ -329,9 +329,9 @@ class GCode:
         self.location.y = self.location.y + font.lineSpacing
 
 
-    def output(self, fontpath, text, outfile):
+    def output(self, fontpath, text, outfile, fontsize):
         outfile.write(self.startCodes())
-        font = CxfFont(fontpath)
+        font = CxfFont(fontpath,fontsize)
         while text != "":
             (part,text) = font.wrap(text,self.size.x-self.start.x)
             outfile.write(self.stringCodes(font,part))
@@ -344,6 +344,7 @@ if __name__ == "__main__":
     optparse.add_option("-o","--output",dest="outpath",help="Path to output (default:stdout)",default="-")
     optparse.add_option("-x",dest="x",help="X offset in mm",default="0.0")
     optparse.add_option("-y",dest="y",help="Y offset in mm",default="0.0")
+    optparse.add_option("-s","--scale",dest="scale",help="scale in 10s of mm",default="1.0")
     optparse.add_option("--width",dest="w",help="target width in mm",default="90.0")
     optparse.add_option("--height",dest="h",help="target height in mm",default="90.0")
     (options,args) = optparse.parse_args()
@@ -353,4 +354,4 @@ if __name__ == "__main__":
         outfile = open(options.outpath,"w")
     text = " ".join(args)
     gcode = GCode(Point(float(options.x),float(options.y)),Point(float(options.w),float(options.h)))
-    gcode.output(options.font,text,outfile)
+    gcode.output(options.font,text,outfile,float(options.scale))
