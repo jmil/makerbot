@@ -1,5 +1,5 @@
 CFLAGS=$(shell freetype-config --cflags) -g -Wall
-LIBS=$(shell freetype-config --libs)
+LIBS=$(shell freetype-config --libs) -lm
 
 prefix ?= /usr/local
 

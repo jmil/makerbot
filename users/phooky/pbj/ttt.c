@@ -30,8 +30,13 @@ on the new FreeType FT_Outline API and .pfb support!
 #include <getopt.h>
 #include <locale.h>
 #include <ft2build.h>
+#include <ctype.h>
+#include <math.h>
+
 #include FT_FREETYPE_H
 #include FT_OUTLINE_H
+
+#define MAX(A,B) ((A>B)?A:B)
 
 #undef __FTERRORS_H__
 #define FT_ERRORDEF( e, v, s )  { e, s },
@@ -63,7 +68,7 @@ static FT_Vector last_point;
 static int debug = 0;
 
 double scale_factor = 1.0/100.0;
-double feedrate = 40000.0;
+double feedrate = 80000.0;
 int invert_y = 1;
 
 double scale(double d) {
@@ -216,7 +221,7 @@ int my_cubic_to(FT_Vector* control1, FT_Vector* control2,
 }
 
 // lookup glyph and extract all the shapes required to draw the outline
-static long int render_char(FT_Face face, wchar_t c, long int offset) {
+static long int render_char(FT_Face face, wchar_t c, long int offset, long int y) {
 	int error;
 	int glyph_index;
 	FT_Outline outline;
@@ -242,7 +247,7 @@ static long int render_char(FT_Face face, wchar_t c, long int offset) {
     func_interface.cubic_to = my_cubic_to;
 
     /* offset the outline to the correct position in x */
-    FT_Outline_Translate( &outline, offset, 0L );
+    FT_Outline_Translate( &outline, offset, y );
 
     /* plot the current character */
     error = FT_Outline_Decompose( &outline, &func_interface, NULL);
@@ -258,11 +263,20 @@ int main(int argc, char **argv) {
 	int error;
 	int i, l;
 	long int offset;
+	long int y = 0L;
     int unicode = 0;
 	char *s;
     char *ttfont = TTFONT;
+    // All measurements in 
+    double xmm = 80.0;
+    double ymm = 80.0;
+    int linecount = 1;
+    long linewidth = 1L;
+    long lineheight = 1L;
+    char *lines[100];
+    int lineidx = 0;
 
-    while((i = getopt(argc, argv, "udf:?")) != -1) {
+    while((i = getopt(argc, argv, "udx:y:f:?")) != -1) {
         switch(i) {
         case 'd':
             debug=1;
@@ -270,6 +284,12 @@ int main(int argc, char **argv) {
         case 'f':
             ttfont = optarg;
             break;
+	case 'x':
+	  xmm = atof(optarg);
+	  break;
+	case 'y':
+	  ymm = atof(optarg);
+	  break;
         case 'u':
             unicode = 1;
             break;
@@ -280,6 +300,7 @@ int main(int argc, char **argv) {
             return 99;
         }
     }
+
 
 	error = FT_Init_FreeType(&library);
 	if(error) handle_ft_error("FT_Init_FreeType", error, __LINE__);
@@ -292,7 +313,7 @@ int main(int argc, char **argv) {
       face->fixed_sizes array.
     */
 #define MYFSIZE 64
-	error = FT_Set_Pixel_Sizes(face, 0, MYFSIZE);     
+	error = FT_Set_Pixel_Sizes(face, 0, MYFSIZE);
 	if(error) handle_ft_error("FT_Set_Pixel_Sizes", error, __LINE__);
 
     if(unicode) {
@@ -319,20 +340,92 @@ int main(int argc, char **argv) {
                 printf("*");
         printf(")\n");
     }
+
+
+    //
+    // Layout!
+    //
+
+    // 0. get maximum scale height
+    // 1. estimate total width, height of single-line in raw units (x,y)
+    // 2. create scale
+    // 3. 
+    {
+      long w = 0L;
+      long h = 0L;
+      char *t = s;
+      int len = strlen(t);
+      int curw = 0;
+      char *lb = 0;
+      while (*t) {
+	wchar_t wc;
+	int glyph_index;
+	int r = mbtowc(&wc,t,len);
+	if (r==-1) { t++; continue; } // invalid unicode
+	glyph_index = FT_Get_Char_Index(face, (FT_ULong)wc);
+	if(!glyph_index) handle_ft_error("FT_Get_Char_Index", 0, __LINE__);
+	error = FT_Load_Glyph(face, glyph_index, FT_LOAD_NO_BITMAP);
+	if(error) handle_ft_error("FT_Load_Glyph", error, __LINE__);
+	w += face->glyph->metrics.width;
+	h = MAX(h,face->glyph->metrics.height);
+	t += r;
+      }
+      linecount = (int)sqrt( ((ymm/xmm) * ((double)w)/((double)h)) );
+      //printf("linecount %d\n",linecount);
+      
+      linewidth = w/linecount;
+      lineheight = h;
+      scale_factor = xmm/((double)linewidth);
+
+      // reloop
+      t = s;
+      w = 0L;
+      h = 0L;
+      lineidx = 0;
+      curw = 0;
+      lines[lineidx] = *t;
+      while (*t) {
+	if (lb == 0) { 
+	  lb = t;
+	  curw = 0;
+	}
+	if (*t == ' ' || *t == '\n') { lb = t+1; }
+	wchar_t wc;
+	int glyph_index;
+	int r = mbtowc(&wc,t,len);
+	if (r==-1) { t++; continue; } // invalid unicode
+	glyph_index = FT_Get_Char_Index(face, (FT_ULong)wc);
+	if(!glyph_index) handle_ft_error("FT_Get_Char_Index", 0, __LINE__);
+	error = FT_Load_Glyph(face, glyph_index, FT_LOAD_NO_BITMAP);
+	if(error) handle_ft_error("FT_Load_Glyph", error, __LINE__);
+	w += face->glyph->metrics.width;
+	curw += face->glyph->metrics.width;
+	if (curw > linewidth) {
+	  t = lb;
+	  lines[++lineidx] = lb;
+	  curw = 0;
+	}
+	t += r;
+      }
+      //printf("LINECOUNT %d\n",linecount);
+    }
+
     //printf("#1=0.1   (SafeHeight)\n#2=0.01  (Depth of CUT)\n#3=0.0003 (Scale)\n#4=10.0  (Feed)\n");
     printf("G21\n"); // metric like a fucking unicorn
     printf("G90\n"); // absolute positioning like a goddamn griffin
     printf("G92 X0 Y0 Z0\n"); // go to zero like a goddamn loser
-    printf("G00 Z0 F%.2f\n",feedrate); // go to zero like a goddamn loser
+    printf("G00 Z0 F%.2f\n",feedrate);
     write_start();
 #endif
 
-	offset = 0;
+    offset = 0;
 
     /* loop through rendering all the chars in the string */
+    lineidx = 1;
     l = strlen(s);
     while(*s) {
         wchar_t wc;
+	int nl = 0;
         int r = mbtowc(&wc, s, l);
         if(r==-1) { s++; continue; }
     
@@ -347,7 +440,17 @@ int main(int argc, char **argv) {
                 printf("(start of symbol 0x%02X)\n", wc);
         }
 #endif
-		offset += render_char(face, wc, offset);
+	//if (wc == '\n') { nl = 1; }
+	//else if ((offset + face->glyph->metrics.width) > linewidth) { nl = 1; }
+	if (lines[lineidx] == s) {
+	  lineidx++;
+	  nl = 1;
+	}
+	if (nl == 1) {
+	  offset = 0L;
+	  y -= lineheight;
+	}
+	offset += render_char(face, wc, offset, y);
         s += r; l -= r;
 	}
 
