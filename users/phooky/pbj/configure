@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if freetype-config --libs >/dev/null; then
+	echo 'No need for fancy configuration.  Now type "make".'
+	exit 0
+else
+	echo 'Please check your freetype2 installation.' 1>&2
+	exit 1
+fi
