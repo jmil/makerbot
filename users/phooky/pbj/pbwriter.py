@@ -7,6 +7,7 @@ __author__ = 'Adam Mayer'
 from optparse import OptionParser
 import re
 import math
+import sys
 
 letterStart = re.compile(r"\[([0123456789abcdef]+)\] (\S+)")
 
@@ -237,9 +238,19 @@ G92 X0 Y0 Z0
 G00 Z0 F1500.00
 """
 
+cooldownSequence = """
+M107
+M126
+G4 P100
+M127
+G00 Z10 F200
+"""
+
 class GCode:
-    def __init__(self):
-        self.location = Point(0,0)
+    def __init__(self, start=Point(0,0), size=Point(90.0,90.0)):
+        self.start = start
+        self.location = start
+        self.size = size
         self.up = 1
 
     def penDownCodes(self):
@@ -295,6 +306,9 @@ class GCode:
     def startCodes(self):
         return warmupSequence
 
+    def stopCodes(self):
+        return cooldownSequence
+
     def stringCodes(self,font,s):
         rv = ""
         for c in s:
@@ -311,17 +325,32 @@ class GCode:
         return rv
 
     def nextLine(self,font):
-        self.location.x = 0
+        self.location.x = self.start.x
         self.location.y = self.location.y + font.lineSpacing
 
-text = " anyway i think i might be pregnant"
-gcode = GCode()
-font = CxfFont("standard.cxf")
 
-print gcode.startCodes()
+    def output(self, fontpath, text, outfile):
+        outfile.write(self.startCodes())
+        font = CxfFont(fontpath)
+        while text != "":
+            (part,text) = font.wrap(text,self.size.x-self.start.x)
+            outfile.write(self.stringCodes(font,part))
+            self.nextLine(font)
+        outfile.write(self.stopCodes())
 
-while text != "":
-    (part,text) = font.wrap(text)
-    print gcode.stringCodes(font,part)
-    gcode.nextLine(font)
-
+if __name__ == "__main__":
+    optparse = OptionParser()
+    optparse.add_option("-f","--font",dest="font",help="Path to .cxf font file",default="standard.cxf")
+    optparse.add_option("-o","--output",dest="outpath",help="Path to output (default:stdout)",default="-")
+    optparse.add_option("-x",dest="x",help="X offset in mm",default="0.0")
+    optparse.add_option("-y",dest="y",help="Y offset in mm",default="0.0")
+    optparse.add_option("--width",dest="w",help="target width in mm",default="90.0")
+    optparse.add_option("--height",dest="h",help="target height in mm",default="90.0")
+    (options,args) = optparse.parse_args()
+    if (options.outpath == "-"):
+        outfile = sys.stdout
+    else:
+        outfile = open(options.outpath,"w")
+    text = " ".join(args)
+    gcode = GCode(Point(float(options.x),float(options.y)),Point(float(options.w),float(options.h)))
+    gcode.output(options.font,text,outfile)
