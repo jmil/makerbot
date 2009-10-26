@@ -47,7 +47,7 @@ Standard
   9
 $CLAYER
   8
-Dino Brackets
+Drawings-Motor
   9
 $DIMEXO
  40
@@ -59,7 +59,7 @@ $DIMTXT
   9
 $CLAYER
   8
-Encoder
+Drawings
   0
 ENDSEC
   0
@@ -911,7 +911,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-26
+29
   0
 LAYER
   5
@@ -923,9 +923,9 @@ AcDbLayerTableRecord
   2
 0
  70
-4
+1
  62
-7
+-7
 420
 0
   6
@@ -989,9 +989,9 @@ AcDbLayerTableRecord
   2
 Motor Plate Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1011,9 +1011,9 @@ AcDbLayerTableRecord
   2
 Idler Wheel
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1033,9 +1033,9 @@ AcDbLayerTableRecord
   2
 Idler Wheel Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1055,9 +1055,9 @@ AcDbLayerTableRecord
   2
 Spacer Plate
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1077,9 +1077,9 @@ AcDbLayerTableRecord
   2
 Spacer Plate Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1099,9 +1099,9 @@ AcDbLayerTableRecord
   2
 Filament Guide Bottom
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1121,9 +1121,9 @@ AcDbLayerTableRecord
   2
 Filament Guide Middle
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1143,9 +1143,9 @@ AcDbLayerTableRecord
   2
 Text
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1165,9 +1165,9 @@ AcDbLayerTableRecord
   2
 Retainer Plate
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1187,9 +1187,9 @@ AcDbLayerTableRecord
   2
 Retainer Plate Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1209,9 +1209,9 @@ AcDbLayerTableRecord
   2
 Filament Guide Bottom Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1231,9 +1231,9 @@ AcDbLayerTableRecord
   2
 Filament Guide Middle Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1253,9 +1253,9 @@ AcDbLayerTableRecord
   2
 Filament Guide Top
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1275,9 +1275,9 @@ AcDbLayerTableRecord
   2
 Filament Guide Top Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1341,9 +1341,9 @@ AcDbLayerTableRecord
   2
 Drawings-Motor
  70
-1
+0
  62
--5
+5
 420
 255
   6
@@ -1363,9 +1363,9 @@ AcDbLayerTableRecord
   2
 Dino Brackets
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1407,9 +1407,9 @@ AcDbLayerTableRecord
   2
 Dino Etch
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1451,9 +1451,9 @@ AcDbLayerTableRecord
   2
 Dino Text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -1473,11 +1473,77 @@ AcDbLayerTableRecord
   2
 Encoder
  70
-0
+1
  62
-7
+-7
 420
 0
+  6
+CONTINUOUS
+370
+0
+390
+F
+  0
+LAYER
+  5
+5C
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+M5-bearing
+ 70
+0
+ 62
+1
+420
+16711680
+  6
+CONTINUOUS
+370
+0
+390
+F
+  0
+LAYER
+  5
+5D
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+M4-bearing
+ 70
+1
+ 62
+-1
+420
+16711680
+  6
+CONTINUOUS
+370
+0
+390
+F
+  0
+LAYER
+  5
+5E
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+M3-bearing
+ 70
+1
+ 62
+-1
+420
+16711680
   6
 CONTINUOUS
 370
@@ -1691,7 +1757,7 @@ AcDbBlockTableRecord
   0
 BLOCK_RECORD
   5
-5C
+5F
 100
 AcDbSymbolTableRecord
 100
@@ -1703,7 +1769,7 @@ tbits
   0
 BLOCK_RECORD
   5
-5D
+60
 100
 AcDbSymbolTableRecord
 100
@@ -1715,7 +1781,7 @@ slots
   0
 BLOCK_RECORD
   5
-5E
+61
 100
 AcDbSymbolTableRecord
 100
@@ -1841,7 +1907,7 @@ AcDbBlockEnd
   0
 BLOCK
   5
-5F
+62
 100
 AcDbEntity
   8
@@ -1865,7 +1931,7 @@ tbits
   0
 LINE
   5
-60
+63
 100
 AcDbEntity
 100
@@ -1893,7 +1959,7 @@ ByLayer
   0
 LINE
   5
-61
+64
 100
 AcDbEntity
 100
@@ -1921,7 +1987,7 @@ ByLayer
   0
 LINE
   5
-62
+65
 100
 AcDbEntity
 100
@@ -1949,7 +2015,7 @@ ByLayer
   0
 LINE
   5
-63
+66
 100
 AcDbEntity
 100
@@ -1977,90 +2043,6 @@ ByLayer
   0
 LINE
   5
-64
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
-0
-  6
-ByLayer
- 10
--10.0
- 20
--4.5
- 30
-0.0
- 11
--5.0
- 21
--4.5
- 31
-0.0
-  0
-LINE
-  5
-65
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
-0
-  6
-ByLayer
- 10
--5.0
- 20
-0.0
- 30
-0.0
- 11
--5.0
- 21
--4.5
- 31
-0.0
-  0
-LINE
-  5
-66
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
-0
-  6
-ByLayer
- 10
--10.0
- 20
--4.5
- 30
-0.0
- 11
--10.0
- 21
-0.0
- 31
-0.0
-  0
-LINE
-  5
 67
 100
 AcDbEntity
@@ -2075,15 +2057,15 @@ AcDbLine
   6
 ByLayer
  10
--1.5
+-10.0
  20
-0.0
+-4.5
  30
 0.0
  11
 -5.0
  21
-0.0
+-4.5
  31
 0.0
   0
@@ -2095,7 +2077,7 @@ AcDbEntity
 100
 AcDbLine
   8
-Dino Brackets
+0
  62
 256
 370
@@ -2103,15 +2085,15 @@ Dino Brackets
   6
 ByLayer
  10
--1.5
+-5.0
  20
-12.0
+0.0
  30
 0.0
  11
-1.5
+-5.0
  21
-12.0
+-4.5
  31
 0.0
   0
@@ -2131,15 +2113,15 @@ AcDbLine
   6
 ByLayer
  10
-1.5
+-10.0
  20
-12.0
+-4.5
  30
 0.0
  11
-1.5
+-10.0
  21
-10.4000000000000004
+0.0
  31
 0.0
   0
@@ -2151,23 +2133,23 @@ AcDbEntity
 100
 AcDbLine
   8
-Dino Brackets
+0
  62
 256
 370
--1
+0
   6
 ByLayer
  10
-2.8000000000000003
+-1.5
  20
-10.4000000000000004
+0.0
  30
 0.0
  11
-1.5
+-5.0
  21
-10.4000000000000004
+0.0
  31
 0.0
   0
@@ -2183,19 +2165,19 @@ Dino Brackets
  62
 256
 370
--1
+0
   6
 ByLayer
  10
 -1.5
  20
-10.4000000000000004
+12.0
  30
 0.0
  11
--2.8000000000000003
+1.5
  21
-10.4000000000000004
+12.0
  31
 0.0
   0
@@ -2215,6 +2197,90 @@ AcDbLine
   6
 ByLayer
  10
+1.5
+ 20
+12.0
+ 30
+0.0
+ 11
+1.5
+ 21
+10.4000000000000004
+ 31
+0.0
+  0
+LINE
+  5
+6D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+2.8000000000000003
+ 20
+10.4000000000000004
+ 30
+0.0
+ 11
+1.5
+ 21
+10.4000000000000004
+ 31
+0.0
+  0
+LINE
+  5
+6E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-1.5
+ 20
+10.4000000000000004
+ 30
+0.0
+ 11
+-2.8000000000000003
+ 21
+10.4000000000000004
+ 31
+0.0
+  0
+LINE
+  5
+6F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+0
+  6
+ByLayer
+ 10
 -1.5
  20
 10.4000000000000004
@@ -2229,7 +2295,7 @@ ByLayer
   0
 LINE
   5
-6D
+70
 100
 AcDbEntity
 100
@@ -2257,7 +2323,7 @@ ByLayer
   0
 LINE
   5
-6E
+71
 100
 AcDbEntity
 100
@@ -2285,7 +2351,7 @@ ByLayer
   0
 LINE
   5
-6F
+72
 100
 AcDbEntity
 100
@@ -2313,7 +2379,7 @@ ByLayer
   0
 LINE
   5
-70
+73
 100
 AcDbEntity
 100
@@ -2341,7 +2407,7 @@ ByLayer
   0
 LINE
   5
-71
+74
 100
 AcDbEntity
 100
@@ -2369,7 +2435,7 @@ ByLayer
   0
 LINE
   5
-72
+75
 100
 AcDbEntity
 100
@@ -2397,7 +2463,7 @@ ByLayer
   0
 ENDBLK
   5
-73
+76
 100
 AcDbEntity
   8
@@ -2407,7 +2473,7 @@ AcDbBlockEnd
   0
 BLOCK
   5
-74
+77
 100
 AcDbEntity
   8
@@ -2431,7 +2497,7 @@ slots
   0
 LINE
   5
-75
+78
 100
 AcDbEntity
 100
@@ -2459,7 +2525,7 @@ ByLayer
   0
 LINE
   5
-76
+79
 100
 AcDbEntity
 100
@@ -2487,7 +2553,7 @@ ByLayer
   0
 CIRCLE
   5
-77
+7A
 100
 AcDbEntity
 100
@@ -2511,7 +2577,7 @@ ByLayer
   0
 LINE
   5
-78
+7B
 100
 AcDbEntity
 100
@@ -2539,7 +2605,7 @@ ByLayer
   0
 LINE
   5
-79
+7C
 100
 AcDbEntity
 100
@@ -2567,7 +2633,7 @@ ByLayer
   0
 LINE
   5
-7A
+7D
 100
 AcDbEntity
 100
@@ -2595,7 +2661,7 @@ ByLayer
   0
 LINE
   5
-7B
+7E
 100
 AcDbEntity
 100
@@ -2623,7 +2689,7 @@ ByLayer
   0
 LINE
   5
-7C
+7F
 100
 AcDbEntity
 100
@@ -2651,7 +2717,7 @@ ByLayer
   0
 LINE
   5
-7D
+80
 100
 AcDbEntity
 100
@@ -2679,7 +2745,7 @@ ByLayer
   0
 ENDBLK
   5
-7E
+81
 100
 AcDbEntity
   8
@@ -2689,7 +2755,7 @@ AcDbBlockEnd
   0
 BLOCK
   5
-7F
+82
 100
 AcDbEntity
   8
@@ -2713,7 +2779,7 @@ M5_c-1
   0
 LINE
   5
-80
+83
 100
 AcDbEntity
 100
@@ -2741,7 +2807,7 @@ ByLayer
   0
 LINE
   5
-81
+84
 100
 AcDbEntity
 100
@@ -2769,7 +2835,7 @@ ByLayer
   0
 LINE
   5
-82
+85
 100
 AcDbEntity
 100
@@ -2797,7 +2863,7 @@ ByLayer
   0
 LINE
   5
-83
+86
 100
 AcDbEntity
 100
@@ -2825,7 +2891,7 @@ ByLayer
   0
 LINE
   5
-84
+87
 100
 AcDbEntity
 100
@@ -2853,7 +2919,7 @@ ByLayer
   0
 LINE
   5
-85
+88
 100
 AcDbEntity
 100
@@ -2881,7 +2947,7 @@ ByLayer
   0
 ENDBLK
   5
-86
+89
 100
 AcDbEntity
   8
@@ -2897,7 +2963,7 @@ ENTITIES
   0
 ARC
   5
-87
+8A
 100
 AcDbEntity
   8
@@ -2927,7 +2993,7 @@ AcDbArc
   0
 LINE
   5
-88
+8B
 100
 AcDbEntity
 100
@@ -2955,7 +3021,7 @@ ByLayer
   0
 ARC
   5
-89
+8C
 100
 AcDbEntity
   8
@@ -2985,7 +3051,7 @@ AcDbArc
   0
 ARC
   5
-8A
+8D
 100
 AcDbEntity
   8
@@ -3015,7 +3081,7 @@ AcDbArc
   0
 ARC
   5
-8B
+8E
 100
 AcDbEntity
   8
@@ -3045,7 +3111,7 @@ AcDbArc
   0
 ARC
   5
-8C
+8F
 100
 AcDbEntity
   8
@@ -3075,7 +3141,7 @@ AcDbArc
   0
 LINE
   5
-8D
+90
 100
 AcDbEntity
 100
@@ -3103,7 +3169,7 @@ ByLayer
   0
 LINE
   5
-8E
+91
 100
 AcDbEntity
 100
@@ -3131,7 +3197,7 @@ ByLayer
   0
 LINE
   5
-8F
+92
 100
 AcDbEntity
 100
@@ -3159,95 +3225,95 @@ ByLayer
   0
 LINE
   5
-90
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Filament Guide Bottom
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-5.0
- 20
-75.0
- 30
-0.0
- 11
-75.0
- 21
-75.0
- 31
-0.0
-  0
-ARC
-  5
-91
-100
-AcDbEntity
-  8
-Filament Guide Bottom
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-5.0
- 20
-70.0
- 30
-0.0
- 40
-5.0
-100
-AcDbArc
- 50
-90.0
- 51
-180.0
-  0
-LINE
-  5
-92
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Spacer Plate
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-75.0
- 20
-75.0
- 30
-0.0
- 11
-5.0
- 21
-75.0
- 31
-0.0
-  0
-ARC
-  5
 93
 100
 AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Bottom
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+5.0
+ 20
+75.0
+ 30
+0.0
+ 11
+75.0
+ 21
+75.0
+ 31
+0.0
+  0
+ARC
+  5
+94
+100
+AcDbEntity
+  8
+Filament Guide Bottom
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+5.0
+ 20
+70.0
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+LINE
+  5
+95
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Spacer Plate
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+75.0
+ 20
+75.0
+ 30
+0.0
+ 11
+5.0
+ 21
+75.0
+ 31
+0.0
+  0
+ARC
+  5
+96
+100
+AcDbEntity
   8
 Spacer Plate
  62
@@ -3275,7 +3341,7 @@ AcDbArc
   0
 LINE
   5
-94
+97
 100
 AcDbEntity
 100
@@ -3303,7 +3369,7 @@ ByLayer
   0
 ARC
   5
-95
+98
 100
 AcDbEntity
   8
@@ -3333,7 +3399,7 @@ AcDbArc
   0
 LINE
   5
-96
+99
 100
 AcDbEntity
 100
@@ -3361,7 +3427,7 @@ ByLayer
   0
 ARC
   5
-97
+9A
 100
 AcDbEntity
   8
@@ -3391,7 +3457,7 @@ AcDbArc
   0
 LINE
   5
-98
+9B
 100
 AcDbEntity
 100
@@ -3419,7 +3485,7 @@ ByLayer
   0
 ARC
   5
-99
+9C
 100
 AcDbEntity
   8
@@ -3449,7 +3515,7 @@ AcDbArc
   0
 LINE
   5
-9A
+9D
 100
 AcDbEntity
 100
@@ -3477,7 +3543,7 @@ ByLayer
   0
 LINE
   5
-9B
+9E
 100
 AcDbEntity
 100
@@ -3505,90 +3571,6 @@ ByLayer
   0
 LINE
   5
-9C
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Filament Guide Top
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-42.4249999999999972
- 20
-6.799999999999998
- 30
-0.0
- 11
-45.3250000000000028
- 21
-6.799999999999998
- 31
-0.0
-  0
-LINE
-  5
-9D
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Filament Guide Top
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-45.3250000000000028
- 20
-6.799999999999998
- 30
-0.0
- 11
-45.3250000000000028
- 21
-4.5
- 31
-0.0
-  0
-LINE
-  5
-9E
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Filament Guide Top
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-45.3250000000000028
- 20
-4.5
- 30
-0.0
- 11
-42.4249999999999972
- 21
-4.5
- 31
-0.0
-  0
-LINE
-  5
 9F
 100
 AcDbEntity
@@ -3605,11 +3587,11 @@ ByLayer
  10
 42.4249999999999972
  20
-4.5
+6.799999999999998
  30
 0.0
  11
-42.4249999999999972
+45.3250000000000028
  21
 6.799999999999998
  31
@@ -3631,15 +3613,15 @@ Filament Guide Top
   6
 ByLayer
  10
-17.1750000000000114
+45.3250000000000028
  20
-6.8499999999999996
+6.799999999999998
  30
 0.0
  11
-20.0750000000000028
+45.3250000000000028
  21
-6.8499999999999996
+4.5
  31
 0.0
   0
@@ -3659,13 +3641,13 @@ Filament Guide Top
   6
 ByLayer
  10
-20.0750000000000028
+45.3250000000000028
  20
-6.8499999999999996
+4.5
  30
 0.0
  11
-20.0750000000000028
+42.4249999999999972
  21
 4.5
  31
@@ -3687,6 +3669,90 @@ Filament Guide Top
   6
 ByLayer
  10
+42.4249999999999972
+ 20
+4.5
+ 30
+0.0
+ 11
+42.4249999999999972
+ 21
+6.799999999999998
+ 31
+0.0
+  0
+LINE
+  5
+A3
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+17.1750000000000114
+ 20
+6.8499999999999996
+ 30
+0.0
+ 11
+20.0750000000000028
+ 21
+6.8499999999999996
+ 31
+0.0
+  0
+LINE
+  5
+A4
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+20.0750000000000028
+ 20
+6.8499999999999996
+ 30
+0.0
+ 11
+20.0750000000000028
+ 21
+4.5
+ 31
+0.0
+  0
+LINE
+  5
+A5
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
 20.0750000000000028
  20
 4.5
@@ -3701,7 +3767,7 @@ ByLayer
   0
 LINE
   5
-A3
+A6
 100
 AcDbEntity
 100
@@ -3729,7 +3795,7 @@ ByLayer
   0
 LINE
   5
-A4
+A7
 100
 AcDbEntity
 100
@@ -3757,7 +3823,7 @@ ByLayer
   0
 LINE
   5
-A5
+A8
 100
 AcDbEntity
 100
@@ -3785,7 +3851,7 @@ ByLayer
   0
 LINE
   5
-A6
+A9
 100
 AcDbEntity
 100
@@ -3806,90 +3872,6 @@ ByLayer
 0.0
  11
 11.5299779687124584
- 21
-67.25
- 31
-0.0
-  0
-LINE
-  5
-A7
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-69.0900440494693555
- 20
-69.9000000000000057
- 30
-0.0
- 11
-75.2099559505306559
- 21
-69.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-A8
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-70.6200220312875473
- 20
-67.25
- 30
-0.0
- 11
-73.6799779687124783
- 21
-72.5500000000000114
- 31
-0.0
-  0
-LINE
-  5
-A9
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-70.6200220312875473
- 20
-72.5500000000000114
- 30
-0.0
- 11
-73.6799779687124641
  21
 67.25
  31
@@ -3913,6 +3895,90 @@ ByLayer
  10
 69.0900440494693555
  20
+69.9000000000000057
+ 30
+0.0
+ 11
+75.2099559505306559
+ 21
+69.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+AB
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+70.6200220312875473
+ 20
+67.25
+ 30
+0.0
+ 11
+73.6799779687124783
+ 21
+72.5500000000000114
+ 31
+0.0
+  0
+LINE
+  5
+AC
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+70.6200220312875473
+ 20
+72.5500000000000114
+ 30
+0.0
+ 11
+73.6799779687124641
+ 21
+67.25
+ 31
+0.0
+  0
+LINE
+  5
+AD
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+69.0900440494693555
+ 20
 5.5
  30
 0.0
@@ -3925,7 +3991,7 @@ ByLayer
   0
 LINE
   5
-AB
+AE
 100
 AcDbEntity
 100
@@ -3953,7 +4019,7 @@ ByLayer
   0
 LINE
   5
-AC
+AF
 100
 AcDbEntity
 100
@@ -3981,7 +4047,7 @@ ByLayer
   0
 LINE
   5
-AD
+B0
 100
 AcDbEntity
 100
@@ -4009,7 +4075,7 @@ ByLayer
   0
 LINE
   5
-AE
+B1
 100
 AcDbEntity
 100
@@ -4037,7 +4103,7 @@ ByLayer
   0
 LINE
   5
-AF
+B2
 100
 AcDbEntity
 100
@@ -4063,61 +4129,9 @@ ByLayer
  31
 0.0
   0
-LINE
-  5
-B0
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-29.3750000000000213
- 20
-74.9999999999999858
- 30
-0.0
- 11
-29.3750000000000071
- 21
-0.4999999999999983
- 31
-0.0
-  0
-CIRCLE
-  5
-B1
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Motor Plate
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-65.0
- 20
-60.5
- 30
-0.0
- 40
-2.3999999999999999
-  0
 ARC
   5
-B2
+B3
 100
 AcDbEntity
   8
@@ -4147,7 +4161,7 @@ AcDbArc
   0
 LINE
   5
-B3
+B4
 100
 AcDbEntity
 100
@@ -4175,7 +4189,7 @@ ByLayer
   0
 ARC
   5
-B4
+B5
 100
 AcDbEntity
   8
@@ -4205,7 +4219,7 @@ AcDbArc
   0
 LINE
   5
-B5
+B6
 100
 AcDbEntity
 100
@@ -4233,7 +4247,7 @@ ByLayer
   0
 LINE
   5
-B6
+B7
 100
 AcDbEntity
 100
@@ -4261,7 +4275,7 @@ ByLayer
   0
 LINE
   5
-B7
+B8
 100
 AcDbEntity
 100
@@ -4289,7 +4303,7 @@ ByLayer
   0
 LINE
   5
-B8
+B9
 100
 AcDbEntity
 100
@@ -4317,7 +4331,7 @@ ByLayer
   0
 CIRCLE
   5
-B9
+BA
 100
 AcDbEntity
 100
@@ -4341,7 +4355,7 @@ ByLayer
   0
 LINE
   5
-BA
+BB
 100
 AcDbEntity
 100
@@ -4369,7 +4383,7 @@ ByLayer
   0
 LINE
   5
-BB
+BC
 100
 AcDbEntity
 100
@@ -4397,7 +4411,7 @@ ByLayer
   0
 CIRCLE
   5
-BC
+BD
 100
 AcDbEntity
 100
@@ -4421,7 +4435,7 @@ ByLayer
   0
 LINE
   5
-BD
+BE
 100
 AcDbEntity
 100
@@ -4449,7 +4463,7 @@ ByLayer
   0
 ARC
   5
-BE
+BF
 100
 AcDbEntity
   8
@@ -4479,7 +4493,7 @@ AcDbArc
   0
 ARC
   5
-BF
+C0
 100
 AcDbEntity
   8
@@ -4509,7 +4523,7 @@ AcDbArc
   0
 CIRCLE
   5
-C0
+C1
 100
 AcDbEntity
 100
@@ -4533,7 +4547,7 @@ ByLayer
   0
 CIRCLE
   5
-C1
+C2
 100
 AcDbEntity
 100
@@ -4557,7 +4571,7 @@ ByLayer
   0
 LINE
   5
-C2
+C3
 100
 AcDbEntity
 100
@@ -4585,7 +4599,7 @@ ByLayer
   0
 LINE
   5
-C3
+C4
 100
 AcDbEntity
 100
@@ -4613,7 +4627,7 @@ ByLayer
   0
 LINE
   5
-C4
+C5
 100
 AcDbEntity
 100
@@ -4641,7 +4655,7 @@ ByLayer
   0
 LINE
   5
-C5
+C6
 100
 AcDbEntity
 100
@@ -4669,7 +4683,7 @@ ByLayer
   0
 LINE
   5
-C6
+C7
 100
 AcDbEntity
 100
@@ -4697,7 +4711,7 @@ ByLayer
   0
 LINE
   5
-C7
+C8
 100
 AcDbEntity
 100
@@ -4725,7 +4739,7 @@ ByLayer
   0
 LINE
   5
-C8
+C9
 100
 AcDbEntity
 100
@@ -4753,7 +4767,7 @@ ByLayer
   0
 LINE
   5
-C9
+CA
 100
 AcDbEntity
 100
@@ -4776,34 +4790,6 @@ ByLayer
 45.3250000000000028
  21
 6.799999999999998
- 31
-0.0
-  0
-LINE
-  5
-CA
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Filament Guide Bottom
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-45.3250000000000028
- 20
-6.799999999999998
- 30
-0.0
- 11
-45.3250000000000028
- 21
-4.5
  31
 0.0
   0
@@ -4825,6 +4811,34 @@ ByLayer
  10
 45.3250000000000028
  20
+6.799999999999998
+ 30
+0.0
+ 11
+45.3250000000000028
+ 21
+4.5
+ 31
+0.0
+  0
+LINE
+  5
+CC
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Bottom
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+45.3250000000000028
+ 20
 4.5
  30
 0.0
@@ -4837,7 +4851,7 @@ ByLayer
   0
 LINE
   5
-CC
+CD
 100
 AcDbEntity
 100
@@ -4865,7 +4879,7 @@ ByLayer
   0
 LINE
   5
-CD
+CE
 100
 AcDbEntity
 100
@@ -4888,34 +4902,6 @@ ByLayer
 17.1750000000000114
  21
 6.8499999999999996
- 31
-0.0
-  0
-LINE
-  5
-CE
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Filament Guide Bottom
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-17.1750000000000114
- 20
-6.8499999999999996
- 30
-0.0
- 11
-17.1750000000000114
- 21
-4.5
  31
 0.0
   0
@@ -4937,6 +4923,34 @@ ByLayer
  10
 17.1750000000000114
  20
+6.8499999999999996
+ 30
+0.0
+ 11
+17.1750000000000114
+ 21
+4.5
+ 31
+0.0
+  0
+LINE
+  5
+D0
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Bottom
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+17.1750000000000114
+ 20
 4.5
  30
 0.0
@@ -4949,7 +4963,7 @@ ByLayer
   0
 LINE
   5
-D0
+D1
 100
 AcDbEntity
 100
@@ -4975,61 +4989,9 @@ ByLayer
  31
 0.0
   0
-CIRCLE
-  5
-D1
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Motor Plate
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-21.0
- 20
-60.5
- 30
-0.0
- 40
-2.3999999999999999
-  0
-LINE
-  5
-D2
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-32.3750000000000213
- 20
-74.9999999999999858
- 30
-0.0
- 11
-32.3750000000000071
- 21
-0.4999999999999976
- 31
-0.0
-  0
 ARC
   5
-D3
+D2
 100
 AcDbEntity
   8
@@ -5059,11 +5021,41 @@ AcDbArc
   0
 ARC
   5
-D4
+D3
 100
 AcDbEntity
   8
 Retainer Plate
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+54.6250000000000142
+ 20
+32.9999745962155657
+ 30
+0.0
+ 40
+4.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+D4
+100
+AcDbEntity
+  8
+Spacer Plate
  62
 256
 370
@@ -5093,7 +5085,7 @@ D5
 100
 AcDbEntity
   8
-Spacer Plate
+Filament Guide Bottom
  62
 256
 370
@@ -5109,7 +5101,7 @@ AcDbCircle
  30
 0.0
  40
-4.0
+21.0
 100
 AcDbArc
  50
@@ -5123,7 +5115,7 @@ D6
 100
 AcDbEntity
   8
-Filament Guide Bottom
+Filament Guide Top
  62
 256
 370
@@ -5153,36 +5145,6 @@ D7
 100
 AcDbEntity
   8
-Filament Guide Top
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-54.6250000000000142
- 20
-32.9999745962155657
- 30
-0.0
- 40
-21.0
-100
-AcDbArc
- 50
-270.0
- 51
-90.0
-  0
-ARC
-  5
-D8
-100
-AcDbEntity
-  8
 Filament Guide Middle
  62
 256
@@ -5209,7 +5171,7 @@ AcDbArc
   0
 ARC
   5
-D9
+D8
 100
 AcDbEntity
   8
@@ -5239,7 +5201,7 @@ AcDbArc
   0
 LINE
   5
-DA
+D9
 100
 AcDbEntity
 100
@@ -5267,7 +5229,7 @@ ByLayer
   0
 LINE
   5
-DB
+DA
 100
 AcDbEntity
 100
@@ -5295,7 +5257,7 @@ ByLayer
   0
 LINE
   5
-DC
+DB
 100
 AcDbEntity
 100
@@ -5323,7 +5285,7 @@ ByLayer
   0
 LINE
   5
-DD
+DC
 100
 AcDbEntity
 100
@@ -5351,7 +5313,7 @@ ByLayer
   0
 ARC
   5
-DE
+DD
 100
 AcDbEntity
   8
@@ -5381,7 +5343,7 @@ AcDbArc
   0
 LINE
   5
-DF
+DE
 100
 AcDbEntity
 100
@@ -5409,7 +5371,7 @@ ByLayer
   0
 LINE
   5
-E0
+DF
 100
 AcDbEntity
 100
@@ -5437,7 +5399,7 @@ ByLayer
   0
 LINE
   5
-E1
+E0
 100
 AcDbEntity
 100
@@ -5460,6 +5422,34 @@ ByLayer
 0.0
  21
 0.0
+ 31
+0.0
+  0
+LINE
+  5
+E1
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Bottom
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+0.0
+ 21
+70.0
  31
 0.0
   0
@@ -5479,49 +5469,21 @@ Filament Guide Bottom
   6
 ByLayer
  10
-0.0
+80.0
  20
-0.0
+70.0
  30
 0.0
  11
-0.0
+80.0
  21
-70.0
+0.0
  31
 0.0
   0
 LINE
   5
 E3
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Filament Guide Bottom
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-80.0
- 20
-70.0
- 30
-0.0
- 11
-80.0
- 21
-0.0
- 31
-0.0
-  0
-LINE
-  5
-E4
 100
 AcDbEntity
 100
@@ -5549,7 +5511,7 @@ ByLayer
   0
 LINE
   5
-E5
+E4
 100
 AcDbEntity
 100
@@ -5577,7 +5539,7 @@ ByLayer
   0
 LINE
   5
-E6
+E5
 100
 AcDbEntity
 100
@@ -5605,7 +5567,7 @@ ByLayer
   0
 LINE
   5
-E7
+E6
 100
 AcDbEntity
 100
@@ -5633,7 +5595,7 @@ ByLayer
   0
 LINE
   5
-E8
+E7
 100
 AcDbEntity
 100
@@ -5661,7 +5623,7 @@ ByLayer
   0
 LINE
   5
-E9
+E8
 100
 AcDbEntity
 100
@@ -5689,7 +5651,7 @@ ByLayer
   0
 LINE
   5
-EA
+E9
 100
 AcDbEntity
 100
@@ -5717,7 +5679,7 @@ ByLayer
   0
 LINE
   5
-EB
+EA
 100
 AcDbEntity
 100
@@ -5738,6 +5700,34 @@ ByLayer
 0.0
  11
 80.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+EB
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Spacer Plate
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+70.0
+ 30
+0.0
+ 11
+0.0
  21
 0.0
  31
@@ -5759,49 +5749,21 @@ Spacer Plate
   6
 ByLayer
  10
-0.0
+80.0
  20
-70.0
+0.0
  30
 0.0
  11
-0.0
+80.0
  21
-0.0
+70.0
  31
 0.0
   0
 LINE
   5
 ED
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Spacer Plate
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-80.0
- 20
-0.0
- 30
-0.0
- 11
-80.0
- 21
-70.0
- 31
-0.0
-  0
-LINE
-  5
-EE
 100
 AcDbEntity
 100
@@ -5829,7 +5791,7 @@ ByLayer
   0
 LINE
   5
-EF
+EE
 100
 AcDbEntity
 100
@@ -5857,6 +5819,34 @@ ByLayer
   0
 LINE
   5
+EF
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Motor Plate
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+70.0
+ 30
+0.0
+ 11
+0.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
 F0
 100
 AcDbEntity
@@ -5871,13 +5861,13 @@ Motor Plate
   6
 ByLayer
  10
-0.0
+80.0
  20
 70.0
  30
 0.0
  11
-0.0
+80.0
  21
 0.0
  31
@@ -5886,34 +5876,6 @@ ByLayer
 LINE
   5
 F1
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Motor Plate
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-80.0
- 20
-70.0
- 30
-0.0
- 11
-80.0
- 21
-0.0
- 31
-0.0
-  0
-LINE
-  5
-F2
 100
 AcDbEntity
 100
@@ -5941,7 +5903,7 @@ ByLayer
   0
 LINE
   5
-F3
+F2
 100
 AcDbEntity
 100
@@ -5969,7 +5931,7 @@ ByLayer
   0
 LINE
   5
-F4
+F3
 100
 AcDbEntity
 100
@@ -5997,7 +5959,7 @@ ByLayer
   0
 LINE
   5
-F5
+F4
 100
 AcDbEntity
 100
@@ -6025,7 +5987,7 @@ ByLayer
   0
 LINE
   5
-F6
+F5
 100
 AcDbEntity
 100
@@ -6053,7 +6015,7 @@ ByLayer
   0
 LINE
   5
-F7
+F6
 100
 AcDbEntity
 100
@@ -6081,7 +6043,7 @@ ByLayer
   0
 LINE
   5
-F8
+F7
 100
 AcDbEntity
 100
@@ -6109,7 +6071,7 @@ ByLayer
   0
 LINE
   5
-F9
+F8
 100
 AcDbEntity
 100
@@ -6137,7 +6099,7 @@ ByLayer
   0
 LINE
   5
-FA
+F9
 100
 AcDbEntity
 100
@@ -6165,7 +6127,7 @@ ByLayer
   0
 ARC
   5
-FB
+FA
 100
 AcDbEntity
   8
@@ -6193,67 +6155,9 @@ AcDbArc
  51
 180.0
   0
-ARC
-  5
-FC
-100
-AcDbEntity
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-65.0
- 20
-60.5
- 30
-0.0
- 40
-3.0
-100
-AcDbArc
- 50
-270.0
- 51
-90.0
-  0
 LINE
   5
-FD
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-65.0
- 20
-70.0
- 30
-0.0
- 11
-65.0
- 21
-63.5
- 31
-0.0
-  0
-LINE
-  5
-FE
+FB
 100
 AcDbEntity
 100
@@ -6281,7 +6185,7 @@ ByLayer
   0
 LINE
   5
-FF
+FC
 100
 AcDbEntity
 100
@@ -6309,7 +6213,7 @@ ByLayer
   0
 LINE
   5
-100
+FD
 100
 AcDbEntity
 100
@@ -6337,7 +6241,7 @@ ByLayer
   0
 LINE
   5
-101
+FE
 100
 AcDbEntity
 100
@@ -6365,7 +6269,7 @@ ByLayer
   0
 LINE
   5
-102
+FF
 100
 AcDbEntity
 100
@@ -6393,7 +6297,7 @@ ByLayer
   0
 LINE
   5
-103
+100
 100
 AcDbEntity
 100
@@ -6421,7 +6325,7 @@ ByLayer
   0
 LINE
   5
-104
+101
 100
 AcDbEntity
 100
@@ -6449,7 +6353,7 @@ ByLayer
   0
 LINE
   5
-105
+102
 100
 AcDbEntity
 100
@@ -6477,7 +6381,7 @@ ByLayer
   0
 LINE
   5
-106
+103
 100
 AcDbEntity
 100
@@ -6505,35 +6409,7 @@ ByLayer
   0
 LINE
   5
-107
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-30.8750000000000213
- 20
-74.9999999999999858
- 30
-0.0
- 11
-30.8749999999999858
- 21
--109.9999999999999716
- 31
-0.0
-  0
-LINE
-  5
-108
+104
 100
 AcDbEntity
 100
@@ -6561,7 +6437,7 @@ ByLayer
   0
 LINE
   5
-109
+105
 100
 AcDbEntity
 100
@@ -6589,7 +6465,7 @@ ByLayer
   0
 LINE
   5
-10A
+106
 100
 AcDbEntity
 100
@@ -6617,7 +6493,7 @@ ByLayer
   0
 LINE
   5
-10B
+107
 100
 AcDbEntity
 100
@@ -6645,7 +6521,7 @@ ByLayer
   0
 LINE
   5
-10C
+108
 100
 AcDbEntity
 100
@@ -6673,7 +6549,7 @@ ByLayer
   0
 LINE
   5
-10D
+109
 100
 AcDbEntity
 100
@@ -6701,7 +6577,7 @@ ByLayer
   0
 LINE
   5
-10E
+10A
 100
 AcDbEntity
 100
@@ -6729,7 +6605,7 @@ ByLayer
   0
 LINE
   5
-10F
+10B
 100
 AcDbEntity
 100
@@ -6757,7 +6633,7 @@ ByLayer
   0
 ARC
   5
-110
+10C
 100
 AcDbEntity
   8
@@ -6787,7 +6663,7 @@ AcDbArc
   0
 LINE
   5
-111
+10D
 100
 AcDbEntity
 100
@@ -6815,7 +6691,7 @@ ByLayer
   0
 LINE
   5
-112
+10E
 100
 AcDbEntity
 100
@@ -6843,7 +6719,7 @@ ByLayer
   0
 LINE
   5
-113
+10F
 100
 AcDbEntity
 100
@@ -6871,7 +6747,7 @@ ByLayer
   0
 LINE
   5
-114
+110
 100
 AcDbEntity
 100
@@ -6899,7 +6775,7 @@ ByLayer
   0
 LINE
   5
-115
+111
 100
 AcDbEntity
 100
@@ -6927,7 +6803,7 @@ ByLayer
   0
 LINE
   5
-116
+112
 100
 AcDbEntity
 100
@@ -6955,7 +6831,7 @@ ByLayer
   0
 LINE
   5
-117
+113
 100
 AcDbEntity
 100
@@ -6983,7 +6859,7 @@ ByLayer
   0
 LINE
   5
-118
+114
 100
 AcDbEntity
 100
@@ -7011,7 +6887,7 @@ ByLayer
   0
 LINE
   5
-119
+115
 100
 AcDbEntity
 100
@@ -7039,7 +6915,7 @@ ByLayer
   0
 LINE
   5
-11A
+116
 100
 AcDbEntity
 100
@@ -7067,7 +6943,7 @@ ByLayer
   0
 LINE
   5
-11B
+117
 100
 AcDbEntity
 100
@@ -7095,7 +6971,7 @@ ByLayer
   0
 LINE
   5
-11C
+118
 100
 AcDbEntity
 100
@@ -7123,7 +6999,7 @@ ByLayer
   0
 LINE
   5
-11D
+119
 100
 AcDbEntity
 100
@@ -7151,7 +7027,7 @@ ByLayer
   0
 LINE
   5
-11E
+11A
 100
 AcDbEntity
 100
@@ -7179,7 +7055,7 @@ ByLayer
   0
 LINE
   5
-11F
+11B
 100
 AcDbEntity
 100
@@ -7207,7 +7083,7 @@ ByLayer
   0
 LINE
   5
-120
+11C
 100
 AcDbEntity
 100
@@ -7235,7 +7111,7 @@ ByLayer
   0
 LINE
   5
-121
+11D
 100
 AcDbEntity
 100
@@ -7263,7 +7139,7 @@ ByLayer
   0
 LINE
   5
-122
+11E
 100
 AcDbEntity
 100
@@ -7291,7 +7167,7 @@ ByLayer
   0
 LINE
   5
-123
+11F
 100
 AcDbEntity
 100
@@ -7319,7 +7195,7 @@ ByLayer
   0
 INSERT
   5
-124
+120
 100
 AcDbEntity
 100
@@ -7349,7 +7225,7 @@ slots
   0
 LINE
   5
-125
+121
 100
 AcDbEntity
 100
@@ -7377,7 +7253,7 @@ ByLayer
   0
 LINE
   5
-126
+122
 100
 AcDbEntity
 100
@@ -7405,7 +7281,7 @@ ByLayer
   0
 CIRCLE
   5
-127
+123
 100
 AcDbEntity
 100
@@ -7429,7 +7305,7 @@ ByLayer
   0
 LINE
   5
-128
+124
 100
 AcDbEntity
 100
@@ -7457,7 +7333,7 @@ ByLayer
   0
 LINE
   5
-129
+125
 100
 AcDbEntity
 100
@@ -7485,7 +7361,7 @@ ByLayer
   0
 LINE
   5
-12A
+126
 100
 AcDbEntity
 100
@@ -7513,7 +7389,7 @@ ByLayer
   0
 LINE
   5
-12B
+127
 100
 AcDbEntity
 100
@@ -7541,7 +7417,7 @@ ByLayer
   0
 LINE
   5
-12C
+128
 100
 AcDbEntity
 100
@@ -7569,63 +7445,7 @@ ByLayer
   0
 LINE
   5
-12D
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-5.25
- 20
-41.7399745962155677
- 30
-0.0
- 11
--4.75
- 21
-41.7399745962155677
- 31
-0.0
-  0
-LINE
-  5
-12E
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-5.25
- 20
-24.2599745962155637
- 30
-0.0
- 11
--4.75
- 21
-24.2599745962155637
- 31
-0.0
-  0
-LINE
-  5
-12F
+129
 100
 AcDbEntity
 100
@@ -7653,7 +7473,7 @@ ByLayer
   0
 LINE
   5
-130
+12A
 100
 AcDbEntity
 100
@@ -7676,124 +7496,12 @@ ByLayer
 4.7500000000000107
  21
 24.2599745962155637
- 31
-0.0
-  0
-LINE
-  5
-131
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-2.100000000000005
- 20
-43.2699525649280261
- 30
-0.0
- 11
-7.4000000000000163
- 21
-40.2099966275031093
- 31
-0.0
-  0
-LINE
-  5
-132
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-7.4000000000000163
- 20
-43.2699525649280261
- 30
-0.0
- 11
-2.100000000000005
- 21
-40.2099966275031093
- 31
-0.0
-  0
-LINE
-  5
-133
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-2.100000000000005
- 20
-25.7899525649280221
- 30
-0.0
- 11
-7.4000000000000163
- 21
-22.7299966275031053
- 31
-0.0
-  0
-LINE
-  5
-134
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-7.4000000000000163
- 20
-25.7899525649280221
- 30
-0.0
- 11
-2.100000000000005
- 21
-22.7299966275031053
  31
 0.0
   0
 ARC
   5
-135
+12B
 100
 AcDbEntity
   8
@@ -7823,7 +7531,7 @@ AcDbArc
   0
 LINE
   5
-136
+12C
 100
 AcDbEntity
 100
@@ -7851,7 +7559,7 @@ ByLayer
   0
 CIRCLE
   5
-137
+12D
 100
 AcDbEntity
 100
@@ -7875,7 +7583,7 @@ ByLayer
   0
 CIRCLE
   5
-138
+12E
 100
 AcDbEntity
 100
@@ -7899,7 +7607,7 @@ ByLayer
   0
 ARC
   5
-139
+12F
 100
 AcDbEntity
   8
@@ -7929,7 +7637,7 @@ AcDbArc
   0
 LINE
   5
-13A
+130
 100
 AcDbEntity
 100
@@ -7957,7 +7665,7 @@ ByLayer
   0
 LINE
   5
-13B
+131
 100
 AcDbEntity
 100
@@ -7985,7 +7693,7 @@ ByLayer
   0
 LINE
   5
-13C
+132
 100
 AcDbEntity
 100
@@ -8013,7 +7721,7 @@ ByLayer
   0
 LINE
   5
-13D
+133
 100
 AcDbEntity
 100
@@ -8041,7 +7749,7 @@ ByLayer
   0
 LINE
   5
-13E
+134
 100
 AcDbEntity
 100
@@ -8069,7 +7777,7 @@ ByLayer
   0
 LINE
   5
-13F
+135
 100
 AcDbEntity
 100
@@ -8097,7 +7805,7 @@ ByLayer
   0
 LINE
   5
-140
+136
 100
 AcDbEntity
 100
@@ -8125,7 +7833,7 @@ ByLayer
   0
 LINE
   5
-141
+137
 100
 AcDbEntity
 100
@@ -8153,7 +7861,7 @@ ByLayer
   0
 LINE
   5
-142
+138
 100
 AcDbEntity
 100
@@ -8181,7 +7889,7 @@ ByLayer
   0
 LINE
   5
-143
+139
 100
 AcDbEntity
 100
@@ -8209,7 +7917,7 @@ ByLayer
   0
 LINE
   5
-144
+13A
 100
 AcDbEntity
 100
@@ -8237,7 +7945,7 @@ ByLayer
   0
 LINE
   5
-145
+13B
 100
 AcDbEntity
 100
@@ -8265,7 +7973,7 @@ ByLayer
   0
 LINE
   5
-146
+13C
 100
 AcDbEntity
 100
@@ -8293,7 +8001,7 @@ ByLayer
   0
 LINE
   5
-147
+13D
 100
 AcDbEntity
 100
@@ -8321,7 +8029,7 @@ ByLayer
   0
 LINE
   5
-148
+13E
 100
 AcDbEntity
 100
@@ -8349,7 +8057,7 @@ ByLayer
   0
 LINE
   5
-149
+13F
 100
 AcDbEntity
 100
@@ -8377,7 +8085,7 @@ ByLayer
   0
 LINE
   5
-14A
+140
 100
 AcDbEntity
 100
@@ -8405,7 +8113,7 @@ ByLayer
   0
 LINE
   5
-14B
+141
 100
 AcDbEntity
 100
@@ -8433,7 +8141,7 @@ ByLayer
   0
 LINE
   5
-14C
+142
 100
 AcDbEntity
 100
@@ -8461,7 +8169,7 @@ ByLayer
   0
 ARC
   5
-14D
+143
 100
 AcDbEntity
   8
@@ -8491,7 +8199,7 @@ AcDbArc
   0
 CIRCLE
   5
-14E
+144
 100
 AcDbEntity
 100
@@ -8515,7 +8223,7 @@ ByLayer
   0
 CIRCLE
   5
-14F
+145
 100
 AcDbEntity
 100
@@ -8539,7 +8247,7 @@ ByLayer
   0
 CIRCLE
   5
-150
+146
 100
 AcDbEntity
 100
@@ -8563,7 +8271,7 @@ ByLayer
   0
 ARC
   5
-151
+147
 100
 AcDbEntity
   8
@@ -8593,7 +8301,7 @@ AcDbArc
   0
 LINE
   5
-152
+148
 100
 AcDbEntity
 100
@@ -8621,175 +8329,7 @@ ByLayer
   0
 LINE
   5
-153
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--19.5900440494693271
- 20
-69.9000000000000199
- 30
-0.0
- 11
--25.7099559505306274
- 21
-69.9000000000000199
- 31
-0.0
-  0
-LINE
-  5
-154
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--21.1200220312875189
- 20
-67.2500000000000142
- 30
-0.0
- 11
--24.1799779687124428
- 21
-72.5500000000001393
- 31
-0.0
-  0
-LINE
-  5
-155
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--21.1200220312875189
- 20
-72.5499999999999972
- 30
-0.0
- 11
--24.1799779687124357
- 21
-67.2499999999999716
- 31
-0.0
-  0
-LINE
-  5
-156
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--19.5900440494693413
- 20
-5.5000000000000142
- 30
-0.0
- 11
--25.7099559505306274
- 21
-5.5
- 31
-0.0
-  0
-LINE
-  5
-157
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--21.1200220312876112
- 20
-2.8500000000000654
- 30
-0.0
- 11
--24.179977968712528
- 21
-8.1500000000000625
- 31
-0.0
-  0
-LINE
-  5
-158
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Drawings
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--21.1200220312874976
- 20
-8.1499999999999915
- 30
-0.0
- 11
--24.1799779687124854
- 21
-2.8500000000000227
- 31
-0.0
-  0
-LINE
-  5
-159
+149
 100
 AcDbEntity
 100
@@ -8817,7 +8357,7 @@ ByLayer
   0
 LINE
   5
-15A
+14A
 100
 AcDbEntity
 100
@@ -8845,7 +8385,7 @@ ByLayer
   0
 LINE
   5
-15B
+14B
 100
 AcDbEntity
 100
@@ -8873,7 +8413,7 @@ ByLayer
   0
 LINE
   5
-15C
+14C
 100
 AcDbEntity
 100
@@ -8901,7 +8441,7 @@ ByLayer
   0
 LINE
   5
-15D
+14D
 100
 AcDbEntity
 100
@@ -8929,7 +8469,7 @@ ByLayer
   0
 LINE
   5
-15E
+14E
 100
 AcDbEntity
 100
@@ -8957,7 +8497,7 @@ ByLayer
   0
 CIRCLE
   5
-15F
+14F
 100
 AcDbEntity
 100
@@ -8981,7 +8521,7 @@ ByLayer
   0
 CIRCLE
   5
-160
+150
 100
 AcDbEntity
 100
@@ -9005,7 +8545,7 @@ ByLayer
   0
 CIRCLE
   5
-161
+151
 100
 AcDbEntity
 100
@@ -9029,7 +8569,7 @@ ByLayer
   0
 LINE
   5
-162
+152
 100
 AcDbEntity
 100
@@ -9057,7 +8597,7 @@ ByLayer
   0
 LINE
   5
-163
+153
 100
 AcDbEntity
 100
@@ -9085,7 +8625,7 @@ ByLayer
   0
 LINE
   5
-164
+154
 100
 AcDbEntity
 100
@@ -9113,7 +8653,7 @@ ByLayer
   0
 LINE
   5
-165
+155
 100
 AcDbEntity
 100
@@ -9141,7 +8681,7 @@ ByLayer
   0
 INSERT
   5
-166
+156
 100
 AcDbEntity
 100
@@ -9169,7 +8709,7 @@ slots
   0
 INSERT
   5
-167
+157
 100
 AcDbEntity
 100
@@ -9197,7 +8737,7 @@ slots
   0
 INSERT
   5
-168
+158
 100
 AcDbEntity
 100
@@ -9225,7 +8765,7 @@ slots
   0
 INSERT
   5
-169
+159
 100
 AcDbEntity
 100
@@ -9253,7 +8793,7 @@ slots
   0
 INSERT
   5
-16A
+15A
 100
 AcDbEntity
 100
@@ -9283,7 +8823,7 @@ tbits
   0
 LINE
   5
-16B
+15B
 100
 AcDbEntity
 100
@@ -9311,7 +8851,7 @@ ByLayer
   0
 LINE
   5
-16C
+15C
 100
 AcDbEntity
 100
@@ -9339,7 +8879,7 @@ ByLayer
   0
 INSERT
   5
-16D
+15D
 100
 AcDbEntity
 100
@@ -9375,7 +8915,7 @@ slots
   0
 INSERT
   5
-16E
+15E
 100
 AcDbEntity
 100
@@ -9403,7 +8943,7 @@ tbits
   0
 INSERT
   5
-16F
+15F
 100
 AcDbEntity
 100
@@ -9431,7 +8971,7 @@ tbits
   0
 LINE
   5
-170
+160
 100
 AcDbEntity
 100
@@ -9459,7 +8999,7 @@ ByLayer
   0
 LINE
   5
-171
+161
 100
 AcDbEntity
 100
@@ -9487,7 +9027,7 @@ ByLayer
   0
 ARC
   5
-172
+162
 100
 AcDbEntity
   8
@@ -9517,7 +9057,7 @@ AcDbArc
   0
 LINE
   5
-173
+163
 100
 AcDbEntity
 100
@@ -9545,7 +9085,7 @@ ByLayer
   0
 INSERT
   5
-174
+164
 100
 AcDbEntity
 100
@@ -9575,7 +9115,7 @@ tbits
   0
 INSERT
   5
-175
+165
 100
 AcDbEntity
 100
@@ -9611,7 +9151,7 @@ tbits
   0
 INSERT
   5
-176
+166
 100
 AcDbEntity
 100
@@ -9647,7 +9187,7 @@ tbits
   0
 LINE
   5
-177
+167
 100
 AcDbEntity
 100
@@ -9675,7 +9215,7 @@ ByLayer
   0
 LINE
   5
-178
+168
 100
 AcDbEntity
 100
@@ -9703,7 +9243,7 @@ ByLayer
   0
 ARC
   5
-179
+169
 100
 AcDbEntity
   8
@@ -9733,7 +9273,7 @@ AcDbArc
   0
 LINE
   5
-17A
+16A
 100
 AcDbEntity
 100
@@ -9761,7 +9301,7 @@ ByLayer
   0
 INSERT
   5
-17B
+16B
 100
 AcDbEntity
 100
@@ -9791,7 +9331,7 @@ tbits
   0
 LINE
   5
-17C
+16C
 100
 AcDbEntity
 100
@@ -9819,7 +9359,7 @@ ByLayer
   0
 LINE
   5
-17D
+16D
 100
 AcDbEntity
 100
@@ -9847,7 +9387,7 @@ ByLayer
   0
 LINE
   5
-17E
+16E
 100
 AcDbEntity
 100
@@ -9875,7 +9415,7 @@ ByLayer
   0
 LINE
   5
-17F
+16F
 100
 AcDbEntity
 100
@@ -9903,35 +9443,7 @@ ByLayer
   0
 LINE
   5
-180
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-65.0
- 20
-57.5
- 30
-0.0
- 11
-65.0
- 21
--46.0
- 31
-0.0
-  0
-LINE
-  5
-181
+170
 100
 AcDbEntity
 100
@@ -9959,7 +9471,7 @@ ByLayer
   0
 ARC
   5
-182
+171
 100
 AcDbEntity
   8
@@ -9989,7 +9501,7 @@ AcDbArc
   0
 LINE
   5
-183
+172
 100
 AcDbEntity
 100
@@ -10017,7 +9529,7 @@ ByLayer
   0
 LINE
   5
-184
+173
 100
 AcDbEntity
 100
@@ -10045,7 +9557,7 @@ ByLayer
   0
 ARC
   5
-185
+174
 100
 AcDbEntity
   8
@@ -10075,7 +9587,7 @@ AcDbArc
   0
 LINE
   5
-186
+175
 100
 AcDbEntity
 100
@@ -10103,7 +9615,7 @@ ByLayer
   0
 LINE
   5
-187
+176
 100
 AcDbEntity
 100
@@ -10131,7 +9643,7 @@ ByLayer
   0
 LINE
   5
-188
+177
 100
 AcDbEntity
 100
@@ -10159,7 +9671,7 @@ ByLayer
   0
 LINE
   5
-189
+178
 100
 AcDbEntity
 100
@@ -10187,7 +9699,7 @@ ByLayer
   0
 INSERT
   5
-18A
+179
 100
 AcDbEntity
 100
@@ -10217,7 +9729,7 @@ slots
   0
 LINE
   5
-18B
+17A
 100
 AcDbEntity
 100
@@ -10245,7 +9757,7 @@ ByLayer
   0
 LINE
   5
-18C
+17B
 100
 AcDbEntity
 100
@@ -10273,7 +9785,7 @@ ByLayer
   0
 LINE
   5
-18D
+17C
 100
 AcDbEntity
 100
@@ -10301,7 +9813,7 @@ ByLayer
   0
 LINE
   5
-18E
+17D
 100
 AcDbEntity
 100
@@ -10329,7 +9841,7 @@ ByLayer
   0
 LINE
   5
-18F
+17E
 100
 AcDbEntity
 100
@@ -10357,7 +9869,7 @@ ByLayer
   0
 LINE
   5
-190
+17F
 100
 AcDbEntity
 100
@@ -10385,7 +9897,7 @@ ByLayer
   0
 INSERT
   5
-191
+180
 100
 AcDbEntity
 100
@@ -10421,7 +9933,7 @@ slots
   0
 ARC
   5
-192
+181
 100
 AcDbEntity
   8
@@ -10451,7 +9963,7 @@ AcDbArc
   0
 CIRCLE
   5
-193
+182
 100
 AcDbEntity
 100
@@ -10475,7 +9987,7 @@ ByLayer
   0
 CIRCLE
   5
-194
+183
 100
 AcDbEntity
 100
@@ -10499,7 +10011,7 @@ ByLayer
   0
 LINE
   5
-195
+184
 100
 AcDbEntity
 100
@@ -10527,7 +10039,7 @@ ByLayer
   0
 LINE
   5
-196
+185
 100
 AcDbEntity
 100
@@ -10555,7 +10067,7 @@ ByLayer
   0
 CIRCLE
   5
-197
+186
 100
 AcDbEntity
 100
@@ -10579,7 +10091,7 @@ ByLayer
   0
 CIRCLE
   5
-198
+187
 100
 AcDbEntity
 100
@@ -10603,7 +10115,7 @@ ByLayer
   0
 CIRCLE
   5
-199
+188
 100
 AcDbEntity
 100
@@ -10627,7 +10139,7 @@ ByLayer
   0
 LINE
   5
-19A
+189
 100
 AcDbEntity
 100
@@ -10655,7 +10167,7 @@ ByLayer
   0
 LINE
   5
-19B
+18A
 100
 AcDbEntity
 100
@@ -10683,7 +10195,7 @@ ByLayer
   0
 LINE
   5
-19C
+18B
 100
 AcDbEntity
 100
@@ -10711,7 +10223,7 @@ ByLayer
   0
 LINE
   5
-19D
+18C
 100
 AcDbEntity
 100
@@ -10739,7 +10251,7 @@ ByLayer
   0
 INSERT
   5
-19E
+18D
 100
 AcDbEntity
 100
@@ -10775,7 +10287,7 @@ slots
   0
 INSERT
   5
-19F
+18E
 100
 AcDbEntity
 100
@@ -10811,7 +10323,7 @@ slots
   0
 INSERT
   5
-1A0
+18F
 100
 AcDbEntity
 100
@@ -10847,7 +10359,7 @@ slots
   0
 INSERT
   5
-1A1
+190
 100
 AcDbEntity
 100
@@ -10883,7 +10395,7 @@ slots
   0
 INSERT
   5
-1A2
+191
 100
 AcDbEntity
 100
@@ -10919,7 +10431,7 @@ tbits
   0
 LINE
   5
-1A3
+192
 100
 AcDbEntity
 100
@@ -10947,7 +10459,7 @@ ByLayer
   0
 LINE
   5
-1A4
+193
 100
 AcDbEntity
 100
@@ -10975,7 +10487,7 @@ ByLayer
   0
 INSERT
   5
-1A5
+194
 100
 AcDbEntity
 100
@@ -11011,7 +10523,7 @@ tbits
   0
 INSERT
   5
-1A6
+195
 100
 AcDbEntity
 100
@@ -11047,7 +10559,7 @@ tbits
   0
 LINE
   5
-1A7
+196
 100
 AcDbEntity
 100
@@ -11075,7 +10587,7 @@ ByLayer
   0
 LINE
   5
-1A8
+197
 100
 AcDbEntity
 100
@@ -11103,7 +10615,7 @@ ByLayer
   0
 ARC
   5
-1A9
+198
 100
 AcDbEntity
   8
@@ -11133,7 +10645,7 @@ AcDbArc
   0
 INSERT
   5
-1AA
+199
 100
 AcDbEntity
 100
@@ -11169,7 +10681,7 @@ tbits
   0
 INSERT
   5
-1AB
+19A
 100
 AcDbEntity
 100
@@ -11205,7 +10717,7 @@ tbits
   0
 LINE
   5
-1AC
+19B
 100
 AcDbEntity
 100
@@ -11233,7 +10745,7 @@ ByLayer
   0
 LINE
   5
-1AD
+19C
 100
 AcDbEntity
 100
@@ -11261,7 +10773,7 @@ ByLayer
   0
 LINE
   5
-1AE
+19D
 100
 AcDbEntity
 100
@@ -11289,7 +10801,7 @@ ByLayer
   0
 LINE
   5
-1AF
+19E
 100
 AcDbEntity
 100
@@ -11317,7 +10829,7 @@ ByLayer
   0
 LINE
   5
-1B0
+19F
 100
 AcDbEntity
 100
@@ -11345,7 +10857,7 @@ ByLayer
   0
 INSERT
   5
-1B1
+1A0
 100
 AcDbEntity
 100
@@ -11381,7 +10893,7 @@ slots
   0
 LINE
   5
-1B2
+1A1
 100
 AcDbEntity
 100
@@ -11409,7 +10921,7 @@ ByLayer
   0
 LINE
   5
-1B3
+1A2
 100
 AcDbEntity
 100
@@ -11437,7 +10949,7 @@ ByLayer
   0
 ARC
   5
-1B4
+1A3
 100
 AcDbEntity
   8
@@ -11467,7 +10979,7 @@ AcDbArc
   0
 ARC
   5
-1B5
+1A4
 100
 AcDbEntity
   8
@@ -11497,7 +11009,7 @@ AcDbArc
   0
 LINE
   5
-1B6
+1A5
 100
 AcDbEntity
 100
@@ -11525,7 +11037,7 @@ ByLayer
   0
 LINE
   5
-1B7
+1A6
 100
 AcDbEntity
 100
@@ -11553,7 +11065,7 @@ ByLayer
   0
 LINE
   5
-1B8
+1A7
 100
 AcDbEntity
 100
@@ -11581,7 +11093,7 @@ ByLayer
   0
 LINE
   5
-1B9
+1A8
 100
 AcDbEntity
 100
@@ -11609,7 +11121,7 @@ ByLayer
   0
 LINE
   5
-1BA
+1A9
 100
 AcDbEntity
 100
@@ -11637,7 +11149,7 @@ ByLayer
   0
 LINE
   5
-1BB
+1AA
 100
 AcDbEntity
 100
@@ -11665,7 +11177,7 @@ ByLayer
   0
 ARC
   5
-1BC
+1AB
 100
 AcDbEntity
   8
@@ -11695,7 +11207,7 @@ AcDbArc
   0
 LINE
   5
-1BD
+1AC
 100
 AcDbEntity
 100
@@ -11723,7 +11235,7 @@ ByLayer
   0
 ARC
   5
-1BE
+1AD
 100
 AcDbEntity
   8
@@ -11753,7 +11265,7 @@ AcDbArc
   0
 LINE
   5
-1BF
+1AE
 100
 AcDbEntity
 100
@@ -11781,7 +11293,7 @@ ByLayer
   0
 LINE
   5
-1C0
+1AF
 100
 AcDbEntity
 100
@@ -11809,7 +11321,7 @@ ByLayer
   0
 ARC
   5
-1C1
+1B0
 100
 AcDbEntity
   8
@@ -11839,7 +11351,7 @@ AcDbArc
   0
 LINE
   5
-1C2
+1B1
 100
 AcDbEntity
 100
@@ -11867,7 +11379,7 @@ ByLayer
   0
 LINE
   5
-1C3
+1B2
 100
 AcDbEntity
 100
@@ -11895,7 +11407,7 @@ ByLayer
   0
 LINE
   5
-1C4
+1B3
 100
 AcDbEntity
 100
@@ -11923,7 +11435,7 @@ ByLayer
   0
 ARC
   5
-1C5
+1B4
 100
 AcDbEntity
   8
@@ -11953,7 +11465,7 @@ AcDbArc
   0
 LINE
   5
-1C6
+1B5
 100
 AcDbEntity
 100
@@ -11981,7 +11493,7 @@ ByLayer
   0
 LINE
   5
-1C7
+1B6
 100
 AcDbEntity
 100
@@ -12009,7 +11521,7 @@ ByLayer
   0
 LINE
   5
-1C8
+1B7
 100
 AcDbEntity
 100
@@ -12037,7 +11549,7 @@ ByLayer
   0
 LINE
   5
-1C9
+1B8
 100
 AcDbEntity
 100
@@ -12065,7 +11577,7 @@ ByLayer
   0
 ARC
   5
-1CA
+1B9
 100
 AcDbEntity
   8
@@ -12095,7 +11607,7 @@ AcDbArc
   0
 LINE
   5
-1CB
+1BA
 100
 AcDbEntity
 100
@@ -12123,7 +11635,7 @@ ByLayer
   0
 ARC
   5
-1CC
+1BB
 100
 AcDbEntity
   8
@@ -12153,7 +11665,7 @@ AcDbArc
   0
 LINE
   5
-1CD
+1BC
 100
 AcDbEntity
 100
@@ -12181,7 +11693,7 @@ ByLayer
   0
 LINE
   5
-1CE
+1BD
 100
 AcDbEntity
 100
@@ -12209,7 +11721,7 @@ ByLayer
   0
 LINE
   5
-1CF
+1BE
 100
 AcDbEntity
 100
@@ -12237,7 +11749,7 @@ ByLayer
   0
 ARC
   5
-1D0
+1BF
 100
 AcDbEntity
   8
@@ -12267,7 +11779,7 @@ AcDbArc
   0
 LINE
   5
-1D1
+1C0
 100
 AcDbEntity
 100
@@ -12295,7 +11807,7 @@ ByLayer
   0
 LINE
   5
-1D2
+1C1
 100
 AcDbEntity
 100
@@ -12323,7 +11835,7 @@ ByLayer
   0
 LINE
   5
-1D3
+1C2
 100
 AcDbEntity
 100
@@ -12351,7 +11863,7 @@ ByLayer
   0
 LINE
   5
-1D4
+1C3
 100
 AcDbEntity
 100
@@ -12379,7 +11891,7 @@ ByLayer
   0
 ARC
   5
-1D5
+1C4
 100
 AcDbEntity
   8
@@ -12409,7 +11921,7 @@ AcDbArc
   0
 LINE
   5
-1D6
+1C5
 100
 AcDbEntity
 100
@@ -12437,7 +11949,7 @@ ByLayer
   0
 ARC
   5
-1D7
+1C6
 100
 AcDbEntity
   8
@@ -12467,7 +11979,7 @@ AcDbArc
   0
 LINE
   5
-1D8
+1C7
 100
 AcDbEntity
 100
@@ -12495,7 +12007,7 @@ ByLayer
   0
 LINE
   5
-1D9
+1C8
 100
 AcDbEntity
 100
@@ -12523,7 +12035,7 @@ ByLayer
   0
 LINE
   5
-1DA
+1C9
 100
 AcDbEntity
 100
@@ -12551,7 +12063,7 @@ ByLayer
   0
 LINE
   5
-1DB
+1CA
 100
 AcDbEntity
 100
@@ -12579,7 +12091,7 @@ ByLayer
   0
 ARC
   5
-1DC
+1CB
 100
 AcDbEntity
   8
@@ -12609,7 +12121,7 @@ AcDbArc
   0
 LINE
   5
-1DD
+1CC
 100
 AcDbEntity
 100
@@ -12637,7 +12149,7 @@ ByLayer
   0
 LINE
   5
-1DE
+1CD
 100
 AcDbEntity
 100
@@ -12665,7 +12177,7 @@ ByLayer
   0
 LINE
   5
-1DF
+1CE
 100
 AcDbEntity
 100
@@ -12693,7 +12205,7 @@ ByLayer
   0
 LINE
   5
-1E0
+1CF
 100
 AcDbEntity
 100
@@ -12721,7 +12233,7 @@ ByLayer
   0
 LINE
   5
-1E1
+1D0
 100
 AcDbEntity
 100
@@ -12749,7 +12261,7 @@ ByLayer
   0
 LINE
   5
-1E2
+1D1
 100
 AcDbEntity
 100
@@ -12777,7 +12289,7 @@ ByLayer
   0
 ARC
   5
-1E3
+1D2
 100
 AcDbEntity
   8
@@ -12807,7 +12319,7 @@ AcDbArc
   0
 LINE
   5
-1E4
+1D3
 100
 AcDbEntity
 100
@@ -12835,7 +12347,7 @@ ByLayer
   0
 ARC
   5
-1E5
+1D4
 100
 AcDbEntity
   8
@@ -12865,7 +12377,7 @@ AcDbArc
   0
 LINE
   5
-1E6
+1D5
 100
 AcDbEntity
 100
@@ -12893,7 +12405,7 @@ ByLayer
   0
 LINE
   5
-1E7
+1D6
 100
 AcDbEntity
 100
@@ -12921,7 +12433,7 @@ ByLayer
   0
 LINE
   5
-1E8
+1D7
 100
 AcDbEntity
 100
@@ -12949,7 +12461,7 @@ ByLayer
   0
 ARC
   5
-1E9
+1D8
 100
 AcDbEntity
   8
@@ -12979,7 +12491,7 @@ AcDbArc
   0
 LINE
   5
-1EA
+1D9
 100
 AcDbEntity
 100
@@ -13007,7 +12519,7 @@ ByLayer
   0
 ARC
   5
-1EB
+1DA
 100
 AcDbEntity
   8
@@ -13037,7 +12549,7 @@ AcDbArc
   0
 LINE
   5
-1EC
+1DB
 100
 AcDbEntity
 100
@@ -13065,7 +12577,7 @@ ByLayer
   0
 LINE
   5
-1ED
+1DC
 100
 AcDbEntity
 100
@@ -13093,7 +12605,7 @@ ByLayer
   0
 LINE
   5
-1EE
+1DD
 100
 AcDbEntity
 100
@@ -13121,7 +12633,7 @@ ByLayer
   0
 LINE
   5
-1EF
+1DE
 100
 AcDbEntity
 100
@@ -13149,7 +12661,7 @@ ByLayer
   0
 LINE
   5
-1F0
+1DF
 100
 AcDbEntity
 100
@@ -13177,7 +12689,7 @@ ByLayer
   0
 LINE
   5
-1F1
+1E0
 100
 AcDbEntity
 100
@@ -13205,7 +12717,7 @@ ByLayer
   0
 LINE
   5
-1F2
+1E1
 100
 AcDbEntity
 100
@@ -13233,7 +12745,7 @@ ByLayer
   0
 LINE
   5
-1F3
+1E2
 100
 AcDbEntity
 100
@@ -13261,7 +12773,7 @@ ByLayer
   0
 LINE
   5
-1F4
+1E3
 100
 AcDbEntity
 100
@@ -13289,7 +12801,7 @@ ByLayer
   0
 ARC
   5
-1F5
+1E4
 100
 AcDbEntity
   8
@@ -13319,7 +12831,7 @@ AcDbArc
   0
 LINE
   5
-1F6
+1E5
 100
 AcDbEntity
 100
@@ -13347,7 +12859,7 @@ ByLayer
   0
 ARC
   5
-1F7
+1E6
 100
 AcDbEntity
   8
@@ -13377,7 +12889,7 @@ AcDbArc
   0
 LINE
   5
-1F8
+1E7
 100
 AcDbEntity
 100
@@ -13405,7 +12917,7 @@ ByLayer
   0
 LINE
   5
-1F9
+1E8
 100
 AcDbEntity
 100
@@ -13433,7 +12945,7 @@ ByLayer
   0
 LINE
   5
-1FA
+1E9
 100
 AcDbEntity
 100
@@ -13461,7 +12973,7 @@ ByLayer
   0
 ARC
   5
-1FB
+1EA
 100
 AcDbEntity
   8
@@ -13491,7 +13003,7 @@ AcDbArc
   0
 LINE
   5
-1FC
+1EB
 100
 AcDbEntity
 100
@@ -13519,7 +13031,7 @@ ByLayer
   0
 ARC
   5
-1FD
+1EC
 100
 AcDbEntity
   8
@@ -13549,7 +13061,7 @@ AcDbArc
   0
 LINE
   5
-1FE
+1ED
 100
 AcDbEntity
 100
@@ -13577,7 +13089,7 @@ ByLayer
   0
 LINE
   5
-1FF
+1EE
 100
 AcDbEntity
 100
@@ -13605,7 +13117,7 @@ ByLayer
   0
 ARC
   5
-200
+1EF
 100
 AcDbEntity
   8
@@ -13635,7 +13147,7 @@ AcDbArc
   0
 LINE
   5
-201
+1F0
 100
 AcDbEntity
 100
@@ -13663,7 +13175,7 @@ ByLayer
   0
 LINE
   5
-202
+1F1
 100
 AcDbEntity
 100
@@ -13691,7 +13203,7 @@ ByLayer
   0
 ARC
   5
-203
+1F2
 100
 AcDbEntity
   8
@@ -13721,7 +13233,7 @@ AcDbArc
   0
 LINE
   5
-204
+1F3
 100
 AcDbEntity
 100
@@ -13749,7 +13261,7 @@ ByLayer
   0
 ARC
   5
-205
+1F4
 100
 AcDbEntity
   8
@@ -13779,7 +13291,7 @@ AcDbArc
   0
 LINE
   5
-206
+1F5
 100
 AcDbEntity
 100
@@ -13807,7 +13319,7 @@ ByLayer
   0
 LINE
   5
-207
+1F6
 100
 AcDbEntity
 100
@@ -13835,7 +13347,7 @@ ByLayer
   0
 LINE
   5
-208
+1F7
 100
 AcDbEntity
 100
@@ -13863,7 +13375,7 @@ ByLayer
   0
 LINE
   5
-209
+1F8
 100
 AcDbEntity
 100
@@ -13891,7 +13403,7 @@ ByLayer
   0
 LINE
   5
-20A
+1F9
 100
 AcDbEntity
 100
@@ -13919,7 +13431,7 @@ ByLayer
   0
 LINE
   5
-20B
+1FA
 100
 AcDbEntity
 100
@@ -13947,7 +13459,7 @@ ByLayer
   0
 ARC
   5
-20C
+1FB
 100
 AcDbEntity
   8
@@ -13977,7 +13489,7 @@ AcDbArc
   0
 LINE
   5
-20D
+1FC
 100
 AcDbEntity
 100
@@ -14005,7 +13517,7 @@ ByLayer
   0
 ARC
   5
-20E
+1FD
 100
 AcDbEntity
   8
@@ -14035,7 +13547,7 @@ AcDbArc
   0
 LINE
   5
-20F
+1FE
 100
 AcDbEntity
 100
@@ -14063,7 +13575,7 @@ ByLayer
   0
 LINE
   5
-210
+1FF
 100
 AcDbEntity
 100
@@ -14091,7 +13603,7 @@ ByLayer
   0
 LINE
   5
-211
+200
 100
 AcDbEntity
 100
@@ -14119,7 +13631,7 @@ ByLayer
   0
 ARC
   5
-212
+201
 100
 AcDbEntity
   8
@@ -14149,7 +13661,7 @@ AcDbArc
   0
 LINE
   5
-213
+202
 100
 AcDbEntity
 100
@@ -14177,7 +13689,7 @@ ByLayer
   0
 ARC
   5
-214
+203
 100
 AcDbEntity
   8
@@ -14207,7 +13719,7 @@ AcDbArc
   0
 LINE
   5
-215
+204
 100
 AcDbEntity
 100
@@ -14235,7 +13747,7 @@ ByLayer
   0
 LINE
   5
-216
+205
 100
 AcDbEntity
 100
@@ -14263,7 +13775,7 @@ ByLayer
   0
 ARC
   5
-217
+206
 100
 AcDbEntity
   8
@@ -14293,7 +13805,7 @@ AcDbArc
   0
 LINE
   5
-218
+207
 100
 AcDbEntity
 100
@@ -14321,7 +13833,7 @@ ByLayer
   0
 LINE
   5
-219
+208
 100
 AcDbEntity
 100
@@ -14349,7 +13861,7 @@ ByLayer
   0
 ARC
   5
-21A
+209
 100
 AcDbEntity
   8
@@ -14379,7 +13891,7 @@ AcDbArc
   0
 LINE
   5
-21B
+20A
 100
 AcDbEntity
 100
@@ -14407,7 +13919,7 @@ ByLayer
   0
 ARC
   5
-21C
+20B
 100
 AcDbEntity
   8
@@ -14437,7 +13949,7 @@ AcDbArc
   0
 LINE
   5
-21D
+20C
 100
 AcDbEntity
 100
@@ -14465,7 +13977,7 @@ ByLayer
   0
 LINE
   5
-21E
+20D
 100
 AcDbEntity
 100
@@ -14493,7 +14005,7 @@ ByLayer
   0
 ARC
   5
-21F
+20E
 100
 AcDbEntity
   8
@@ -14523,7 +14035,7 @@ AcDbArc
   0
 LINE
   5
-220
+20F
 100
 AcDbEntity
 100
@@ -14551,7 +14063,7 @@ ByLayer
   0
 ARC
   5
-221
+210
 100
 AcDbEntity
   8
@@ -14581,7 +14093,7 @@ AcDbArc
   0
 LINE
   5
-222
+211
 100
 AcDbEntity
 100
@@ -14609,7 +14121,7 @@ ByLayer
   0
 LINE
   5
-223
+212
 100
 AcDbEntity
 100
@@ -14637,7 +14149,7 @@ ByLayer
   0
 ARC
   5
-224
+213
 100
 AcDbEntity
   8
@@ -14667,7 +14179,7 @@ AcDbArc
   0
 LINE
   5
-225
+214
 100
 AcDbEntity
 100
@@ -14695,7 +14207,7 @@ ByLayer
   0
 LINE
   5
-226
+215
 100
 AcDbEntity
 100
@@ -14723,7 +14235,7 @@ ByLayer
   0
 LINE
   5
-227
+216
 100
 AcDbEntity
 100
@@ -14751,7 +14263,7 @@ ByLayer
   0
 LINE
   5
-228
+217
 100
 AcDbEntity
 100
@@ -14779,7 +14291,7 @@ ByLayer
   0
 LINE
   5
-229
+218
 100
 AcDbEntity
 100
@@ -14807,7 +14319,7 @@ ByLayer
   0
 ARC
   5
-22A
+219
 100
 AcDbEntity
   8
@@ -14837,7 +14349,7 @@ AcDbArc
   0
 LINE
   5
-22B
+21A
 100
 AcDbEntity
 100
@@ -14865,7 +14377,7 @@ ByLayer
   0
 ARC
   5
-22C
+21B
 100
 AcDbEntity
   8
@@ -14895,7 +14407,7 @@ AcDbArc
   0
 LINE
   5
-22D
+21C
 100
 AcDbEntity
 100
@@ -14923,7 +14435,7 @@ ByLayer
   0
 LINE
   5
-22E
+21D
 100
 AcDbEntity
 100
@@ -14951,7 +14463,7 @@ ByLayer
   0
 LINE
   5
-22F
+21E
 100
 AcDbEntity
 100
@@ -14979,7 +14491,7 @@ ByLayer
   0
 ARC
   5
-230
+21F
 100
 AcDbEntity
   8
@@ -15009,7 +14521,7 @@ AcDbArc
   0
 LINE
   5
-231
+220
 100
 AcDbEntity
 100
@@ -15037,7 +14549,7 @@ ByLayer
   0
 ARC
   5
-232
+221
 100
 AcDbEntity
   8
@@ -15067,7 +14579,7 @@ AcDbArc
   0
 LINE
   5
-233
+222
 100
 AcDbEntity
 100
@@ -15095,7 +14607,7 @@ ByLayer
   0
 LINE
   5
-234
+223
 100
 AcDbEntity
 100
@@ -15123,7 +14635,7 @@ ByLayer
   0
 LINE
   5
-235
+224
 100
 AcDbEntity
 100
@@ -15151,7 +14663,7 @@ ByLayer
   0
 LINE
   5
-236
+225
 100
 AcDbEntity
 100
@@ -15179,7 +14691,7 @@ ByLayer
   0
 ARC
   5
-237
+226
 100
 AcDbEntity
   8
@@ -15209,7 +14721,7 @@ AcDbArc
   0
 LINE
   5
-238
+227
 100
 AcDbEntity
 100
@@ -15237,7 +14749,7 @@ ByLayer
   0
 ARC
   5
-239
+228
 100
 AcDbEntity
   8
@@ -15267,7 +14779,7 @@ AcDbArc
   0
 LINE
   5
-23A
+229
 100
 AcDbEntity
 100
@@ -15295,7 +14807,7 @@ ByLayer
   0
 LINE
   5
-23B
+22A
 100
 AcDbEntity
 100
@@ -15323,7 +14835,7 @@ ByLayer
   0
 LINE
   5
-23C
+22B
 100
 AcDbEntity
 100
@@ -15351,7 +14863,7 @@ ByLayer
   0
 LINE
   5
-23D
+22C
 100
 AcDbEntity
 100
@@ -15379,7 +14891,7 @@ ByLayer
   0
 ARC
   5
-23E
+22D
 100
 AcDbEntity
   8
@@ -15409,7 +14921,7 @@ AcDbArc
   0
 LINE
   5
-23F
+22E
 100
 AcDbEntity
 100
@@ -15437,7 +14949,7 @@ ByLayer
   0
 LINE
   5
-240
+22F
 100
 AcDbEntity
 100
@@ -15465,7 +14977,7 @@ ByLayer
   0
 ARC
   5
-241
+230
 100
 AcDbEntity
   8
@@ -15495,7 +15007,7 @@ AcDbArc
   0
 LINE
   5
-242
+231
 100
 AcDbEntity
 100
@@ -15523,7 +15035,7 @@ ByLayer
   0
 LINE
   5
-243
+232
 100
 AcDbEntity
 100
@@ -15551,7 +15063,7 @@ ByLayer
   0
 LINE
   5
-244
+233
 100
 AcDbEntity
 100
@@ -15579,7 +15091,7 @@ ByLayer
   0
 LINE
   5
-245
+234
 100
 AcDbEntity
 100
@@ -15607,7 +15119,7 @@ ByLayer
   0
 LINE
   5
-246
+235
 100
 AcDbEntity
 100
@@ -15635,7 +15147,7 @@ ByLayer
   0
 ARC
   5
-247
+236
 100
 AcDbEntity
   8
@@ -15665,7 +15177,7 @@ AcDbArc
   0
 LINE
   5
-248
+237
 100
 AcDbEntity
 100
@@ -15693,7 +15205,7 @@ ByLayer
   0
 LINE
   5
-249
+238
 100
 AcDbEntity
 100
@@ -15721,7 +15233,7 @@ ByLayer
   0
 LINE
   5
-24A
+239
 100
 AcDbEntity
 100
@@ -15749,7 +15261,7 @@ ByLayer
   0
 ARC
   5
-24B
+23A
 100
 AcDbEntity
   8
@@ -15779,7 +15291,7 @@ AcDbArc
   0
 LINE
   5
-24C
+23B
 100
 AcDbEntity
 100
@@ -15807,7 +15319,7 @@ ByLayer
   0
 ARC
   5
-24D
+23C
 100
 AcDbEntity
   8
@@ -15837,7 +15349,7 @@ AcDbArc
   0
 LINE
   5
-24E
+23D
 100
 AcDbEntity
 100
@@ -15865,7 +15377,7 @@ ByLayer
   0
 LINE
   5
-24F
+23E
 100
 AcDbEntity
 100
@@ -15893,7 +15405,7 @@ ByLayer
   0
 LINE
   5
-250
+23F
 100
 AcDbEntity
 100
@@ -15921,7 +15433,7 @@ ByLayer
   0
 ARC
   5
-251
+240
 100
 AcDbEntity
   8
@@ -15951,7 +15463,7 @@ AcDbArc
   0
 LINE
   5
-252
+241
 100
 AcDbEntity
 100
@@ -15979,7 +15491,7 @@ ByLayer
   0
 LINE
   5
-253
+242
 100
 AcDbEntity
 100
@@ -16007,7 +15519,7 @@ ByLayer
   0
 ARC
   5
-254
+243
 100
 AcDbEntity
   8
@@ -16037,7 +15549,7 @@ AcDbArc
   0
 LINE
   5
-255
+244
 100
 AcDbEntity
 100
@@ -16065,7 +15577,7 @@ ByLayer
   0
 ARC
   5
-256
+245
 100
 AcDbEntity
   8
@@ -16095,7 +15607,7 @@ AcDbArc
   0
 LINE
   5
-257
+246
 100
 AcDbEntity
 100
@@ -16123,7 +15635,7 @@ ByLayer
   0
 LINE
   5
-258
+247
 100
 AcDbEntity
 100
@@ -16151,7 +15663,7 @@ ByLayer
   0
 ARC
   5
-259
+248
 100
 AcDbEntity
   8
@@ -16181,7 +15693,7 @@ AcDbArc
   0
 LINE
   5
-25A
+249
 100
 AcDbEntity
 100
@@ -16209,7 +15721,7 @@ ByLayer
   0
 ARC
   5
-25B
+24A
 100
 AcDbEntity
   8
@@ -16239,7 +15751,7 @@ AcDbArc
   0
 LINE
   5
-25C
+24B
 100
 AcDbEntity
 100
@@ -16267,7 +15779,7 @@ ByLayer
   0
 LINE
   5
-25D
+24C
 100
 AcDbEntity
 100
@@ -16295,7 +15807,7 @@ ByLayer
   0
 ARC
   5
-25E
+24D
 100
 AcDbEntity
   8
@@ -16325,7 +15837,7 @@ AcDbArc
   0
 LINE
   5
-25F
+24E
 100
 AcDbEntity
 100
@@ -16353,7 +15865,7 @@ ByLayer
   0
 LINE
   5
-260
+24F
 100
 AcDbEntity
 100
@@ -16381,7 +15893,7 @@ ByLayer
   0
 LINE
   5
-261
+250
 100
 AcDbEntity
 100
@@ -16409,7 +15921,7 @@ ByLayer
   0
 LINE
   5
-262
+251
 100
 AcDbEntity
 100
@@ -16437,7 +15949,7 @@ ByLayer
   0
 LINE
   5
-263
+252
 100
 AcDbEntity
 100
@@ -16465,7 +15977,7 @@ ByLayer
   0
 ARC
   5
-264
+253
 100
 AcDbEntity
   8
@@ -16495,7 +16007,7 @@ AcDbArc
   0
 LINE
   5
-265
+254
 100
 AcDbEntity
 100
@@ -16523,7 +16035,7 @@ ByLayer
   0
 ARC
   5
-266
+255
 100
 AcDbEntity
   8
@@ -16553,7 +16065,7 @@ AcDbArc
   0
 LINE
   5
-267
+256
 100
 AcDbEntity
 100
@@ -16581,7 +16093,7 @@ ByLayer
   0
 ARC
   5
-268
+257
 100
 AcDbEntity
   8
@@ -16611,7 +16123,7 @@ AcDbArc
   0
 ARC
   5
-269
+258
 100
 AcDbEntity
   8
@@ -16641,7 +16153,7 @@ AcDbArc
   0
 LINE
   5
-26A
+259
 100
 AcDbEntity
 100
@@ -16669,7 +16181,7 @@ ByLayer
   0
 ARC
   5
-26B
+25A
 100
 AcDbEntity
   8
@@ -16699,7 +16211,7 @@ AcDbArc
   0
 ARC
   5
-26C
+25B
 100
 AcDbEntity
   8
@@ -16729,7 +16241,7 @@ AcDbArc
   0
 LINE
   5
-26D
+25C
 100
 AcDbEntity
 100
@@ -16757,7 +16269,7 @@ ByLayer
   0
 ARC
   5
-26E
+25D
 100
 AcDbEntity
   8
@@ -16787,7 +16299,7 @@ AcDbArc
   0
 LINE
   5
-26F
+25E
 100
 AcDbEntity
 100
@@ -16815,7 +16327,7 @@ ByLayer
   0
 ARC
   5
-270
+25F
 100
 AcDbEntity
   8
@@ -16845,7 +16357,7 @@ AcDbArc
   0
 LINE
   5
-271
+260
 100
 AcDbEntity
 100
@@ -16873,7 +16385,7 @@ ByLayer
   0
 LINE
   5
-272
+261
 100
 AcDbEntity
 100
@@ -16901,7 +16413,7 @@ ByLayer
   0
 LINE
   5
-273
+262
 100
 AcDbEntity
 100
@@ -16929,7 +16441,7 @@ ByLayer
   0
 ARC
   5
-274
+263
 100
 AcDbEntity
   8
@@ -16959,7 +16471,7 @@ AcDbArc
   0
 LINE
   5
-275
+264
 100
 AcDbEntity
 100
@@ -16987,7 +16499,7 @@ ByLayer
   0
 LINE
   5
-276
+265
 100
 AcDbEntity
 100
@@ -17015,7 +16527,7 @@ ByLayer
   0
 ARC
   5
-277
+266
 100
 AcDbEntity
   8
@@ -17045,7 +16557,7 @@ AcDbArc
   0
 LINE
   5
-278
+267
 100
 AcDbEntity
 100
@@ -17073,7 +16585,7 @@ ByLayer
   0
 LINE
   5
-279
+268
 100
 AcDbEntity
 100
@@ -17101,7 +16613,7 @@ ByLayer
   0
 ARC
   5
-27A
+269
 100
 AcDbEntity
   8
@@ -17131,7 +16643,7 @@ AcDbArc
   0
 LINE
   5
-27B
+26A
 100
 AcDbEntity
 100
@@ -17159,7 +16671,7 @@ ByLayer
   0
 ARC
   5
-27C
+26B
 100
 AcDbEntity
   8
@@ -17189,7 +16701,7 @@ AcDbArc
   0
 LINE
   5
-27D
+26C
 100
 AcDbEntity
 100
@@ -17217,7 +16729,7 @@ ByLayer
   0
 LINE
   5
-27E
+26D
 100
 AcDbEntity
 100
@@ -17245,7 +16757,7 @@ ByLayer
   0
 LINE
   5
-27F
+26E
 100
 AcDbEntity
 100
@@ -17273,7 +16785,7 @@ ByLayer
   0
 ARC
   5
-280
+26F
 100
 AcDbEntity
   8
@@ -17303,7 +16815,7 @@ AcDbArc
   0
 LINE
   5
-281
+270
 100
 AcDbEntity
 100
@@ -17331,7 +16843,7 @@ ByLayer
   0
 ARC
   5
-282
+271
 100
 AcDbEntity
   8
@@ -17361,7 +16873,7 @@ AcDbArc
   0
 LINE
   5
-283
+272
 100
 AcDbEntity
 100
@@ -17389,7 +16901,7 @@ ByLayer
   0
 LINE
   5
-284
+273
 100
 AcDbEntity
 100
@@ -17417,7 +16929,7 @@ ByLayer
   0
 LINE
   5
-285
+274
 100
 AcDbEntity
 100
@@ -17445,7 +16957,7 @@ ByLayer
   0
 ARC
   5
-286
+275
 100
 AcDbEntity
   8
@@ -17475,7 +16987,7 @@ AcDbArc
   0
 LINE
   5
-287
+276
 100
 AcDbEntity
 100
@@ -17503,7 +17015,7 @@ ByLayer
   0
 LINE
   5
-288
+277
 100
 AcDbEntity
 100
@@ -17531,7 +17043,7 @@ ByLayer
   0
 ARC
   5
-289
+278
 100
 AcDbEntity
   8
@@ -17561,7 +17073,7 @@ AcDbArc
   0
 LINE
   5
-28A
+279
 100
 AcDbEntity
 100
@@ -17589,7 +17101,7 @@ ByLayer
   0
 ARC
   5
-28B
+27A
 100
 AcDbEntity
   8
@@ -17619,7 +17131,7 @@ AcDbArc
   0
 LINE
   5
-28C
+27B
 100
 AcDbEntity
 100
@@ -17647,7 +17159,7 @@ ByLayer
   0
 LINE
   5
-28D
+27C
 100
 AcDbEntity
 100
@@ -17675,7 +17187,7 @@ ByLayer
   0
 ARC
   5
-28E
+27D
 100
 AcDbEntity
   8
@@ -17705,7 +17217,7 @@ AcDbArc
   0
 LINE
   5
-28F
+27E
 100
 AcDbEntity
 100
@@ -17733,7 +17245,7 @@ ByLayer
   0
 ARC
   5
-290
+27F
 100
 AcDbEntity
   8
@@ -17763,7 +17275,7 @@ AcDbArc
   0
 LINE
   5
-291
+280
 100
 AcDbEntity
 100
@@ -17791,7 +17303,7 @@ ByLayer
   0
 LINE
   5
-292
+281
 100
 AcDbEntity
 100
@@ -17819,7 +17331,7 @@ ByLayer
   0
 ARC
   5
-293
+282
 100
 AcDbEntity
   8
@@ -17849,7 +17361,7 @@ AcDbArc
   0
 LINE
   5
-294
+283
 100
 AcDbEntity
 100
@@ -17877,7 +17389,7 @@ ByLayer
   0
 LINE
   5
-295
+284
 100
 AcDbEntity
 100
@@ -17905,7 +17417,7 @@ ByLayer
   0
 LINE
   5
-296
+285
 100
 AcDbEntity
 100
@@ -17933,7 +17445,7 @@ ByLayer
   0
 LINE
   5
-297
+286
 100
 AcDbEntity
 100
@@ -17961,7 +17473,7 @@ ByLayer
   0
 LINE
   5
-298
+287
 100
 AcDbEntity
 100
@@ -17989,7 +17501,7 @@ ByLayer
   0
 ARC
   5
-299
+288
 100
 AcDbEntity
   8
@@ -18019,7 +17531,7 @@ AcDbArc
   0
 LINE
   5
-29A
+289
 100
 AcDbEntity
 100
@@ -18047,7 +17559,7 @@ ByLayer
   0
 ARC
   5
-29B
+28A
 100
 AcDbEntity
   8
@@ -18077,7 +17589,7 @@ AcDbArc
   0
 LINE
   5
-29C
+28B
 100
 AcDbEntity
 100
@@ -18105,7 +17617,7 @@ ByLayer
   0
 INSERT
   5
-29D
+28C
 100
 AcDbEntity
 100
@@ -18129,7 +17641,7 @@ M5_c-1
   0
 INSERT
   5
-29E
+28D
 100
 AcDbEntity
 100
@@ -18153,7 +17665,7 @@ M5_c-1
   0
 CIRCLE
   5
-29F
+28E
 100
 AcDbEntity
 100
@@ -18177,7 +17689,7 @@ ByLayer
   0
 CIRCLE
   5
-2A0
+28F
 100
 AcDbEntity
 100
@@ -18201,7 +17713,7 @@ ByLayer
   0
 CIRCLE
   5
-2A1
+290
 100
 AcDbEntity
 100
@@ -18225,7 +17737,7 @@ ByLayer
   0
 CIRCLE
   5
-2A2
+291
 100
 AcDbEntity
 100
@@ -18249,7 +17761,7 @@ ByLayer
   0
 INSERT
   5
-2A3
+292
 100
 AcDbEntity
 100
@@ -18273,7 +17785,7 @@ M5_c-1
   0
 INSERT
   5
-2A4
+293
 100
 AcDbEntity
 100
@@ -18297,7 +17809,7 @@ M5_c-1
   0
 LINE
   5
-2A5
+294
 100
 AcDbEntity
 100
@@ -18325,7 +17837,7 @@ ByLayer
   0
 ARC
   5
-2A6
+295
 100
 AcDbEntity
   8
@@ -18355,7 +17867,7 @@ AcDbArc
   0
 LINE
   5
-2A7
+296
 100
 AcDbEntity
 100
@@ -18383,7 +17895,7 @@ ByLayer
   0
 ARC
   5
-2A8
+297
 100
 AcDbEntity
   8
@@ -18413,7 +17925,7 @@ AcDbArc
   0
 LINE
   5
-2A9
+298
 100
 AcDbEntity
 100
@@ -18441,7 +17953,7 @@ ByLayer
   0
 LINE
   5
-2AA
+299
 100
 AcDbEntity
 100
@@ -18469,7 +17981,7 @@ ByLayer
   0
 LINE
   5
-2AB
+29A
 100
 AcDbEntity
 100
@@ -18497,7 +18009,7 @@ ByLayer
   0
 LINE
   5
-2AC
+29B
 100
 AcDbEntity
 100
@@ -18525,7 +18037,7 @@ ByLayer
   0
 LINE
   5
-2AD
+29C
 100
 AcDbEntity
 100
@@ -18553,7 +18065,7 @@ ByLayer
   0
 LINE
   5
-2AE
+29D
 100
 AcDbEntity
 100
@@ -18581,7 +18093,7 @@ ByLayer
   0
 ARC
   5
-2AF
+29E
 100
 AcDbEntity
   8
@@ -18611,7 +18123,7 @@ AcDbArc
   0
 LINE
   5
-2B0
+29F
 100
 AcDbEntity
 100
@@ -18639,7 +18151,7 @@ ByLayer
   0
 LINE
   5
-2B1
+2A0
 100
 AcDbEntity
 100
@@ -18667,7 +18179,7 @@ ByLayer
   0
 ARC
   5
-2B2
+2A1
 100
 AcDbEntity
   8
@@ -18697,7 +18209,7 @@ AcDbArc
   0
 LINE
   5
-2B3
+2A2
 100
 AcDbEntity
 100
@@ -18725,7 +18237,7 @@ ByLayer
   0
 ARC
   5
-2B4
+2A3
 100
 AcDbEntity
   8
@@ -18755,7 +18267,7 @@ AcDbArc
   0
 ARC
   5
-2B5
+2A4
 100
 AcDbEntity
   8
@@ -18785,7 +18297,7 @@ AcDbArc
   0
 ARC
   5
-2B6
+2A5
 100
 AcDbEntity
   8
@@ -18815,7 +18327,7 @@ AcDbArc
   0
 LINE
   5
-2B7
+2A6
 100
 AcDbEntity
 100
@@ -18843,7 +18355,7 @@ ByLayer
   0
 ARC
   5
-2B8
+2A7
 100
 AcDbEntity
   8
@@ -18873,7 +18385,7 @@ AcDbArc
   0
 ARC
   5
-2B9
+2A8
 100
 AcDbEntity
   8
@@ -18903,7 +18415,7 @@ AcDbArc
   0
 LINE
   5
-2BA
+2A9
 100
 AcDbEntity
 100
@@ -18931,7 +18443,7 @@ ByLayer
   0
 ARC
   5
-2BB
+2AA
 100
 AcDbEntity
   8
@@ -18961,7 +18473,7 @@ AcDbArc
   0
 LINE
   5
-2BC
+2AB
 100
 AcDbEntity
 100
@@ -18989,7 +18501,7 @@ ByLayer
   0
 LINE
   5
-2BD
+2AC
 100
 AcDbEntity
 100
@@ -19017,7 +18529,7 @@ ByLayer
   0
 LINE
   5
-2BE
+2AD
 100
 AcDbEntity
 100
@@ -19045,7 +18557,7 @@ ByLayer
   0
 ARC
   5
-2BF
+2AE
 100
 AcDbEntity
   8
@@ -19075,7 +18587,7 @@ AcDbArc
   0
 LINE
   5
-2C0
+2AF
 100
 AcDbEntity
 100
@@ -19103,7 +18615,7 @@ ByLayer
   0
 ARC
   5
-2C1
+2B0
 100
 AcDbEntity
   8
@@ -19133,7 +18645,7 @@ AcDbArc
   0
 LINE
   5
-2C2
+2B1
 100
 AcDbEntity
 100
@@ -19161,7 +18673,7 @@ ByLayer
   0
 LINE
   5
-2C3
+2B2
 100
 AcDbEntity
 100
@@ -19189,7 +18701,7 @@ ByLayer
   0
 LINE
   5
-2C4
+2B3
 100
 AcDbEntity
 100
@@ -19217,7 +18729,7 @@ ByLayer
   0
 ARC
   5
-2C5
+2B4
 100
 AcDbEntity
   8
@@ -19247,7 +18759,7 @@ AcDbArc
   0
 LINE
   5
-2C6
+2B5
 100
 AcDbEntity
 100
@@ -19275,7 +18787,7 @@ ByLayer
   0
 ARC
   5
-2C7
+2B6
 100
 AcDbEntity
   8
@@ -19305,7 +18817,7 @@ AcDbArc
   0
 LINE
   5
-2C8
+2B7
 100
 AcDbEntity
 100
@@ -19333,7 +18845,7 @@ ByLayer
   0
 LINE
   5
-2C9
+2B8
 100
 AcDbEntity
 100
@@ -19361,7 +18873,7 @@ ByLayer
   0
 LINE
   5
-2CA
+2B9
 100
 AcDbEntity
 100
@@ -19389,7 +18901,7 @@ ByLayer
   0
 ARC
   5
-2CB
+2BA
 100
 AcDbEntity
   8
@@ -19419,7 +18931,7 @@ AcDbArc
   0
 LINE
   5
-2CC
+2BB
 100
 AcDbEntity
 100
@@ -19447,7 +18959,7 @@ ByLayer
   0
 ARC
   5
-2CD
+2BC
 100
 AcDbEntity
   8
@@ -19477,7 +18989,7 @@ AcDbArc
   0
 LINE
   5
-2CE
+2BD
 100
 AcDbEntity
 100
@@ -19505,7 +19017,7 @@ ByLayer
   0
 LINE
   5
-2CF
+2BE
 100
 AcDbEntity
 100
@@ -19533,7 +19045,7 @@ ByLayer
   0
 ARC
   5
-2D0
+2BF
 100
 AcDbEntity
   8
@@ -19563,7 +19075,7 @@ AcDbArc
   0
 LINE
   5
-2D1
+2C0
 100
 AcDbEntity
 100
@@ -19591,7 +19103,7 @@ ByLayer
   0
 LINE
   5
-2D2
+2C1
 100
 AcDbEntity
 100
@@ -19619,7 +19131,7 @@ ByLayer
   0
 LINE
   5
-2D3
+2C2
 100
 AcDbEntity
 100
@@ -19647,7 +19159,7 @@ ByLayer
   0
 ARC
   5
-2D4
+2C3
 100
 AcDbEntity
   8
@@ -19677,7 +19189,7 @@ AcDbArc
   0
 LINE
   5
-2D5
+2C4
 100
 AcDbEntity
 100
@@ -19705,7 +19217,7 @@ ByLayer
   0
 ARC
   5
-2D6
+2C5
 100
 AcDbEntity
   8
@@ -19735,7 +19247,7 @@ AcDbArc
   0
 LINE
   5
-2D7
+2C6
 100
 AcDbEntity
 100
@@ -19763,7 +19275,7 @@ ByLayer
   0
 LINE
   5
-2D8
+2C7
 100
 AcDbEntity
 100
@@ -19791,7 +19303,7 @@ ByLayer
   0
 LINE
   5
-2D9
+2C8
 100
 AcDbEntity
 100
@@ -19819,7 +19331,7 @@ ByLayer
   0
 LINE
   5
-2DA
+2C9
 100
 AcDbEntity
 100
@@ -19847,7 +19359,7 @@ ByLayer
   0
 LINE
   5
-2DB
+2CA
 100
 AcDbEntity
 100
@@ -19875,7 +19387,7 @@ ByLayer
   0
 LINE
   5
-2DC
+2CB
 100
 AcDbEntity
 100
@@ -19903,7 +19415,7 @@ ByLayer
   0
 ARC
   5
-2DD
+2CC
 100
 AcDbEntity
   8
@@ -19933,7 +19445,7 @@ AcDbArc
   0
 LINE
   5
-2DE
+2CD
 100
 AcDbEntity
 100
@@ -19961,7 +19473,7 @@ ByLayer
   0
 LINE
   5
-2DF
+2CE
 100
 AcDbEntity
 100
@@ -19989,7 +19501,7 @@ ByLayer
   0
 ARC
   5
-2E0
+2CF
 100
 AcDbEntity
   8
@@ -20019,7 +19531,7 @@ AcDbArc
   0
 LINE
   5
-2E1
+2D0
 100
 AcDbEntity
 100
@@ -20047,7 +19559,7 @@ ByLayer
   0
 ARC
   5
-2E2
+2D1
 100
 AcDbEntity
   8
@@ -20077,7 +19589,7 @@ AcDbArc
   0
 ARC
   5
-2E3
+2D2
 100
 AcDbEntity
   8
@@ -20107,7 +19619,7 @@ AcDbArc
   0
 ARC
   5
-2E4
+2D3
 100
 AcDbEntity
   8
@@ -20137,7 +19649,7 @@ AcDbArc
   0
 LINE
   5
-2E5
+2D4
 100
 AcDbEntity
 100
@@ -20165,7 +19677,7 @@ ByLayer
   0
 ARC
   5
-2E6
+2D5
 100
 AcDbEntity
   8
@@ -20195,7 +19707,7 @@ AcDbArc
   0
 ARC
   5
-2E7
+2D6
 100
 AcDbEntity
   8
@@ -20225,7 +19737,7 @@ AcDbArc
   0
 LINE
   5
-2E8
+2D7
 100
 AcDbEntity
 100
@@ -20253,7 +19765,7 @@ ByLayer
   0
 ARC
   5
-2E9
+2D8
 100
 AcDbEntity
   8
@@ -20283,7 +19795,7 @@ AcDbArc
   0
 LINE
   5
-2EA
+2D9
 100
 AcDbEntity
 100
@@ -20311,7 +19823,7 @@ ByLayer
   0
 LINE
   5
-2EB
+2DA
 100
 AcDbEntity
 100
@@ -20339,7 +19851,7 @@ ByLayer
   0
 LINE
   5
-2EC
+2DB
 100
 AcDbEntity
 100
@@ -20367,7 +19879,7 @@ ByLayer
   0
 ARC
   5
-2ED
+2DC
 100
 AcDbEntity
   8
@@ -20397,7 +19909,7 @@ AcDbArc
   0
 LINE
   5
-2EE
+2DD
 100
 AcDbEntity
 100
@@ -20425,7 +19937,7 @@ ByLayer
   0
 ARC
   5
-2EF
+2DE
 100
 AcDbEntity
   8
@@ -20455,7 +19967,7 @@ AcDbArc
   0
 LINE
   5
-2F0
+2DF
 100
 AcDbEntity
 100
@@ -20483,7 +19995,7 @@ ByLayer
   0
 LINE
   5
-2F1
+2E0
 100
 AcDbEntity
 100
@@ -20511,7 +20023,7 @@ ByLayer
   0
 LINE
   5
-2F2
+2E1
 100
 AcDbEntity
 100
@@ -20539,7 +20051,7 @@ ByLayer
   0
 ARC
   5
-2F3
+2E2
 100
 AcDbEntity
   8
@@ -20569,7 +20081,7 @@ AcDbArc
   0
 LINE
   5
-2F4
+2E3
 100
 AcDbEntity
 100
@@ -20597,7 +20109,7 @@ ByLayer
   0
 ARC
   5
-2F5
+2E4
 100
 AcDbEntity
   8
@@ -20627,7 +20139,7 @@ AcDbArc
   0
 LINE
   5
-2F6
+2E5
 100
 AcDbEntity
 100
@@ -20655,7 +20167,7 @@ ByLayer
   0
 LINE
   5
-2F7
+2E6
 100
 AcDbEntity
 100
@@ -20683,7 +20195,7 @@ ByLayer
   0
 LINE
   5
-2F8
+2E7
 100
 AcDbEntity
 100
@@ -20711,7 +20223,7 @@ ByLayer
   0
 ARC
   5
-2F9
+2E8
 100
 AcDbEntity
   8
@@ -20741,7 +20253,7 @@ AcDbArc
   0
 LINE
   5
-2FA
+2E9
 100
 AcDbEntity
 100
@@ -20769,7 +20281,7 @@ ByLayer
   0
 ARC
   5
-2FB
+2EA
 100
 AcDbEntity
   8
@@ -20799,7 +20311,7 @@ AcDbArc
   0
 LINE
   5
-2FC
+2EB
 100
 AcDbEntity
 100
@@ -20827,7 +20339,7 @@ ByLayer
   0
 LINE
   5
-2FD
+2EC
 100
 AcDbEntity
 100
@@ -20855,7 +20367,7 @@ ByLayer
   0
 ARC
   5
-2FE
+2ED
 100
 AcDbEntity
   8
@@ -20885,7 +20397,7 @@ AcDbArc
   0
 LINE
   5
-2FF
+2EE
 100
 AcDbEntity
 100
@@ -20913,7 +20425,7 @@ ByLayer
   0
 LINE
   5
-300
+2EF
 100
 AcDbEntity
 100
@@ -20941,7 +20453,7 @@ ByLayer
   0
 LINE
   5
-301
+2F0
 100
 AcDbEntity
 100
@@ -20969,7 +20481,7 @@ ByLayer
   0
 ARC
   5
-302
+2F1
 100
 AcDbEntity
   8
@@ -20999,7 +20511,7 @@ AcDbArc
   0
 LINE
   5
-303
+2F2
 100
 AcDbEntity
 100
@@ -21027,7 +20539,7 @@ ByLayer
   0
 ARC
   5
-304
+2F3
 100
 AcDbEntity
   8
@@ -21057,7 +20569,7 @@ AcDbArc
   0
 LINE
   5
-305
+2F4
 100
 AcDbEntity
 100
@@ -21085,7 +20597,7 @@ ByLayer
   0
 LINE
   5
-306
+2F5
 100
 AcDbEntity
 100
@@ -21113,7 +20625,7 @@ ByLayer
   0
 LINE
   5
-307
+2F6
 100
 AcDbEntity
 100
@@ -21141,7 +20653,7 @@ ByLayer
   0
 LINE
   5
-308
+2F7
 100
 AcDbEntity
 100
@@ -21169,7 +20681,7 @@ ByLayer
   0
 LINE
   5
-309
+2F8
 100
 AcDbEntity
 100
@@ -21197,7 +20709,7 @@ ByLayer
   0
 LINE
   5
-30A
+2F9
 100
 AcDbEntity
 100
@@ -21225,7 +20737,7 @@ ByLayer
   0
 ARC
   5
-30B
+2FA
 100
 AcDbEntity
   8
@@ -21255,7 +20767,7 @@ AcDbArc
   0
 LINE
   5
-30C
+2FB
 100
 AcDbEntity
 100
@@ -21283,7 +20795,7 @@ ByLayer
   0
 LINE
   5
-30D
+2FC
 100
 AcDbEntity
 100
@@ -21311,7 +20823,7 @@ ByLayer
   0
 ARC
   5
-30E
+2FD
 100
 AcDbEntity
   8
@@ -21341,7 +20853,7 @@ AcDbArc
   0
 LINE
   5
-30F
+2FE
 100
 AcDbEntity
 100
@@ -21369,7 +20881,7 @@ ByLayer
   0
 ARC
   5
-310
+2FF
 100
 AcDbEntity
   8
@@ -21399,7 +20911,7 @@ AcDbArc
   0
 LINE
   5
-311
+300
 100
 AcDbEntity
 100
@@ -21427,7 +20939,7 @@ ByLayer
   0
 LINE
   5
-312
+301
 100
 AcDbEntity
 100
@@ -21455,7 +20967,7 @@ ByLayer
   0
 LINE
   5
-313
+302
 100
 AcDbEntity
 100
@@ -21483,7 +20995,7 @@ ByLayer
   0
 ARC
   5
-314
+303
 100
 AcDbEntity
   8
@@ -21513,7 +21025,7 @@ AcDbArc
   0
 LINE
   5
-315
+304
 100
 AcDbEntity
 100
@@ -21541,7 +21053,7 @@ ByLayer
   0
 ARC
   5
-316
+305
 100
 AcDbEntity
   8
@@ -21571,7 +21083,7 @@ AcDbArc
   0
 LINE
   5
-317
+306
 100
 AcDbEntity
 100
@@ -21599,7 +21111,7 @@ ByLayer
   0
 ARC
   5
-318
+307
 100
 AcDbEntity
   8
@@ -21629,7 +21141,7 @@ AcDbArc
   0
 LINE
   5
-319
+308
 100
 AcDbEntity
 100
@@ -21657,7 +21169,7 @@ ByLayer
   0
 ARC
   5
-31A
+309
 100
 AcDbEntity
   8
@@ -21672,6 +21184,490 @@ ByLayer
 AcDbCircle
  10
 -42.2916666666666643
+ 20
+-87.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+LINE
+  5
+30A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-42.2916666666666643
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+-43.125
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+30B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-43.125
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+-43.125
+ 21
+-89.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+30C
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-38.5416666666666643
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+-38.5416666666666643
+ 21
+-85.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+30D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-38.5416666666666643
+ 20
+-85.9000000000000057
+ 30
+0.0
+ 11
+-37.5416666666666643
+ 21
+-87.5666666666666771
+ 31
+0.0
+  0
+LINE
+  5
+30E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-37.5416666666666643
+ 20
+-87.5666666666666771
+ 30
+0.0
+ 11
+-36.5416666666666643
+ 21
+-85.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+30F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-36.5416666666666643
+ 20
+-85.9000000000000057
+ 30
+0.0
+ 11
+-36.5416666666666643
+ 21
+-88.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+310
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-35.5416666666666643
+ 20
+-87.5666666666666771
+ 30
+0.0
+ 11
+-35.5416666666666643
+ 21
+-88.2333333333333343
+ 31
+0.0
+  0
+ARC
+  5
+311
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-34.875
+ 20
+-88.2333333333333343
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+LINE
+  5
+312
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-34.2083333333333286
+ 20
+-88.2333333333333343
+ 30
+0.0
+ 11
+-34.2083333333333286
+ 21
+-87.5666666666666771
+ 31
+0.0
+  0
+ARC
+  5
+313
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-34.875
+ 20
+-87.5666666666666771
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+LINE
+  5
+314
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-33.2083333333333357
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+-33.2083333333333357
+ 21
+-88.4000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+315
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-32.7083333333333357
+ 20
+-88.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+LINE
+  5
+316
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-32.7083333333333357
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+-31.8750000000000036
+ 21
+-88.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+317
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-31.8750000000000036
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+-31.8750000000000036
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+318
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-30.875
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+-30.875
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+319
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-30.875
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+-30.0416666666666679
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+31A
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-30.0416666666666679
  20
 -87.4000000000000057
  30
@@ -21701,505 +21697,21 @@ Dino Text
   6
 ByLayer
  10
--42.2916666666666643
+-29.5416666666666679
  20
--86.9000000000000057
+-87.4000000000000057
  30
 0.0
  11
--43.125
+-29.5416666666666679
  21
--86.9000000000000057
+-88.9000000000000057
  31
 0.0
   0
 LINE
   5
 31C
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--43.125
- 20
--86.9000000000000057
- 30
-0.0
- 11
--43.125
- 21
--89.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-31D
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--38.5416666666666643
- 20
--88.9000000000000057
- 30
-0.0
- 11
--38.5416666666666643
- 21
--85.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-31E
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--38.5416666666666643
- 20
--85.9000000000000057
- 30
-0.0
- 11
--37.5416666666666643
- 21
--87.5666666666666771
- 31
-0.0
-  0
-LINE
-  5
-31F
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--37.5416666666666643
- 20
--87.5666666666666771
- 30
-0.0
- 11
--36.5416666666666643
- 21
--85.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-320
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--36.5416666666666643
- 20
--85.9000000000000057
- 30
-0.0
- 11
--36.5416666666666643
- 21
--88.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-321
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--35.5416666666666643
- 20
--87.5666666666666771
- 30
-0.0
- 11
--35.5416666666666643
- 21
--88.2333333333333343
- 31
-0.0
-  0
-ARC
-  5
-322
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--34.875
- 20
--88.2333333333333343
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-180.0
- 51
-0.0
-  0
-LINE
-  5
-323
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--34.2083333333333286
- 20
--88.2333333333333343
- 30
-0.0
- 11
--34.2083333333333286
- 21
--87.5666666666666771
- 31
-0.0
-  0
-ARC
-  5
-324
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--34.875
- 20
--87.5666666666666771
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-0.0
- 51
-180.0
-  0
-LINE
-  5
-325
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--33.2083333333333357
- 20
--86.9000000000000057
- 30
-0.0
- 11
--33.2083333333333357
- 21
--88.4000000000000057
- 31
-0.0
-  0
-ARC
-  5
-326
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--32.7083333333333357
- 20
--88.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-180.0
- 51
-270.0
-  0
-LINE
-  5
-327
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--32.7083333333333357
- 20
--88.9000000000000057
- 30
-0.0
- 11
--31.8750000000000036
- 21
--88.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-328
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--31.8750000000000036
- 20
--88.9000000000000057
- 30
-0.0
- 11
--31.8750000000000036
- 21
--86.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-329
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--30.875
- 20
--88.9000000000000057
- 30
-0.0
- 11
--30.875
- 21
--86.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-32A
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--30.875
- 20
--86.9000000000000057
- 30
-0.0
- 11
--30.0416666666666679
- 21
--86.9000000000000057
- 31
-0.0
-  0
-ARC
-  5
-32B
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--30.0416666666666679
- 20
--87.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-0.0
- 51
-90.0
-  0
-LINE
-  5
-32C
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--29.5416666666666679
- 20
--87.4000000000000057
- 30
-0.0
- 11
--29.5416666666666679
- 21
--88.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-32D
 100
 AcDbEntity
 100
@@ -22227,7 +21739,7 @@ ByLayer
   0
 LINE
   5
-32E
+31D
 100
 AcDbEntity
 100
@@ -22255,7 +21767,7 @@ ByLayer
   0
 LINE
   5
-32F
+31E
 100
 AcDbEntity
 100
@@ -22283,7 +21795,7 @@ ByLayer
   0
 ARC
   5
-330
+31F
 100
 AcDbEntity
   8
@@ -22313,7 +21825,7 @@ AcDbArc
   0
 LINE
   5
-331
+320
 100
 AcDbEntity
 100
@@ -22341,7 +21853,7 @@ ByLayer
   0
 ARC
   5
-332
+321
 100
 AcDbEntity
   8
@@ -22371,7 +21883,7 @@ AcDbArc
   0
 LINE
   5
-333
+322
 100
 AcDbEntity
 100
@@ -22399,7 +21911,7 @@ ByLayer
   0
 LINE
   5
-334
+323
 100
 AcDbEntity
 100
@@ -22427,7 +21939,7 @@ ByLayer
   0
 LINE
   5
-335
+324
 100
 AcDbEntity
 100
@@ -22455,7 +21967,7 @@ ByLayer
   0
 LINE
   5
-336
+325
 100
 AcDbEntity
 100
@@ -22483,7 +21995,7 @@ ByLayer
   0
 LINE
   5
-337
+326
 100
 AcDbEntity
 100
@@ -22511,7 +22023,7 @@ ByLayer
   0
 LINE
   5
-338
+327
 100
 AcDbEntity
 100
@@ -22539,7 +22051,7 @@ ByLayer
   0
 ARC
   5
-339
+328
 100
 AcDbEntity
   8
@@ -22569,7 +22081,7 @@ AcDbArc
   0
 LINE
   5
-33A
+329
 100
 AcDbEntity
 100
@@ -22597,7 +22109,7 @@ ByLayer
   0
 LINE
   5
-33B
+32A
 100
 AcDbEntity
 100
@@ -22625,7 +22137,7 @@ ByLayer
   0
 ARC
   5
-33C
+32B
 100
 AcDbEntity
   8
@@ -22655,7 +22167,7 @@ AcDbArc
   0
 LINE
   5
-33D
+32C
 100
 AcDbEntity
 100
@@ -22683,7 +22195,7 @@ ByLayer
   0
 ARC
   5
-33E
+32D
 100
 AcDbEntity
   8
@@ -22713,7 +22225,7 @@ AcDbArc
   0
 LINE
   5
-33F
+32E
 100
 AcDbEntity
 100
@@ -22741,7 +22253,7 @@ ByLayer
   0
 LINE
   5
-340
+32F
 100
 AcDbEntity
 100
@@ -22769,7 +22281,7 @@ ByLayer
   0
 ARC
   5
-341
+330
 100
 AcDbEntity
   8
@@ -22799,7 +22311,7 @@ AcDbArc
   0
 LINE
   5
-342
+331
 100
 AcDbEntity
 100
@@ -22827,7 +22339,7 @@ ByLayer
   0
 ARC
   5
-343
+332
 100
 AcDbEntity
   8
@@ -22857,7 +22369,7 @@ AcDbArc
   0
 LINE
   5
-344
+333
 100
 AcDbEntity
 100
@@ -22885,7 +22397,7 @@ ByLayer
   0
 ARC
   5
-345
+334
 100
 AcDbEntity
   8
@@ -22915,7 +22427,7 @@ AcDbArc
   0
 LINE
   5
-346
+335
 100
 AcDbEntity
 100
@@ -22943,7 +22455,7 @@ ByLayer
   0
 LINE
   5
-347
+336
 100
 AcDbEntity
 100
@@ -22971,7 +22483,7 @@ ByLayer
   0
 ARC
   5
-348
+337
 100
 AcDbEntity
   8
@@ -23001,7 +22513,7 @@ AcDbArc
   0
 LINE
   5
-349
+338
 100
 AcDbEntity
 100
@@ -23029,7 +22541,7 @@ ByLayer
   0
 ARC
   5
-34A
+339
 100
 AcDbEntity
   8
@@ -23059,7 +22571,7 @@ AcDbArc
   0
 LINE
   5
-34B
+33A
 100
 AcDbEntity
 100
@@ -23087,7 +22599,7 @@ ByLayer
   0
 LINE
   5
-34C
+33B
 100
 AcDbEntity
 100
@@ -23115,7 +22627,7 @@ ByLayer
   0
 LINE
   5
-34D
+33C
 100
 AcDbEntity
 100
@@ -23143,7 +22655,7 @@ ByLayer
   0
 LINE
   5
-34E
+33D
 100
 AcDbEntity
 100
@@ -23171,7 +22683,7 @@ ByLayer
   0
 LINE
   5
-34F
+33E
 100
 AcDbEntity
 100
@@ -23199,7 +22711,7 @@ ByLayer
   0
 ARC
   5
-350
+33F
 100
 AcDbEntity
   8
@@ -23229,7 +22741,7 @@ AcDbArc
   0
 LINE
   5
-351
+340
 100
 AcDbEntity
 100
@@ -23257,7 +22769,7 @@ ByLayer
   0
 ARC
   5
-352
+341
 100
 AcDbEntity
   8
@@ -23287,7 +22799,7 @@ AcDbArc
   0
 LINE
   5
-353
+342
 100
 AcDbEntity
 100
@@ -23315,7 +22827,7 @@ ByLayer
   0
 LINE
   5
-354
+343
 100
 AcDbEntity
 100
@@ -23343,7 +22855,7 @@ ByLayer
   0
 ARC
   5
-355
+344
 100
 AcDbEntity
   8
@@ -23358,6 +22870,490 @@ ByLayer
 AcDbCircle
  10
 -38.9583333333333357
+ 20
+-136.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+LINE
+  5
+345
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-38.4583333333333357
+ 20
+-136.4000000000000057
+ 30
+0.0
+ 11
+-38.4583333333333357
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+346
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-39.4583333333333357
+ 20
+-135.9000000000000057
+ 30
+0.0
+ 11
+-39.4583333333333357
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+347
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-35.2083333333333357
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+-35.2083333333333357
+ 21
+-134.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+348
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-35.2083333333333357
+ 20
+-134.9000000000000057
+ 30
+0.0
+ 11
+-34.2083333333333357
+ 21
+-136.5666666666666629
+ 31
+0.0
+  0
+LINE
+  5
+349
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-34.2083333333333357
+ 20
+-136.5666666666666629
+ 30
+0.0
+ 11
+-33.2083333333333357
+ 21
+-134.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+34A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-33.2083333333333357
+ 20
+-134.9000000000000057
+ 30
+0.0
+ 11
+-33.2083333333333357
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+34B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-32.2083333333333357
+ 20
+-136.5666666666666629
+ 30
+0.0
+ 11
+-32.2083333333333357
+ 21
+-137.2333333333333485
+ 31
+0.0
+  0
+ARC
+  5
+34C
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-31.5416666666666679
+ 20
+-137.2333333333333485
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+LINE
+  5
+34D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-30.8750000000000036
+ 20
+-137.2333333333333485
+ 30
+0.0
+ 11
+-30.8750000000000036
+ 21
+-136.5666666666666629
+ 31
+0.0
+  0
+ARC
+  5
+34E
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-31.5416666666666679
+ 20
+-136.5666666666666629
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+LINE
+  5
+34F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-29.875
+ 20
+-135.9000000000000057
+ 30
+0.0
+ 11
+-29.875
+ 21
+-137.4000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+350
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-29.375
+ 20
+-137.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+LINE
+  5
+351
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-29.375
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+-28.5416666666666679
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+352
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-28.5416666666666679
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+-28.5416666666666679
+ 21
+-135.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+353
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-27.5416666666666679
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+-27.5416666666666679
+ 21
+-135.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+354
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-27.5416666666666679
+ 20
+-135.9000000000000057
+ 30
+0.0
+ 11
+-26.7083333333333357
+ 21
+-135.9000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+355
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-26.7083333333333357
  20
 -136.4000000000000057
  30
@@ -23387,13 +23383,13 @@ Dino Text
   6
 ByLayer
  10
--38.4583333333333357
+-26.2083333333333357
  20
 -136.4000000000000057
  30
 0.0
  11
--38.4583333333333357
+-26.2083333333333357
  21
 -137.9000000000000057
  31
@@ -23402,490 +23398,6 @@ ByLayer
 LINE
   5
 357
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--39.4583333333333357
- 20
--135.9000000000000057
- 30
-0.0
- 11
--39.4583333333333357
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-358
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--35.2083333333333357
- 20
--137.9000000000000057
- 30
-0.0
- 11
--35.2083333333333357
- 21
--134.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-359
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--35.2083333333333357
- 20
--134.9000000000000057
- 30
-0.0
- 11
--34.2083333333333357
- 21
--136.5666666666666629
- 31
-0.0
-  0
-LINE
-  5
-35A
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--34.2083333333333357
- 20
--136.5666666666666629
- 30
-0.0
- 11
--33.2083333333333357
- 21
--134.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-35B
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--33.2083333333333357
- 20
--134.9000000000000057
- 30
-0.0
- 11
--33.2083333333333357
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-35C
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--32.2083333333333357
- 20
--136.5666666666666629
- 30
-0.0
- 11
--32.2083333333333357
- 21
--137.2333333333333485
- 31
-0.0
-  0
-ARC
-  5
-35D
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--31.5416666666666679
- 20
--137.2333333333333485
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-180.0
- 51
-0.0
-  0
-LINE
-  5
-35E
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--30.8750000000000036
- 20
--137.2333333333333485
- 30
-0.0
- 11
--30.8750000000000036
- 21
--136.5666666666666629
- 31
-0.0
-  0
-ARC
-  5
-35F
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--31.5416666666666679
- 20
--136.5666666666666629
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-0.0
- 51
-180.0
-  0
-LINE
-  5
-360
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--29.875
- 20
--135.9000000000000057
- 30
-0.0
- 11
--29.875
- 21
--137.4000000000000057
- 31
-0.0
-  0
-ARC
-  5
-361
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--29.375
- 20
--137.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-180.0
- 51
-270.0
-  0
-LINE
-  5
-362
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--29.375
- 20
--137.9000000000000057
- 30
-0.0
- 11
--28.5416666666666679
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-363
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--28.5416666666666679
- 20
--137.9000000000000057
- 30
-0.0
- 11
--28.5416666666666679
- 21
--135.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-364
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--27.5416666666666679
- 20
--137.9000000000000057
- 30
-0.0
- 11
--27.5416666666666679
- 21
--135.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-365
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--27.5416666666666679
- 20
--135.9000000000000057
- 30
-0.0
- 11
--26.7083333333333357
- 21
--135.9000000000000057
- 31
-0.0
-  0
-ARC
-  5
-366
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
--26.7083333333333357
- 20
--136.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-0.0
- 51
-90.0
-  0
-LINE
-  5
-367
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--26.2083333333333357
- 20
--136.4000000000000057
- 30
-0.0
- 11
--26.2083333333333357
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-368
 100
 AcDbEntity
 100
@@ -23913,7 +23425,7 @@ ByLayer
   0
 LINE
   5
-369
+358
 100
 AcDbEntity
 100
@@ -23941,7 +23453,7 @@ ByLayer
   0
 LINE
   5
-36A
+359
 100
 AcDbEntity
 100
@@ -23969,7 +23481,7 @@ ByLayer
   0
 ARC
   5
-36B
+35A
 100
 AcDbEntity
   8
@@ -23999,7 +23511,7 @@ AcDbArc
   0
 LINE
   5
-36C
+35B
 100
 AcDbEntity
 100
@@ -24027,7 +23539,7 @@ ByLayer
   0
 ARC
   5
-36D
+35C
 100
 AcDbEntity
   8
@@ -24057,7 +23569,7 @@ AcDbArc
   0
 LINE
   5
-36E
+35D
 100
 AcDbEntity
 100
@@ -24085,7 +23597,7 @@ ByLayer
   0
 LINE
   5
-36F
+35E
 100
 AcDbEntity
 100
@@ -24113,7 +23625,7 @@ ByLayer
   0
 LINE
   5
-370
+35F
 100
 AcDbEntity
 100
@@ -24141,7 +23653,7 @@ ByLayer
   0
 LINE
   5
-371
+360
 100
 AcDbEntity
 100
@@ -24169,7 +23681,7 @@ ByLayer
   0
 LINE
   5
-372
+361
 100
 AcDbEntity
 100
@@ -24197,7 +23709,7 @@ ByLayer
   0
 LINE
   5
-373
+362
 100
 AcDbEntity
 100
@@ -24225,7 +23737,7 @@ ByLayer
   0
 ARC
   5
-374
+363
 100
 AcDbEntity
   8
@@ -24255,7 +23767,7 @@ AcDbArc
   0
 LINE
   5
-375
+364
 100
 AcDbEntity
 100
@@ -24283,7 +23795,7 @@ ByLayer
   0
 LINE
   5
-376
+365
 100
 AcDbEntity
 100
@@ -24311,7 +23823,7 @@ ByLayer
   0
 ARC
   5
-377
+366
 100
 AcDbEntity
   8
@@ -24341,7 +23853,7 @@ AcDbArc
   0
 LINE
   5
-378
+367
 100
 AcDbEntity
 100
@@ -24369,7 +23881,7 @@ ByLayer
   0
 ARC
   5
-379
+368
 100
 AcDbEntity
   8
@@ -24399,7 +23911,7 @@ AcDbArc
   0
 LINE
   5
-37A
+369
 100
 AcDbEntity
 100
@@ -24427,7 +23939,7 @@ ByLayer
   0
 LINE
   5
-37B
+36A
 100
 AcDbEntity
 100
@@ -24455,7 +23967,7 @@ ByLayer
   0
 LINE
   5
-37C
+36B
 100
 AcDbEntity
 100
@@ -24483,7 +23995,7 @@ ByLayer
   0
 ARC
   5
-37D
+36C
 100
 AcDbEntity
   8
@@ -24513,7 +24025,7 @@ AcDbArc
   0
 LINE
   5
-37E
+36D
 100
 AcDbEntity
 100
@@ -24541,7 +24053,7 @@ ByLayer
   0
 ARC
   5
-37F
+36E
 100
 AcDbEntity
   8
@@ -24571,7 +24083,7 @@ AcDbArc
   0
 LINE
   5
-380
+36F
 100
 AcDbEntity
 100
@@ -24599,7 +24111,7 @@ ByLayer
   0
 ARC
   5
-381
+370
 100
 AcDbEntity
   8
@@ -24629,7 +24141,7 @@ AcDbArc
   0
 LINE
   5
-382
+371
 100
 AcDbEntity
 100
@@ -24657,7 +24169,7 @@ ByLayer
   0
 ARC
   5
-383
+372
 100
 AcDbEntity
   8
@@ -24672,6 +24184,490 @@ ByLayer
 AcDbCircle
  10
 95.7083333333333286
+ 20
+-87.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+LINE
+  5
+373
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+95.7083333333333286
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+94.875
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+374
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+94.875
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+94.875
+ 21
+-89.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+375
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+99.4583333333333286
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+99.4583333333333286
+ 21
+-85.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+376
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+99.4583333333333286
+ 20
+-85.9000000000000057
+ 30
+0.0
+ 11
+100.4583333333333286
+ 21
+-87.5666666666666771
+ 31
+0.0
+  0
+LINE
+  5
+377
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+100.4583333333333286
+ 20
+-87.5666666666666771
+ 30
+0.0
+ 11
+101.4583333333333286
+ 21
+-85.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+378
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+101.4583333333333286
+ 20
+-85.9000000000000057
+ 30
+0.0
+ 11
+101.4583333333333286
+ 21
+-88.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+379
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+102.4583333333333286
+ 20
+-87.5666666666666771
+ 30
+0.0
+ 11
+102.4583333333333286
+ 21
+-88.2333333333333343
+ 31
+0.0
+  0
+ARC
+  5
+37A
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+103.125
+ 20
+-88.2333333333333343
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+LINE
+  5
+37B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+103.7916666666666572
+ 20
+-88.2333333333333343
+ 30
+0.0
+ 11
+103.7916666666666572
+ 21
+-87.5666666666666771
+ 31
+0.0
+  0
+ARC
+  5
+37C
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+103.125
+ 20
+-87.5666666666666771
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+LINE
+  5
+37D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+104.7916666666666714
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+104.7916666666666714
+ 21
+-88.4000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+37E
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+105.2916666666666714
+ 20
+-88.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+LINE
+  5
+37F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+105.2916666666666714
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+106.125
+ 21
+-88.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+380
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+106.125
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+106.125
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+381
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+107.125
+ 20
+-88.9000000000000057
+ 30
+0.0
+ 11
+107.125
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+382
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+107.125
+ 20
+-86.9000000000000057
+ 30
+0.0
+ 11
+107.9583333333333286
+ 21
+-86.9000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+383
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+107.9583333333333286
  20
 -87.4000000000000057
  30
@@ -24701,505 +24697,21 @@ Dino Text
   6
 ByLayer
  10
-95.7083333333333286
+108.4583333333333286
  20
--86.9000000000000057
+-87.4000000000000057
  30
 0.0
  11
-94.875
+108.4583333333333286
  21
--86.9000000000000057
+-88.9000000000000057
  31
 0.0
   0
 LINE
   5
 385
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-94.875
- 20
--86.9000000000000057
- 30
-0.0
- 11
-94.875
- 21
--89.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-386
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-99.4583333333333286
- 20
--88.9000000000000057
- 30
-0.0
- 11
-99.4583333333333286
- 21
--85.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-387
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-99.4583333333333286
- 20
--85.9000000000000057
- 30
-0.0
- 11
-100.4583333333333286
- 21
--87.5666666666666771
- 31
-0.0
-  0
-LINE
-  5
-388
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-100.4583333333333286
- 20
--87.5666666666666771
- 30
-0.0
- 11
-101.4583333333333286
- 21
--85.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-389
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-101.4583333333333286
- 20
--85.9000000000000057
- 30
-0.0
- 11
-101.4583333333333286
- 21
--88.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-38A
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-102.4583333333333286
- 20
--87.5666666666666771
- 30
-0.0
- 11
-102.4583333333333286
- 21
--88.2333333333333343
- 31
-0.0
-  0
-ARC
-  5
-38B
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-103.125
- 20
--88.2333333333333343
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-180.0
- 51
-0.0
-  0
-LINE
-  5
-38C
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-103.7916666666666572
- 20
--88.2333333333333343
- 30
-0.0
- 11
-103.7916666666666572
- 21
--87.5666666666666771
- 31
-0.0
-  0
-ARC
-  5
-38D
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-103.125
- 20
--87.5666666666666771
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-0.0
- 51
-180.0
-  0
-LINE
-  5
-38E
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-104.7916666666666714
- 20
--86.9000000000000057
- 30
-0.0
- 11
-104.7916666666666714
- 21
--88.4000000000000057
- 31
-0.0
-  0
-ARC
-  5
-38F
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-105.2916666666666714
- 20
--88.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-180.0
- 51
-270.0
-  0
-LINE
-  5
-390
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-105.2916666666666714
- 20
--88.9000000000000057
- 30
-0.0
- 11
-106.125
- 21
--88.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-391
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-106.125
- 20
--88.9000000000000057
- 30
-0.0
- 11
-106.125
- 21
--86.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-392
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-107.125
- 20
--88.9000000000000057
- 30
-0.0
- 11
-107.125
- 21
--86.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-393
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-107.125
- 20
--86.9000000000000057
- 30
-0.0
- 11
-107.9583333333333286
- 21
--86.9000000000000057
- 31
-0.0
-  0
-ARC
-  5
-394
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-107.9583333333333286
- 20
--87.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-0.0
- 51
-90.0
-  0
-LINE
-  5
-395
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-108.4583333333333286
- 20
--87.4000000000000057
- 30
-0.0
- 11
-108.4583333333333286
- 21
--88.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-396
 100
 AcDbEntity
 100
@@ -25227,7 +24739,7 @@ ByLayer
   0
 LINE
   5
-397
+386
 100
 AcDbEntity
 100
@@ -25255,7 +24767,7 @@ ByLayer
   0
 LINE
   5
-398
+387
 100
 AcDbEntity
 100
@@ -25283,7 +24795,7 @@ ByLayer
   0
 ARC
   5
-399
+388
 100
 AcDbEntity
   8
@@ -25313,7 +24825,7 @@ AcDbArc
   0
 LINE
   5
-39A
+389
 100
 AcDbEntity
 100
@@ -25341,7 +24853,7 @@ ByLayer
   0
 ARC
   5
-39B
+38A
 100
 AcDbEntity
   8
@@ -25371,7 +24883,7 @@ AcDbArc
   0
 LINE
   5
-39C
+38B
 100
 AcDbEntity
 100
@@ -25399,7 +24911,7 @@ ByLayer
   0
 LINE
   5
-39D
+38C
 100
 AcDbEntity
 100
@@ -25427,7 +24939,7 @@ ByLayer
   0
 LINE
   5
-39E
+38D
 100
 AcDbEntity
 100
@@ -25455,7 +24967,7 @@ ByLayer
   0
 LINE
   5
-39F
+38E
 100
 AcDbEntity
 100
@@ -25483,7 +24995,7 @@ ByLayer
   0
 LINE
   5
-3A0
+38F
 100
 AcDbEntity
 100
@@ -25511,7 +25023,7 @@ ByLayer
   0
 LINE
   5
-3A1
+390
 100
 AcDbEntity
 100
@@ -25539,7 +25051,7 @@ ByLayer
   0
 ARC
   5
-3A2
+391
 100
 AcDbEntity
   8
@@ -25569,7 +25081,7 @@ AcDbArc
   0
 LINE
   5
-3A3
+392
 100
 AcDbEntity
 100
@@ -25597,7 +25109,7 @@ ByLayer
   0
 LINE
   5
-3A4
+393
 100
 AcDbEntity
 100
@@ -25625,7 +25137,7 @@ ByLayer
   0
 ARC
   5
-3A5
+394
 100
 AcDbEntity
   8
@@ -25655,7 +25167,7 @@ AcDbArc
   0
 LINE
   5
-3A6
+395
 100
 AcDbEntity
 100
@@ -25683,7 +25195,7 @@ ByLayer
   0
 ARC
   5
-3A7
+396
 100
 AcDbEntity
   8
@@ -25713,7 +25225,7 @@ AcDbArc
   0
 LINE
   5
-3A8
+397
 100
 AcDbEntity
 100
@@ -25741,7 +25253,7 @@ ByLayer
   0
 LINE
   5
-3A9
+398
 100
 AcDbEntity
 100
@@ -25769,7 +25281,7 @@ ByLayer
   0
 ARC
   5
-3AA
+399
 100
 AcDbEntity
   8
@@ -25799,7 +25311,7 @@ AcDbArc
   0
 LINE
   5
-3AB
+39A
 100
 AcDbEntity
 100
@@ -25827,7 +25339,7 @@ ByLayer
   0
 ARC
   5
-3AC
+39B
 100
 AcDbEntity
   8
@@ -25857,7 +25369,7 @@ AcDbArc
   0
 LINE
   5
-3AD
+39C
 100
 AcDbEntity
 100
@@ -25885,7 +25397,7 @@ ByLayer
   0
 ARC
   5
-3AE
+39D
 100
 AcDbEntity
   8
@@ -25915,7 +25427,7 @@ AcDbArc
   0
 LINE
   5
-3AF
+39E
 100
 AcDbEntity
 100
@@ -25943,7 +25455,7 @@ ByLayer
   0
 LINE
   5
-3B0
+39F
 100
 AcDbEntity
 100
@@ -25971,7 +25483,7 @@ ByLayer
   0
 ARC
   5
-3B1
+3A0
 100
 AcDbEntity
   8
@@ -26001,7 +25513,7 @@ AcDbArc
   0
 LINE
   5
-3B2
+3A1
 100
 AcDbEntity
 100
@@ -26029,7 +25541,7 @@ ByLayer
   0
 ARC
   5
-3B3
+3A2
 100
 AcDbEntity
   8
@@ -26059,7 +25571,7 @@ AcDbArc
   0
 LINE
   5
-3B4
+3A3
 100
 AcDbEntity
 100
@@ -26087,7 +25599,7 @@ ByLayer
   0
 LINE
   5
-3B5
+3A4
 100
 AcDbEntity
 100
@@ -26115,7 +25627,7 @@ ByLayer
   0
 LINE
   5
-3B6
+3A5
 100
 AcDbEntity
 100
@@ -26143,7 +25655,7 @@ ByLayer
   0
 LINE
   5
-3B7
+3A6
 100
 AcDbEntity
 100
@@ -26171,7 +25683,7 @@ ByLayer
   0
 LINE
   5
-3B8
+3A7
 100
 AcDbEntity
 100
@@ -26199,7 +25711,7 @@ ByLayer
   0
 ARC
   5
-3B9
+3A8
 100
 AcDbEntity
   8
@@ -26229,7 +25741,7 @@ AcDbArc
   0
 LINE
   5
-3BA
+3A9
 100
 AcDbEntity
 100
@@ -26257,7 +25769,7 @@ ByLayer
   0
 ARC
   5
-3BB
+3AA
 100
 AcDbEntity
   8
@@ -26287,7 +25799,7 @@ AcDbArc
   0
 LINE
   5
-3BC
+3AB
 100
 AcDbEntity
 100
@@ -26315,7 +25827,7 @@ ByLayer
   0
 LINE
   5
-3BD
+3AC
 100
 AcDbEntity
 100
@@ -26343,7 +25855,7 @@ ByLayer
   0
 ARC
   5
-3BE
+3AD
 100
 AcDbEntity
   8
@@ -26358,6 +25870,490 @@ ByLayer
 AcDbCircle
  10
 99.0416666666666714
+ 20
+-136.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+LINE
+  5
+3AE
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+99.5416666666666714
+ 20
+-136.4000000000000057
+ 30
+0.0
+ 11
+99.5416666666666714
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3AF
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+98.5416666666666714
+ 20
+-135.9000000000000057
+ 30
+0.0
+ 11
+98.5416666666666714
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3B0
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+102.7916666666666714
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+102.7916666666666714
+ 21
+-134.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3B1
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+102.7916666666666714
+ 20
+-134.9000000000000057
+ 30
+0.0
+ 11
+103.7916666666666714
+ 21
+-136.5666666666666629
+ 31
+0.0
+  0
+LINE
+  5
+3B2
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+103.7916666666666714
+ 20
+-136.5666666666666629
+ 30
+0.0
+ 11
+104.7916666666666714
+ 21
+-134.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3B3
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+104.7916666666666714
+ 20
+-134.9000000000000057
+ 30
+0.0
+ 11
+104.7916666666666714
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3B4
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+105.7916666666666714
+ 20
+-136.5666666666666629
+ 30
+0.0
+ 11
+105.7916666666666714
+ 21
+-137.2333333333333485
+ 31
+0.0
+  0
+ARC
+  5
+3B5
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+106.4583333333333428
+ 20
+-137.2333333333333485
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+LINE
+  5
+3B6
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+107.125
+ 20
+-137.2333333333333485
+ 30
+0.0
+ 11
+107.125
+ 21
+-136.5666666666666629
+ 31
+0.0
+  0
+ARC
+  5
+3B7
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+106.4583333333333428
+ 20
+-136.5666666666666629
+ 30
+0.0
+ 40
+0.6666666666666666
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+LINE
+  5
+3B8
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+108.125
+ 20
+-135.9000000000000057
+ 30
+0.0
+ 11
+108.125
+ 21
+-137.4000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+3B9
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+108.625
+ 20
+-137.4000000000000057
+ 30
+0.0
+ 40
+0.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+LINE
+  5
+3BA
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+108.625
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+109.4583333333333286
+ 21
+-137.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3BB
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+109.4583333333333286
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+109.4583333333333286
+ 21
+-135.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3BC
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+110.4583333333333286
+ 20
+-137.9000000000000057
+ 30
+0.0
+ 11
+110.4583333333333286
+ 21
+-135.9000000000000057
+ 31
+0.0
+  0
+LINE
+  5
+3BD
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+110.4583333333333286
+ 20
+-135.9000000000000057
+ 30
+0.0
+ 11
+111.2916666666666572
+ 21
+-135.9000000000000057
+ 31
+0.0
+  0
+ARC
+  5
+3BE
+100
+AcDbEntity
+  8
+Dino Text
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+111.2916666666666572
  20
 -136.4000000000000057
  30
@@ -26387,13 +26383,13 @@ Dino Text
   6
 ByLayer
  10
-99.5416666666666714
+111.7916666666666572
  20
 -136.4000000000000057
  30
 0.0
  11
-99.5416666666666714
+111.7916666666666572
  21
 -137.9000000000000057
  31
@@ -26402,490 +26398,6 @@ ByLayer
 LINE
   5
 3C0
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-98.5416666666666714
- 20
--135.9000000000000057
- 30
-0.0
- 11
-98.5416666666666714
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3C1
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-102.7916666666666714
- 20
--137.9000000000000057
- 30
-0.0
- 11
-102.7916666666666714
- 21
--134.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3C2
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-102.7916666666666714
- 20
--134.9000000000000057
- 30
-0.0
- 11
-103.7916666666666714
- 21
--136.5666666666666629
- 31
-0.0
-  0
-LINE
-  5
-3C3
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-103.7916666666666714
- 20
--136.5666666666666629
- 30
-0.0
- 11
-104.7916666666666714
- 21
--134.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3C4
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-104.7916666666666714
- 20
--134.9000000000000057
- 30
-0.0
- 11
-104.7916666666666714
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3C5
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-105.7916666666666714
- 20
--136.5666666666666629
- 30
-0.0
- 11
-105.7916666666666714
- 21
--137.2333333333333485
- 31
-0.0
-  0
-ARC
-  5
-3C6
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-106.4583333333333428
- 20
--137.2333333333333485
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-180.0
- 51
-0.0
-  0
-LINE
-  5
-3C7
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-107.125
- 20
--137.2333333333333485
- 30
-0.0
- 11
-107.125
- 21
--136.5666666666666629
- 31
-0.0
-  0
-ARC
-  5
-3C8
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-106.4583333333333428
- 20
--136.5666666666666629
- 30
-0.0
- 40
-0.6666666666666666
-100
-AcDbArc
- 50
-0.0
- 51
-180.0
-  0
-LINE
-  5
-3C9
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-108.125
- 20
--135.9000000000000057
- 30
-0.0
- 11
-108.125
- 21
--137.4000000000000057
- 31
-0.0
-  0
-ARC
-  5
-3CA
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-108.625
- 20
--137.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-180.0
- 51
-270.0
-  0
-LINE
-  5
-3CB
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-108.625
- 20
--137.9000000000000057
- 30
-0.0
- 11
-109.4583333333333286
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3CC
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-109.4583333333333286
- 20
--137.9000000000000057
- 30
-0.0
- 11
-109.4583333333333286
- 21
--135.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3CD
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-110.4583333333333286
- 20
--137.9000000000000057
- 30
-0.0
- 11
-110.4583333333333286
- 21
--135.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3CE
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-110.4583333333333286
- 20
--135.9000000000000057
- 30
-0.0
- 11
-111.2916666666666572
- 21
--135.9000000000000057
- 31
-0.0
-  0
-ARC
-  5
-3CF
-100
-AcDbEntity
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-111.2916666666666572
- 20
--136.4000000000000057
- 30
-0.0
- 40
-0.5
-100
-AcDbArc
- 50
-0.0
- 51
-90.0
-  0
-LINE
-  5
-3D0
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Text
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-111.7916666666666572
- 20
--136.4000000000000057
- 30
-0.0
- 11
-111.7916666666666572
- 21
--137.9000000000000057
- 31
-0.0
-  0
-LINE
-  5
-3D1
 100
 AcDbEntity
 100
@@ -26913,7 +26425,7 @@ ByLayer
   0
 LINE
   5
-3D2
+3C1
 100
 AcDbEntity
 100
@@ -26941,7 +26453,7 @@ ByLayer
   0
 LINE
   5
-3D3
+3C2
 100
 AcDbEntity
 100
@@ -26969,7 +26481,7 @@ ByLayer
   0
 LINE
   5
-3D4
+3C3
 100
 AcDbEntity
 100
@@ -26997,7 +26509,7 @@ ByLayer
   0
 LINE
   5
-3D5
+3C4
 100
 AcDbEntity
 100
@@ -27025,7 +26537,7 @@ ByLayer
   0
 LINE
   5
-3D6
+3C5
 100
 AcDbEntity
 100
@@ -27053,7 +26565,7 @@ ByLayer
   0
 LINE
   5
-3D7
+3C6
 100
 AcDbEntity
 100
@@ -27081,7 +26593,7 @@ ByLayer
   0
 LINE
   5
-3D8
+3C7
 100
 AcDbEntity
 100
@@ -27109,7 +26621,7 @@ ByLayer
   0
 LINE
   5
-3D9
+3C8
 100
 AcDbEntity
 100
@@ -27137,7 +26649,7 @@ ByLayer
   0
 LINE
   5
-3DA
+3C9
 100
 AcDbEntity
 100
@@ -27165,7 +26677,7 @@ ByLayer
   0
 LINE
   5
-3DB
+3CA
 100
 AcDbEntity
 100
@@ -27193,7 +26705,7 @@ ByLayer
   0
 LINE
   5
-3DC
+3CB
 100
 AcDbEntity
 100
@@ -27221,7 +26733,7 @@ ByLayer
   0
 LINE
   5
-3DD
+3CC
 100
 AcDbEntity
 100
@@ -27249,7 +26761,7 @@ ByLayer
   0
 LINE
   5
-3DE
+3CD
 100
 AcDbEntity
 100
@@ -27277,7 +26789,7 @@ ByLayer
   0
 LINE
   5
-3DF
+3CE
 100
 AcDbEntity
 100
@@ -27305,7 +26817,7 @@ ByLayer
   0
 LINE
   5
-3E0
+3CF
 100
 AcDbEntity
 100
@@ -27333,7 +26845,7 @@ ByLayer
   0
 LINE
   5
-3E1
+3D0
 100
 AcDbEntity
 100
@@ -27361,7 +26873,7 @@ ByLayer
   0
 LINE
   5
-3E2
+3D1
 100
 AcDbEntity
 100
@@ -27389,7 +26901,7 @@ ByLayer
   0
 CIRCLE
   5
-3E3
+3D2
 100
 AcDbEntity
 100
@@ -27413,7 +26925,7 @@ ByLayer
   0
 CIRCLE
   5
-3E4
+3D3
 100
 AcDbEntity
 100
@@ -27437,7 +26949,7 @@ ByLayer
   0
 LINE
   5
-3E5
+3D4
 100
 AcDbEntity
 100
@@ -27465,7 +26977,7 @@ ByLayer
   0
 ARC
   5
-3E6
+3D5
 100
 AcDbEntity
   8
@@ -27495,7 +27007,7 @@ AcDbArc
   0
 LINE
   5
-3E7
+3D6
 100
 AcDbEntity
 100
@@ -27523,7 +27035,7 @@ ByLayer
   0
 ARC
   5
-3E8
+3D7
 100
 AcDbEntity
   8
@@ -27553,7 +27065,7 @@ AcDbArc
   0
 CIRCLE
   5
-3E9
+3D8
 100
 AcDbEntity
 100
@@ -27577,7 +27089,7 @@ ByLayer
   0
 CIRCLE
   5
-3EA
+3D9
 100
 AcDbEntity
 100
@@ -27601,7 +27113,7 @@ ByLayer
   0
 CIRCLE
   5
-3EB
+3DA
 100
 AcDbEntity
 100
@@ -27625,7 +27137,7 @@ ByLayer
   0
 CIRCLE
   5
-3EC
+3DB
 100
 AcDbEntity
 100
@@ -27649,7 +27161,7 @@ ByLayer
   0
 CIRCLE
   5
-3ED
+3DC
 100
 AcDbEntity
 100
@@ -27673,7 +27185,7 @@ ByLayer
   0
 LINE
   5
-3EE
+3DD
 100
 AcDbEntity
 100
@@ -27701,7 +27213,7 @@ ByLayer
   0
 LINE
   5
-3EF
+3DE
 100
 AcDbEntity
 100
@@ -27729,7 +27241,7 @@ ByLayer
   0
 LINE
   5
-3F0
+3DF
 100
 AcDbEntity
 100
@@ -27757,7 +27269,7 @@ ByLayer
   0
 LINE
   5
-3F1
+3E0
 100
 AcDbEntity
 100
@@ -27785,7 +27297,7 @@ ByLayer
   0
 LINE
   5
-3F2
+3E1
 100
 AcDbEntity
 100
@@ -27813,7 +27325,7 @@ ByLayer
   0
 LINE
   5
-3F3
+3E2
 100
 AcDbEntity
 100
@@ -27841,7 +27353,7 @@ ByLayer
   0
 ARC
   5
-3F4
+3E3
 100
 AcDbEntity
   8
@@ -27871,7 +27383,7 @@ AcDbArc
   0
 LINE
   5
-3F5
+3E4
 100
 AcDbEntity
 100
@@ -27899,7 +27411,7 @@ ByLayer
   0
 LINE
   5
-3F6
+3E5
 100
 AcDbEntity
 100
@@ -27927,7 +27439,7 @@ ByLayer
   0
 LINE
   5
-3F7
+3E6
 100
 AcDbEntity
 100
@@ -27955,7 +27467,7 @@ ByLayer
   0
 ARC
   5
-3F8
+3E7
 100
 AcDbEntity
   8
@@ -27985,7 +27497,7 @@ AcDbArc
   0
 LINE
   5
-3F9
+3E8
 100
 AcDbEntity
 100
@@ -28013,7 +27525,7 @@ ByLayer
   0
 ARC
   5
-3FA
+3E9
 100
 AcDbEntity
   8
@@ -28043,7 +27555,7 @@ AcDbArc
   0
 LINE
   5
-3FB
+3EA
 100
 AcDbEntity
 100
@@ -28071,7 +27583,7 @@ ByLayer
   0
 LINE
   5
-3FC
+3EB
 100
 AcDbEntity
 100
@@ -28099,7 +27611,7 @@ ByLayer
   0
 LINE
   5
-3FD
+3EC
 100
 AcDbEntity
 100
@@ -28127,7 +27639,7 @@ ByLayer
   0
 ARC
   5
-3FE
+3ED
 100
 AcDbEntity
   8
@@ -28157,7 +27669,7 @@ AcDbArc
   0
 LINE
   5
-3FF
+3EE
 100
 AcDbEntity
 100
@@ -28185,7 +27697,7 @@ ByLayer
   0
 ARC
   5
-400
+3EF
 100
 AcDbEntity
   8
@@ -28215,7 +27727,7 @@ AcDbArc
   0
 LINE
   5
-401
+3F0
 100
 AcDbEntity
 100
@@ -28243,7 +27755,7 @@ ByLayer
   0
 LINE
   5
-402
+3F1
 100
 AcDbEntity
 100
@@ -28271,7 +27783,7 @@ ByLayer
   0
 ARC
   5
-403
+3F2
 100
 AcDbEntity
   8
@@ -28301,7 +27813,7 @@ AcDbArc
   0
 LINE
   5
-404
+3F3
 100
 AcDbEntity
 100
@@ -28329,7 +27841,7 @@ ByLayer
   0
 LINE
   5
-405
+3F4
 100
 AcDbEntity
 100
@@ -28357,7 +27869,7 @@ ByLayer
   0
 LINE
   5
-406
+3F5
 100
 AcDbEntity
 100
@@ -28385,7 +27897,7 @@ ByLayer
   0
 ARC
   5
-407
+3F6
 100
 AcDbEntity
   8
@@ -28415,7 +27927,7 @@ AcDbArc
   0
 LINE
   5
-408
+3F7
 100
 AcDbEntity
 100
@@ -28443,7 +27955,7 @@ ByLayer
   0
 ARC
   5
-409
+3F8
 100
 AcDbEntity
   8
@@ -28473,7 +27985,7 @@ AcDbArc
   0
 LINE
   5
-40A
+3F9
 100
 AcDbEntity
 100
@@ -28501,7 +28013,7 @@ ByLayer
   0
 LINE
   5
-40B
+3FA
 100
 AcDbEntity
 100
@@ -28529,7 +28041,7 @@ ByLayer
   0
 ARC
   5
-40C
+3FB
 100
 AcDbEntity
   8
@@ -28559,7 +28071,7 @@ AcDbArc
   0
 LINE
   5
-40D
+3FC
 100
 AcDbEntity
 100
@@ -28587,7 +28099,7 @@ ByLayer
   0
 LINE
   5
-40E
+3FD
 100
 AcDbEntity
 100
@@ -28615,7 +28127,7 @@ ByLayer
   0
 ARC
   5
-40F
+3FE
 100
 AcDbEntity
   8
@@ -28645,7 +28157,7 @@ AcDbArc
   0
 LINE
   5
-410
+3FF
 100
 AcDbEntity
 100
@@ -28673,7 +28185,7 @@ ByLayer
   0
 ARC
   5
-411
+400
 100
 AcDbEntity
   8
@@ -28703,7 +28215,7 @@ AcDbArc
   0
 LINE
   5
-412
+401
 100
 AcDbEntity
 100
@@ -28731,7 +28243,7 @@ ByLayer
   0
 LINE
   5
-413
+402
 100
 AcDbEntity
 100
@@ -28759,7 +28271,7 @@ ByLayer
   0
 LINE
   5
-414
+403
 100
 AcDbEntity
 100
@@ -28787,7 +28299,7 @@ ByLayer
   0
 ARC
   5
-415
+404
 100
 AcDbEntity
   8
@@ -28817,7 +28329,7 @@ AcDbArc
   0
 ARC
   5
-416
+405
 100
 AcDbEntity
   8
@@ -28847,7 +28359,7 @@ AcDbArc
   0
 LINE
   5
-417
+406
 100
 AcDbEntity
 100
@@ -28875,7 +28387,7 @@ ByLayer
   0
 ARC
   5
-418
+407
 100
 AcDbEntity
   8
@@ -28905,7 +28417,7 @@ AcDbArc
   0
 LINE
   5
-419
+408
 100
 AcDbEntity
 100
@@ -28933,7 +28445,7 @@ ByLayer
   0
 ARC
   5
-41A
+409
 100
 AcDbEntity
   8
@@ -28963,7 +28475,7 @@ AcDbArc
   0
 LINE
   5
-41B
+40A
 100
 AcDbEntity
 100
@@ -28991,7 +28503,7 @@ ByLayer
   0
 LINE
   5
-41C
+40B
 100
 AcDbEntity
 100
@@ -29019,7 +28531,7 @@ ByLayer
   0
 ARC
   5
-41D
+40C
 100
 AcDbEntity
   8
@@ -29049,7 +28561,7 @@ AcDbArc
   0
 ARC
   5
-41E
+40D
 100
 AcDbEntity
   8
@@ -29079,7 +28591,7 @@ AcDbArc
   0
 ARC
   5
-41F
+40E
 100
 AcDbEntity
   8
@@ -29109,7 +28621,7 @@ AcDbArc
   0
 ARC
   5
-420
+40F
 100
 AcDbEntity
   8
@@ -29139,7 +28651,7 @@ AcDbArc
   0
 ARC
   5
-421
+410
 100
 AcDbEntity
   8
@@ -29169,7 +28681,7 @@ AcDbArc
   0
 ARC
   5
-422
+411
 100
 AcDbEntity
   8
@@ -29199,7 +28711,7 @@ AcDbArc
   0
 LINE
   5
-423
+412
 100
 AcDbEntity
 100
@@ -29227,7 +28739,7 @@ ByLayer
   0
 LINE
   5
-424
+413
 100
 AcDbEntity
 100
@@ -29255,7 +28767,7 @@ ByLayer
   0
 ARC
   5
-425
+414
 100
 AcDbEntity
   8
@@ -29285,65 +28797,7 @@ AcDbArc
   0
 LINE
   5
-426
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-21.0
- 20
-63.3999999999999986
- 30
-0.0
- 11
-21.0
- 21
-70.0
- 31
-0.0
-  0
-ARC
-  5
-427
-100
-AcDbEntity
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-21.0
- 20
-60.5
- 30
-0.0
- 40
-2.8999999999999999
-100
-AcDbArc
- 50
-90.0
- 51
-270.0
-  0
-LINE
-  5
-428
+415
 100
 AcDbEntity
 100
@@ -29371,7 +28825,7 @@ ByLayer
   0
 ARC
   5
-429
+416
 100
 AcDbEntity
   8
@@ -29401,7 +28855,7 @@ AcDbArc
   0
 LINE
   5
-42A
+417
 100
 AcDbEntity
 100
@@ -29429,7 +28883,7 @@ ByLayer
   0
 LINE
   5
-42B
+418
 100
 AcDbEntity
 100
@@ -29457,7 +28911,7 @@ ByLayer
   0
 ARC
   5
-42C
+419
 100
 AcDbEntity
   8
@@ -29487,7 +28941,7 @@ AcDbArc
   0
 LINE
   5
-42D
+41A
 100
 AcDbEntity
 100
@@ -29515,7 +28969,7 @@ ByLayer
   0
 LINE
   5
-42E
+41B
 100
 AcDbEntity
 100
@@ -29543,7 +28997,7 @@ ByLayer
   0
 CIRCLE
   5
-42F
+41C
 100
 AcDbEntity
 100
@@ -29567,7 +29021,7 @@ ByLayer
   0
 CIRCLE
   5
-430
+41D
 100
 AcDbEntity
 100
@@ -29591,7 +29045,7 @@ ByLayer
   0
 CIRCLE
   5
-431
+41E
 100
 AcDbEntity
 100
@@ -29615,7 +29069,7 @@ ByLayer
   0
 LINE
   5
-432
+41F
 100
 AcDbEntity
 100
@@ -29643,7 +29097,7 @@ ByLayer
   0
 LINE
   5
-433
+420
 100
 AcDbEntity
 100
@@ -29671,7 +29125,7 @@ ByLayer
   0
 LINE
   5
-434
+421
 100
 AcDbEntity
 100
@@ -29699,7 +29153,7 @@ ByLayer
   0
 LINE
   5
-435
+422
 100
 AcDbEntity
 100
@@ -29727,7 +29181,7 @@ ByLayer
   0
 LINE
   5
-436
+423
 100
 AcDbEntity
 100
@@ -29755,7 +29209,7 @@ ByLayer
   0
 LINE
   5
-437
+424
 100
 AcDbEntity
 100
@@ -29783,7 +29237,7 @@ ByLayer
   0
 ARC
   5
-438
+425
 100
 AcDbEntity
   8
@@ -29813,7 +29267,7 @@ AcDbArc
   0
 LINE
   5
-439
+426
 100
 AcDbEntity
 100
@@ -29841,7 +29295,7 @@ ByLayer
   0
 ARC
   5
-43A
+427
 100
 AcDbEntity
   8
@@ -29871,7 +29325,7 @@ AcDbArc
   0
 LINE
   5
-43B
+428
 100
 AcDbEntity
 100
@@ -29899,7 +29353,7 @@ ByLayer
   0
 LINE
   5
-43C
+429
 100
 AcDbEntity
 100
@@ -29927,7 +29381,7 @@ ByLayer
   0
 ARC
   5
-43D
+42A
 100
 AcDbEntity
   8
@@ -29957,7 +29411,7 @@ AcDbArc
   0
 LINE
   5
-43E
+42B
 100
 AcDbEntity
 100
@@ -29985,7 +29439,7 @@ ByLayer
   0
 LINE
   5
-43F
+42C
 100
 AcDbEntity
 100
@@ -30013,7 +29467,7 @@ ByLayer
   0
 LINE
   5
-440
+42D
 100
 AcDbEntity
 100
@@ -30041,7 +29495,7 @@ ByLayer
   0
 ARC
   5
-441
+42E
 100
 AcDbEntity
   8
@@ -30071,7 +29525,7 @@ AcDbArc
   0
 LINE
   5
-442
+42F
 100
 AcDbEntity
 100
@@ -30099,7 +29553,7 @@ ByLayer
   0
 LINE
   5
-443
+430
 100
 AcDbEntity
 100
@@ -30127,7 +29581,7 @@ ByLayer
   0
 LINE
   5
-444
+431
 100
 AcDbEntity
 100
@@ -30155,7 +29609,7 @@ ByLayer
   0
 LINE
   5
-445
+432
 100
 AcDbEntity
 100
@@ -30183,7 +29637,7 @@ ByLayer
   0
 ARC
   5
-446
+433
 100
 AcDbEntity
   8
@@ -30213,7 +29667,7 @@ AcDbArc
   0
 LINE
   5
-447
+434
 100
 AcDbEntity
 100
@@ -30241,7 +29695,7 @@ ByLayer
   0
 ARC
   5
-448
+435
 100
 AcDbEntity
   8
@@ -30271,7 +29725,7 @@ AcDbArc
   0
 LINE
   5
-449
+436
 100
 AcDbEntity
 100
@@ -30299,7 +29753,7 @@ ByLayer
   0
 LINE
   5
-44A
+437
 100
 AcDbEntity
 100
@@ -30327,7 +29781,7 @@ ByLayer
   0
 LINE
   5
-44B
+438
 100
 AcDbEntity
 100
@@ -30355,7 +29809,7 @@ ByLayer
   0
 ARC
   5
-44C
+439
 100
 AcDbEntity
   8
@@ -30385,7 +29839,7 @@ AcDbArc
   0
 LINE
   5
-44D
+43A
 100
 AcDbEntity
 100
@@ -30413,7 +29867,7 @@ ByLayer
   0
 LINE
   5
-44E
+43B
 100
 AcDbEntity
 100
@@ -30441,7 +29895,7 @@ ByLayer
   0
 LINE
   5
-44F
+43C
 100
 AcDbEntity
 100
@@ -30469,7 +29923,7 @@ ByLayer
   0
 LINE
   5
-450
+43D
 100
 AcDbEntity
 100
@@ -30497,7 +29951,7 @@ ByLayer
   0
 ARC
   5
-451
+43E
 100
 AcDbEntity
   8
@@ -30527,7 +29981,7 @@ AcDbArc
   0
 LINE
   5
-452
+43F
 100
 AcDbEntity
 100
@@ -30555,7 +30009,7 @@ ByLayer
   0
 ARC
   5
-453
+440
 100
 AcDbEntity
   8
@@ -30585,7 +30039,7 @@ AcDbArc
   0
 LINE
   5
-454
+441
 100
 AcDbEntity
 100
@@ -30613,7 +30067,7 @@ ByLayer
   0
 LINE
   5
-455
+442
 100
 AcDbEntity
 100
@@ -30641,7 +30095,7 @@ ByLayer
   0
 LINE
   5
-456
+443
 100
 AcDbEntity
 100
@@ -30669,7 +30123,7 @@ ByLayer
   0
 LINE
   5
-457
+444
 100
 AcDbEntity
 100
@@ -30697,7 +30151,7 @@ ByLayer
   0
 ARC
   5
-458
+445
 100
 AcDbEntity
   8
@@ -30727,7 +30181,7 @@ AcDbArc
   0
 LINE
   5
-459
+446
 100
 AcDbEntity
 100
@@ -30755,7 +30209,7 @@ ByLayer
   0
 LINE
   5
-45A
+447
 100
 AcDbEntity
 100
@@ -30783,7 +30237,7 @@ ByLayer
   0
 LINE
   5
-45B
+448
 100
 AcDbEntity
 100
@@ -30811,7 +30265,7 @@ ByLayer
   0
 LINE
   5
-45C
+449
 100
 AcDbEntity
 100
@@ -30839,7 +30293,7 @@ ByLayer
   0
 LINE
   5
-45D
+44A
 100
 AcDbEntity
 100
@@ -30867,7 +30321,7 @@ ByLayer
   0
 LINE
   5
-45E
+44B
 100
 AcDbEntity
 100
@@ -30895,7 +30349,7 @@ ByLayer
   0
 ARC
   5
-45F
+44C
 100
 AcDbEntity
   8
@@ -30925,7 +30379,7 @@ AcDbArc
   0
 LINE
   5
-460
+44D
 100
 AcDbEntity
 100
@@ -30953,7 +30407,7 @@ ByLayer
   0
 ARC
   5
-461
+44E
 100
 AcDbEntity
   8
@@ -30983,7 +30437,7 @@ AcDbArc
   0
 LINE
   5
-462
+44F
 100
 AcDbEntity
 100
@@ -31011,7 +30465,7 @@ ByLayer
   0
 LINE
   5
-463
+450
 100
 AcDbEntity
 100
@@ -31039,7 +30493,7 @@ ByLayer
   0
 LINE
   5
-464
+451
 100
 AcDbEntity
 100
@@ -31067,7 +30521,7 @@ ByLayer
   0
 ARC
   5
-465
+452
 100
 AcDbEntity
   8
@@ -31097,7 +30551,7 @@ AcDbArc
   0
 LINE
   5
-466
+453
 100
 AcDbEntity
 100
@@ -31125,7 +30579,7 @@ ByLayer
   0
 ARC
   5
-467
+454
 100
 AcDbEntity
   8
@@ -31155,7 +30609,7 @@ AcDbArc
   0
 LINE
   5
-468
+455
 100
 AcDbEntity
 100
@@ -31183,7 +30637,7 @@ ByLayer
   0
 LINE
   5
-469
+456
 100
 AcDbEntity
 100
@@ -31211,7 +30665,7 @@ ByLayer
   0
 LINE
   5
-46A
+457
 100
 AcDbEntity
 100
@@ -31239,7 +30693,7 @@ ByLayer
   0
 LINE
   5
-46B
+458
 100
 AcDbEntity
 100
@@ -31267,7 +30721,7 @@ ByLayer
   0
 LINE
   5
-46C
+459
 100
 AcDbEntity
 100
@@ -31295,7 +30749,7 @@ ByLayer
   0
 LINE
   5
-46D
+45A
 100
 AcDbEntity
 100
@@ -31323,7 +30777,7 @@ ByLayer
   0
 LINE
   5
-46E
+45B
 100
 AcDbEntity
 100
@@ -31351,7 +30805,7 @@ ByLayer
   0
 LINE
   5
-46F
+45C
 100
 AcDbEntity
 100
@@ -31379,7 +30833,7 @@ ByLayer
   0
 LINE
   5
-470
+45D
 100
 AcDbEntity
 100
@@ -31407,7 +30861,7 @@ ByLayer
   0
 ARC
   5
-471
+45E
 100
 AcDbEntity
   8
@@ -31437,7 +30891,7 @@ AcDbArc
   0
 LINE
   5
-472
+45F
 100
 AcDbEntity
 100
@@ -31465,7 +30919,7 @@ ByLayer
   0
 ARC
   5
-473
+460
 100
 AcDbEntity
   8
@@ -31495,7 +30949,7 @@ AcDbArc
   0
 LINE
   5
-474
+461
 100
 AcDbEntity
 100
@@ -31523,7 +30977,7 @@ ByLayer
   0
 LINE
   5
-475
+462
 100
 AcDbEntity
 100
@@ -31551,7 +31005,7 @@ ByLayer
   0
 LINE
   5
-476
+463
 100
 AcDbEntity
 100
@@ -31579,7 +31033,7 @@ ByLayer
   0
 ARC
   5
-477
+464
 100
 AcDbEntity
   8
@@ -31609,7 +31063,7 @@ AcDbArc
   0
 LINE
   5
-478
+465
 100
 AcDbEntity
 100
@@ -31637,7 +31091,7 @@ ByLayer
   0
 ARC
   5
-479
+466
 100
 AcDbEntity
   8
@@ -31667,7 +31121,7 @@ AcDbArc
   0
 LINE
   5
-47A
+467
 100
 AcDbEntity
 100
@@ -31695,7 +31149,7 @@ ByLayer
   0
 LINE
   5
-47B
+468
 100
 AcDbEntity
 100
@@ -31723,7 +31177,7 @@ ByLayer
   0
 ARC
   5
-47C
+469
 100
 AcDbEntity
   8
@@ -31753,7 +31207,7 @@ AcDbArc
   0
 LINE
   5
-47D
+46A
 100
 AcDbEntity
 100
@@ -31781,7 +31235,7 @@ ByLayer
   0
 LINE
   5
-47E
+46B
 100
 AcDbEntity
 100
@@ -31809,7 +31263,7 @@ ByLayer
   0
 ARC
   5
-47F
+46C
 100
 AcDbEntity
   8
@@ -31839,7 +31293,7 @@ AcDbArc
   0
 LINE
   5
-480
+46D
 100
 AcDbEntity
 100
@@ -31867,7 +31321,7 @@ ByLayer
   0
 ARC
   5
-481
+46E
 100
 AcDbEntity
   8
@@ -31897,7 +31351,7 @@ AcDbArc
   0
 LINE
   5
-482
+46F
 100
 AcDbEntity
 100
@@ -31925,7 +31379,7 @@ ByLayer
   0
 LINE
   5
-483
+470
 100
 AcDbEntity
 100
@@ -31953,7 +31407,7 @@ ByLayer
   0
 LINE
   5
-484
+471
 100
 AcDbEntity
 100
@@ -31981,7 +31435,7 @@ ByLayer
   0
 LINE
   5
-485
+472
 100
 AcDbEntity
 100
@@ -32009,7 +31463,7 @@ ByLayer
   0
 LINE
   5
-486
+473
 100
 AcDbEntity
 100
@@ -32037,7 +31491,7 @@ ByLayer
   0
 LINE
   5
-487
+474
 100
 AcDbEntity
 100
@@ -32065,7 +31519,7 @@ ByLayer
   0
 LINE
   5
-488
+475
 100
 AcDbEntity
 100
@@ -32093,7 +31547,7 @@ ByLayer
   0
 ARC
   5
-489
+476
 100
 AcDbEntity
   8
@@ -32123,7 +31577,7 @@ AcDbArc
   0
 LINE
   5
-48A
+477
 100
 AcDbEntity
 100
@@ -32151,7 +31605,7 @@ ByLayer
   0
 ARC
   5
-48B
+478
 100
 AcDbEntity
   8
@@ -32181,7 +31635,7 @@ AcDbArc
   0
 LINE
   5
-48C
+479
 100
 AcDbEntity
 100
@@ -32209,7 +31663,7 @@ ByLayer
   0
 LINE
   5
-48D
+47A
 100
 AcDbEntity
 100
@@ -32237,7 +31691,7 @@ ByLayer
   0
 ARC
   5
-48E
+47B
 100
 AcDbEntity
   8
@@ -32267,7 +31721,7 @@ AcDbArc
   0
 LINE
   5
-48F
+47C
 100
 AcDbEntity
 100
@@ -32295,7 +31749,7 @@ ByLayer
   0
 LINE
   5
-490
+47D
 100
 AcDbEntity
 100
@@ -32323,7 +31777,7 @@ ByLayer
   0
 LINE
   5
-491
+47E
 100
 AcDbEntity
 100
@@ -32351,7 +31805,7 @@ ByLayer
   0
 ARC
   5
-492
+47F
 100
 AcDbEntity
   8
@@ -32381,7 +31835,7 @@ AcDbArc
   0
 LINE
   5
-493
+480
 100
 AcDbEntity
 100
@@ -32409,7 +31863,7 @@ ByLayer
   0
 LINE
   5
-494
+481
 100
 AcDbEntity
 100
@@ -32437,7 +31891,7 @@ ByLayer
   0
 LINE
   5
-495
+482
 100
 AcDbEntity
 100
@@ -32465,7 +31919,7 @@ ByLayer
   0
 LINE
   5
-496
+483
 100
 AcDbEntity
 100
@@ -32493,7 +31947,7 @@ ByLayer
   0
 ARC
   5
-497
+484
 100
 AcDbEntity
   8
@@ -32523,7 +31977,7 @@ AcDbArc
   0
 LINE
   5
-498
+485
 100
 AcDbEntity
 100
@@ -32551,7 +32005,7 @@ ByLayer
   0
 ARC
   5
-499
+486
 100
 AcDbEntity
   8
@@ -32581,7 +32035,7 @@ AcDbArc
   0
 LINE
   5
-49A
+487
 100
 AcDbEntity
 100
@@ -32609,7 +32063,7 @@ ByLayer
   0
 LINE
   5
-49B
+488
 100
 AcDbEntity
 100
@@ -32637,7 +32091,7 @@ ByLayer
   0
 LINE
   5
-49C
+489
 100
 AcDbEntity
 100
@@ -32665,7 +32119,7 @@ ByLayer
   0
 ARC
   5
-49D
+48A
 100
 AcDbEntity
   8
@@ -32695,7 +32149,7 @@ AcDbArc
   0
 LINE
   5
-49E
+48B
 100
 AcDbEntity
 100
@@ -32723,7 +32177,7 @@ ByLayer
   0
 LINE
   5
-49F
+48C
 100
 AcDbEntity
 100
@@ -32751,7 +32205,7 @@ ByLayer
   0
 LINE
   5
-4A0
+48D
 100
 AcDbEntity
 100
@@ -32779,7 +32233,7 @@ ByLayer
   0
 LINE
   5
-4A1
+48E
 100
 AcDbEntity
 100
@@ -32807,7 +32261,7 @@ ByLayer
   0
 ARC
   5
-4A2
+48F
 100
 AcDbEntity
   8
@@ -32837,7 +32291,7 @@ AcDbArc
   0
 LINE
   5
-4A3
+490
 100
 AcDbEntity
 100
@@ -32865,7 +32319,7 @@ ByLayer
   0
 ARC
   5
-4A4
+491
 100
 AcDbEntity
   8
@@ -32895,7 +32349,7 @@ AcDbArc
   0
 LINE
   5
-4A5
+492
 100
 AcDbEntity
 100
@@ -32923,7 +32377,7 @@ ByLayer
   0
 LINE
   5
-4A6
+493
 100
 AcDbEntity
 100
@@ -32951,7 +32405,7 @@ ByLayer
   0
 LINE
   5
-4A7
+494
 100
 AcDbEntity
 100
@@ -32979,7 +32433,7 @@ ByLayer
   0
 LINE
   5
-4A8
+495
 100
 AcDbEntity
 100
@@ -33007,7 +32461,7 @@ ByLayer
   0
 ARC
   5
-4A9
+496
 100
 AcDbEntity
   8
@@ -33037,7 +32491,7 @@ AcDbArc
   0
 LINE
   5
-4AA
+497
 100
 AcDbEntity
 100
@@ -33065,7 +32519,7 @@ ByLayer
   0
 LINE
   5
-4AB
+498
 100
 AcDbEntity
 100
@@ -33093,7 +32547,7 @@ ByLayer
   0
 LINE
   5
-4AC
+499
 100
 AcDbEntity
 100
@@ -33121,7 +32575,7 @@ ByLayer
   0
 LINE
   5
-4AD
+49A
 100
 AcDbEntity
 100
@@ -33149,7 +32603,7 @@ ByLayer
   0
 LINE
   5
-4AE
+49B
 100
 AcDbEntity
 100
@@ -33177,7 +32631,7 @@ ByLayer
   0
 LINE
   5
-4AF
+49C
 100
 AcDbEntity
 100
@@ -33205,7 +32659,7 @@ ByLayer
   0
 ARC
   5
-4B0
+49D
 100
 AcDbEntity
   8
@@ -33235,7 +32689,7 @@ AcDbArc
   0
 LINE
   5
-4B1
+49E
 100
 AcDbEntity
 100
@@ -33263,7 +32717,7 @@ ByLayer
   0
 ARC
   5
-4B2
+49F
 100
 AcDbEntity
   8
@@ -33293,7 +32747,7 @@ AcDbArc
   0
 LINE
   5
-4B3
+4A0
 100
 AcDbEntity
 100
@@ -33321,7 +32775,7 @@ ByLayer
   0
 LINE
   5
-4B4
+4A1
 100
 AcDbEntity
 100
@@ -33349,7 +32803,7 @@ ByLayer
   0
 LINE
   5
-4B5
+4A2
 100
 AcDbEntity
 100
@@ -33377,7 +32831,7 @@ ByLayer
   0
 ARC
   5
-4B6
+4A3
 100
 AcDbEntity
   8
@@ -33407,7 +32861,7 @@ AcDbArc
   0
 LINE
   5
-4B7
+4A4
 100
 AcDbEntity
 100
@@ -33435,7 +32889,7 @@ ByLayer
   0
 ARC
   5
-4B8
+4A5
 100
 AcDbEntity
   8
@@ -33465,7 +32919,7 @@ AcDbArc
   0
 LINE
   5
-4B9
+4A6
 100
 AcDbEntity
 100
@@ -33493,7 +32947,7 @@ ByLayer
   0
 LINE
   5
-4BA
+4A7
 100
 AcDbEntity
 100
@@ -33521,7 +32975,7 @@ ByLayer
   0
 LINE
   5
-4BB
+4A8
 100
 AcDbEntity
 100
@@ -33549,7 +33003,7 @@ ByLayer
   0
 ARC
   5
-4BC
+4A9
 100
 AcDbEntity
   8
@@ -33579,7 +33033,7 @@ AcDbArc
   0
 LINE
   5
-4BD
+4AA
 100
 AcDbEntity
 100
@@ -33607,7 +33061,7 @@ ByLayer
   0
 ARC
   5
-4BE
+4AB
 100
 AcDbEntity
   8
@@ -33637,7 +33091,7 @@ AcDbArc
   0
 LINE
   5
-4BF
+4AC
 100
 AcDbEntity
 100
@@ -33665,7 +33119,7 @@ ByLayer
   0
 ARC
   5
-4C0
+4AD
 100
 AcDbEntity
   8
@@ -33695,7 +33149,7 @@ AcDbArc
   0
 LINE
   5
-4C1
+4AE
 100
 AcDbEntity
 100
@@ -33723,7 +33177,7 @@ ByLayer
   0
 LINE
   5
-4C2
+4AF
 100
 AcDbEntity
 100
@@ -33751,7 +33205,7 @@ ByLayer
   0
 ARC
   5
-4C3
+4B0
 100
 AcDbEntity
   8
@@ -33781,7 +33235,7 @@ AcDbArc
   0
 LINE
   5
-4C4
+4B1
 100
 AcDbEntity
 100
@@ -33809,7 +33263,7 @@ ByLayer
   0
 ARC
   5
-4C5
+4B2
 100
 AcDbEntity
   8
@@ -33839,7 +33293,7 @@ AcDbArc
   0
 LINE
   5
-4C6
+4B3
 100
 AcDbEntity
 100
@@ -33867,7 +33321,7 @@ ByLayer
   0
 LINE
   5
-4C7
+4B4
 100
 AcDbEntity
 100
@@ -33895,7 +33349,7 @@ ByLayer
   0
 LINE
   5
-4C8
+4B5
 100
 AcDbEntity
 100
@@ -33923,7 +33377,7 @@ ByLayer
   0
 LINE
   5
-4C9
+4B6
 100
 AcDbEntity
 100
@@ -33951,7 +33405,7 @@ ByLayer
   0
 LINE
   5
-4CA
+4B7
 100
 AcDbEntity
 100
@@ -33979,7 +33433,7 @@ ByLayer
   0
 ARC
   5
-4CB
+4B8
 100
 AcDbEntity
   8
@@ -34009,7 +33463,7 @@ AcDbArc
   0
 LINE
   5
-4CC
+4B9
 100
 AcDbEntity
 100
@@ -34037,7 +33491,7 @@ ByLayer
   0
 ARC
   5
-4CD
+4BA
 100
 AcDbEntity
   8
@@ -34067,7 +33521,7 @@ AcDbArc
   0
 LINE
   5
-4CE
+4BB
 100
 AcDbEntity
 100
@@ -34095,7 +33549,7 @@ ByLayer
   0
 LINE
   5
-4CF
+4BC
 100
 AcDbEntity
 100
@@ -34123,7 +33577,7 @@ ByLayer
   0
 ARC
   5
-4D0
+4BD
 100
 AcDbEntity
   8
@@ -34153,7 +33607,7 @@ AcDbArc
   0
 LINE
   5
-4D1
+4BE
 100
 AcDbEntity
 100
@@ -34181,7 +33635,7 @@ ByLayer
   0
 LINE
   5
-4D2
+4BF
 100
 AcDbEntity
 100
@@ -34209,7 +33663,7 @@ ByLayer
   0
 LINE
   5
-4D3
+4C0
 100
 AcDbEntity
 100
@@ -34237,7 +33691,7 @@ ByLayer
   0
 LINE
   5
-4D4
+4C1
 100
 AcDbEntity
 100
@@ -34265,7 +33719,7 @@ ByLayer
   0
 LINE
   5
-4D5
+4C2
 100
 AcDbEntity
 100
@@ -34293,7 +33747,7 @@ ByLayer
   0
 LINE
   5
-4D6
+4C3
 100
 AcDbEntity
 100
@@ -34321,7 +33775,7 @@ ByLayer
   0
 LINE
   5
-4D7
+4C4
 100
 AcDbEntity
 100
@@ -34349,7 +33803,7 @@ ByLayer
   0
 LINE
   5
-4D8
+4C5
 100
 AcDbEntity
 100
@@ -34377,7 +33831,7 @@ ByLayer
   0
 ARC
   5
-4D9
+4C6
 100
 AcDbEntity
   8
@@ -34407,7 +33861,7 @@ AcDbArc
   0
 LINE
   5
-4DA
+4C7
 100
 AcDbEntity
 100
@@ -34435,7 +33889,7 @@ ByLayer
   0
 ARC
   5
-4DB
+4C8
 100
 AcDbEntity
   8
@@ -34465,7 +33919,7 @@ AcDbArc
   0
 LINE
   5
-4DC
+4C9
 100
 AcDbEntity
 100
@@ -34493,7 +33947,7 @@ ByLayer
   0
 LINE
   5
-4DD
+4CA
 100
 AcDbEntity
 100
@@ -34521,7 +33975,7 @@ ByLayer
   0
 ARC
   5
-4DE
+4CB
 100
 AcDbEntity
   8
@@ -34551,7 +34005,7 @@ AcDbArc
   0
 LINE
   5
-4DF
+4CC
 100
 AcDbEntity
 100
@@ -34579,7 +34033,7 @@ ByLayer
   0
 LINE
   5
-4E0
+4CD
 100
 AcDbEntity
 100
@@ -34607,7 +34061,7 @@ ByLayer
   0
 LINE
   5
-4E1
+4CE
 100
 AcDbEntity
 100
@@ -34635,7 +34089,7 @@ ByLayer
   0
 ARC
   5
-4E2
+4CF
 100
 AcDbEntity
   8
@@ -34665,7 +34119,7 @@ AcDbArc
   0
 LINE
   5
-4E3
+4D0
 100
 AcDbEntity
 100
@@ -34693,7 +34147,7 @@ ByLayer
   0
 LINE
   5
-4E4
+4D1
 100
 AcDbEntity
 100
@@ -34721,7 +34175,7 @@ ByLayer
   0
 LINE
   5
-4E5
+4D2
 100
 AcDbEntity
 100
@@ -34749,7 +34203,7 @@ ByLayer
   0
 LINE
   5
-4E6
+4D3
 100
 AcDbEntity
 100
@@ -34777,7 +34231,7 @@ ByLayer
   0
 ARC
   5
-4E7
+4D4
 100
 AcDbEntity
   8
@@ -34807,7 +34261,7 @@ AcDbArc
   0
 LINE
   5
-4E8
+4D5
 100
 AcDbEntity
 100
@@ -34835,7 +34289,7 @@ ByLayer
   0
 ARC
   5
-4E9
+4D6
 100
 AcDbEntity
   8
@@ -34865,7 +34319,7 @@ AcDbArc
   0
 LINE
   5
-4EA
+4D7
 100
 AcDbEntity
 100
@@ -34893,7 +34347,7 @@ ByLayer
   0
 LINE
   5
-4EB
+4D8
 100
 AcDbEntity
 100
@@ -34921,7 +34375,7 @@ ByLayer
   0
 LINE
   5
-4EC
+4D9
 100
 AcDbEntity
 100
@@ -34949,7 +34403,7 @@ ByLayer
   0
 ARC
   5
-4ED
+4DA
 100
 AcDbEntity
   8
@@ -34979,7 +34433,7 @@ AcDbArc
   0
 LINE
   5
-4EE
+4DB
 100
 AcDbEntity
 100
@@ -35007,7 +34461,7 @@ ByLayer
   0
 LINE
   5
-4EF
+4DC
 100
 AcDbEntity
 100
@@ -35035,7 +34489,7 @@ ByLayer
   0
 LINE
   5
-4F0
+4DD
 100
 AcDbEntity
 100
@@ -35063,7 +34517,7 @@ ByLayer
   0
 LINE
   5
-4F1
+4DE
 100
 AcDbEntity
 100
@@ -35091,7 +34545,7 @@ ByLayer
   0
 ARC
   5
-4F2
+4DF
 100
 AcDbEntity
   8
@@ -35121,7 +34575,7 @@ AcDbArc
   0
 LINE
   5
-4F3
+4E0
 100
 AcDbEntity
 100
@@ -35149,7 +34603,7 @@ ByLayer
   0
 ARC
   5
-4F4
+4E1
 100
 AcDbEntity
   8
@@ -35179,7 +34633,7 @@ AcDbArc
   0
 LINE
   5
-4F5
+4E2
 100
 AcDbEntity
 100
@@ -35207,7 +34661,7 @@ ByLayer
   0
 LINE
   5
-4F6
+4E3
 100
 AcDbEntity
 100
@@ -35235,7 +34689,7 @@ ByLayer
   0
 LINE
   5
-4F7
+4E4
 100
 AcDbEntity
 100
@@ -35263,7 +34717,7 @@ ByLayer
   0
 LINE
   5
-4F8
+4E5
 100
 AcDbEntity
 100
@@ -35291,7 +34745,7 @@ ByLayer
   0
 ARC
   5
-4F9
+4E6
 100
 AcDbEntity
   8
@@ -35321,7 +34775,7 @@ AcDbArc
   0
 LINE
   5
-4FA
+4E7
 100
 AcDbEntity
 100
@@ -35349,7 +34803,7 @@ ByLayer
   0
 LINE
   5
-4FB
+4E8
 100
 AcDbEntity
 100
@@ -35377,7 +34831,7 @@ ByLayer
   0
 LINE
   5
-4FC
+4E9
 100
 AcDbEntity
 100
@@ -35405,7 +34859,7 @@ ByLayer
   0
 LINE
   5
-4FD
+4EA
 100
 AcDbEntity
 100
@@ -35433,7 +34887,7 @@ ByLayer
   0
 LINE
   5
-4FE
+4EB
 100
 AcDbEntity
 100
@@ -35461,7 +34915,7 @@ ByLayer
   0
 LINE
   5
-4FF
+4EC
 100
 AcDbEntity
 100
@@ -35489,7 +34943,7 @@ ByLayer
   0
 ARC
   5
-500
+4ED
 100
 AcDbEntity
   8
@@ -35519,7 +34973,7 @@ AcDbArc
   0
 LINE
   5
-501
+4EE
 100
 AcDbEntity
 100
@@ -35547,7 +35001,7 @@ ByLayer
   0
 ARC
   5
-502
+4EF
 100
 AcDbEntity
   8
@@ -35577,7 +35031,7 @@ AcDbArc
   0
 LINE
   5
-503
+4F0
 100
 AcDbEntity
 100
@@ -35605,7 +35059,7 @@ ByLayer
   0
 LINE
   5
-504
+4F1
 100
 AcDbEntity
 100
@@ -35633,7 +35087,7 @@ ByLayer
   0
 LINE
   5
-505
+4F2
 100
 AcDbEntity
 100
@@ -35661,7 +35115,7 @@ ByLayer
   0
 ARC
   5
-506
+4F3
 100
 AcDbEntity
   8
@@ -35691,7 +35145,7 @@ AcDbArc
   0
 LINE
   5
-507
+4F4
 100
 AcDbEntity
 100
@@ -35719,7 +35173,7 @@ ByLayer
   0
 ARC
   5
-508
+4F5
 100
 AcDbEntity
   8
@@ -35749,7 +35203,7 @@ AcDbArc
   0
 LINE
   5
-509
+4F6
 100
 AcDbEntity
 100
@@ -35777,7 +35231,7 @@ ByLayer
   0
 LINE
   5
-50A
+4F7
 100
 AcDbEntity
 100
@@ -35805,7 +35259,7 @@ ByLayer
   0
 LINE
   5
-50B
+4F8
 100
 AcDbEntity
 100
@@ -35833,7 +35287,7 @@ ByLayer
   0
 LINE
   5
-50C
+4F9
 100
 AcDbEntity
 100
@@ -35861,7 +35315,7 @@ ByLayer
   0
 ARC
   5
-50D
+4FA
 100
 AcDbEntity
   8
@@ -35891,7 +35345,7 @@ AcDbArc
   0
 LINE
   5
-50E
+4FB
 100
 AcDbEntity
 100
@@ -35919,7 +35373,7 @@ ByLayer
   0
 ARC
   5
-50F
+4FC
 100
 AcDbEntity
   8
@@ -35949,7 +35403,7 @@ AcDbArc
   0
 LINE
   5
-510
+4FD
 100
 AcDbEntity
 100
@@ -35977,7 +35431,7 @@ ByLayer
   0
 ARC
   5
-511
+4FE
 100
 AcDbEntity
   8
@@ -36007,7 +35461,7 @@ AcDbArc
   0
 LINE
   5
-512
+4FF
 100
 AcDbEntity
 100
@@ -36035,7 +35489,7 @@ ByLayer
   0
 ARC
   5
-513
+500
 100
 AcDbEntity
   8
@@ -36065,7 +35519,7 @@ AcDbArc
   0
 LINE
   5
-514
+501
 100
 AcDbEntity
 100
@@ -36093,7 +35547,7 @@ ByLayer
   0
 LINE
   5
-515
+502
 100
 AcDbEntity
 100
@@ -36121,7 +35575,7 @@ ByLayer
   0
 MTEXT
   5
-516
+503
 100
 AcDbEntity
 100
@@ -36155,13 +35609,13 @@ normal
  50
 0.0
  73
-1
+0
  44
 1.0
   0
 MTEXT
   5
-517
+504
 100
 AcDbEntity
 100
@@ -36195,13 +35649,13 @@ normal
  50
 0.0
  73
-1
+0
  44
 1.0
   0
 MTEXT
   5
-518
+505
 100
 AcDbEntity
 100
@@ -36235,13 +35689,13 @@ normal
  50
 0.0
  73
-1
+0
  44
 1.0
   0
 MTEXT
   5
-519
+506
 100
 AcDbEntity
 100
@@ -36275,43 +35729,13 @@ normal
  50
 0.0
  73
-1
+0
  44
 1.0
   0
-ARC
-  5
-51A
-100
-AcDbEntity
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-10.0000000000000018
- 20
-48.9999745962155728
- 30
-0.0
- 40
-5.0
-100
-AcDbArc
- 50
-90.0000000000000284
- 51
-180.0
-  0
 LINE
   5
-51B
+507
 100
 AcDbEntity
 100
@@ -36335,155 +35759,11 @@ ByLayer
  21
 10.5
  31
-0.0
-  0
-LINE
-  5
-51C
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-5.0
- 20
-15.5
- 30
-0.0
- 11
-5.0000000000000018
- 21
-48.9999745962155728
- 31
-0.0
-  0
-ARC
-  5
-51D
-100
-AcDbEntity
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-10.0
- 20
-15.5
- 30
-0.0
- 40
-5.0
-100
-AcDbArc
- 50
-180.0
- 51
-270.0
-  0
-LINE
-  5
-51E
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-21.0
- 20
-55.9999745962155728
- 30
-0.0
- 11
-21.0
- 21
-57.6000000000000014
- 31
-0.0
-  0
-LINE
-  5
-51F
-100
-AcDbEntity
-100
-AcDbLine
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-10.0
- 20
-53.9999745962155728
- 30
-0.0
- 11
-19.0
- 21
-53.9999745962155728
- 31
-0.0
-  0
-ARC
-  5
-520
-100
-AcDbEntity
-  8
-Dino Brackets
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-19.0
- 20
-55.9999745962155728
- 30
-0.0
- 40
-2.0
-100
-AcDbArc
- 50
-270.0
- 51
 0.0
   0
 INSERT
   5
-521
+508
 100
 AcDbEntity
 100
@@ -36513,7 +35793,7 @@ tbits
   0
 INSERT
   5
-522
+509
 100
 AcDbEntity
 100
@@ -36543,7 +35823,7 @@ tbits
   0
 LINE
   5
-523
+50A
 100
 AcDbEntity
 100
@@ -36571,7 +35851,7 @@ ByLayer
   0
 LINE
   5
-524
+50B
 100
 AcDbEntity
 100
@@ -36599,7 +35879,7 @@ ByLayer
   0
 ARC
   5
-525
+50C
 100
 AcDbEntity
   8
@@ -36629,7 +35909,7 @@ AcDbArc
   0
 LINE
   5
-526
+50D
 100
 AcDbEntity
 100
@@ -36657,7 +35937,7 @@ ByLayer
   0
 LINE
   5
-527
+50E
 100
 AcDbEntity
 100
@@ -36685,7 +35965,7 @@ ByLayer
   0
 LINE
   5
-528
+50F
 100
 AcDbEntity
 100
@@ -36713,7 +35993,7 @@ ByLayer
   0
 ARC
   5
-529
+510
 100
 AcDbEntity
   8
@@ -36743,7 +36023,7 @@ AcDbArc
   0
 ARC
   5
-52A
+511
 100
 AcDbEntity
   8
@@ -36773,7 +36053,7 @@ AcDbArc
   0
 ARC
   5
-52B
+512
 100
 AcDbEntity
   8
@@ -36803,7 +36083,7 @@ AcDbArc
   0
 LINE
   5
-52C
+513
 100
 AcDbEntity
 100
@@ -36831,7 +36111,7 @@ ByLayer
   0
 ARC
   5
-52D
+514
 100
 AcDbEntity
   8
@@ -36861,7 +36141,7 @@ AcDbArc
   0
 LINE
   5
-52E
+515
 100
 AcDbEntity
 100
@@ -36889,7 +36169,7 @@ ByLayer
   0
 ARC
   5
-52F
+516
 100
 AcDbEntity
   8
@@ -36919,7 +36199,7 @@ AcDbArc
   0
 LINE
   5
-530
+517
 100
 AcDbEntity
 100
@@ -36947,7 +36227,7 @@ ByLayer
   0
 LINE
   5
-531
+518
 100
 AcDbEntity
 100
@@ -36975,7 +36255,7 @@ ByLayer
   0
 ARC
   5
-532
+519
 100
 AcDbEntity
   8
@@ -37005,7 +36285,7 @@ AcDbArc
   0
 ARC
   5
-533
+51A
 100
 AcDbEntity
   8
@@ -37035,7 +36315,7 @@ AcDbArc
   0
 LINE
   5
-534
+51B
 100
 AcDbEntity
 100
@@ -37063,7 +36343,7 @@ ByLayer
   0
 LINE
   5
-535
+51C
 100
 AcDbEntity
 100
@@ -37091,7 +36371,7 @@ ByLayer
   0
 ARC
   5
-536
+51D
 100
 AcDbEntity
   8
@@ -37121,7 +36401,7 @@ AcDbArc
   0
 LINE
   5
-537
+51E
 100
 AcDbEntity
 100
@@ -37149,7 +36429,7 @@ ByLayer
   0
 LINE
   5
-538
+51F
 100
 AcDbEntity
 100
@@ -37177,7 +36457,7 @@ ByLayer
   0
 ARC
   5
-539
+520
 100
 AcDbEntity
   8
@@ -37207,7 +36487,7 @@ AcDbArc
   0
 INSERT
   5
-53A
+521
 100
 AcDbEntity
 100
@@ -37237,7 +36517,7 @@ slots
   0
 MTEXT
   5
-53B
+522
 100
 AcDbEntity
 100
@@ -37271,13 +36551,13 @@ normal
  50
 0.0
  73
-1
+0
  44
 1.0
   0
 ARC
   5
-53C
+523
 100
 AcDbEntity
   8
@@ -37307,7 +36587,7 @@ AcDbArc
   0
 ARC
   5
-53D
+524
 100
 AcDbEntity
   8
@@ -37337,7 +36617,7 @@ AcDbArc
   0
 ARC
   5
-53E
+525
 100
 AcDbEntity
   8
@@ -37367,7 +36647,7 @@ AcDbArc
   0
 LINE
   5
-53F
+526
 100
 AcDbEntity
 100
@@ -37395,7 +36675,7 @@ ByLayer
   0
 LINE
   5
-540
+527
 100
 AcDbEntity
 100
@@ -37423,7 +36703,7 @@ ByLayer
   0
 LINE
   5
-541
+528
 100
 AcDbEntity
 100
@@ -37451,7 +36731,7 @@ ByLayer
   0
 LINE
   5
-542
+529
 100
 AcDbEntity
 100
@@ -37479,7 +36759,7 @@ ByLayer
   0
 LINE
   5
-543
+52A
 100
 AcDbEntity
 100
@@ -37507,7 +36787,7 @@ ByLayer
   0
 LINE
   5
-544
+52B
 100
 AcDbEntity
 100
@@ -37535,7 +36815,7 @@ ByLayer
   0
 LINE
   5
-545
+52C
 100
 AcDbEntity
 100
@@ -37563,7 +36843,7 @@ ByLayer
   0
 LINE
   5
-546
+52D
 100
 AcDbEntity
 100
@@ -37591,7 +36871,7 @@ ByLayer
   0
 LINE
   5
-547
+52E
 100
 AcDbEntity
 100
@@ -37619,7 +36899,7 @@ ByLayer
   0
 LINE
   5
-548
+52F
 100
 AcDbEntity
 100
@@ -37647,7 +36927,7 @@ ByLayer
   0
 LINE
   5
-549
+530
 100
 AcDbEntity
 100
@@ -37675,7 +36955,7 @@ ByLayer
   0
 LINE
   5
-54A
+531
 100
 AcDbEntity
 100
@@ -37703,7 +36983,7 @@ ByLayer
   0
 LINE
   5
-54B
+532
 100
 AcDbEntity
 100
@@ -37731,7 +37011,7 @@ ByLayer
   0
 LINE
   5
-54C
+533
 100
 AcDbEntity
 100
@@ -37759,7 +37039,7 @@ ByLayer
   0
 LINE
   5
-54D
+534
 100
 AcDbEntity
 100
@@ -37787,7 +37067,7 @@ ByLayer
   0
 LINE
   5
-54E
+535
 100
 AcDbEntity
 100
@@ -37815,7 +37095,7 @@ ByLayer
   0
 LINE
   5
-54F
+536
 100
 AcDbEntity
 100
@@ -37843,7 +37123,7 @@ ByLayer
   0
 LINE
   5
-550
+537
 100
 AcDbEntity
 100
@@ -37871,7 +37151,7 @@ ByLayer
   0
 LINE
   5
-551
+538
 100
 AcDbEntity
 100
@@ -37899,7 +37179,7 @@ ByLayer
   0
 LINE
   5
-552
+539
 100
 AcDbEntity
 100
@@ -37927,7 +37207,7 @@ ByLayer
   0
 LINE
   5
-553
+53A
 100
 AcDbEntity
 100
@@ -37955,7 +37235,7 @@ ByLayer
   0
 LINE
   5
-554
+53B
 100
 AcDbEntity
 100
@@ -37983,7 +37263,7 @@ ByLayer
   0
 CIRCLE
   5
-555
+53C
 100
 AcDbEntity
 100
@@ -38007,7 +37287,7 @@ ByLayer
   0
 CIRCLE
   5
-556
+53D
 100
 AcDbEntity
 100
@@ -38031,7 +37311,7 @@ ByLayer
   0
 CIRCLE
   5
-557
+53E
 100
 AcDbEntity
 100
@@ -38055,7 +37335,7 @@ ByLayer
   0
 CIRCLE
   5
-558
+53F
 100
 AcDbEntity
 100
@@ -38079,7 +37359,7 @@ ByLayer
   0
 CIRCLE
   5
-559
+540
 100
 AcDbEntity
 100
@@ -38103,7 +37383,7 @@ ByLayer
   0
 CIRCLE
   5
-55A
+541
 100
 AcDbEntity
 100
@@ -38127,7 +37407,7 @@ ByLayer
   0
 CIRCLE
   5
-55B
+542
 100
 AcDbEntity
 100
@@ -38151,7 +37431,7 @@ ByLayer
   0
 CIRCLE
   5
-55C
+543
 100
 AcDbEntity
 100
@@ -38175,7 +37455,7 @@ ByLayer
   0
 CIRCLE
   5
-55D
+544
 100
 AcDbEntity
 100
@@ -38199,7 +37479,7 @@ ByLayer
   0
 CIRCLE
   5
-55E
+545
 100
 AcDbEntity
 100
@@ -38223,7 +37503,7 @@ ByLayer
   0
 CIRCLE
   5
-55F
+546
 100
 AcDbEntity
 100
@@ -38247,7 +37527,7 @@ ByLayer
   0
 CIRCLE
   5
-560
+547
 100
 AcDbEntity
 100
@@ -38271,7 +37551,7 @@ ByLayer
   0
 CIRCLE
   5
-561
+548
 100
 AcDbEntity
 100
@@ -38295,7 +37575,7 @@ ByLayer
   0
 CIRCLE
   5
-562
+549
 100
 AcDbEntity
 100
@@ -38319,7 +37599,7 @@ ByLayer
   0
 CIRCLE
   5
-563
+54A
 100
 AcDbEntity
 100
@@ -38343,7 +37623,7 @@ ByLayer
   0
 CIRCLE
   5
-564
+54B
 100
 AcDbEntity
 100
@@ -38367,7 +37647,7 @@ ByLayer
   0
 CIRCLE
   5
-565
+54C
 100
 AcDbEntity
 100
@@ -38391,7 +37671,7 @@ ByLayer
   0
 CIRCLE
   5
-566
+54D
 100
 AcDbEntity
 100
@@ -38415,7 +37695,7 @@ ByLayer
   0
 CIRCLE
   5
-567
+54E
 100
 AcDbEntity
 100
@@ -38439,7 +37719,7 @@ ByLayer
   0
 CIRCLE
   5
-568
+54F
 100
 AcDbEntity
 100
@@ -38463,7 +37743,7 @@ ByLayer
   0
 CIRCLE
   5
-569
+550
 100
 AcDbEntity
 100
@@ -38487,7 +37767,7 @@ ByLayer
   0
 CIRCLE
   5
-56A
+551
 100
 AcDbEntity
 100
@@ -38511,7 +37791,7 @@ ByLayer
   0
 CIRCLE
   5
-56B
+552
 100
 AcDbEntity
 100
@@ -38535,7 +37815,7 @@ ByLayer
   0
 CIRCLE
   5
-56C
+553
 100
 AcDbEntity
 100
@@ -38559,7 +37839,7 @@ ByLayer
   0
 CIRCLE
   5
-56D
+554
 100
 AcDbEntity
 100
@@ -38583,7 +37863,7 @@ ByLayer
   0
 CIRCLE
   5
-56E
+555
 100
 AcDbEntity
 100
@@ -38607,7 +37887,7 @@ ByLayer
   0
 CIRCLE
   5
-56F
+556
 100
 AcDbEntity
 100
@@ -38631,7 +37911,7 @@ ByLayer
   0
 CIRCLE
   5
-570
+557
 100
 AcDbEntity
 100
@@ -38655,7 +37935,7 @@ ByLayer
   0
 CIRCLE
   5
-571
+558
 100
 AcDbEntity
 100
@@ -38679,7 +37959,7 @@ ByLayer
   0
 CIRCLE
   5
-572
+559
 100
 AcDbEntity
 100
@@ -38703,7 +37983,7 @@ ByLayer
   0
 CIRCLE
   5
-573
+55A
 100
 AcDbEntity
 100
@@ -38727,7 +38007,7 @@ ByLayer
   0
 CIRCLE
   5
-574
+55B
 100
 AcDbEntity
 100
@@ -38751,7 +38031,7 @@ ByLayer
   0
 CIRCLE
   5
-575
+55C
 100
 AcDbEntity
 100
@@ -38775,7 +38055,7 @@ ByLayer
   0
 CIRCLE
   5
-576
+55D
 100
 AcDbEntity
 100
@@ -38799,7 +38079,7 @@ ByLayer
   0
 CIRCLE
   5
-577
+55E
 100
 AcDbEntity
 100
@@ -38823,7 +38103,7 @@ ByLayer
   0
 CIRCLE
   5
-578
+55F
 100
 AcDbEntity
 100
@@ -38847,7 +38127,7 @@ ByLayer
   0
 CIRCLE
   5
-579
+560
 100
 AcDbEntity
 100
@@ -38871,7 +38151,7 @@ ByLayer
   0
 CIRCLE
   5
-57A
+561
 100
 AcDbEntity
 100
@@ -38895,7 +38175,7 @@ ByLayer
   0
 CIRCLE
   5
-57B
+562
 100
 AcDbEntity
 100
@@ -38919,7 +38199,7 @@ ByLayer
   0
 CIRCLE
   5
-57C
+563
 100
 AcDbEntity
 100
@@ -38943,7 +38223,7 @@ ByLayer
   0
 CIRCLE
   5
-57D
+564
 100
 AcDbEntity
 100
@@ -38967,7 +38247,7 @@ ByLayer
   0
 CIRCLE
   5
-57E
+565
 100
 AcDbEntity
 100
@@ -38991,7 +38271,7 @@ ByLayer
   0
 CIRCLE
   5
-57F
+566
 100
 AcDbEntity
 100
@@ -39015,7 +38295,7 @@ ByLayer
   0
 CIRCLE
   5
-580
+567
 100
 AcDbEntity
 100
@@ -39039,7 +38319,7 @@ ByLayer
   0
 CIRCLE
   5
-581
+568
 100
 AcDbEntity
 100
@@ -39063,7 +38343,7 @@ ByLayer
   0
 MTEXT
   5
-582
+569
 100
 AcDbEntity
 100
@@ -39097,13 +38377,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-583
+56A
 100
 AcDbEntity
 100
@@ -39137,13 +38417,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-584
+56B
 100
 AcDbEntity
 100
@@ -39177,13 +38457,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-585
+56C
 100
 AcDbEntity
 100
@@ -39217,13 +38497,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-586
+56D
 100
 AcDbEntity
 100
@@ -39257,13 +38537,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-587
+56E
 100
 AcDbEntity
 100
@@ -39297,13 +38577,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-588
+56F
 100
 AcDbEntity
 100
@@ -39337,13 +38617,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-589
+570
 100
 AcDbEntity
 100
@@ -39379,13 +38659,13 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 MTEXT
   5
-58A
+571
 100
 AcDbEntity
 100
@@ -39419,13 +38699,13 @@ normal
  50
 0.0
  73
-1
+0
  44
 1.0
   0
 LINE
   5
-58B
+572
 100
 AcDbEntity
 100
@@ -39453,7 +38733,7 @@ ByLayer
   0
 LINE
   5
-58C
+573
 100
 AcDbEntity
 100
@@ -39481,7 +38761,7 @@ ByLayer
   0
 LINE
   5
-58D
+574
 100
 AcDbEntity
 100
@@ -39509,7 +38789,7 @@ ByLayer
   0
 LINE
   5
-58E
+575
 100
 AcDbEntity
 100
@@ -39537,103 +38817,7 @@ ByLayer
   0
 CIRCLE
   5
-58F
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Encoder
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-37.3000000000000469
- 20
-55.489974596215589
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-590
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Encoder
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-12.4000000000000306
- 20
-55.489974596215589
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-591
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Encoder
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-37.3000000000000327
- 20
-23.9899745962155961
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-592
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Encoder
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-12.4000000000000359
- 20
-23.9899745962155997
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-593
+576
 100
 AcDbEntity
 100
@@ -39657,6 +38841,824 @@ ByLayer
   0
 LINE
   5
+577
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+30.8000000000000433
+ 20
+58.989974596215589
+ 30
+0.0
+ 11
+18.8000000000000753
+ 21
+58.9899745962156032
+ 31
+0.0
+  0
+LINE
+  5
+578
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+18.8000000000000753
+ 20
+58.9899745962156032
+ 30
+0.0
+ 11
+18.8000000000000398
+ 21
+48.9899745962155961
+ 31
+0.0
+  0
+LINE
+  5
+579
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+18.8000000000000398
+ 20
+48.9899745962155961
+ 30
+0.0
+ 11
+30.8000000000000398
+ 21
+48.989974596215589
+ 31
+0.0
+  0
+LINE
+  5
+57A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+30.8000000000000398
+ 20
+48.989974596215589
+ 30
+0.0
+ 11
+30.8000000000000433
+ 21
+58.989974596215589
+ 31
+0.0
+  0
+LINE
+  5
+57B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+10.0
+ 20
+10.5
+ 30
+0.0
+ 11
+9.3000000000000362
+ 21
+10.5
+ 31
+0.0
+  0
+ARC
+  5
+57C
+100
+AcDbEntity
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+9.3000000000000362
+ 20
+13.0
+ 30
+0.0
+ 40
+2.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+LINE
+  5
+57D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+6.8000000000000576
+ 20
+58.4899745962156103
+ 30
+0.0
+ 11
+6.8000000000000362
+ 21
+13.0
+ 31
+0.0
+  0
+ARC
+  5
+57E
+100
+AcDbEntity
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+9.3000000000000558
+ 20
+58.4899745962156103
+ 30
+0.0
+ 40
+2.5
+100
+AcDbArc
+ 50
+89.9999999999999574
+ 51
+180.0
+  0
+LINE
+  5
+57F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+18.4999999999999964
+ 20
+60.9899745962156032
+ 30
+0.0
+ 11
+9.3000000000000576
+ 21
+60.9899745962156103
+ 31
+0.0
+  0
+LINE
+  5
+580
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+21.0
+ 20
+63.4899745962156032
+ 30
+0.0
+ 11
+21.0
+ 21
+70.0
+ 31
+0.0
+  0
+ARC
+  5
+581
+100
+AcDbEntity
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+18.5
+ 20
+63.4899745962156032
+ 30
+0.0
+ 40
+2.5
+100
+AcDbArc
+ 50
+269.9999999999998863
+ 51
+0.0
+  0
+LINE
+  5
+582
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Dino Brackets
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+65.0
+ 20
+70.0
+ 30
+0.0
+ 11
+65.0
+ 21
+-46.0
+ 31
+0.0
+  0
+LINE
+  5
+583
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.6500000000000483
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+39.9500000000000597
+ 21
+53.9599966275031306
+ 31
+0.0
+  0
+LINE
+  5
+584
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.9500000000000597
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+34.6500000000000483
+ 21
+53.9599966275031306
+ 31
+0.0
+  0
+LINE
+  5
+585
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.3000002118645497
+ 20
+58.5499309006005859
+ 30
+0.0
+ 11
+37.2999997881355512
+ 21
+52.4300182918305921
+ 31
+0.0
+  0
+LINE
+  5
+586
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000249
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+15.0500000000000362
+ 21
+53.9599966275031306
+ 31
+0.0
+  0
+LINE
+  5
+587
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+15.0500000000000362
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+9.7500000000000249
+ 21
+53.9599966275031306
+ 31
+0.0
+  0
+LINE
+  5
+588
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+12.4000002118645263
+ 20
+58.5499309006005859
+ 30
+0.0
+ 11
+12.3999997881355277
+ 21
+52.4300182918305921
+ 31
+0.0
+  0
+LINE
+  5
+589
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000302
+ 20
+25.5199525649280581
+ 30
+0.0
+ 11
+15.0500000000000416
+ 21
+22.4599966275031413
+ 31
+0.0
+  0
+LINE
+  5
+58A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+15.0500000000000416
+ 20
+25.5199525649280581
+ 30
+0.0
+ 11
+9.7500000000000302
+ 21
+22.4599966275031413
+ 31
+0.0
+  0
+LINE
+  5
+58B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+12.4000002118645316
+ 20
+27.0499309006005966
+ 30
+0.0
+ 11
+12.3999997881355331
+ 21
+20.9300182918306028
+ 31
+0.0
+  0
+LINE
+  5
+58C
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.3000002118645284
+ 20
+27.0499309006005895
+ 30
+0.0
+ 11
+39.9500000000000384
+ 21
+25.519952564928051
+ 31
+0.0
+  0
+LINE
+  5
+58D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.9500000000000384
+ 20
+25.519952564928051
+ 30
+0.0
+ 11
+39.9500000000000384
+ 21
+22.4599966275031342
+ 31
+0.0
+  0
+LINE
+  5
+58E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.9500000000000384
+ 20
+22.4599966275031342
+ 30
+0.0
+ 11
+37.2999997881355299
+ 21
+20.9300182918305957
+ 31
+0.0
+  0
+LINE
+  5
+58F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.650000000000027
+ 20
+22.4599966275031342
+ 30
+0.0
+ 11
+37.2999997881355299
+ 21
+20.9300182918305957
+ 31
+0.0
+  0
+LINE
+  5
+590
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.650000000000027
+ 20
+22.4599966275031342
+ 30
+0.0
+ 11
+34.650000000000027
+ 21
+25.519952564928051
+ 31
+0.0
+  0
+LINE
+  5
+591
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.650000000000027
+ 20
+25.519952564928051
+ 30
+0.0
+ 11
+37.3000002118645284
+ 21
+27.0499309006005895
+ 31
+0.0
+  0
+LINE
+  5
+592
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.650000000000027
+ 20
+25.519952564928051
+ 30
+0.0
+ 11
+39.9500000000000384
+ 21
+22.4599966275031342
+ 31
+0.0
+  0
+LINE
+  5
+593
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Encoder
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.9500000000000384
+ 20
+25.519952564928051
+ 30
+0.0
+ 11
+34.650000000000027
+ 21
+22.4599966275031342
+ 31
+0.0
+  0
+LINE
+  5
 594
 100
 AcDbEntity
@@ -39671,27 +39673,27 @@ Encoder
   6
 ByLayer
  10
-30.8000000000000433
+37.3000002118645284
  20
-58.989974596215589
+27.0499309006005895
  30
 0.0
  11
-18.8000000000000753
+37.2999997881355299
  21
-58.9899745962156032
+20.9300182918305957
  31
 0.0
   0
-LINE
+CIRCLE
   5
 595
 100
 AcDbEntity
 100
-AcDbLine
+AcDbCircle
   8
-Encoder
+Retainer Plate
  62
 256
 370
@@ -39699,27 +39701,23 @@ Encoder
   6
 ByLayer
  10
-18.8000000000000753
+37.3000000000000469
  20
-58.9899745962156032
+55.489974596215589
  30
 0.0
- 11
-18.8000000000000398
- 21
-48.9899745962155961
- 31
-0.0
+ 40
+1.5
   0
-LINE
+CIRCLE
   5
 596
 100
 AcDbEntity
 100
-AcDbLine
+AcDbCircle
   8
-Encoder
+Retainer Plate
  62
 256
 370
@@ -39727,25 +39725,45 @@ Encoder
   6
 ByLayer
  10
-18.8000000000000398
+12.4000000000000306
  20
-48.9899745962155961
+55.489974596215589
  30
 0.0
- 11
-30.8000000000000398
- 21
-48.989974596215589
- 31
-0.0
+ 40
+1.5
   0
-LINE
+CIRCLE
   5
 597
 100
 AcDbEntity
 100
-AcDbLine
+AcDbCircle
+  8
+Retainer Plate
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+12.4000000000000359
+ 20
+23.9899745962155997
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+598
+100
+AcDbEntity
+100
+AcDbCircle
   8
 Encoder
  62
@@ -39755,15 +39773,1171 @@ Encoder
   6
 ByLayer
  10
-30.8000000000000398
+37.3000000000000327
  20
-48.989974596215589
+23.9899745962155961
+ 30
+0.0
+ 40
+1.5
+  0
+LINE
+  5
+599
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+12.4000002118645316
+ 20
+27.0499309006005966
  30
 0.0
  11
-30.8000000000000433
+15.0500000000000416
  21
-58.989974596215589
+25.5199525649280581
+ 31
+0.0
+  0
+LINE
+  5
+59A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+15.0500000000000416
+ 20
+25.5199525649280581
+ 30
+0.0
+ 11
+15.0500000000000416
+ 21
+22.4599966275031413
+ 31
+0.0
+  0
+LINE
+  5
+59B
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+15.0500000000000416
+ 20
+22.4599966275031413
+ 30
+0.0
+ 11
+12.3999997881355331
+ 21
+20.9300182918306028
+ 31
+0.0
+  0
+LINE
+  5
+59C
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000302
+ 20
+22.4599966275031413
+ 30
+0.0
+ 11
+12.3999997881355331
+ 21
+20.9300182918306028
+ 31
+0.0
+  0
+LINE
+  5
+59D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000302
+ 20
+22.4599966275031413
+ 30
+0.0
+ 11
+9.7500000000000302
+ 21
+25.5199525649280581
+ 31
+0.0
+  0
+LINE
+  5
+59E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000302
+ 20
+25.5199525649280581
+ 30
+0.0
+ 11
+12.4000002118645316
+ 21
+27.0499309006005966
+ 31
+0.0
+  0
+LINE
+  5
+59F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.3000002118645497
+ 20
+58.5499309006005859
+ 30
+0.0
+ 11
+39.9500000000000597
+ 21
+57.0199525649280474
+ 31
+0.0
+  0
+LINE
+  5
+5A0
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.9500000000000597
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+39.9500000000000597
+ 21
+53.9599966275031306
+ 31
+0.0
+  0
+LINE
+  5
+5A1
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.9500000000000597
+ 20
+53.9599966275031306
+ 30
+0.0
+ 11
+37.2999997881355512
+ 21
+52.4300182918305921
+ 31
+0.0
+  0
+LINE
+  5
+5A2
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.6500000000000483
+ 20
+53.9599966275031306
+ 30
+0.0
+ 11
+37.2999997881355512
+ 21
+52.4300182918305921
+ 31
+0.0
+  0
+LINE
+  5
+5A3
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.6500000000000483
+ 20
+53.9599966275031306
+ 30
+0.0
+ 11
+34.6500000000000483
+ 21
+57.0199525649280474
+ 31
+0.0
+  0
+LINE
+  5
+5A4
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.6500000000000483
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+37.3000002118645497
+ 21
+58.5499309006005859
+ 31
+0.0
+  0
+LINE
+  5
+5A5
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+12.4000002118645263
+ 20
+58.5499309006005859
+ 30
+0.0
+ 11
+15.0500000000000362
+ 21
+57.0199525649280474
+ 31
+0.0
+  0
+LINE
+  5
+5A6
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+15.0500000000000362
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+15.0500000000000362
+ 21
+53.9599966275031306
+ 31
+0.0
+  0
+LINE
+  5
+5A7
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+15.0500000000000362
+ 20
+53.9599966275031306
+ 30
+0.0
+ 11
+12.3999997881355277
+ 21
+52.4300182918305921
+ 31
+0.0
+  0
+LINE
+  5
+5A8
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000249
+ 20
+53.9599966275031306
+ 30
+0.0
+ 11
+12.3999997881355277
+ 21
+52.4300182918305921
+ 31
+0.0
+  0
+LINE
+  5
+5A9
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000249
+ 20
+53.9599966275031306
+ 30
+0.0
+ 11
+9.7500000000000249
+ 21
+57.0199525649280474
+ 31
+0.0
+  0
+LINE
+  5
+5AA
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+9.7500000000000249
+ 20
+57.0199525649280474
+ 30
+0.0
+ 11
+12.4000002118645263
+ 21
+58.5499309006005859
+ 31
+0.0
+  0
+CIRCLE
+  5
+5AB
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Filament Guide Middle
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.3000000000000469
+ 20
+55.489974596215589
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+5AC
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Filament Guide Middle
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+12.4000000000000341
+ 20
+55.489974596215589
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+5AD
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Filament Guide Middle
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+12.4000000000000199
+ 20
+23.9899745962156103
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+5AE
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Filament Guide Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.7999999999354799
+ 20
+33.0
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+5AF
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+35.8749999999078284
+ 20
+33.0
+ 30
+0.0
+ 40
+3.5
+  0
+CIRCLE
+  5
+5B0
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+35.8749999999078284
+ 20
+33.0
+ 30
+0.0
+ 40
+1.5
+  0
+LINE
+  5
+5B1
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.2873121634208005
+ 20
+35.75
+ 30
+0.0
+ 11
+32.6995989231493311
+ 21
+33.0000000000000071
+ 31
+0.0
+  0
+LINE
+  5
+5B2
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.4627386439637462
+ 20
+35.75
+ 30
+0.0
+ 11
+34.2873121634208005
+ 21
+35.75
+ 31
+0.0
+  0
+LINE
+  5
+5B3
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.4627386439637462
+ 20
+35.75
+ 30
+0.0
+ 11
+39.0504518842352155
+ 21
+33.0000000000000071
+ 31
+0.0
+  0
+LINE
+  5
+5B4
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.0504518842352155
+ 20
+33.0000000000000071
+ 30
+0.0
+ 11
+37.4627386439637391
+ 21
+30.25
+ 31
+0.0
+  0
+LINE
+  5
+5B5
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+32.6995989231493311
+ 20
+33.0000000000000071
+ 30
+0.0
+ 11
+34.2873121634208005
+ 21
+30.25
+ 31
+0.0
+  0
+LINE
+  5
+5B6
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M3-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+37.4627386439637391
+ 20
+30.25
+ 30
+0.0
+ 11
+34.2873121634208005
+ 21
+30.25
+ 31
+0.0
+  0
+CIRCLE
+  5
+5B7
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Drawings-Motor
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+24.7500000000000107
+ 20
+32.9999745962155657
+ 30
+0.0
+ 40
+6.0
+  0
+CIRCLE
+  5
+5B8
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Drawings-Motor
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+24.7500000000000107
+ 20
+32.9999745962155657
+ 30
+0.0
+ 40
+3.0
+  0
+LINE
+  5
+5B9
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawings
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+31.8999999999999986
+ 20
+57.5000000000000142
+ 30
+0.0
+ 11
+31.8999999999999986
+ 21
+-59.9999999999999858
+ 31
+0.0
+  0
+CIRCLE
+  5
+5BA
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+36.8999999999354742
+ 20
+33.0
+ 30
+0.0
+ 40
+5.0
+  0
+CIRCLE
+  5
+5BB
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+36.8999999999354742
+ 20
+33.0
+ 30
+0.0
+ 40
+4.25
+  0
+CIRCLE
+  5
+5BC
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+36.8999999999354742
+ 20
+33.0
+ 30
+0.0
+ 40
+2.5
+  0
+LINE
+  5
+5BD
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+36.8999999999354742
+ 20
+37.25
+ 30
+0.0
+ 11
+36.8999999999354742
+ 21
+28.75
+ 31
+0.0
+  0
+LINE
+  5
+5BE
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.5905989231769695
+ 20
+28.9999745962155657
+ 30
+0.0
+ 11
+39.2094010766939718
+ 21
+28.9999745962155657
+ 31
+0.0
+  0
+LINE
+  5
+5BF
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+39.2094010766939718
+ 20
+28.9999745962155657
+ 30
+0.0
+ 11
+41.5188021534524836
+ 21
+32.9999745962155586
+ 31
+0.0
+  0
+LINE
+  5
+5C0
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+41.5188021534524836
+ 20
+32.9999745962155586
+ 30
+0.0
+ 11
+39.2094010766939789
+ 21
+36.9999745962155657
+ 31
+0.0
+  0
+LINE
+  5
+5C1
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.5905989231769695
+ 20
+36.9999745962155657
+ 30
+0.0
+ 11
+39.2094010766939789
+ 21
+36.9999745962155657
+ 31
+0.0
+  0
+LINE
+  5
+5C2
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+34.5905989231769695
+ 20
+28.9999745962155657
+ 30
+0.0
+ 11
+32.2811978464184648
+ 21
+32.9999745962155657
+ 31
+0.0
+  0
+LINE
+  5
+5C3
+100
+AcDbEntity
+100
+AcDbLine
+  8
+M5-bearing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+32.2811978464184648
+ 20
+32.9999745962155657
+ 30
+0.0
+ 11
+34.5905989231769695
+ 21
+36.9999745962155657
  31
 0.0
   0
@@ -39805,7 +40979,7 @@ E
   3
 AcDbVariableDictionary
 350
-598
+5C4
   0
 DICTIONARY
   5
@@ -40269,7 +41443,7 @@ Layout2
   0
 DICTIONARY
   5
-598
+5C4
 100
 AcDbDictionary
 281
@@ -40277,15 +41451,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-59A
+5C6
   3
 HIDETEXT
 350
-599
+5C5
   0
 DICTIONARYVAR
   5
-599
+5C5
 100
 DictionaryVariables
 280
@@ -40295,7 +41469,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-59A
+5C6
 100
 DictionaryVariables
 280
