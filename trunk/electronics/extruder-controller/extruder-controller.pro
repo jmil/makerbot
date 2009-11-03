@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : /Users/zachsmith/makerbot/trunk/electronics/extruder-controller/extruder-controller.brd
 
-Start at      : 18:49:35 (11/2/09)
-End at        : 18:51:56 (11/2/09)
-Elapsed time  : 00:02:21
+Start at      : 16:37:06 (11/3/09)
+End at        : 16:38:25 (11/3/09)
+Elapsed time  : 00:01:19
 
-Signals       :    81   RoutingGrid: 5 mil  Layers: 2
-Connections   :   217   predefined:  0 ( 0 Vias )
+Signals       :    81   RoutingGrid: 2.5 mil  Layers: 2
+Connections   :   217   predefined:  202 ( 59 Vias )
 
-Router memory :   2336232
+Router memory :   7153120
 
 Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:39  00:00:26  00:00:25  00:00:24  00:00:27
-Number of Ripups  :         5         0         0         0         0
+Time per pass     :  00:00:17  00:00:15  00:00:15  00:00:15  00:00:17
+Number of Ripups  :         0         0         0         0         0
 max. Level        :         1         0         0         0         0
-max. Total        :        54         0         0         0         0
+max. Total        :         0         0         0         0         0
 
-Routed            :       211       211       211       211       211
-Vias              :       122        85        82        74        74
-Resolution        :    97.2 %    97.2 %    97.2 %    97.2 %    97.2 %
+Routed            :        10        10        10        10        10
+Vias              :        11        10        10        10        10
+Resolution        :    97.7 %    97.7 %    97.7 %    97.7 %    97.7 %
 
-Final             : 97.2% finished
+Final             : 97.7% finished
