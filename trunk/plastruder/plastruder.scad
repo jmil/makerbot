@@ -1,11 +1,23 @@
-module motor_plate()
-{
+acrylicThickness = 5.6;
 	dxf_linear_extrude(
-			file = "main-assembly.dxf",
-			layer = "Motor Plate",
-			height = 4.5,
-			center=true,
-			convexity = 2);
+		file = "main-assembly.dxf",
+		layer = "Motor Plate",
+		height = acrylicThickness
+	);
+
+/*
+
+module plastruderMK5()
+{
+	motorPlate();
 }
 
-motor_plate();
+module motorPlate()
+{
+	acrylicPlate("Motor Plate");
+}
+
+module acrylicPlate(layer)
+{
+}
+*/
