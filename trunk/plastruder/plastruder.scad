@@ -1,12 +1,20 @@
 acrylicThickness = 5.5;
+
 dinoX = 44.125;
+dinoY = 79;
+dinoZ = 139;
+
+/*
+rotate([90, 0, 0])
+{
+	plastruderMK5();
+}
+*/
 
 plastruderMK5();
 
 module plastruderMK5()
 {
-	rotate([90, 0, 0])
-	{
 		motorPlate();
 		spacerPlate();
 		filamentGuide();
@@ -14,7 +22,6 @@ module plastruderMK5()
 
 		leftDino();
 		rightDino();
-	}
 }
 
 module motorPlate()
@@ -55,6 +62,9 @@ module leftDino()
 	{
 		dinoSupport();
 	}
+
+	leftDinoTop();
+	leftDinoBottom();
 }
 
 module leftDinoFront()
@@ -73,10 +83,40 @@ module leftDinoBack()
 	}
 }
 
+module leftDinoTop()
+{
+	translate([0,-dinoY, dinoZ-acrylicThickness*1.5])
+	{
+		rotate([90, 0, 0])
+		{
+			acrylicPlate("Dino Left Top Mount");
+		}
+	}
+}
+
+module leftDinoBottom()
+{
+	translate([0,-(dinoY+acrylicThickness), dinoZ+50-acrylicThickness*1.5])
+	{
+		rotate([90,0,0])
+		{
+			acrylicPlate("Dino Left Bottom Mount");
+		}
+	}
+}
+
 module rightDino()
 {
 	rightDinoFront();
 	rightDinoBack();
+
+	translate([dinoX, 0, 0])
+	{
+		dinoSupport();
+	}
+
+	rightDinoTop();
+	rightDinoBottom();
 }
 
 module rightDinoFront()
@@ -92,6 +132,29 @@ module rightDinoBack()
 	translate([0, 0, -acrylicThickness])
 	{
 		acrylicPlate("Dino Right Back");
+	}
+}
+
+
+module rightDinoTop()
+{
+	translate([0,-dinoY, dinoZ-acrylicThickness*1.5])
+	{
+		rotate([90, 0, 0])
+		{
+			acrylicPlate("Dino Right Top Mount");
+		}
+	}
+}
+
+module rightDinoBottom()
+{
+	translate([0,-(dinoY+acrylicThickness), dinoZ+50-acrylicThickness*1.5])
+	{
+		rotate([90,0,0])
+		{
+			acrylicPlate("Dino Right Bottom Mount");
+		}
 	}
 }
 
