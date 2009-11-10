@@ -4,6 +4,9 @@ dinoX = 44.125;
 dinoY = 79;
 dinoZ = 139;
 
+heaterZ = 70.5;
+heaterY = 33;
+
 /*
 rotate([90, 0, 0])
 {
@@ -22,7 +25,37 @@ module plastruderMK5()
 
 		leftDino();
 		rightDino();
+
+		heaterAssembly();
 }
+
+module heaterAssembly()
+{
+	heaterMount();
+}
+
+module heaterMount()
+{
+	translate([0,-heaterY,heaterZ+acrylicThickness*2.5])
+	{
+		rotate([-90, 0, 0])
+		{
+			translate([0,0,-acrylicThickness])
+			{
+				acrylicPlate("Heater Mount");
+			}
+			translate([0,0,-acrylicThickness*2])
+			{
+				acrylicPlate("Insulator Top");
+			}
+			translate([0,0,-acrylicThickness*3])
+			{
+				acrylicPlate("Insulator Retainer");
+			}
+		}
+	}
+}
+
 
 module motorPlate()
 {
