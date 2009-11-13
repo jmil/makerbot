@@ -1,6 +1,6 @@
 //POVRay-File created by 3d41.ulp v1.05
 ///home/hoeken/Desktop/makerbot/trunk/electronics/magnetic-linear-encoder/magnetic-linear-encoder.brd
-//11/13/09 1:27 PM
+//11/13/09 2:13 PM
 
 #version 3.5;
 
@@ -92,7 +92,7 @@
 #declare pcb_layer1_used = 1;
 #declare pcb_layer16_used = 1;
 #declare inc_testmode = off;
-#declare global_seed=seed(251);
+#declare global_seed=seed(994);
 #declare global_pcb_layer_dis = array[16]
 {
 	0.000000,
@@ -261,12 +261,12 @@ object{TOOLS_PCB_SMD(0.460000,1.430000,0.037000,0) rotate<0,-270.000000,0> textu
 object{TOOLS_PCB_SMD(0.460000,1.430000,0.037000,0) rotate<0,-270.000000,0> texture{col_pds} translate<43.165000,0.000000,32.015000>}
 object{TOOLS_PCB_SMD(0.460000,1.430000,0.037000,0) rotate<0,-270.000000,0> texture{col_pds} translate<43.165000,0.000000,31.365000>}
 object{TOOLS_PCB_SMD(0.460000,1.430000,0.037000,0) rotate<0,-270.000000,0> texture{col_pds} translate<43.165000,0.000000,30.715000>}
-#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.524000,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,27.940000> texture{col_thl}}
-#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.524000,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,30.480000> texture{col_thl}}
-#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.524000,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,33.020000> texture{col_thl}}
-#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.524000,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,35.560000> texture{col_thl}}
-#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.524000,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,38.100000> texture{col_thl}}
-#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.524000,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,40.640000> texture{col_thl}}
+#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.625600,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,27.940000> texture{col_thl}}
+#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.625600,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,30.480000> texture{col_thl}}
+#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.625600,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,33.020000> texture{col_thl}}
+#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.625600,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,35.560000> texture{col_thl}}
+#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.625600,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,38.100000> texture{col_thl}}
+#ifndef(global_pack_JP1) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.625600,1.016000,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<30.480000,0,40.640000> texture{col_thl}}
 object{TOOLS_PCB_SMD(1.500000,1.500000,0.037000,0) rotate<0,-90.000000,0> texture{col_pds} translate<50.518000,0.000000,36.830000>}
 object{TOOLS_PCB_SMD(1.500000,1.500000,0.037000,0) rotate<0,-90.000000,0> texture{col_pds} translate<47.018000,0.000000,36.830000>}
 object{TOOLS_PCB_SMD(1.600000,1.803000,0.037000,0) rotate<0,-270.000000,0> texture{col_pds} translate<26.670000,0.000000,43.332000>}
@@ -275,16 +275,16 @@ object{TOOLS_PCB_SMD(1.600000,1.803000,0.037000,0) rotate<0,-90.000000,0> textur
 object{TOOLS_PCB_SMD(1.600000,1.803000,0.037000,0) rotate<0,-90.000000,0> texture{col_pds} translate<23.622000,0.000000,22.504000>}
 object{TOOLS_PCB_SMD(1.600000,1.803000,0.037000,0) rotate<0,-180.000000,0> texture{col_pds} translate<50.190000,0.000000,34.290000>}
 object{TOOLS_PCB_SMD(1.600000,1.803000,0.037000,0) rotate<0,-180.000000,0> texture{col_pds} translate<47.346000,0.000000,34.290000>}
-#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.638400,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,27.940000> texture{col_thl}}
-#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.638400,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,30.480000> texture{col_thl}}
-#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.638400,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,33.020000> texture{col_thl}}
-#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.638400,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,35.560000> texture{col_thl}}
+#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.701800,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,27.940000> texture{col_thl}}
+#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.701800,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,30.480000> texture{col_thl}}
+#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.701800,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,33.020000> texture{col_thl}}
+#ifndef(global_pack_U_2) #local global_tmp=0; #else #local global_tmp=100; #end object{TOOLS_PCB_VIA(1.701800,1.092200,1,16,3+global_tmp,100) rotate<0,-180.000000,0>translate<26.670000,0,35.560000> texture{col_thl}}
 //Pads/Vias
-object{TOOLS_PCB_VIA(0.906400,0.500000,1,16,1,0) translate<33.274000,0,37.084000> texture{col_thl}}
-object{TOOLS_PCB_VIA(0.906400,0.500000,1,16,1,0) translate<34.798000,0,37.846000> texture{col_thl}}
-object{TOOLS_PCB_VIA(0.906400,0.500000,1,16,1,0) translate<40.894000,0,30.734000> texture{col_thl}}
-object{TOOLS_PCB_VIA(0.906400,0.500000,1,16,1,0) translate<22.098000,0,40.894000> texture{col_thl}}
-object{TOOLS_PCB_VIA(0.906400,0.500000,1,16,1,0) translate<38.100000,0,34.798000> texture{col_thl}}
+object{TOOLS_PCB_VIA(1.008000,0.500000,1,16,1,0) translate<33.274000,0,37.084000> texture{col_thl}}
+object{TOOLS_PCB_VIA(1.008000,0.500000,1,16,1,0) translate<34.798000,0,37.846000> texture{col_thl}}
+object{TOOLS_PCB_VIA(1.008000,0.500000,1,16,1,0) translate<40.894000,0,30.734000> texture{col_thl}}
+object{TOOLS_PCB_VIA(1.008000,0.500000,1,16,1,0) translate<22.098000,0,40.894000> texture{col_thl}}
+object{TOOLS_PCB_VIA(1.008000,0.500000,1,16,1,0) translate<38.100000,0,34.798000> texture{col_thl}}
 #end
 #if(pcb_wires=on)
 union{
