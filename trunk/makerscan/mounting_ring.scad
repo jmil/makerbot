@@ -1,27 +1,40 @@
-difference() {
+//bracket_ring();
+//bracket_block();
+mounting_bracket();
+
+thickness = 7;
+
+module mounting_bracket()
+{
 	union() {
-		cylinder(h=7,r=17.4);
-		translate(v=[14.4,-6,0]) scale(v=[5,12,7]) cube();
-		translate(v=[-14.4,-5,0]) scale(v=[-10,10,7]) cube();
-		intersection() {
-			translate(v=[-19.4,-10,0]) scale(v=[-30,20,20]) cube();
-			rotate(a=10.0,v=[1,0,0]) {
-				translate(v=[-34.4,0,0]) {
-					difference() {
-						scale(v=[-30,40,25]) {
-							cube(center=true);
-						}
-						translate(v=[6,0,-5])
-							cylinder(h=20,r=2.2);
-						translate(v=[-6,0,-5])
-							cylinder(h=20,r=2.2);
-					}
-				}
+		bracket_ring();
+		bracket_block();
+	}
+}
+
+module bracket_ring()
+{
+	difference()
+	{
+		union()
+		{
+				cylinder(h=thickness,r=17.4, convexity=10);
+				translate(v=[14.4,-6,0]) scale(v=[5,12,thickness]) cube(convexity=10);
+				translate(v=[-14.4,-5,0]) scale(v=[-10,10,thickness]) cube(convexity=10);	
+		}
+		cylinder(h=thickness,r=13.4, convexity=10);
+		translate(v=[12,-2,0]) scale(v=[16,4,thickness]) cube(convexity=10);
+	}
+}
+
+module bracket_block()
+{
+		translate(v=[-(30),-10,0])
+		{
+			difference()
+			{
+				cube([thickness, 40, 20]);
+				translate([-1, 30, 10]) rotate([0,90,0])scale([1/5,1/5,1/5]) cylinder(h=thickness*5*2, r=1.75*5);
 			}
 		}
-	}
-	cylinder(h=7,r=13.4);
-	translate(v=[12,-2,0]) scale(v=[16,4,7]) cube();
-	
-};
-
+}
