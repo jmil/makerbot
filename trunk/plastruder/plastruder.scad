@@ -1,9 +1,11 @@
 acrylicThickness = 5.5;
+filamentGuideThickness = 3.125;
 steelThickness = 1.0;
+
 
 dinoX = 44.125;
 dinoY = 79;
-dinoZ = 139;
+dinoZ = 169;
 
 heaterZ = 70.5;
 heaterY = 33;
@@ -36,6 +38,7 @@ motorShaftLength = 15;
 
 
 plastruderMK5();
+//leftDino();
 
 module plastruderMK5()
 {
@@ -82,7 +85,7 @@ module heaterBarrelAssembly()
 		translate([0,0,heaterBarrelLength-insulatorOverlap])
 		{
 			thermalBarrier();
-			retainingWasher();
+			translate([0,0,-5]) retainingWasher();
 		}
 		heaterBarrel();
 		translate([0,0,-(nozzleHeight-nozzleOverlap)])
@@ -152,7 +155,7 @@ module heaterAssembly()
 	rotate([-90, 0, 0])
 	{
 		translate([13.8,-(acrylicThickness*2.5),-(33+acrylicThickness*2)])
-			heaterBarrelAssembly();
+			rotate([0,0,180]) heaterBarrelAssembly();
 		translate([-13.8,-(acrylicThickness*2.5),-(33+acrylicThickness*2)])
 			heaterBarrelAssembly();
 	}
@@ -189,12 +192,12 @@ module spacerPlate()
 module filamentGuide()
 {
 	translate([0,0,acrylicThickness*2])
-		acrylicPlate("Filament Guide");
+		acrylicPlate("Filament Guide", filamentGuideThickness);
 }
 
 module retainerPlate()
 {
-	translate([0,0,acrylicThickness*3])
+	translate([0,0,acrylicThickness*2+filamentGuideThickness])
 		acrylicPlate("Retainer Plate");
 }
 
@@ -203,7 +206,7 @@ module leftDino()
 	leftDinoFront();
 	leftDinoBack();
 
-	translate([-dinoX, 0, 0])
+	translate([-dinoX, 0, -1])
 		dinoSupport();
 
 	leftDinoTop();
@@ -212,7 +215,7 @@ module leftDino()
 
 module leftDinoFront()
 {
-	translate([0,0,acrylicThickness*4])
+	translate([0,0,20])
 		acrylicPlate("Dino Left Front");
 }
 
@@ -233,7 +236,7 @@ module leftDinoTop()
 
 module leftDinoBottom()
 {
-	translate([0,-(dinoY+acrylicThickness), dinoZ+50-acrylicThickness*1.5])
+	translate([0,-(dinoY+acrylicThickness), dinoZ+80-acrylicThickness*1.5])
 	{
 		rotate([90,0,0])
 			acrylicPlate("Dino Left Bottom Mount");
@@ -254,7 +257,7 @@ module rightDino()
 
 module rightDinoFront()
 {
-	translate([0,0,acrylicThickness*4])
+	translate([0,0,20])
 		acrylicPlate("Dino Right Front");
 }
 
@@ -276,7 +279,7 @@ module rightDinoTop()
 
 module rightDinoBottom()
 {
-	translate([0,-(dinoY+acrylicThickness), dinoZ+50-acrylicThickness*1.5])
+	translate([0,-(dinoY+acrylicThickness), dinoZ+80-acrylicThickness*1.5])
 	{
 		rotate([90,0,0])
 			acrylicPlate("Dino Right Bottom Mount");
@@ -292,12 +295,12 @@ module dinoSupport()
 	}
 }
 
-module acrylicPlate(layer)
+module acrylicPlate(layer, thickness=acrylicThickness)
 {
 	dxf_linear_extrude(
 		file = "main-assembly.dxf",
 		layer = layer,
-		height = acrylicThickness,
+		height = thickness,
 		convexity = 10
 	);
 }
