@@ -41,6 +41,14 @@ $INSUNITS
  70
 4
   9
+$DIMSTYLE
+  2
+Standard
+  9
+$CLAYER
+  8
+0
+  9
 $DIMEXO
  40
 0.625
@@ -51,7 +59,7 @@ $DIMTXT
   9
 $CLAYER
   8
-0
+Syringe Flange
   0
 ENDSEC
   0
@@ -903,7 +911,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-4
+6
   0
 LAYER
   5
@@ -915,9 +923,9 @@ AcDbLayerTableRecord
   2
 0
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -935,11 +943,11 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-syringe-clamp-top
+Top Clamp
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -959,9 +967,9 @@ AcDbLayerTableRecord
   2
 text
  70
-0
- 62
 1
+ 62
+-1
 420
 16711680
   6
@@ -979,7 +987,51 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-syringe-clamp-bottom
+Bottom Clamp
+ 70
+1
+ 62
+-7
+420
+0
+  6
+CONTINUOUS
+370
+0
+390
+F
+  0
+LAYER
+  5
+46
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Drawings
+ 70
+0
+ 62
+5
+420
+255
+  6
+CONTINUOUS
+370
+0
+390
+F
+  0
+LAYER
+  5
+47
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Syringe Flange
  70
 0
  62
@@ -1319,69 +1371,13 @@ ENTITIES
   0
 LINE
   5
-46
-100
-AcDbEntity
-100
-AcDbLine
-  8
-syringe-clamp-top
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-7.0000000000000036
- 20
-39.0000000000000142
- 30
-0.0
- 11
-53.0
- 21
-39.0000000000000142
- 31
-0.0
-  0
-LINE
-  5
-47
-100
-AcDbEntity
-100
-AcDbLine
-  8
-syringe-clamp-top
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-59.0
- 20
-33.0000000000000142
- 30
-0.0
- 11
-59.0
- 21
-7.0
- 31
-0.0
-  0
-LINE
-  5
 48
 100
 AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
@@ -1389,15 +1385,15 @@ syringe-clamp-top
   6
 ByLayer
  10
-52.9999999999999858
+-23.0000000000000036
  20
-0.9999999999999822
+19.0000000000000142
  30
 0.0
  11
-6.9999999999999893
+22.9999999999999929
  21
-1.0000000000000142
+19.0000000000000142
  31
 0.0
   0
@@ -1409,7 +1405,7 @@ AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
@@ -1417,77 +1413,73 @@ syringe-clamp-top
   6
 ByLayer
  10
-0.9999999999999964
+28.9999999999999929
  20
-7.0000000000000107
+13.0000000000000142
  30
 0.0
  11
-1.0000000000000071
+28.9999999999999929
  21
-33.0000000000000284
+-13.0
  31
 0.0
   0
-ARC
+LINE
   5
 4A
 100
 AcDbEntity
+100
+AcDbLine
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
 -1
   6
 ByLayer
-100
-AcDbCircle
  10
-7.0
+22.9999999999999787
  20
-33.0000000000000071
+-19.0000000000000178
  30
 0.0
- 40
-6.0
-100
-AcDbArc
- 50
-90.0
- 51
-180.0
+ 11
+-23.0000000000000178
+ 21
+-18.9999999999999858
+ 31
+0.0
   0
-ARC
+LINE
   5
 4B
 100
 AcDbEntity
+100
+AcDbLine
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
 -1
   6
 ByLayer
-100
-AcDbCircle
  10
-6.9999999999999964
+-29.0000000000000107
  20
-7.0000000000000142
+-12.9999999999999893
  30
 0.0
- 40
-6.0
-100
-AcDbArc
- 50
-180.0
- 51
-270.0
+ 11
+-29.0
+ 21
+13.0000000000000284
+ 31
+0.0
   0
 ARC
   5
@@ -1495,7 +1487,7 @@ ARC
 100
 AcDbEntity
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
@@ -1505,9 +1497,69 @@ ByLayer
 100
 AcDbCircle
  10
-52.9999999999999929
+-23.0000000000000071
  20
-6.9999999999999964
+13.0000000000000071
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+4D
+100
+AcDbEntity
+  8
+Top Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-23.0000000000000107
+ 20
+-12.9999999999999858
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+4E
+100
+AcDbEntity
+  8
+Top Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+22.9999999999999858
+ 20
+-13.0000000000000036
  30
 0.0
  40
@@ -1521,11 +1573,11 @@ AcDbArc
   0
 ARC
   5
-4D
+4F
 100
 AcDbEntity
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
@@ -1535,9 +1587,9 @@ ByLayer
 100
 AcDbCircle
  10
-53.0
+22.9999999999999929
  20
-33.0
+13.0
  30
 0.0
  40
@@ -1548,54 +1600,6 @@ AcDbArc
 0.0
  51
 90.0
-  0
-CIRCLE
-  5
-4E
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-syringe-clamp-top
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-30.0000000000000071
- 20
-20.0
- 30
-0.0
- 40
-3.5
-  0
-CIRCLE
-  5
-4F
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-syringe-clamp-top
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-6.4999999999999964
- 20
-6.5000000000000195
- 30
-0.0
- 40
-1.5
   0
 CIRCLE
   5
@@ -1605,7 +1609,7 @@ AcDbEntity
 100
 AcDbCircle
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
@@ -1613,13 +1617,13 @@ syringe-clamp-top
   6
 ByLayer
  10
-6.5000000000000036
+0.0
  20
-33.5000000000000142
+0.0
  30
 0.0
  40
-1.5
+3.5
   0
 CIRCLE
   5
@@ -1629,7 +1633,7 @@ AcDbEntity
 100
 AcDbCircle
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
@@ -1637,9 +1641,9 @@ syringe-clamp-top
   6
 ByLayer
  10
-53.5
+-23.5000000000000107
  20
-33.5
+-13.4999999999999805
  30
 0.0
  40
@@ -1653,7 +1657,7 @@ AcDbEntity
 100
 AcDbCircle
   8
-syringe-clamp-top
+Top Clamp
  62
 256
 370
@@ -1661,9 +1665,57 @@ syringe-clamp-top
   6
 ByLayer
  10
-53.5
+-23.5000000000000036
  20
-6.5
+13.5000000000000142
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+53
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Top Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+23.4999999999999929
+ 20
+13.5
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+54
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Top Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+23.4999999999999929
+ 20
+-13.5
  30
 0.0
  40
@@ -1671,7 +1723,7 @@ ByLayer
   0
 MTEXT
   5
-53
+55
 100
 AcDbEntity
 100
@@ -1685,9 +1737,9 @@ text
   6
 ByLayer
  10
-29.9999999999999964
+-0.0000000000000107
  20
-10.0000000000000071
+-9.9999999999999929
  30
 0.0
  40
@@ -1705,19 +1757,19 @@ standard
  50
 0.0
  73
-0
+1
  44
 1.0
   0
 LINE
   5
-54
+56
 100
 AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -1725,27 +1777,27 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-59.0
+29.0
  20
-83.0
+13.0
  30
 0.0
  11
-59.0
+29.0
  21
-57.0
+-13.0
  31
 0.0
   0
 LINE
   5
-55
+57
 100
 AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -1753,77 +1805,17 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-1.0
+-29.0
  20
-57.0
+-13.0
  30
 0.0
  11
-1.0000000000000036
+-28.9999999999999964
  21
-83.0000000000000142
+13.0000000000000142
  31
 0.0
-  0
-ARC
-  5
-56
-100
-AcDbEntity
-  8
-syringe-clamp-bottom
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-7.0
- 20
-83.0
- 30
-0.0
- 40
-6.0
-100
-AcDbArc
- 50
-90.0
- 51
-180.0
-  0
-ARC
-  5
-57
-100
-AcDbEntity
-  8
-syringe-clamp-bottom
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-7.0
- 20
-57.0
- 30
-0.0
- 40
-6.0
-100
-AcDbArc
- 50
-180.0
- 51
-270.0
   0
 ARC
   5
@@ -1831,7 +1823,7 @@ ARC
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -1841,9 +1833,69 @@ ByLayer
 100
 AcDbCircle
  10
-53.0
+-23.0
  20
-56.9999999999999929
+13.0
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+59
+100
+AcDbEntity
+  8
+Bottom Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-23.0
+ 20
+-13.0
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+5A
+100
+AcDbEntity
+  8
+Bottom Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+23.0
+ 20
+-13.0000000000000071
  30
 0.0
  40
@@ -1857,11 +1909,11 @@ AcDbArc
   0
 ARC
   5
-59
+5B
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -1871,9 +1923,9 @@ ByLayer
 100
 AcDbCircle
  10
-53.0
+23.0
  20
-83.0
+13.0
  30
 0.0
  40
@@ -1884,54 +1936,6 @@ AcDbArc
 0.0
  51
 90.0
-  0
-CIRCLE
-  5
-5A
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-syringe-clamp-bottom
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-6.4999999999999964
- 20
-56.5000000000000213
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-5B
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-syringe-clamp-bottom
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-6.5000000000000071
- 20
-83.5000000000000142
- 30
-0.0
- 40
-1.5
   0
 CIRCLE
   5
@@ -1941,7 +1945,7 @@ AcDbEntity
 100
 AcDbCircle
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -1949,9 +1953,9 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-53.5
+-23.5000000000000036
  20
-83.5
+-13.4999999999999787
  30
 0.0
  40
@@ -1965,7 +1969,7 @@ AcDbEntity
 100
 AcDbCircle
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -1973,9 +1977,57 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-53.5
+-23.4999999999999929
  20
-56.5
+13.5000000000000142
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+5E
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Bottom Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+23.5
+ 20
+13.5
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+5F
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Bottom Clamp
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+23.5
+ 20
+-13.5
  30
 0.0
  40
@@ -1983,13 +2035,13 @@ ByLayer
   0
 LINE
   5
-5E
+60
 100
 AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -1997,25 +2049,25 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-7.0
+-23.0
  20
-89.0
+19.0
  30
 0.0
  11
-12.0626088853479203
+-17.9373911146520797
  21
-89.0
+19.0
  31
 0.0
   0
 ARC
   5
-5F
+61
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2025,9 +2077,9 @@ ByLayer
 100
 AcDbCircle
  10
-12.0626088853479203
+-17.9373911146520797
  20
-91.5
+21.5
  30
 0.0
  40
@@ -2041,11 +2093,11 @@ AcDbArc
   0
 ARC
   5
-60
+62
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2055,9 +2107,9 @@ ByLayer
 100
 AcDbCircle
  10
-30.0
+0.0
  20
-70.0
+0.0
  30
 0.0
  40
@@ -2071,13 +2123,13 @@ AcDbArc
   0
 LINE
   5
-61
+63
 100
 AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2085,25 +2137,25 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-47.9373911146520868
+17.9373911146520868
  20
-89.0
+19.0
  30
 0.0
  11
-53.0
+23.0
  21
-89.0
+19.0
  31
 0.0
   0
 ARC
   5
-62
+64
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2113,9 +2165,9 @@ ByLayer
 100
 AcDbCircle
  10
-47.9373911146520868
+17.9373911146520868
  20
-91.5
+21.5
  30
 0.0
  40
@@ -2129,13 +2181,13 @@ AcDbArc
   0
 LINE
   5
-63
+65
 100
 AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2143,25 +2195,25 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-52.9999999999999929
+22.9999999999999929
  20
-50.9999999999999858
+-19.0000000000000142
  30
 0.0
  11
-47.9373911146520797
+17.9373911146520797
  21
-51.0
+-19.0
  31
 0.0
   0
 ARC
   5
-64
+66
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2171,9 +2223,9 @@ ByLayer
 100
 AcDbCircle
  10
-47.9373911146520726
+17.9373911146520726
  20
-48.5
+-21.5
  30
 0.0
  40
@@ -2187,11 +2239,11 @@ AcDbArc
   0
 ARC
   5
-65
+67
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2201,9 +2253,9 @@ ByLayer
 100
 AcDbCircle
  10
-30.0
+0.0
  20
-70.0
+0.0
  30
 0.0
  40
@@ -2217,13 +2269,13 @@ AcDbArc
   0
 LINE
   5
-66
+68
 100
 AcDbEntity
 100
 AcDbLine
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2231,25 +2283,25 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-12.0626088853479132
+-17.9373911146520868
  20
-51.0
+-19.0
  30
 0.0
  11
-6.9999999999999964
+-23.0000000000000036
  21
-51.0
+-19.0
  31
 0.0
   0
 ARC
   5
-67
+69
 100
 AcDbEntity
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2259,9 +2311,9 @@ ByLayer
 100
 AcDbCircle
  10
-12.0626088853479132
+-17.9373911146520868
  20
-48.5
+-21.5
  30
 0.0
  40
@@ -2275,7 +2327,7 @@ AcDbArc
   0
 MTEXT
   5
-68
+6A
 100
 AcDbEntity
 100
@@ -2289,9 +2341,9 @@ text
   6
 ByLayer
  10
-30.0
+0.0
  20
-90.0
+20.0
  30
 0.0
  40
@@ -2309,13 +2361,13 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
 MTEXT
   5
-69
+6B
 100
 AcDbEntity
 100
@@ -2329,9 +2381,9 @@ text
   6
 ByLayer
  10
-29.9999999999999964
+-0.0000000000000036
  20
-50.0
+-20.0
  30
 0.0
  40
@@ -2349,19 +2401,19 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
 CIRCLE
   5
-6A
+6C
 100
 AcDbEntity
 100
 AcDbCircle
   8
-syringe-clamp-bottom
+Bottom Clamp
  62
 256
 370
@@ -2369,13 +2421,253 @@ syringe-clamp-bottom
   6
 ByLayer
  10
-30.0
+0.0
  20
-70.0
+0.0
  30
 0.0
  40
 16.0
+  0
+ARC
+  5
+6D
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-19.1091872069486612
+ 20
+7.6916593920253424
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+116.8334215100468327
+ 51
+163.1269985478409126
+  0
+ARC
+  5
+6E
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-0.0000000000000055
+ 20
+-30.0833333333332575
+ 30
+0.0
+ 40
+47.3333333333332646
+100
+AcDbArc
+ 50
+63.1665784899530607
+ 51
+116.8334215100469606
+  0
+ARC
+  5
+6F
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+19.1091872069486612
+ 20
+7.6916593920253433
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+16.8730014521589524
+ 51
+63.1665784899531744
+  0
+ARC
+  5
+70
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-6.2500000000000568
+ 20
+0.0000000000000008
+ 30
+0.0
+ 40
+31.5000000000000533
+100
+AcDbArc
+ 50
+343.1269985478410263
+ 51
+16.8730014521589524
+  0
+ARC
+  5
+71
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+19.1091872069486612
+ 20
+-7.6916593920253442
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+296.8334215100468327
+ 51
+343.1269985478409126
+  0
+ARC
+  5
+72
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+0.0000000000000018
+ 20
+30.0833333333332575
+ 30
+0.0
+ 40
+47.3333333333332646
+100
+AcDbArc
+ 50
+243.1665784899530536
+ 51
+296.8334215100469464
+  0
+ARC
+  5
+73
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+6.2500000000000568
+ 20
+0.0
+ 30
+0.0
+ 40
+31.5000000000000284
+100
+AcDbArc
+ 50
+163.1269985478410263
+ 51
+196.8730014521589453
+  0
+ARC
+  5
+74
+100
+AcDbEntity
+  8
+Syringe Flange
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-19.1091872069486648
+ 20
+-7.6916593920253371
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+196.8730014521589453
+ 51
+243.1665784899531388
   0
 ENDSEC
   0
@@ -2415,7 +2707,7 @@ E
   3
 AcDbVariableDictionary
 350
-6B
+75
   0
 DICTIONARY
   5
@@ -2879,7 +3171,7 @@ Layout2
   0
 DICTIONARY
   5
-6B
+75
 100
 AcDbDictionary
 281
@@ -2887,15 +3179,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-6D
+77
   3
 HIDETEXT
 350
-6C
+76
   0
 DICTIONARYVAR
   5
-6C
+76
 100
 DictionaryVariables
 280
@@ -2905,7 +3197,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-6D
+77
 100
 DictionaryVariables
 280
