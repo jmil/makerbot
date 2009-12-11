@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : /home/hoeken/Desktop/makerbot/trunk/electronics/extruder-controller/extruder-controller.brd
 
-Start at      : 18:02:55 (12/7/09)
-End at        : 18:05:56 (12/7/09)
-Elapsed time  : 00:03:01
+Start at      : 18:12:26 (12/10/09)
+End at        : 18:13:13 (12/10/09)
+Elapsed time  : 00:00:47
 
-Signals       :    81   RoutingGrid: 2.5 mil  Layers: 2
-Connections   :   191   predefined:  0 ( 0 Vias )
+Signals       :    78   RoutingGrid: 5 mil  Layers: 2
+Connections   :   200   predefined:  0 ( 0 Vias )
 
-Router memory :   5874012
+Router memory :   1490400
 
 Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:47  00:00:34  00:00:33  00:00:32  00:00:35
-Number of Ripups  :        10         0         0         0         0
-max. Level        :         2         0         0         0         0
-max. Total        :        46         0         0         0         0
+Time per pass     :  00:00:16  00:00:08  00:00:07  00:00:08  00:00:08
+Number of Ripups  :        11         0         0         0         0
+max. Level        :         1         0         0         0         0
+max. Total        :        50         0         0         0         0
 
-Routed            :       184       184       184       184       184
-Vias              :        97        67        63        61        61
-Resolution        :    96.3 %    96.3 %    96.3 %    96.3 %    96.3 %
+Routed            :       194       194       194       194       194
+Vias              :       113        75        73        66        64
+Resolution        :    97.0 %    97.0 %    97.0 %    97.0 %    97.0 %
 
-Final             : 96.3% finished
+Final             : 97.0% finished
