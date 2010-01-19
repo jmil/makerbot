@@ -41,6 +41,14 @@ $INSUNITS
  70
 4
   9
+$DIMSTYLE
+  2
+Standard
+  9
+$CLAYER
+  8
+Barrel
+  9
 $DIMEXO
  40
 0.625
@@ -4631,33 +4639,9 @@ AcDbArc
  51
 22.4999999999999858
   0
-CIRCLE
-  5
-BA
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-Flang
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-140.0
-  0
 LINE
   5
-BB
+BA
 100
 AcDbEntity
 100
@@ -4685,7 +4669,7 @@ ByLayer
   0
 LINE
   5
-BC
+BB
 100
 AcDbEntity
 100
@@ -4713,7 +4697,7 @@ ByLayer
   0
 LINE
   5
-BD
+BC
 100
 AcDbEntity
 100
@@ -4741,7 +4725,7 @@ ByLayer
   0
 LINE
   5
-BE
+BD
 100
 AcDbEntity
 100
@@ -4769,7 +4753,7 @@ ByLayer
   0
 LINE
   5
-BF
+BE
 100
 AcDbEntity
 100
@@ -4797,7 +4781,7 @@ ByLayer
   0
 LINE
   5
-C0
+BF
 100
 AcDbEntity
 100
@@ -4825,7 +4809,7 @@ ByLayer
   0
 LINE
   5
-C1
+C0
 100
 AcDbEntity
 100
@@ -4853,7 +4837,7 @@ ByLayer
   0
 LINE
   5
-C2
+C1
 100
 AcDbEntity
 100
@@ -4881,7 +4865,7 @@ ByLayer
   0
 LINE
   5
-C3
+C2
 100
 AcDbEntity
 100
@@ -4909,7 +4893,7 @@ ByLayer
   0
 LINE
   5
-C4
+C3
 100
 AcDbEntity
 100
@@ -4937,7 +4921,7 @@ ByLayer
   0
 LINE
   5
-C5
+C4
 100
 AcDbEntity
 100
@@ -4965,7 +4949,7 @@ ByLayer
   0
 LINE
   5
-C6
+C5
 100
 AcDbEntity
 100
@@ -4993,7 +4977,7 @@ ByLayer
   0
 LINE
   5
-C7
+C6
 100
 AcDbEntity
 100
@@ -5021,7 +5005,7 @@ ByLayer
   0
 LINE
   5
-C8
+C7
 100
 AcDbEntity
 100
@@ -5049,7 +5033,7 @@ ByLayer
   0
 LINE
   5
-C9
+C8
 100
 AcDbEntity
 100
@@ -5077,7 +5061,7 @@ ByLayer
   0
 LINE
   5
-CA
+C9
 100
 AcDbEntity
 100
@@ -5105,7 +5089,7 @@ ByLayer
   0
 ARC
   5
-CB
+CA
 100
 AcDbEntity
   8
@@ -5126,6 +5110,36 @@ AcDbCircle
 0.0
  40
 50.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+22.5000000000000036
+  0
+ARC
+  5
+CB
+100
+AcDbEntity
+  8
+Flang
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+45.0
 100
 AcDbArc
  50
@@ -5155,13 +5169,13 @@ AcDbCircle
  30
 0.0
  40
-45.0
+50.0
 100
 AcDbArc
  50
-0.0
+45.0
  51
-22.5000000000000036
+67.5
   0
 ARC
   5
@@ -5185,7 +5199,7 @@ AcDbCircle
  30
 0.0
  40
-50.0
+45.0
 100
 AcDbArc
  50
@@ -5215,13 +5229,13 @@ AcDbCircle
  30
 0.0
  40
-45.0
+50.0
 100
 AcDbArc
  50
-45.0
+90.0
  51
-67.5
+112.5
   0
 ARC
   5
@@ -5245,7 +5259,7 @@ AcDbCircle
  30
 0.0
  40
-50.0
+45.0
 100
 AcDbArc
  50
@@ -5275,13 +5289,13 @@ AcDbCircle
  30
 0.0
  40
-45.0
+50.0
 100
 AcDbArc
  50
-90.0
+135.0
  51
-112.5
+157.5
   0
 ARC
   5
@@ -5305,7 +5319,7 @@ AcDbCircle
  30
 0.0
  40
-50.0
+45.0
 100
 AcDbArc
  50
@@ -5335,13 +5349,13 @@ AcDbCircle
  30
 0.0
  40
-45.0
+50.0
 100
 AcDbArc
  50
-135.0
+180.0
  51
-157.5
+202.5
   0
 ARC
   5
@@ -5365,7 +5379,7 @@ AcDbCircle
  30
 0.0
  40
-50.0
+45.0
 100
 AcDbArc
  50
@@ -5395,13 +5409,13 @@ AcDbCircle
  30
 0.0
  40
-45.0
+50.0
 100
 AcDbArc
  50
-180.0
+225.0
  51
-202.5
+247.4999999999999716
   0
 ARC
   5
@@ -5425,7 +5439,7 @@ AcDbCircle
  30
 0.0
  40
-50.0
+45.0
 100
 AcDbArc
  50
@@ -5459,43 +5473,13 @@ AcDbCircle
 100
 AcDbArc
  50
-225.0
- 51
-247.4999999999999716
-  0
-ARC
-  5
-D7
-100
-AcDbEntity
-  8
-Flang
- 62
-256
-370
--1
-  6
-ByLayer
-100
-AcDbCircle
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-45.0
-100
-AcDbArc
- 50
 270.0
  51
 292.5
   0
 ARC
   5
-D8
+D7
 100
 AcDbEntity
   8
@@ -5525,7 +5509,7 @@ AcDbArc
   0
 ARC
   5
-D9
+D8
 100
 AcDbEntity
   8
@@ -5555,7 +5539,7 @@ AcDbArc
   0
 ARC
   5
-DA
+D9
 100
 AcDbEntity
   8
@@ -5585,7 +5569,7 @@ AcDbArc
   0
 CIRCLE
   5
-DB
+DA
 100
 AcDbEntity
 100
@@ -5606,6 +5590,30 @@ ByLayer
 0.0
  40
 4.0
+  0
+CIRCLE
+  5
+DB
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+Flang
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+130.0
   0
 ENDSEC
   0
