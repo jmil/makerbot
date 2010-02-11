@@ -2,7 +2,7 @@
   <!--
      Firmware for the RepRap Motherboard v1.1 and v1.2.
     -->
-  <board name="RepRap Motherboard v1.X">
+  <board name="RepRap Motherboard v1.X" manualreset="true">
     <version major="1" minor="1"/>
     <version major="1" minor="2"/>
     <programmer class="replicatorg.uploader.AvrdudeUploader">
@@ -11,7 +11,7 @@
       <arch>m644p</arch>
     </programmer>
     <firmware
-       name="v1.6 - Latest version"
+       name="v1.6"
        major="1"
        minor="6"
        relpath="firmware/SanguinoMaster-v1.6.hex"/>
@@ -31,11 +31,6 @@
       <speed>19200</speed>
       <arch>m168</arch>
     </programmer>
-    <firmware
-       major="1"
-       minor="9"
-       name="v1.9 remote"
-       url="http://github.com/makerbot/G3Firmware/raw/master/dist/ArduinoSlave/ArduinoSlaveExtruder-v1.9.hex"/>
     <firmware
        major="1"
        minor="8"
