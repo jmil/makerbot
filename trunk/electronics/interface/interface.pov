@@ -1,6 +1,6 @@
 //POVRay-File created by 3d41.ulp v1.05
 ///home/hoeken/Desktop/makerbot/trunk/electronics/interface/interface.brd
-//2/11/10 5:39 PM
+//3/1/10 5:54 PM
 
 #version 3.5;
 
@@ -92,7 +92,7 @@
 #declare pcb_layer1_used = 1;
 #declare pcb_layer16_used = 1;
 #declare inc_testmode = off;
-#declare global_seed=seed(792);
+#declare global_seed=seed(400);
 #declare global_pcb_layer_dis = array[16]
 {
 	0.000000,
