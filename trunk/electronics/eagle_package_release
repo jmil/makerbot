@@ -48,7 +48,8 @@ eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/ComponentTraces.pho" $BOARD/*.br
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/CopperTraces.pho" $BOARD/*.brd Bottom Pads Vias
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/SolderMaskComponent.pho" $BOARD/*.brd tStop
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/SolderMaskCopper.pho" $BOARD/*.brd bStop
-eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/SilkScreen.pho" $BOARD/*.brd Dimension tPlace tDocu tValues tNames
+eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/TopSilkScreen.pho" $BOARD/*.brd Dimension tPlace tDocu tValues tNames
+eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/BottomSilkScreen.pho" $BOARD/*.brd Dimension bPlace bDocu bValues bNames
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/TopCream.pho" $BOARD/*.brd Dimension tCream
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/BottomCream.pho" $BOARD/*.brd Dimension bCream
 
