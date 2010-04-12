@@ -13,35 +13,43 @@ $HANDSEED
   5
 FFFF
   9
-$DIMASZ
- 40
-2.5
-  9
-$PLIMMIN
- 10
-0.0
- 20
-0.0
+$SPLINESEGS
+ 70
+8
   9
 $DIMEXE
  40
 1.25
   9
-$DIMGAP
- 40
-0.625
+$DIMAZIN
+ 70
+8
   9
-$PLIMMAX
- 10
-210.0
- 20
-297.0
+$DIMZIN
+ 70
+8
+  9
+$DIMLUNIT
+ 70
+2
+  9
+$GRIDMODE
+ 70
+1
   9
 $INSUNITS
  70
 4
   9
-$DIMEXO
+$DIMADEC
+ 70
+2
+  9
+$DIMASZ
+ 40
+2.5
+  9
+$DIMGAP
  40
 0.625
   9
@@ -49,9 +57,71 @@ $DIMTXT
  40
 2.5
   9
+$GRIDUNIT
+ 10
+0.0
+ 20
+0.0
+  9
+$DIMEXO
+ 40
+0.625
+  9
+$LUPREC
+ 70
+4
+  9
 $CLAYER
   8
 0
+  9
+$PINSBASE
+ 10
+51.997518610421857
+ 20
+174.94998449131515
+ 30
+0.0
+  9
+$DIMAUNIT
+ 70
+0
+  9
+$AUPREC
+ 70
+2
+  9
+$PLIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$LUNITS
+ 70
+2
+  9
+$PLIMMAX
+ 10
+215.90000000000001
+ 20
+279.39999999999998
+  9
+$DIMSTYLE
+  2
+Standard
+  9
+$DIMBLK
+  1
+
+  9
+$AUNITS
+ 70
+0
+  9
+$CLAYER
+  8
+Measurements
   0
 ENDSEC
   0
@@ -903,7 +973,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-1
+2
   0
 LAYER
   5
@@ -920,6 +990,28 @@ AcDbLayerTableRecord
 7
 420
 0
+  6
+CONTINUOUS
+370
+0
+390
+F
+  0
+LAYER
+  5
+43
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Measurements
+ 70
+0
+ 62
+5
+420
+255
   6
 CONTINUOUS
 370
@@ -1253,7 +1345,7 @@ ENTITIES
   0
 LINE
   5
-43
+44
 100
 AcDbEntity
 100
@@ -1281,7 +1373,7 @@ ByLayer
   0
 LINE
   5
-44
+45
 100
 AcDbEntity
 100
@@ -1298,34 +1390,6 @@ ByLayer
 3.2511999999999999
  20
 -0.0000000000000008
- 30
-0.0
- 11
-3.2511999999999999
- 21
-60.0
- 31
-0.0
-  0
-LINE
-  5
-45
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--3.2511999999999999
- 20
-60.0
  30
 0.0
  11
@@ -1353,6 +1417,34 @@ ByLayer
  10
 -3.2511999999999999
  20
+60.0
+ 30
+0.0
+ 11
+3.2511999999999999
+ 21
+60.0
+ 31
+0.0
+  0
+LINE
+  5
+47
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-3.2511999999999999
+ 20
 0.0000000000000004
  30
 0.0
@@ -1365,7 +1457,7 @@ ByLayer
   0
 LINE
   5
-47
+48
 100
 AcDbEntity
 100
@@ -1386,34 +1478,6 @@ ByLayer
 0.0
  11
 -3.96875
- 21
-60.0
- 31
-0.0
-  0
-LINE
-  5
-48
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-3.96875
- 20
--0.000000000000001
- 30
-0.0
- 11
-3.96875
  21
 60.0
  31
@@ -1435,6 +1499,34 @@ AcDbLine
   6
 ByLayer
  10
+3.96875
+ 20
+-0.000000000000001
+ 30
+0.0
+ 11
+3.96875
+ 21
+60.0
+ 31
+0.0
+  0
+LINE
+  5
+4A
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
 -3.2511999999999999
  20
 60.0
@@ -1449,7 +1541,7 @@ ByLayer
   0
 LINE
   5
-4A
+4B
 100
 AcDbEntity
 100
@@ -1477,7 +1569,7 @@ ByLayer
   0
 LINE
   5
-4B
+4C
 100
 AcDbEntity
 100
@@ -1505,7 +1597,7 @@ ByLayer
   0
 LINE
   5
-4C
+4D
 100
 AcDbEntity
 100
@@ -1533,7 +1625,7 @@ ByLayer
   0
 LINE
   5
-4D
+4E
 100
 AcDbEntity
 100
@@ -1559,13 +1651,53 @@ ByLayer
  31
 0.0
   0
+MTEXT
+  5
+4F
+100
+AcDbEntity
+100
+AcDbMText
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+20.0
+ 20
+70.0
+ 30
+0.0
+ 40
+5.0
+ 41
+100.0
+ 71
+1
+ 72
+2
+  1
+Thermal\~Barrier\~Support
+  7
+standard
+ 50
+0.0
+ 73
+0
+ 44
+1.0
+  0
 DIMENSION
   5
-4E
+50
 100
 AcDbEntity
   8
-0
+Measurements
  62
 256
 370
@@ -1591,7 +1723,7 @@ AcDbDimension
  71
 5
  72
-1
+0
  41
 1.0
  42
@@ -1621,11 +1753,11 @@ AcDbRotatedDimension
   0
 DIMENSION
   5
-4F
+51
 100
 AcDbEntity
   8
-0
+Measurements
  62
 256
 370
@@ -1651,7 +1783,7 @@ AcDbDimension
  71
 5
  72
-1
+0
  41
 1.0
  42
@@ -1681,11 +1813,11 @@ AcDbRotatedDimension
   0
 DIMENSION
   5
-50
+52
 100
 AcDbEntity
   8
-0
+Measurements
  62
 256
 370
@@ -1711,7 +1843,7 @@ AcDbDimension
  71
 5
  72
-1
+0
  41
 1.0
  42
@@ -1739,53 +1871,13 @@ AcDbAlignedDimension
 100
 AcDbRotatedDimension
   0
-MTEXT
-  5
-51
-100
-AcDbEntity
-100
-AcDbMText
-  8
-0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-20.0
- 20
-70.0
- 30
-0.0
- 40
-5.0
- 41
-100.0
- 71
-1
- 72
-0
-  1
-Thermal\~Barrier\~Support
-  7
-standard
- 50
-0.0
- 73
-1
- 44
-1.0
-  0
 DIMENSION
   5
-52
+53
 100
 AcDbEntity
   8
-0
+Measurements
  62
 256
 370
@@ -1811,7 +1903,7 @@ AcDbDimension
  71
 5
  72
-1
+0
  41
 1.0
  42
@@ -1841,7 +1933,7 @@ AcDbRotatedDimension
   0
 MTEXT
   5
-53
+54
 100
 AcDbEntity
 100
@@ -1867,15 +1959,15 @@ ByLayer
  71
 1
  72
-0
+2
   1
-Notes:\P\P*\~Made\~from\~Stainless\~Steel\~Tubing\~(McMaster\~#6100K231)\P*\~Bottom\~5mm\~threaded\~with\~insert\~proper\~threads\~here\P*\~1/4"\~ID\~(actual:\~.256")\P*\~5/16"\~OD\~(actual:\~.3125")\P*\~Length:\~60mm
+Notes:\P\P*\~Made\~from\~Stainless\~Steel\~Tubing\~(see:\~McMaster\~#6100K231)\P*\~Bottom\~5mm\~threaded\~with\~insert\~proper\~threads\~here\P*\~1/4"\~ID\~(actual:\~.256")\P*\~5/16"\~OD\~(actual:\~.3125")\P*\~Length:\~60mm
   7
 standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -1917,7 +2009,7 @@ E
   3
 AcDbVariableDictionary
 350
-54
+55
   0
 DICTIONARY
   5
@@ -2381,7 +2473,7 @@ Layout2
   0
 DICTIONARY
   5
-54
+55
 100
 AcDbDictionary
 281
@@ -2389,15 +2481,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-56
+57
   3
 HIDETEXT
 350
-55
+56
   0
 DICTIONARYVAR
   5
-55
+56
 100
 DictionaryVariables
 280
@@ -2407,7 +2499,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-56
+57
 100
 DictionaryVariables
 280
