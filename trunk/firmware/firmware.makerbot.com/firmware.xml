@@ -12,6 +12,13 @@
       <manualreset>true</manualreset>
     </programmer>
     <firmware
+       major="2"
+       minor="0"
+       relpath="firmware/MB-rrmbv12-v2.0r0.hex"
+       name="v2.0 release 0"
+       description="This is the inital release of the v2.0 firmware."
+       />
+    <firmware
        name="v1.6"
        major="1"
        minor="6"
@@ -24,14 +31,6 @@
        major="1"
        minor="4"
        relpath="firmware/SanguinoMaster-v1.4.hex"/>
-    <firmware
-       major="0"
-       minor="0"
-       relpath="firmware/MB-rrmbv12-v2.0a2.hex"
-       name="v2.0 BETA 2"
-       status="beta"
-       description="This is the beta release of the v2.0 firmware."
-       />
   </board>
   <board name="Extruder Controller v2.2">
     <version major="2" minor="2"/>
@@ -40,6 +39,14 @@
       <speed>19200</speed>
       <arch>m168</arch>
     </programmer>
+    <firmware
+       major="2"
+       minor="0"
+       relpath="firmware/EC-ecv22-v2.0r0.hex"
+       name="v2.0 release 0"
+       status="beta"
+       description="This is the inital release of the v2.0 firmware."
+       />
     <firmware
        major="1"
        minor="8"
@@ -61,13 +68,5 @@
        major="1"
        minor="4"
        relpath="firmware/ArduinoSlaveExtruder-v1.4.hex"/>
-    <firmware
-       major="0"
-       minor="0"
-       relpath="firmware/EC-ecv22-v2.0a2.hex"
-       name="v2.0 BETA 2"
-       status="beta"
-       description="This is the beta release of the v2.0 firmware."
-       />
   </board>
 </boards>
