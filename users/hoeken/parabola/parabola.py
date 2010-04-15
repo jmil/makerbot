@@ -1,10 +1,11 @@
 import sdxf
 
 # Set your parabola's parameters here
-focus=60
-range=(-140.0,140.0)
+width = 450
+focus=width*.23
+range=(-width/2,width/2)
 delta=5
-centerRadius = 0.5  # radius of circle marking center
+centerRadius = 5  # radius of circle marking center
 
 d=sdxf.Drawing()
 
