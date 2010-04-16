@@ -1,5 +1,5 @@
 999
-dxflib 2.2.0.0
+dxflib 2.0.4.8
   0
 SECTION
   2
@@ -13,9 +13,39 @@ $HANDSEED
   5
 FFFF
   9
+$CLAYER
+  8
+drawings
+  9
 $DIMASZ
  40
 2.5
+  9
+$DIMGAP
+ 40
+0.625
+  9
+$DIMEXO
+ 40
+0.625
+  9
+$INSUNITS
+ 70
+4
+  9
+$DIMTXT
+ 40
+2.5
+  9
+$DIMSTYLE
+  2
+Standard
+  9
+$PLIMMAX
+ 10
+210.0
+ 20
+297.0
   9
 $PLIMMIN
  10
@@ -26,40 +56,6 @@ $PLIMMIN
 $DIMEXE
  40
 1.25
-  9
-$DIMGAP
- 40
-0.625
-  9
-$PLIMMAX
- 10
-210.0
- 20
-297.0
-  9
-$INSUNITS
- 70
-4
-  9
-$DIMSTYLE
-  2
-Standard
-  9
-$CLAYER
-  8
-drawings
-  9
-$DIMEXO
- 40
-0.625
-  9
-$DIMTXT
- 40
-2.5
-  9
-$CLAYER
-  8
-drawings
   0
 ENDSEC
   0
@@ -926,8 +922,6 @@ AcDbLayerTableRecord
 0
  62
 7
-420
-0
   6
 CONTINUOUS
 370
@@ -948,8 +942,6 @@ build-platform
 0
  62
 7
-420
-0
   6
 CONTINUOUS
 370
@@ -970,8 +962,6 @@ platform-text
 0
  62
 1
-420
-16711680
   6
 CONTINUOUS
 370
@@ -992,8 +982,6 @@ cuts
 0
  62
 7
-420
-0
   6
 CONTINUOUS
 370
@@ -1013,9 +1001,7 @@ drawings
  70
 1
  62
--5
-420
-255
+7
   6
 CONTINUOUS
 370
@@ -3533,150 +3519,6 @@ AcDbEntity
 100
 AcDbCircle
   8
-cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--45.9618999999999431
- 20
-45.9619000000000639
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-96
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--45.9618999999999716
- 20
-0.0000000000000284
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-97
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--45.9619000000000213
- 20
--45.9618999999999929
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-98
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-45.9619
- 20
-45.9618999999999858
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-99
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-45.9619
- 20
--0.0000000000000122
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-9A
-100
-AcDbEntity
-100
-AcDbCircle
-  8
-cuts
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-45.9618999999999929
- 20
--45.9619000000000213
- 30
-0.0
- 40
-1.5
-  0
-CIRCLE
-  5
-9B
-100
-AcDbEntity
-100
-AcDbCircle
-  8
 drawings
  62
 256
@@ -3695,7 +3537,7 @@ ByLayer
   0
 CIRCLE
   5
-9C
+96
 100
 AcDbEntity
 100
@@ -3719,7 +3561,7 @@ ByLayer
   0
 CIRCLE
   5
-9D
+97
 100
 AcDbEntity
 100
@@ -3743,7 +3585,7 @@ ByLayer
   0
 CIRCLE
   5
-9E
+98
 100
 AcDbEntity
 100
@@ -3767,7 +3609,7 @@ ByLayer
   0
 CIRCLE
   5
-9F
+99
 100
 AcDbEntity
 100
@@ -3791,7 +3633,7 @@ ByLayer
   0
 CIRCLE
   5
-A0
+9A
 100
 AcDbEntity
 100
@@ -3812,6 +3654,150 @@ ByLayer
 0.0
  40
 4.5
+  0
+CIRCLE
+  5
+9B
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+cuts
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+45.5000000000000142
+ 20
+45.4999999999999929
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+9C
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+cuts
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+45.5000000000000142
+ 20
+0.0
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+9D
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+cuts
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+45.4999999999999929
+ 20
+-45.5000000000000142
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+9E
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+cuts
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-45.4999999999999929
+ 20
+-45.4999999999999787
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+9F
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+cuts
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-45.4999999999999858
+ 20
+0.0000000000000056
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+A0
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+cuts
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-45.4999999999999929
+ 20
+45.5
+ 30
+0.0
+ 40
+1.5
   0
 ENDSEC
   0
