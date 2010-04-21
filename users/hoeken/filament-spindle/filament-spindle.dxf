@@ -47,7 +47,7 @@ Standard
   9
 $CLAYER
   8
-Flange Etch
+0
   9
 $DIMEXO
  40
@@ -59,7 +59,7 @@ $DIMTXT
   9
 $CLAYER
   8
-0
+Top
   0
 ENDSEC
   0
@@ -5975,7 +5975,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -6015,7 +6015,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -6139,7 +6139,7 @@ standard
  50
 -90.0
  73
-1
+0
  44
 1.0
   0
@@ -6207,7 +6207,7 @@ standard
  50
 90.0
  73
-1
+0
  44
 1.0
   0
@@ -6331,7 +6331,7 @@ standard
  50
 180.0
  73
-1
+0
  44
 1.0
   0
@@ -6539,7 +6539,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -7737,7 +7737,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -7777,7 +7777,7 @@ standard
  50
 119.9999999999999858
  73
-1
+0
  44
 1.0
   0
@@ -7817,7 +7817,7 @@ standard
  50
 239.9999999999999716
  73
-1
+0
  44
 1.0
   0
@@ -7857,7 +7857,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -7945,7 +7945,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -29001,6 +29001,270 @@ holes-20
  45
 1.0
   0
+LINE
+  5
+32D
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-149.9999999999999716
+ 20
+-525.0
+ 30
+0.0
+ 11
+150.0000000000000284
+ 21
+-525.0
+ 31
+0.0
+  0
+LINE
+  5
+32E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-149.9999999999999716
+ 20
+-425.0
+ 30
+0.0
+ 11
+150.0000000000000284
+ 21
+-425.0
+ 31
+0.0
+  0
+LINE
+  5
+32F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+Drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-150.0
+ 20
+-625.0
+ 30
+0.0
+ 11
+150.0
+ 21
+-625.0
+ 31
+0.0
+  0
+INSERT
+  5
+330
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+holes-20
+ 10
+142.5000000000000284
+ 20
+-425.0
+ 30
+0.0
+ 50
+90.0
+ 44
+1.0
+ 45
+1.0
+  0
+INSERT
+  5
+331
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+holes-20
+ 10
+142.5000000000000284
+ 20
+-525.0
+ 30
+0.0
+ 50
+90.0
+ 44
+1.0
+ 45
+1.0
+  0
+INSERT
+  5
+332
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+holes-20
+ 10
+142.5
+ 20
+-625.0
+ 30
+0.0
+ 50
+90.0
+ 44
+1.0
+ 45
+1.0
+  0
+INSERT
+  5
+333
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+holes-20
+ 10
+-142.5000000000000284
+ 20
+-525.0
+ 30
+0.0
+ 50
+-90.0
+ 44
+1.0
+ 45
+1.0
+  0
+INSERT
+  5
+334
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+holes-20
+ 10
+-142.5000000000000284
+ 20
+-625.0
+ 30
+0.0
+ 50
+-90.0
+ 44
+1.0
+ 45
+1.0
+  0
+INSERT
+  5
+335
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+Top
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+holes-20
+ 10
+-142.5
+ 20
+-425.0
+ 30
+0.0
+ 50
+-90.0
+ 44
+1.0
+ 45
+1.0
+  0
 ENDSEC
   0
 SECTION
@@ -29039,7 +29303,7 @@ E
   3
 AcDbVariableDictionary
 350
-32D
+336
   0
 DICTIONARY
   5
@@ -29503,7 +29767,7 @@ Layout2
   0
 DICTIONARY
   5
-32D
+336
 100
 AcDbDictionary
 281
@@ -29511,15 +29775,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-32F
+338
   3
 HIDETEXT
 350
-32E
+337
   0
 DICTIONARYVAR
   5
-32E
+337
 100
 DictionaryVariables
 280
@@ -29529,7 +29793,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-32F
+338
 100
 DictionaryVariables
 280
