@@ -4,7 +4,7 @@
 
 Generates GCode which will draw a raft of varying speeds in order to determine optimum speed.
 
-Usage: python taste_tester.py [options] file
+Usage: python taste_tester.py [options]
 
 Options:
   -h, --help						show this help
@@ -77,7 +77,7 @@ class TasteTester:
 		print "M107 (pressure off)"
 		print "M126 (relief open)"
 		self.go_to_point(self.current_x, self.current_y, 10, self.z_feedrate)
-		self.go_to_point(0, 0, 10, self.max_xy)
+		self.go_to_point(0, 0, 25, self.max_xy)
 		print "M18 (drives off)"
 		print "M127"
 		
@@ -92,9 +92,18 @@ class TasteTester:
 def main(argv):
 	
 	try:
-		opts, args = getopt.getopt(argv, "h", ["help", "z-height", "z-feedrate" "feedrate-min", "feedrate-max", "size", "spacing"])
+		opts, args = getopt.getopt(argv, '', [
+			'help',
+			'feedrate-min=',
+			'feedrate-max=',
+			'size=',
+			'spacing=',
+			'z-height=',
+			'z-feedrate='
+		])
 	except getopt.GetoptError:
 		usage()
+		print "fuck"
 		sys.exit(2)
         
 	z_height = 0.25
@@ -109,17 +118,17 @@ def main(argv):
 			usage()
 			sys.exit()
 		elif opt in ("--z-height"):
-			z_height = int(arg)
+			z_height = float(arg)
 		elif opt in ("--z-feedrate"):
-			z_feedrate = int(arg)
+			z_feedrate = float(arg)
 		elif opt in ("--feedrate-min"):
-			xy_min = int(arg)
+			xy_min = float(arg)
 		elif opt in ("--feedrate-max"):
-			xy_max = int(arg)
+			xy_max = float(arg)
 		elif opt in ("--size"):
-			size = int(arg)
+			size = float(arg)
 		elif opt in ("--spacing"):
-			spacing = int(arg)
+			spacing = float(arg)
 
 	tasty = TasteTester(z_height, z_feedrate, xy_min, xy_max, size, spacing)
 	tasty.generate()
