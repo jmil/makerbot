@@ -1,16 +1,16 @@
 #!/usr/bin/python
 #
-# Creates a C code lookup table for doing ADC to temperature conversion
-# on a microcontroller
-# based on: http://hydraraptor.blogspot.com/2007/10/measuring-temperature-easy-way.html
-"""GCode Surface Milling Script
+"""Frosterize
 
-Generates GCode to mill your entire milling surface flat.
+Generates GCode which will control the MakerBot Frostruder to draw an image using varying sized beads of deposited material.
 
-Usage: python mill_surface_flush.py [options]
+Usage: python frosterizer.py [options] file
 
 Options:
   -h, --help						show this help
+  --z-feedrate						the Z axis feedrate in mm/min.  default 150
+  --xy-feedrate						the XY axes feedrate in mm/min. default 3500
+  --width						the maximum width of the build surface. default 80.
 """
 
 from math import *
@@ -20,22 +20,22 @@ from PIL import Image
 from PIL import ImageOps
 from PIL import ImageEnhance
 
-class WasherDriller:
-	"Class to handle generating washer drilling gcode"
-	def __init__(self, img_path):
+class Frosterizer:
+	"Class to handle generating frosting code."
+	def __init__(self, img_path, z, xy, width):
 
 		self.file = img_path
 		self.current_x = 0
 		self.current_y = 0
 		self.current_z = 0
 
-		self.z_feedrate = 150
-		self.xy_feedrate = 3500
-		self.print_feedrate = 3500
+		self.z_feedrate = z
+		self.xy_feedrate = xy
+		self.print_feedrate = xy
 		self.safe_height = 0
 		
-		self.max_width = 80.0
-		self.multiplier = 80.0 / self.max_width
+		self.max_width = float(width)
+		self.multiplier = width / self.max_width
 
 		self.load_image()
 
@@ -53,9 +53,9 @@ class WasherDriller:
 			ratio = self.max_width / self.image.size[0]
 		else:
 			ratio = self.max_width / self.image.size[1]
-			
+
 		self.image = self.image.resize((int(self.image.size[0]*ratio), int(self.image.size[1]*ratio)))
-		self.image.save(self.file + ".old.png")
+		self.image.save(self.file + ".resized.png")
 		self.pixels = self.image.load()
 		
 	def test_pixel(self, x, y):
@@ -130,18 +130,28 @@ class WasherDriller:
 def main(argv):
 	
 	try:
-		opts, args = getopt.getopt(argv, "h", ["help"])
+		opts, args = getopt.getopt(argv, "h", ["help", "z-feedrate", "xy-feedrate", "width"])
 	except getopt.GetoptError:
 		usage()
 		sys.exit(2)
         
+	z_feedrate = 150
+	xy_feedrate = 3500
+	width = 80
+
 	for opt, arg in opts:
 		if opt in ("-h", "--help"):
 			usage()
 			sys.exit()
+		elif opt in ("--z-feedrate"):
+			z_feedrate = int(arg)
+		elif opt in ("-xy-feedrate"):
+			xy_feedrate = int(arg)
+		elif opt in ("--width"):
+			width = int(arg)
 
-	wd = WasherDriller(argv[0])
-	wd.generate()
+	frosty = Frosterizer(argv[0], z_feedrate, xy_feedrate, width)
+	frosty.generate()
 
 def usage():
     print __doc__
