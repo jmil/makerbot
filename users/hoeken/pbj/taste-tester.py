@@ -103,7 +103,6 @@ def main(argv):
 		])
 	except getopt.GetoptError:
 		usage()
-		print "fuck"
 		sys.exit(2)
         
 	z_height = 0.25

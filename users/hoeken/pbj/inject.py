@@ -1,9 +1,5 @@
 #!/usr/bin/python
-#
-# Creates a C code lookup table for doing ADC to temperature conversion
-# on a microcontroller
-# based on: http://hydraraptor.blogspot.com/2007/10/measuring-temperature-easy-way.html
-"""GCode Surface Milling Script
+"""Taste
 
 Generates GCode to mill your entire milling surface flat.
 
