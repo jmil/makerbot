@@ -69,7 +69,7 @@ class TasteDelay:
 		
 		for i in range(self.rows):
 			x_start = -self.width/2
-			y_point = self.width/2 - (self.spacing * self.rows)
+			y_point = self.width/2 - (self.spacing * i)
 			
 			for j in range(self.columns):
 
