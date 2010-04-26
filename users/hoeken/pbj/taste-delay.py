@@ -13,7 +13,7 @@ Options:
   --xy-feedrate								the XY axes feedrate in mm/min. default 3000
   --size											the width/height of the raft in mm. default 80
   --line-length								the length of each line in mm.  default 10
-  --spacing										spacing between lines in mm. default 5
+  --spacing										spacing between rows/columns in mm. default 5
   --start-delay								the delay after the pressure valve opens before movement in milliseconds.  default 25
   --stop-delay								the delay after the relief valve opens before movement in milliseconds.  default 150
   --start-delay-increment			the time increment to use between rows for testing start delay.  default 1
