@@ -42,10 +42,10 @@ class TasteOoze:
 		self.stop_delay = stop_delay
 
 		self.rows = int(width/spacing)
-		self.distance_bump = (self.max_distance - self.min_distance) / float(self.rows-1)
+		self.distance_increment = (self.max_distance - self.min_distance) / float(self.rows-1)
 
 	def getTurnoffDistance(self, line):
-		return self.min_distance + self.distance_bump * line
+		return self.min_distance + self.distance_increment * line
 
 	def getTurnoffMillis(self, line):
 		return self.getTurnoffDistance(line) / self.xy_feedrate * 60000.0 
@@ -59,12 +59,12 @@ class TasteOoze:
 			line = i+1
 			print "(#%d - %.2fmm / %.2f ms)" % (line, self.getTurnoffDistance(i), self.getTurnoffMillis(i))
 
+		print
 		print "G21 (metric ftw)"
 		print "G90 (absolute mode)"
 		print "G92 X0 Y0 Z0 (zero all axes)"
-		
 		self.go_to_point(0, 0, self.start_height, self.z_feedrate)
-		print ""
+		print
 		
 		for i in range(self.rows):
 			x_start = -self.width/2
