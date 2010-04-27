@@ -16,6 +16,7 @@ Options:
   --stop-delay					the delay after the relief valve opens before movement in milliseconds.  default 150
   --min-delay					the minimum delay for printing a dot in milliseconds. default 10
   --max-delay					the maximum delay for printing a dot in milliseconds. default 100
+  --line-length					the length of the test lines to draw in mm.  default 10
 """
 
 from math import *
@@ -24,7 +25,7 @@ import getopt
 
 class TasteDelay:
 	"Class to handle generating frosting code."
-	def __init__(self, start_z, z, feedrate, width, spacing, stop_delay, min_delay, max_delay):
+	def __init__(self, start_z, z, feedrate, width, spacing, stop_delay, min_delay, max_delay, line_length):
 
 		self.current_x = 0
 		self.current_y = 0
@@ -38,9 +39,10 @@ class TasteDelay:
 		self.stop_delay = stop_delay
 		self.min_delay = min_delay
 		self.max_delay = max_delay
+		self.line_length = line_length
 
 		self.rows = int(width/spacing)
-		self.columns = int(width/spacing)
+		self.columns = int(width/(spacing+line_length))
 		self.delay_increment = (self.max_delay - self.min_delay) / float(self.rows-1)
 
 	def getDelay(self, line):
@@ -71,17 +73,20 @@ class TasteDelay:
 			
 			for j in range(self.columns):
 
+				x_end = x_start + self.line_length
+
 				print "(dot at %.2f, %.2f)" % (x_start, y_point)
 				self.go_to_point(x_start, y_point, self.start_height, self.xy_feedrate)
 				print("M106 (pressure on)")
 				print("G4 P%d (wait %d ms)") % (dot_delay, dot_delay)
+				self.go_to_point(x_end, y_point, self.start_height, self.xy_feedrate)
 				print("M107 (pressure off)");
 				print("M126 (relief valve open)")
 				print("G4 P%d (wait %d ms)") % (self.stop_delay, self.stop_delay)
 				print("M127 (relief valve close)")
 				print("");
 								
-				x_start = x_start + self.spacing
+				x_start = x_end + self.spacing
 
 		print "M107 (pressure off)"
 		print "M126 (relief open)"
@@ -103,6 +108,7 @@ def main(argv):
 	try:
 		opts, args = getopt.getopt(argv, '', [
 			'help',
+			'line-length=',
 			'max-delay=',
 			'min-delay=',
 			'size=',
@@ -116,6 +122,7 @@ def main(argv):
 		usage()
 		sys.exit(2)
         
+	line_length = 10
 	min_delay = 10
 	max_delay = 100
 	size = 80
@@ -129,6 +136,8 @@ def main(argv):
 		if opt in ("-h", "--help"):
 			usage()
 			sys.exit()
+		elif opt in ("--line-length"):
+			line_length = float(arg)
 		elif opt in ("--max-delay"):
 			max_delay = float(arg)
 		elif opt in ("--min-delay"):
@@ -152,7 +161,7 @@ def main(argv):
 		elif opt in ("--z-feedrate"):
 			z_feedrate = float(arg)
 
-	tasty = TasteDelay(z_height, z_feedrate, xy_feedrate, size, spacing, stop_delay, min_delay, max_delay)
+	tasty = TasteDelay(z_height, z_feedrate, xy_feedrate, size, spacing, stop_delay, min_delay, max_delay, line_length)
 	tasty.generate()
 
 def usage():

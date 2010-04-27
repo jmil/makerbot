@@ -1,10 +1,10 @@
 #!/usr/bin/python
 #
-"""Frosterize
+"""Frosterize.py
 
 Generates GCode which will control the MakerBot Frostruder to draw an image using varying sized beads of deposited material.
 
-Usage: python frosterizer.py [options] file
+Usage: python frosterizer.py [options] file > output.gcode
 
 Options:
   -h, --help						show this help
