@@ -10,7 +10,13 @@ Options:
   -h, --help						show this help
   --z-feedrate						the Z axis feedrate in mm/min.  default 150
   --xy-feedrate						the XY axes feedrate in mm/min. default 3500
-  --width						the maximum width of the build surface. default 80.
+  --width						the maximum width of the build surface in mm. default 80.
+  --height						the maximum height of the build surface in mm.  default 80.
+  --start-delay						the delay after the pressure valve opens before movement in milliseconds.  default 25
+  --stop-delay						the delay after the relief valve opens before movement in milliseconds.  default 150
+  --dot-delay						the delay after pressure valve opens for printing a single dot in milliseconds.  default: start-delay
+  --line-width						the width of the line the Frostruder can draw in mm.  default 0.50
+  --border						draw a border around your drawing.  default: off 
 """
 
 from math import *
@@ -91,27 +97,30 @@ class Frosterizer:
 						print "(line from %.2f to %.2f at %.2f)" % (start, end, y)
 						self.go_to_point(start*self.multiplier, y*self.multiplier, 0, self.xy_feedrate)
 						print("M106 (pressure on)")
-						print("G4 P25 (wait 25ms)")
+						print("G4 P%d (wait %dms)") % (self.start_delay, self.start_delay)
 						self.go_to_point(end*self.multiplier, y*self.multiplier, 0, self.print_feedrate)
 						print("M107 (pressure off)");
 						print("M126 (relief valve open)")
-						print("G4 P150 (wait 150ms)")
+						print("G4 P%d (wait %dms)") % (self.stop_delay, self.stop_delay)
 						print("M127 (relief valve close)")
+						print
 
 						x = end
 					else:
 						print ("(dot at %.2f, %.2f)") % (x, y)
 						self.go_to_point(x*self.multiplier, y*self.multiplier, 0, self.xy_feedrate)
 						print("M106 (pressure on)")
-						print("G4 P50 (wait 50ms)")
+						print("G4 P%d (wait %dms)") % (self.dot_delay, self.dot_delay)
 						print("M107 (pressure off)");
 						print("M126 (relief valve open)")
-						print("G4 P150 (wait 150ms)")
+						print("G4 P%d (wait %dms)") % (self.stop_delay, self.stop_delay)
 						print("M127 (relief valve close)")
+						print
 				x = x+1
 			self.go_to_point(self.current_x, self.current_y+self.multiplier*2, 0, self.xy_feedrate)
 
-
+		print
+		print "(end of print job)"
 		print "M107"
 		print "M126"
 		self.go_to_point(self.current_x, self.current_y, 10, self.xy_feedrate)
