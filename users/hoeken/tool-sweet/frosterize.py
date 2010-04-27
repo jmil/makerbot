@@ -19,6 +19,11 @@ Options:
   --border						draw a border around your drawing.  default: off 
 """
 
+#TODO
+#
+# implement z height
+# implement early shutoff
+
 from math import *
 import sys
 import getopt
@@ -81,6 +86,12 @@ class Frosterizer:
 			return True
 		else:
 			return False
+
+	def x_pixel_to_point(self, pixel):
+		return -self.width/2 + pixel * self.line_width
+	
+	def y_pixel_to_point(self, pixel):
+		return self.height/2 - pixel * self.line_width
 		
 	def generate(self):
 		"Generate the actual GCode"
@@ -91,10 +102,30 @@ class Frosterizer:
 		print "G92 X0 Y0 Z0 (zero all axes)"
 		self.go_to_point(0, 0, 0, self.z_feedrate)
 		print
+	
+		if self.border:
+			min_x = self.x_pixel_to_point(-1)
+			max_x = self.x_pixel_to_point(self.image.size[0])
+			min_y = self.y_pixel_to_point(-1)
+			max_y = self.y_pixel_to_point(self.image.size[1])
+
+			print "(border outline)"
+			self.go_to_point(min_x, max_y, 0, self.xy_feedrate)
+			print("M106 (pressure on)")
+			print("G4 P%d (wait %dms)") % (self.start_delay, self.start_delay)
+			self.go_to_point(max_x, max_y, 0, self.xy_feedrate)
+			self.go_to_point(max_x, min_y, 0, self.xy_feedrate)
+			self.go_to_point(min_x, min_y, 0, self.xy_feedrate)
+			self.go_to_point(min_x, max_y, 0, self.xy_feedrate)
+			print("M107 (pressure off)");
+			print("M126 (relief valve open)")
+			print("G4 P%d (wait %dms)") % (self.stop_delay, self.stop_delay)
+			print("M127 (relief valve close)")
+			print
 		
 		for y in range(self.image.size[1]):
 			x = 0
-			actual_y = self.height/2 - y * self.line_width
+			actual_y = self.y_pixel_to_point(y)
 			
 			self.go_to_point(self.current_x, actual_y, 0, self.xy_feedrate)
 			print
@@ -107,10 +138,10 @@ class Frosterizer:
 						while self.test_pixel(end, y):
 							end = end+1
 
-						actual_start = -self.width/2 + start * self.line_width
-						actual_end = -self.width/2 + end * self.line_width
+						actual_start = self.x_pixel_to_point(start)
+						actual_end = self.x_pixel_to_point(end)
 
-						print "(line from %.2f to %.2f at %.2f)" % (start, end, y)
+						print "(line from %.2f to %.2f at %.2f)" % (actual_start, actual_end, actual_y)
 						self.go_to_point(actual_start, actual_y, 0, self.xy_feedrate)
 						print("M106 (pressure on)")
 						print("G4 P%d (wait %dms)") % (self.start_delay, self.start_delay)
@@ -123,9 +154,9 @@ class Frosterizer:
 
 						x = end
 					else:
-						actual_x = -self.width/2 + x * self.line_width
+						actual_x = self.x_pixel_to_point(x)
 						
-						print ("(dot at %.2f, %.2f)") % (x, y)
+						print ("(dot at %.2f, %.2f)") % (actual_x, actual_y)
 						self.go_to_point(actual_x, actual_y, 0, self.xy_feedrate)
 						print("M106 (pressure on)")
 						print("G4 P%d (wait %dms)") % (self.dot_delay, self.dot_delay)
@@ -205,7 +236,7 @@ def main(argv):
 		elif opt in ("--border"):
 			border = True
 		
-	frosty = Frosterizer(argv[0], z_feedrate, xy_feedrate, width, height, start_delay, stop_delay, dot_delay, line_width, border)
+	frosty = Frosterizer(argv[-1], z_feedrate, xy_feedrate, width, height, start_delay, stop_delay, dot_delay, line_width, border)
 	frosty.generate()
 
 def usage():
