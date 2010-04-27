@@ -8,12 +8,10 @@ public:
   PrimitivesTestSuite() {
     TEST_ADD(PrimitivesTestSuite::constructionTest);
     TEST_ADD(PrimitivesTestSuite::scalingTest);
-    TEST_ADD(PrimitivesTestSuite::rotationTest);
   }
 private:
   void constructionTest();
   void scalingTest();
-  void rotationTest();
 };
 
 #endif // PRIMITIVE_TESTS_H
