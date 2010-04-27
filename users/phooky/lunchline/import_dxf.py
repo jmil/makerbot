@@ -150,13 +150,3 @@ class DxfParser:
         while self.parse_next_code():
             pass
 
-
-parser = DxfParser(sys.stdin)
-c = context.GCodeContext()
-
-parser.parse()
-for entity in parser.entities:
-    entity.get_gcode(c)
-for line in c.codes:
-    print line
-
