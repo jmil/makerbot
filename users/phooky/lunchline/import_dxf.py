@@ -10,6 +10,22 @@ class DXFEntity:
         if code in self.register_map:
             return float(self.register_map[code])
         return default
+    def get_gcode(self,context):
+        pass
+    # raise NotImplementedError()
+    def gcode_travel(self,context,x,y,start=True):
+        gcode = ""
+        if context.last == (x,y):
+            return gcode
+        if context.drawing:
+            gcode = gcode + context.stop_codes
+            context.drawing = False
+        gcode = gcode + "G1 X%f Y%f F%f\n" % (x,y,context.travel_speed)
+        context.last = (x,y)
+        if start and not context.drawing:
+            gcode = gcode + context.start_codes
+            context.drawing = True
+        return gcode
 
 class DXFLine(DXFEntity):
     def load(self):
@@ -19,6 +35,13 @@ class DXFLine(DXFEntity):
     def __str__(self):
         return "Line from (%f,%f) to (%f,%f)" % \
             (self.start[0], self.start[1], self.end[0], self.end[1])
+    def get_gcode(self,context):
+        "Emit gcode for drawing line"
+        gcode = self.gcode_travel(context,self.start[0],self.start[1])
+        gcode = gcode + "G1 X%f Y%f F%f" % \
+            (self.end[0], self.end[1], context.draw_speed)
+        context.last = self.end
+        return gcode
 
 class DXFCircle(DXFEntity):
     def load(self):
@@ -38,6 +61,19 @@ class DXFArc(DXFCircle):
             (self.center[0], self.center[1], self.radius, \
                  self.start_angle, self.end_angle)
 
+class DXFEllipse(DXFEntity):
+    def load(self):
+        self.center = (self.get_float(10),self.get_float(20))
+        # major axis relative to center
+        self.major = (self.get_float(11),self.get_float(21))
+        self.minor_to_major = self.get_float(40)
+        self.start_param = self.get_float(50)
+        self.end_param = self.get_float(51)
+    def __str__(self):
+        return "Ellipse at (%f,%f), major (%f,%f), minor/major %f" + \
+            "start %f end %f" % \
+            (self.center[0], self.center[1], self.major[0], self.major[1],
+             self.minor_to_major, self.start_param, self.end_param)
 
 class DXFPolyLine(DXFEntity):
     def load(self):
@@ -59,7 +95,8 @@ class GenericSection:
         "LINE" : DXFLine,
         "CIRCLE" : DXFCircle,
         "LWPOLYLINE" : DXFPolyLine,
-        "ARC" : DXFArc
+        "ARC" : DXFArc,
+        "ELLIPSE" : DXFEllipse
         }
     def __init__(self,parser):
         self.parser = parser
@@ -144,8 +181,18 @@ class DxfParser:
             pass
 
 
+class GCodeContext :
+    def __init__(self):
+        self.travel_speed = 2000
+        self.draw_speed = 500
+        self.start_codes = ""
+        self.stop_codes = ""
+        self.last = None
+        self.drawing = False
 
 parser = DxfParser(sys.stdin)
+context = GCodeContext()
+
 parser.parse()
 for entity in parser.entities:
-    print entity
+    print entity.get_gcode(context)
