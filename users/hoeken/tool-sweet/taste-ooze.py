@@ -71,6 +71,7 @@ class TasteOoze:
 			x_end = self.width/2
 			x_turnoff = x_end - self.getTurnoffDistance(i)
 			y_point = self.width/2 - (self.spacing * i)
+			next_y =  self.width/2 - (self.spacing * (i+1))
 			
 			print "(line from %.2f to %.2f at %.2f)" % (x_start, x_end, self.xy_feedrate)
 			self.go_to_point(x_start, y_point, self.start_height, self.xy_feedrate)
@@ -82,6 +83,7 @@ class TasteOoze:
 			self.go_to_point(x_end, y_point, self.start_height, self.xy_feedrate)
 			print("G4 P%d (wait %d ms)") % (self.stop_delay, self.stop_delay)
 			print("M127 (relief valve close)")
+			self.go_to_point(x_end, next_y, self.start_height, self.xy_feedrate)
 			print("");
 
 		print "M107 (pressure off)"
