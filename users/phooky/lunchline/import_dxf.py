@@ -1,6 +1,7 @@
 import sys
 import entities
 import context
+from math import radians
 
 class RegisterMap:
     def __init__(self):
@@ -20,7 +21,11 @@ class RegisterMap:
         if code in self.map:
             return float(self.map[code])
         return default
-
+    def get_angle(self,code,default = 0.0):
+        "Returns angle in radians"
+        if code in self.map:
+            return radians(float(self.map[code]))
+        return default
 class DXFLine(entities.Line):
     def load(self,emap):
         self.thickness = emap.get_float(39)
@@ -37,8 +42,10 @@ class DXFCircle(entities.Circle):
 
 class DXFArc(entities.Arc):
     def load(self,emap):
-        self.start_angle = emap.get_float(50)
-        self.end_angle = emap.get_float(51)
+        self.center = (emap.get_float(10),emap.get_float(20))
+        self.radius = emap.get_float(40)
+        self.start_angle = emap.get_angle(50)
+        self.end_angle = emap.get_angle(51)
 
 class DXFEllipse(entities.Ellipse):
     def load(self,emap):
@@ -46,8 +53,8 @@ class DXFEllipse(entities.Ellipse):
         # major axis relative to center
         self.major = (emap.get_float(11),emap.get_float(21))
         self.minor_to_major = emap.get_float(40)
-        self.start_param = emap.get_float(50)
-        self.end_param = emap.get_float(51)
+        self.start_param = emap.get_angle(50)
+        self.end_param = emap.get_angle(51)
 
 class DXFPolyLine(entities.PolyLine):
     def load(self,emap):

@@ -9,7 +9,7 @@ class GCodeContext:
         self.draw_speed = 500.0
         self.travel_speed = 1000.0
         self.last = None
-        self.codes = []
+        self.codes = ["G90","G17"]
     def start(self):
         if not self.drawing:
             self.codes.extend(self.start_codes)
