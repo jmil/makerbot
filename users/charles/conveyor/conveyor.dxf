@@ -47,7 +47,7 @@ Standard
   9
 $CLAYER
   8
-1 bottom
+3 side
   9
 $DIMEXO
  40
@@ -967,9 +967,9 @@ AcDbLayerTableRecord
   2
 drawings, plywood
  70
-0
+1
  62
-4
+-4
 420
 65535
   6
@@ -989,9 +989,9 @@ AcDbLayerTableRecord
   2
 1 bottom
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1011,9 +1011,9 @@ AcDbLayerTableRecord
   2
 drawings, build platform
  70
-0
+1
  62
-2
+-2
 420
 16776960
   6
@@ -1033,9 +1033,9 @@ AcDbLayerTableRecord
   2
 2 top
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1055,9 +1055,9 @@ AcDbLayerTableRecord
   2
 4 side cover
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -1077,9 +1077,9 @@ AcDbLayerTableRecord
   2
 drawings, PCB
  70
-0
+1
  62
-3
+-3
 420
 65280
   6
@@ -1099,9 +1099,9 @@ AcDbLayerTableRecord
   2
 drawings, 5 tension bar
  70
-0
+1
  62
-4
+-4
 420
 65535
   6
@@ -1121,9 +1121,9 @@ AcDbLayerTableRecord
   2
 drawings, tube
  70
-0
+1
  62
-5
+-5
 420
 255
   6
@@ -1143,9 +1143,9 @@ AcDbLayerTableRecord
   2
 text
  70
-0
+1
  62
-4
+-4
 420
 65535
   6
@@ -1165,9 +1165,9 @@ AcDbLayerTableRecord
   2
 drawings, motor
  70
-0
+1
  62
-2
+-2
 420
 16776960
   6
@@ -1187,9 +1187,9 @@ AcDbLayerTableRecord
   2
 drawings, conveyor belt
  70
-0
+1
  62
-6
+-6
 420
 16711935
   6
@@ -1209,9 +1209,9 @@ AcDbLayerTableRecord
   2
 5 gears
  70
-0
+1
  62
-7
+-7
 420
 0
   6
@@ -17381,7 +17381,7 @@ ByLayer
  71
 1
  72
-0
+2
   1
 This\~should\~work
   7
@@ -17389,7 +17389,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -20961,6 +20961,30 @@ ByLayer
  40
 2.7000000000000002
   0
+CIRCLE
+  5
+2CE
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+3 side
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-60.8989220010750074
+ 20
+-88.0000000000000142
+ 30
+0.0
+ 40
+4.75
+  0
 ENDSEC
   0
 SECTION
@@ -20999,7 +21023,7 @@ E
   3
 AcDbVariableDictionary
 350
-2CE
+2CF
   0
 DICTIONARY
   5
@@ -21463,7 +21487,7 @@ Layout2
   0
 DICTIONARY
   5
-2CE
+2CF
 100
 AcDbDictionary
 281
@@ -21471,15 +21495,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-2D0
+2D1
   3
 HIDETEXT
 350
-2CF
+2D0
   0
 DICTIONARYVAR
   5
-2CF
+2D0
 100
 DictionaryVariables
 280
@@ -21489,7 +21513,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-2D0
+2D1
 100
 DictionaryVariables
 280
