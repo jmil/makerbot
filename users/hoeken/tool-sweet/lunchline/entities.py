@@ -12,7 +12,9 @@ class Line(Entity):
     def get_gcode(self,context):
         "Emit gcode for drawing line"
         context.go_to_point(self.start[0],self.start[1])
-        context.go_to_point(self.end[0],self.end[1], True)
+        context.start()
+	context.go_to_point(self.end[0],self.end[1])
+	context.stop()
 
 class Circle(Entity):
     def __str__(self):
