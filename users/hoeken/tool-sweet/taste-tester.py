@@ -51,6 +51,7 @@ class TasteTester:
 	def generate(self):
 		"Generate the actual GCode"
 		
+		print "(", " ".join(sys.argv), ")"
 		print "(After you run the script, use the reference below to determine speeds.)"
 		print "(Starting from the top, the lines were printed at the following speeds:)"
 		

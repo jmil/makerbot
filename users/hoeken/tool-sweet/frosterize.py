@@ -2,7 +2,9 @@
 #
 """Frosterize.py
 
-Generates GCode which will control the MakerBot Frostruder to draw an image using varying sized beads of deposited material.
+Generates GCode which from an image (JPEG, GIF, PNG, etc.) for printing with the Frostruder.
+
+More info at: http://wiki.makerbot.com/frosterize
 
 Usage: python frosterizer.py [options] file > output.gcode
 
@@ -13,7 +15,7 @@ Options:
   --xy-feedrate						the XY axes feedrate in mm/min. default 3500
   --width						the maximum width of the build surface in mm. default 80.
   --height						the maximum height of the build surface in mm.  default 80.
-  --start-delay						the delay after the pressure valve opens before movement in milliseconds.  default 25
+  --start-delay						the delay after the pressure valve opens before movement in milliseconds.  default 50
   --stop-delay						the delay after the relief valve opens before movement in milliseconds.  default 150
   --dot-delay						the delay after pressure valve opens for printing a single dot in milliseconds.  default: 50
   --line-width						the width of the line the Frostruder can draw in mm.  default 0.50
@@ -96,6 +98,7 @@ class Frosterizer:
 		"Generate the actual GCode"
 		
 		print "(Frosterized version of %s @ %.2f line width / %.2f)" % (self.file, self.line_width, self.xy_feedrate)
+		print "(", " ".join(sys.argv), ")"
 		print "G21 (metric ftw)"
 		print "G90 (absolute mode)"
 		print "G92 X0 Y0 Z0 (zero all axes)"
@@ -218,7 +221,7 @@ def main(argv):
 	xy_feedrate = 3500
 	width = 80
 	height = 80
-	start_delay = 25
+	start_delay = 50
 	stop_delay = 150
 	dot_delay = 50
 	line_width = 0.50

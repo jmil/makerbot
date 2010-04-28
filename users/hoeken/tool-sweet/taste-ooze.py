@@ -4,7 +4,7 @@
 
 Generates GCode which will draw lines with varying ooze prevention lengths in order to determine optimum distance before end of line to stop extruding.
 
-Usage: python taste_ooze.py [options]
+Usage: python taste-ooze.py [options]
 
 Options:
   -h, --help					show this help
@@ -52,6 +52,7 @@ class TasteOoze:
 
 	def generate(self):
 		"Generate the actual GCode"
+		print "(", " ".join(sys.argv), ")"
 		print "(After you run the script, use the reference below to determine optimum turnoff distance.)"
 		print "(Starting from the top, the lines were printed at the following turnoff distances:)"
 		

@@ -10,7 +10,7 @@ preamble = ["G90","G17"]
 
 # The G code postscript.  These codes are emitted when the build is done.
 # Each G code should be a seperate string.
-postscript = []
+postscript = ["(end of print job)", "M107", "M126", "M18", "M127", "G18"]
 
 # An array containing the G codes to emit to start the frostruder.
 # Each G code should be a seperate string.

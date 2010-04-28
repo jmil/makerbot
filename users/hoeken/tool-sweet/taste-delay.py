@@ -4,7 +4,7 @@
 
 Generates GCode which will draw lines with varying start/stop delays in order to determine optimum delay for printing.
 
-Usage: python taste_tester.py [options]
+Usage: python taste-delay.py [options]
 
 Options:
   -h, --help					show this help
@@ -51,6 +51,7 @@ class TasteDelay:
 
 	def generate(self):
 		"Generate the actual GCode"
+		print "(", " ".join(sys.argv), ")"
 		print "(After you run the script, use the reference below to determine delays.)"
 		print "(Starting from the top, the dot lines were printed at the following delays:)"
 		

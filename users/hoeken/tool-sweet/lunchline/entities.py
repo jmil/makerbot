@@ -11,8 +11,8 @@ class Line(Entity):
             (self.start[0], self.start[1], self.end[0], self.end[1])
     def get_gcode(self,context):
         "Emit gcode for drawing line"
-        context.travel_to(self.start[0],self.start[1])
-        context.draw_line_to(self.end[0],self.end[1])
+        context.go_to_point(self.start[0],self.start[1])
+        context.go_to_point(self.end[0],self.end[1], True)
 
 class Circle(Entity):
     def __str__(self):
@@ -21,9 +21,11 @@ class Circle(Entity):
     def get_gcode(self,context):
         "Emit gcode for drawing arc"
         start = (self.center[0] - self.radius, self.center[1])
-        context.travel_to(start[0],start[1])
-        arc_code = "G3 I%f J0 F%f" % (self.radius, context.draw_speed)
+        context.go_to_point(start[0],start[1])
+	context.start()
+        arc_code = "G3 I%f J0 F%f" % (self.radius, context.xy_feedrate)
         context.codes.append(arc_code)
+	context.stop()
 
 class Arc(Entity):
     def __str__(self):
@@ -40,7 +42,7 @@ class Arc(Entity):
         "Emit gcode for drawing arc"
         start = self.find_point(0)
         end = self.find_point(1)
-        context.travel_to(start[0],start[1])
+        context.go_to_point(start[0],start[1])
         delta = self.end_angle - self.start_angle
         if (delta < 0):
             arc_code = "G3"
@@ -49,9 +51,11 @@ class Arc(Entity):
         arc_code = arc_code + " X%f Y%f I%f J%f F%f" % \
             (end[0], end[1], \
              self.center[0] - start[0], self.center[1] - start[1], \
-             context.draw_speed)
+             context.xy_feedrate)
         context.last = end
+	context.start()
         context.codes.append(arc_code)
+	context.stop()
         
 class Ellipse(Entity):
     def __str__(self):
@@ -67,7 +71,9 @@ class PolyLine(Entity):
     def get_gcode(self,context):
         "Emit gcode for drawing polyline"
         start = self.segments[0]
-        context.travel_to(start[0],start[1])
+        context.go_to_point(start[0],start[1])
+	context.start()
         for segment in self.segments[1:]:
-            context.draw_line_to(segment[0],segment[1])
+            context.go_to_point(segment[0],segment[1])
             context.last = segment
+	context.stop()
