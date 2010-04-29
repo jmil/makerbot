@@ -6,7 +6,7 @@ Generates GCode which from an image (JPEG, GIF, PNG, etc.) for printing with the
 
 More info at: http://wiki.makerbot.com/frosterize
 
-Usage: python frosterizer.py [options] file > output.gcode
+Usage: python frosterize.py [options] file > output.gcode
 
 Options:
   -h, --help						show this help
@@ -21,6 +21,7 @@ Options:
   --line-width						the width of the line the Frostruder can draw in mm.  default 0.50
   --border						draw a border around your drawing.  default: off
   --stop-distance					the distance to shut down the extruder before the end of a line in mm.  default 1.0
+  --invert						invert the image output (light areas are drawn instead of dark areas).  default: off
 """
 
 from math import *
@@ -32,7 +33,7 @@ from PIL import ImageEnhance
 
 class Frosterizer:
 	"Class to handle generating frosting code."
-	def __init__(self, img_path, z_feedrate, z_height, xy_feedrate, width, height, start_delay, stop_delay, dot_delay, line_width, border, stop_distance):
+	def __init__(self, img_path, z_feedrate, z_height, xy_feedrate, width, height, start_delay, stop_delay, dot_delay, line_width, border, stop_distance, invert):
 
 		self.file = img_path
 		self.current_x = 0
@@ -52,6 +53,8 @@ class Frosterizer:
 		self.line_width = line_width
 		self.border = border
 		self.stop_distance = stop_distance
+		self.invert = invert
+		self.pbi = 25.4/self.line_width
 	
 		self.load_image()
 
@@ -75,6 +78,19 @@ class Frosterizer:
 		self.image = self.image.resize((int(self.image.size[0]*ratio), int(self.image.size[1]*ratio)))
 		self.image.save(self.file + "-resized.png")
 		self.pixels = self.image.load()
+
+		self.width = self.image.size[0] * self.line_width
+		self.height = self.image.size[1] * self.line_width
+
+		for i in range(self.image.size[0]):
+			for j in range(self.image.size[1]):
+				if self.test_pixel(i, j):
+					self.pixels[i,j] = 0
+				else:
+					self.pixels[i,j] = 255
+		
+		self.image.save(self.file + "-printable.png")
+		
 		
 	def test_pixel(self, x, y):
 		if (x >= self.image.size[0]):
@@ -83,10 +99,16 @@ class Frosterizer:
 			return False
 				
 		#print "pixel at %d, %d = %d" % (x, y, self.pixels[x,y])
+		offValue = True
+		onValue = False
+		if self.invert:
+			offValue = False
+			onValue = True
+		
 		if self.pixels[x, y] >= 127:
-			return True
+			return onValue
 		else:
-			return False
+			return offValue
 
 	def x_pixel_to_point(self, pixel):
 		return -self.width/2 + pixel * self.line_width
@@ -97,8 +119,9 @@ class Frosterizer:
 	def generate(self):
 		"Generate the actual GCode"
 		
-		print "(Frosterized version of %s @ %.2f line width / %.2f)" % (self.file, self.line_width, self.xy_feedrate)
-		print "(", " ".join(sys.argv), ")"
+		print "(Frosterized version of %s)" % (self.file)
+		print "(Size: %.2fmm x %.2fmm / %.2f PBI [Peanut Butter Inch])" % (self.width, self.height, self.pbi)
+		print "(Call:", " ".join(sys.argv), ")"
 		print "G21 (metric ftw)"
 		print "G90 (absolute mode)"
 		print "G92 X0 Y0 Z0 (zero all axes)"
@@ -203,6 +226,7 @@ def main(argv):
 			"dot-delay=",
 			"help",
 			"height=",
+			"invert",
 			"line-width=",
 			"start-delay=",
 			"stop-delay=",
@@ -227,6 +251,7 @@ def main(argv):
 	line_width = 0.50
 	border = False
 	stop_distance = 1.0
+	invert = False
 
 	for opt, arg in opts:
 		if opt in ("-h", "--help"):
@@ -254,8 +279,10 @@ def main(argv):
 			border = True
 		elif opt in ("--stop-distance"):
 			stop_distance = float(arg)
+		elif opt in ("--invert"):
+			invert = True
 		
-	frosty = Frosterizer(argv[-1], z_feedrate, z_height, xy_feedrate, width, height, start_delay, stop_delay, dot_delay, line_width, border, stop_distance)
+	frosty = Frosterizer(argv[-1], z_feedrate, z_height, xy_feedrate, width, height, start_delay, stop_delay, dot_delay, line_width, border, stop_distance, invert)
 	frosty.generate()
 
 def usage():
