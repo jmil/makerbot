@@ -14,7 +14,7 @@ class GCodeContext:
 	self.file = file
 	
 	self.drawing = False
-        self.last = None
+	self.last = None
 	self.codes = []
 
     def generate(self):
@@ -39,14 +39,14 @@ class GCodeContext:
 	print "M127"
 
     def start(self):
-            self.codes.append("M106 (pressure on)")
-            self.codes.append("G4 P%d (wait %dms)" % (self.start_delay, self.start_delay))
+		self.codes.append("M106 (pressure on)")
+		self.codes.append("G4 P%d (wait %dms)" % (self.start_delay, self.start_delay))
 
     def stop(self):
-	self.codes.append("M106 (pressure off)")
-	self.codes.append("M126 (relief valve open)")
-	self.codes.append("G4 P%d (wait %dms)" % (self.stop_delay, self.stop_delay))
-	self.codes.append("M127 (relief valve close)")
+		self.codes.append("M107 (pressure off)")
+		self.codes.append("M126 (relief valve open)")
+		self.codes.append("G4 P%d (wait %dms)" % (self.stop_delay, self.stop_delay))
+		self.codes.append("M127 (relief valve close)")
 
     def go_to_point(self, x, y, stop=False):
         if self.last == (x,y):
