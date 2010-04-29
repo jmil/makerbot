@@ -67,7 +67,7 @@ class Frosterizer:
 		x_ratio = self.width / float(self.image.size[0])
 		y_ratio = self.height / float(self.image.size[1])
 
-		ratio = max(x_ratio, y_ratio)
+		ratio = min(x_ratio, y_ratio)
 		
 		#multiply so each row = 1 line width
 		ratio = ratio / self.line_width
