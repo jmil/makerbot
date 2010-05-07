@@ -13,6 +13,13 @@
     </programmer>
     <firmware
        major="2"
+       minor="1"
+       relpath="firmware/MB-rrmbv12-v2.1r1.hex"
+       name="v2.1 release 1"
+       description="This is the inital release of the v2.1 firmware for the motherboard.  This is a maintenance release and includes a number of small bug fixes which should improve reliability for very long print sessions and allow printing from SD cards with filesystem glitches."
+       />
+    <firmware
+       major="2"
        minor="0"
        relpath="firmware/MB-rrmbv12-v2.0r1.hex"
        name="v2.0 release 1"
@@ -39,6 +46,13 @@
       <speed>19200</speed>
       <arch>m168</arch>
     </programmer>
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/EC-ecv22-v2.3r1.hex"
+       name="v2.3 release 1"
+       description="This release features a number of improvements, including more reliable extruder operation, an improved and tunable temperature control system, and support for valves on channel C.  You'll need this release installed if you plan on using the Mk2 Frostruder."
+       />
     <firmware
        major="2"
        minor="2"
