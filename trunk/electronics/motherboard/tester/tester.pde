@@ -91,7 +91,6 @@ byte BAR_PIN 			= INTERFACE_19;
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(LCD_RS_PIN, LCD_ENABLE_PIN, LCD_D4_PIN, LCD_D5_PIN, LCD_D6_PIN, LCD_D7_PIN);
 
-
 void setup()
 {
 	lcd.begin(16, 4);
@@ -159,6 +158,8 @@ void setup()
 	
 	//start our rs485 comms port
 	Serial1.begin(38400);
+	digitalWrite(RX_ENABLE_PIN, LOW); //always listen
+	digitalWrite(TX_ENABLE_PIN, HIGH); //always transmit
 
 	digitalWrite(A_ENABLE_PIN, HIGH);
 	digitalWrite(B_ENABLE_PIN, HIGH);
@@ -183,20 +184,20 @@ void chirp()
 	playNote(500, 1000);
 	playNote(750, 1000);
 
-        delay(500);
+    delay(500);
 }
 
 void loop()
 {
 	Serial.println("Motherboard v2.2 Tester Begin");
 
-        chirp();
+    chirp();
 
 	test_interface();
 	test_endstops();
 	test_steppers();
 	test_rs485();
-	//test_sd_card();
+	test_sd_card();
 	test_piezo();
 }
 
@@ -410,23 +411,71 @@ void test_steppers()
 
 	lcd.clear();
 	lcd.print("Stepper Testing Complete");
-        chirp();
+    chirp();
 }
 
 void test_rs485()
 {
+	int fails = 0;
+	
+	for (char i='a'; i<='z'; i++)
+	{
+		lcd.clear();
+		lcd.print("Testing ");
+		lcd.print(i);
+
+		Serial1.print(i, BYTE);
+
+		while(Serial1.read() != i)
+		{
+			fails++;
+			delay(1);
+
+			if (fails >= 1000)
+				break;
+		}
+
+		while (fails >= 1000)
+		{
+			lcd.clear();
+			lcd.print("RS485 FAIL.");
+		}
+	}
 
 	lcd.clear();
 	lcd.print("RS485 Comms Testing Complete");
-        chirp();
+    chirp();
 }
 
 void test_sdcard()
 {
+	prompter("Lock and Insert SD Card");
+	while (digitalRead(SD_CARD_DETECT) && digitalRead(SD_CARD_WRITE))
+	{
+		delay(1);
+	}
 
+	prompter("Remove SD Card");
+	while (!digitalRead(SD_CARD_DETECT))
+	{
+		delay(1);
+	}
+
+	prompter("Insert Unlocked SD Card");
+	while (digitalRead(SD_CARD_DETECT))
+	{
+		if (digitalRead(SD_CARD_WRITE))
+			break;
+			
+		delay(1);
+	}
+
+	prompter("TODO: Test SD Read/Write");
+	delay(1500);
+	
 	lcd.clear();
 	lcd.print("SD Card Testing Complete");
-        chirp();
+    chirp();
 }
 
 void test_piezo()
