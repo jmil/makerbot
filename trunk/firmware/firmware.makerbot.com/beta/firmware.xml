@@ -112,4 +112,19 @@
        minor="4"
        relpath="firmware/ArduinoSlaveExtruder-v1.4.hex"/>
   </board>
+  <board name="Extruder Controller v3.4">
+    <version major="3" minor="4"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>57600</speed>
+      <arch>atmega328p</arch>
+    </programmer>
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/EC-ecv34-v2.3a0.hex"
+       name="v2.3 alpha 0"
+       description="This is the alpha release of the v2.3 extruder firmware for the forthcoming v3.4 extruder controller."
+       />
+  </board>
 </boards>
