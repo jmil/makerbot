@@ -61,6 +61,7 @@ module filamentDriveHousing()
 	height = 45;
 	width = 42.3;
 	angle = 12.5;
+	cutoutSize = 7;
 
 	color([0.75, 0.25, 0.25])
 	{
@@ -106,6 +107,7 @@ module filamentDriveHousing()
 					}
 				}
 
+/*
 				for(i=[0:3])
 				{
 					rotate([0,0,i*90])
@@ -155,6 +157,26 @@ module filamentDriveHousing()
 							
 								translate([0,0,-50])
 									cube(size=[100, 100, 100], center=true);
+							}
+						}
+					}
+				}
+*/
+
+
+				for(i=[0:3])
+				{
+					rotate([0,0,i*90])
+					{
+						translate([31/2, 31/2, 0])
+						{
+							union()
+							{
+								cylinder(r=cutoutSize/2, h=height-10, center=true);
+								translate([cutoutSize/2, 0, 0])
+									cube(size=[cutoutSize, cutoutSize, height-10], center=true);	
+								translate([0, cutoutSize/2, 0])
+									cube(size=[cutoutSize, cutoutSize, height-10], center=true);
 							}
 						}
 					}
