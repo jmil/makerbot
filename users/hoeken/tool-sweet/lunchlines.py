@@ -92,6 +92,9 @@ def main(argv):
 		entity.get_gcode(context)
 	context.generate()
 
+def usage():
+    print __doc__
+
 if __name__ == "__main__":
 	main(sys.argv[1:])
 else:
