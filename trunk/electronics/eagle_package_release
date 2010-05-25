@@ -44,7 +44,7 @@ mkdir -p "$TO_DIR/renders"
 
 #create our gerber files!
 echo "Creating Gerber Files..."
-eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/ComponentTraces.pho" $BOARD/*.brd Top Pads Vias tGND_GNDA
+eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/ComponentTraces.pho" $BOARD/*.brd Top Pads Vias
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/CopperTraces.pho" $BOARD/*.brd Bottom Pads Vias
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/SolderMaskComponent.pho" $BOARD/*.brd tStop
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/SolderMaskCopper.pho" $BOARD/*.brd bStop
