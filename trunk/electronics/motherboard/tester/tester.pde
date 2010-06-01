@@ -42,7 +42,7 @@
 #define RX_ENABLE_PIN    30
 
 //pin for controlling the PSU.
-//#define PS_ON_PIN        26
+#define PS_ON_PIN        29
 
 //pins for all the peripherals
 #define INTERFACE_3      33
@@ -93,440 +93,495 @@ LiquidCrystal lcd(LCD_RS_PIN, LCD_ENABLE_PIN, LCD_D4_PIN, LCD_D5_PIN, LCD_D6_PIN
 
 void setup()
 {
-	lcd.begin(16, 4);
-	
-	pinMode(X_STEP_PIN, OUTPUT);
-	pinMode(X_DIR_PIN, OUTPUT);
-	pinMode(X_ENABLE_PIN, OUTPUT);
-	pinMode(X_MIN_PIN, INPUT);
-	pinMode(X_MAX_PIN, INPUT);
+  lcd.begin(16, 4);
 
-	pinMode(Y_STEP_PIN, OUTPUT);
-	pinMode(Y_DIR_PIN, OUTPUT);
-	pinMode(Y_ENABLE_PIN, OUTPUT);
-	pinMode(Y_MIN_PIN, INPUT);
-	pinMode(Y_MAX_PIN, INPUT);
+  pinMode(X_STEP_PIN, OUTPUT);
+  pinMode(X_DIR_PIN, OUTPUT);
+  pinMode(X_ENABLE_PIN, OUTPUT);
+  pinMode(X_MIN_PIN, INPUT);
+  pinMode(X_MAX_PIN, INPUT);
 
-	pinMode(Z_STEP_PIN, OUTPUT);
-	pinMode(Z_DIR_PIN, OUTPUT);
-	pinMode(Z_ENABLE_PIN, OUTPUT);
-	pinMode(Z_MIN_PIN, INPUT);
-	pinMode(Z_MAX_PIN, INPUT);
+  pinMode(Y_STEP_PIN, OUTPUT);
+  pinMode(Y_DIR_PIN, OUTPUT);
+  pinMode(Y_ENABLE_PIN, OUTPUT);
+  pinMode(Y_MIN_PIN, INPUT);
+  pinMode(Y_MAX_PIN, INPUT);
 
-	pinMode(A_STEP_PIN, OUTPUT);
-	pinMode(A_DIR_PIN, OUTPUT);
-	pinMode(A_ENABLE_PIN, OUTPUT);
+  pinMode(Z_STEP_PIN, OUTPUT);
+  pinMode(Z_DIR_PIN, OUTPUT);
+  pinMode(Z_ENABLE_PIN, OUTPUT);
+  pinMode(Z_MIN_PIN, INPUT);
+  pinMode(Z_MAX_PIN, INPUT);
 
-	pinMode(B_STEP_PIN, OUTPUT);
-	pinMode(B_DIR_PIN, OUTPUT);
-	pinMode(B_ENABLE_PIN, OUTPUT);
+  pinMode(A_STEP_PIN, OUTPUT);
+  pinMode(A_DIR_PIN, OUTPUT);
+  pinMode(A_ENABLE_PIN, OUTPUT);
 
-	pinMode(DEBUG_PIN, OUTPUT);
-	
-	pinMode(SD_CARD_WRITE, INPUT);
-	pinMode(SD_CARD_DETECT, INPUT);
-	pinMode(SD_CARD_SELECT, OUTPUT);
+  pinMode(B_STEP_PIN, OUTPUT);
+  pinMode(B_DIR_PIN, OUTPUT);
+  pinMode(B_ENABLE_PIN, OUTPUT);
 
-	pinMode(TX_ENABLE_PIN, OUTPUT);
-	pinMode(RX_ENABLE_PIN, OUTPUT);
+  pinMode(DEBUG_PIN, OUTPUT);
 
-	pinMode(LCD_RS_PIN, OUTPUT);
-	pinMode(LCD_ENABLE_PIN, OUTPUT);
-	pinMode(LCD_D4_PIN, OUTPUT);
-	pinMode(LCD_D5_PIN, OUTPUT);
-	pinMode(LCD_D6_PIN, OUTPUT);
-	pinMode(LCD_D7_PIN, OUTPUT);
-	pinMode(OK_PIN, INPUT);
-	pinMode(CANCEL_PIN, INPUT);
-	pinMode(FOO_PIN, OUTPUT);
-	pinMode(X_PLUS_PIN, INPUT);
-	pinMode(X_MINUS_PIN, INPUT);
-	pinMode(Y_PLUS_PIN, INPUT);
-	pinMode(Y_MINUS_PIN, INPUT);
-	pinMode(Z_PLUS_PIN, INPUT);
-	pinMode(Z_MINUS_PIN, INPUT);
-	pinMode(ZERO_PIN, INPUT);
-	pinMode(BAR_PIN, OUTPUT);
-	pinMode(DEBUG_PIN, OUTPUT);
+  pinMode(SD_CARD_WRITE, INPUT);
+  pinMode(SD_CARD_DETECT, INPUT);
+  pinMode(SD_CARD_SELECT, OUTPUT);
 
-	pinMode(BUZZER_PIN, OUTPUT);
-	pinMode(KILL_SWITCH, INPUT);
-	
-	//start our serial console
-	Serial.begin(57600);
-	Serial.println("Motherboard v2.2 Tester Started");
-	
-	//start our rs485 comms port
-	Serial1.begin(38400);
-	digitalWrite(RX_ENABLE_PIN, LOW); //always listen
-	digitalWrite(TX_ENABLE_PIN, HIGH); //always transmit
+  digitalWrite(SD_CARD_WRITE, HIGH);
+  digitalWrite(SD_CARD_DETECT, HIGH);
 
-	digitalWrite(A_ENABLE_PIN, HIGH);
-	digitalWrite(B_ENABLE_PIN, HIGH);
-	digitalWrite(X_ENABLE_PIN, HIGH);
-	digitalWrite(Y_ENABLE_PIN, HIGH);
-	digitalWrite(Z_ENABLE_PIN, HIGH);
+  pinMode(TX_ENABLE_PIN, OUTPUT);
+  pinMode(RX_ENABLE_PIN, OUTPUT);
 
-	digitalWrite(X_DIR_PIN, LOW);
-	digitalWrite(Y_DIR_PIN, LOW);
-	digitalWrite(Z_DIR_PIN, LOW);
-	digitalWrite(A_DIR_PIN, LOW);
-	digitalWrite(B_DIR_PIN, LOW);
+  pinMode(LCD_RS_PIN, OUTPUT);
+  pinMode(LCD_ENABLE_PIN, OUTPUT);
+  pinMode(LCD_D4_PIN, OUTPUT);
+  pinMode(LCD_D5_PIN, OUTPUT);
+  pinMode(LCD_D6_PIN, OUTPUT);
+  pinMode(LCD_D7_PIN, OUTPUT);
+  pinMode(OK_PIN, INPUT);
+  pinMode(CANCEL_PIN, INPUT);
+  pinMode(FOO_PIN, OUTPUT);
+  pinMode(X_PLUS_PIN, INPUT);
+  pinMode(X_MINUS_PIN, INPUT);
+  pinMode(Y_PLUS_PIN, INPUT);
+  pinMode(Y_MINUS_PIN, INPUT);
+  pinMode(Z_PLUS_PIN, INPUT);
+  pinMode(Z_MINUS_PIN, INPUT);
+  pinMode(ZERO_PIN, INPUT);
+  pinMode(BAR_PIN, OUTPUT);
+  pinMode(DEBUG_PIN, OUTPUT);
 
-	digitalWrite(ZERO_PIN, LOW);
-	digitalWrite(BAR_PIN, LOW);
-	digitalWrite(DEBUG_PIN, LOW);
+  pinMode(BUZZER_PIN, OUTPUT);
+  pinMode(KILL_SWITCH, INPUT);
+
+  pinMode(PS_ON_PIN, OUTPUT);
+
+  //start our serial console
+  Serial.begin(57600);
+  Serial.println("Motherboard v2.2 Tester Started");
+
+  //start our rs485 comms port
+  Serial1.begin(38400);
+  digitalWrite(RX_ENABLE_PIN, LOW); //always listen
+  digitalWrite(TX_ENABLE_PIN, HIGH); //always transmit
+
+  digitalWrite(A_ENABLE_PIN, HIGH);
+  digitalWrite(B_ENABLE_PIN, HIGH);
+  digitalWrite(X_ENABLE_PIN, HIGH);
+  digitalWrite(Y_ENABLE_PIN, HIGH);
+  digitalWrite(Z_ENABLE_PIN, HIGH);
+
+  digitalWrite(X_DIR_PIN, LOW);
+  digitalWrite(Y_DIR_PIN, LOW);
+  digitalWrite(Z_DIR_PIN, LOW);
+  digitalWrite(A_DIR_PIN, LOW);
+  digitalWrite(B_DIR_PIN, LOW);
+
+  digitalWrite(ZERO_PIN, LOW);
+  digitalWrite(BAR_PIN, LOW);
+  digitalWrite(DEBUG_PIN, LOW);
+  digitalWrite(PS_ON_PIN, LOW);
 }
 
 void chirp()
 {
-	playNote(1000, 1000);
-	playNote(500, 1000);
-	playNote(750, 1000);
+  playNote(1000, 1000);
+  playNote(500, 1000);
+  playNote(750, 1000);
 
-    delay(500);
+  delay(500);
 }
 
 void loop()
 {
-	Serial.println("Motherboard v2.2 Tester Begin");
+  Serial.println("Motherboard v2.2 Tester Begin");
 
-    chirp();
+  chirp();
 
-	test_interface();
-	test_endstops();
-	test_steppers();
-	test_rs485();
-	test_sd_card();
-	test_piezo();
+  prompter("Lets get testy.");
+
+  //test_interface();
+  //test_endstops();
+  //test_steppers();
+  //test_rs485();
+  test_sd_card();
+  //test_piezo();
 }
 
 void test_interface()
 {
-	prompter("Press OK to begin Interface testing.");
-	while(!confirm(OK_PIN))
-		true;
-		
-	prompter("Press Zero on Interface");
-	while(!confirm(ZERO_PIN))
-		true;
+  prompter("Press OK to begin Interface testing.");
+  while(!confirm(OK_PIN))
+    true;
 
-	prompter("Press X+ on Interface");
-	while(!confirm(X_PLUS_PIN))
-		true;
+  prompter("Press Zero on Interface");
+  while(!confirm(ZERO_PIN))
+    true;
 
-	prompter("Press X- on Interface");
-	while(!confirm(X_MINUS_PIN))
-		true;
+  prompter("Press X+ on Interface");
+  while(!confirm(X_PLUS_PIN))
+    true;
 
-	prompter("Press Y+ on Interface");
-	while(!confirm(Y_PLUS_PIN))
-		true;
+  prompter("Press X- on Interface");
+  while(!confirm(X_MINUS_PIN))
+    true;
 
-	prompter("Press Y- on Interface");
-	while(!confirm(Y_MINUS_PIN))
-		true;
+  prompter("Press Y+ on Interface");
+  while(!confirm(Y_PLUS_PIN))
+    true;
 
-	prompter("Press Z+ on Interface");
-	while(!confirm(Z_PLUS_PIN))
-		true;
+  prompter("Press Y- on Interface");
+  while(!confirm(Y_MINUS_PIN))
+    true;
 
-	prompter("Press Z- on Interface");
-	while(!confirm(Z_MINUS_PIN))
-		true;
+  prompter("Press Z+ on Interface");
+  while(!confirm(Z_PLUS_PIN))
+    true;
 
-	digitalWrite(FOO_PIN, HIGH);
-	prompter("Press OK if FOO LED is on");
-	while(!confirm(OK_PIN))
-		true;
-	digitalWrite(FOO_PIN, LOW);
+  prompter("Press Z- on Interface");
+  while(!confirm(Z_MINUS_PIN))
+    true;
 
-	digitalWrite(BAR_PIN, HIGH);
-	prompter("Press OK if BAR LED is on");
-	while(!confirm(OK_PIN))
-		true;
-	digitalWrite(BAR_PIN, LOW);
+  digitalWrite(FOO_PIN, HIGH);
+  prompter("Press OK if FOO LED is on");
+  while(!confirm(OK_PIN))
+    true;
+  digitalWrite(FOO_PIN, LOW);
 
-	digitalWrite(DEBUG_PIN, HIGH);
-	prompter("Press OK if DEBUG LED is on");
-	while(!confirm(OK_PIN))
-		true;
-	digitalWrite(DEBUG_PIN, LOW);
+  digitalWrite(BAR_PIN, HIGH);
+  prompter("Press OK if BAR LED is on");
+  while(!confirm(OK_PIN))
+    true;
+  digitalWrite(BAR_PIN, LOW);
 
-	prompter("Press Cancel on Interface.");
-	while(!confirm(CANCEL_PIN))
-		true;
+  digitalWrite(DEBUG_PIN, HIGH);
+  prompter("Press OK if DEBUG LED is on");
+  while(!confirm(OK_PIN))
+    true;
+  digitalWrite(DEBUG_PIN, LOW);
 
-	lcd.clear();
-	lcd.print("Interface Testing Complete");
-        chirp();
+  prompter("Press Cancel on Interface.");
+  while(!confirm(CANCEL_PIN))
+    true;
+
+  lcd.clear();
+  lcd.print("Interface Testing Complete");
+  chirp();
 }
 
 void test_endstops()
 {
-	prompter("Please Trigger Emergency Stop");
-	while(!confirm(KILL_SWITCH))
-		true;
+  prompter("Please X Minimum Switch");
+  while(!confirm(X_MIN_PIN))
+    true;
 
-	prompter("Please X Minimum Switch");
-	while(!confirm(X_MIN_PIN))
-		true;
+  prompter("Please X Maximum Switch");
+  while(!confirm(X_MAX_PIN))
+    true;
 
-	prompter("Please X Maximum Switch");
-	while(!confirm(X_MAX_PIN))
-		true;
+  prompter("Please Y Minimum Switch");
+  while(!confirm(Y_MIN_PIN))
+    true;
 
-	prompter("Please Y Minimum Switch");
-	while(!confirm(Y_MIN_PIN))
-		true;
+  prompter("Please Y Maximum Switch");
+  while(!confirm(Y_MAX_PIN))
+    true;
 
-	prompter("Please Y Maximum Switch");
-	while(!confirm(Y_MAX_PIN))
-		true;
+  prompter("Please Z Minimum Switch");
+  while(!confirm(Z_MIN_PIN))
+    true;
 
-	prompter("Please Z Minimum Switch");
-	while(!confirm(Z_MIN_PIN))
-		true;
+  prompter("Please Z Maximum Switch");
+  while(!confirm(Z_MAX_PIN))
+    true;
 
-	prompter("Please Z Maximum Switch");
-	while(!confirm(Z_MAX_PIN))
-		true;
+  prompter("Please Trigger Emergency Stop");
+  while(!confirm(KILL_SWITCH))
+    true;
 
-	lcd.clear();
-	lcd.print("Endstop Testing Complete");
-        chirp();
+  lcd.clear();
+  lcd.print("Endstop Testing Complete");
+  chirp();
 }
 
 void test_steppers()
 {
-	digitalWrite(X_DIR_PIN, HIGH);
-	digitalWrite(X_ENABLE_PIN, LOW);
-	prompter("Press OK if X motor is rotating CW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(X_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(X_STEP_PIN, LOW);
-		delay(1);
-	}
+  digitalWrite(X_DIR_PIN, HIGH);
+  digitalWrite(X_ENABLE_PIN, LOW);
+  prompter("Press OK if X motor is rotating CW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(X_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(X_STEP_PIN, LOW);
+    delay(1);
+  }
 
-	digitalWrite(X_DIR_PIN, LOW);
-	prompter("Press OK if X motor is rotating CCW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(X_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(X_STEP_PIN, LOW);
-		delay(1);
-	}
-	digitalWrite(X_ENABLE_PIN, HIGH);
+  digitalWrite(X_DIR_PIN, LOW);
+  prompter("Press OK if X motor is rotating CCW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(X_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(X_STEP_PIN, LOW);
+    delay(1);
+  }
+  digitalWrite(X_ENABLE_PIN, HIGH);
 
-	digitalWrite(Y_DIR_PIN, HIGH);
-	digitalWrite(Y_ENABLE_PIN, LOW);
-	prompter("Press OK if Y motor is rotating CW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(Y_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(Y_STEP_PIN, LOW);
-		delay(1);
-	}
+  digitalWrite(Y_DIR_PIN, HIGH);
+  digitalWrite(Y_ENABLE_PIN, LOW);
+  prompter("Press OK if Y motor is rotating CW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(Y_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(Y_STEP_PIN, LOW);
+    delay(1);
+  }
 
-	digitalWrite(Y_DIR_PIN, LOW);
-	prompter("Press OK if Y motor is rotating CCW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(Y_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(Y_STEP_PIN, LOW);
-		delay(1);
-	}
-	digitalWrite(Y_ENABLE_PIN, HIGH);
+  digitalWrite(Y_DIR_PIN, LOW);
+  prompter("Press OK if Y motor is rotating CCW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(Y_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(Y_STEP_PIN, LOW);
+    delay(1);
+  }
+  digitalWrite(Y_ENABLE_PIN, HIGH);
 
-	digitalWrite(Z_DIR_PIN, HIGH);
-	digitalWrite(Z_ENABLE_PIN, LOW);
-	prompter("Press OK if Z motor is rotating CW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(Z_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(Z_STEP_PIN, LOW);
-		delay(1);
-	}
+  digitalWrite(Z_DIR_PIN, HIGH);
+  digitalWrite(Z_ENABLE_PIN, LOW);
+  prompter("Press OK if Z motor is rotating CW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(Z_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(Z_STEP_PIN, LOW);
+    delay(1);
+  }
 
-	digitalWrite(Z_DIR_PIN, LOW);
-	prompter("Press OK if Z motor is rotating CCW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(Z_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(Z_STEP_PIN, LOW);
-		delay(1);
-	}
-	digitalWrite(Z_ENABLE_PIN, HIGH);
+  digitalWrite(Z_DIR_PIN, LOW);
+  prompter("Press OK if Z motor is rotating CCW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(Z_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(Z_STEP_PIN, LOW);
+    delay(1);
+  }
+  digitalWrite(Z_ENABLE_PIN, HIGH);
 
-	digitalWrite(A_DIR_PIN, HIGH);
-	digitalWrite(A_ENABLE_PIN, LOW);
-	prompter("Press OK if A motor is rotating CW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(A_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(A_STEP_PIN, LOW);
-		delay(1);
-	}
+  digitalWrite(A_DIR_PIN, HIGH);
+  digitalWrite(A_ENABLE_PIN, LOW);
+  prompter("Press OK if A motor is rotating CW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(A_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(A_STEP_PIN, LOW);
+    delay(1);
+  }
 
-	digitalWrite(A_DIR_PIN, LOW);
-	prompter("Press OK if A motor is rotating CCW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(A_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(A_STEP_PIN, LOW);
-		delay(1);
-	}
-	digitalWrite(A_ENABLE_PIN, HIGH);
+  digitalWrite(A_DIR_PIN, LOW);
+  prompter("Press OK if A motor is rotating CCW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(A_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(A_STEP_PIN, LOW);
+    delay(1);
+  }
+  digitalWrite(A_ENABLE_PIN, HIGH);
 
-	digitalWrite(B_DIR_PIN, HIGH);
-	digitalWrite(B_ENABLE_PIN, LOW);
-	prompter("Press OK if B motor is rotating CW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(B_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(B_STEP_PIN, LOW);
-		delay(1);
-	}
+  digitalWrite(B_DIR_PIN, HIGH);
+  digitalWrite(B_ENABLE_PIN, LOW);
+  prompter("Press OK if B motor is rotating CW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(B_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(B_STEP_PIN, LOW);
+    delay(1);
+  }
 
-	digitalWrite(B_DIR_PIN, LOW);
-	prompter("Press OK if B motor is rotating CCW");
-	while(!confirm(OK_PIN))
-	{
-		digitalWrite(B_STEP_PIN, HIGH);
-		delay(1);
-		digitalWrite(B_STEP_PIN, LOW);
-		delay(1);
-	}
-	digitalWrite(B_ENABLE_PIN, HIGH);
+  digitalWrite(B_DIR_PIN, LOW);
+  prompter("Press OK if B motor is rotating CCW");
+  while(!confirm(OK_PIN))
+  {
+    digitalWrite(B_STEP_PIN, HIGH);
+    delay(1);
+    digitalWrite(B_STEP_PIN, LOW);
+    delay(1);
+  }
+  digitalWrite(B_ENABLE_PIN, HIGH);
 
-	lcd.clear();
-	lcd.print("Stepper Testing Complete");
-    chirp();
+  lcd.clear();
+  lcd.print("Stepper Testing Complete");
+  chirp();
 }
 
 void test_rs485()
 {
-	int fails = 0;
-	
-	for (char i='a'; i<='z'; i++)
-	{
-		lcd.clear();
-		lcd.print("Testing ");
-		lcd.print(i);
+  int fails = 0;
 
-		Serial1.print(i, BYTE);
+  for (char i='a'; i<='z'; i++)
+  {
+    lcd.clear();
+    lcd.print("Testing ");
+    lcd.print(i);
 
-		while(Serial1.read() != i)
-		{
-			fails++;
-			delay(1);
+    Serial1.print(i, BYTE);
 
-			if (fails >= 1000)
-				break;
-		}
+    while(Serial1.read() != i)
+    {
+      fails++;
+      delay(1);
 
-		while (fails >= 1000)
-		{
-			lcd.clear();
-			lcd.print("RS485 FAIL.");
-		}
-	}
+      if (fails >= 1000)
+        break;
+    }
 
-	lcd.clear();
-	lcd.print("RS485 Comms Testing Complete");
-    chirp();
+    while (fails >= 1000)
+    {
+      lcd.clear();
+      lcd.print("RS485 FAIL.");
+    }
+  }
+
+  lcd.clear();
+  lcd.print("RS485 Comms Testing Complete");
+  chirp();
 }
 
-void test_sdcard()
+void test_sd_card()
 {
-	prompter("Lock and Insert SD Card");
-	while (digitalRead(SD_CARD_DETECT) && digitalRead(SD_CARD_WRITE))
-	{
-		delay(1);
-	}
+  while(!confirm(OK_PIN))
+  {
+    if (confirm(SD_CARD_DETECT))
+    {
+      lcd.clear();
+      lcd.print("NO SD CARD");   
+    }
+    else
+    {
+      if (confirm(SD_CARD_WRITE))
+      {
+        lcd.clear();
+        lcd.print("SD CARD LOCKED");
+      }
+      else
+      {
+        lcd.clear();
+        lcd.print("SD CARD UNLOCKED");
+      }
+    }
+    
+    delay(100);
+  }
+  
+  /*
+	prompter("Remove SD Card\nPress OK");
+   	while(!confirm(OK_PIN))
+   {
+   delay(1);
+   }
+   
+   
+   	prompter("Lock and Insert SD Card\nPress OK");
+   	while(!confirm(OK_PIN))
+   {
+   delay(1);
+   }
+   	while (digitalRead(SD_CARD_DETECT) && digitalRead(SD_CARD_WRITE))
+   	{
+   		delay(1);
+   	}
+   
+   	prompter("Remove SD Card\nPress OK");
+   	while(!confirm(OK_PIN))
+   {
+   delay(1);
+   }
+   	while (!digitalRead(SD_CARD_DETECT))
+   	{
+   		delay(1);
+   	}
+   
+   	prompter("Insert Unlocked SD Card\nPress OK");
+   	while(!confirm(OK_PIN))
+   {
+   delay(1);
+   }
+   	while (digitalRead(SD_CARD_DETECT))
+   	{
+   		if (digitalRead(SD_CARD_WRITE))
+   			break;
+   			
+   		delay(1);
+   	}
+   
+   	prompter("TODO: Test SD Read/Write");
+   	delay(1500);
+   
+   */
 
-	prompter("Remove SD Card");
-	while (!digitalRead(SD_CARD_DETECT))
-	{
-		delay(1);
-	}
-
-	prompter("Insert Unlocked SD Card");
-	while (digitalRead(SD_CARD_DETECT))
-	{
-		if (digitalRead(SD_CARD_WRITE))
-			break;
-			
-		delay(1);
-	}
-
-	prompter("TODO: Test SD Read/Write");
-	delay(1500);
-	
-	lcd.clear();
-	lcd.print("SD Card Testing Complete");
-    chirp();
+  lcd.clear();
+  lcd.print("SD Card Testing Complete");
+  chirp();
 }
 
 void test_piezo()
 {
-	prompter("Press OK if is beeping.");
-	while(!confirm(OK_PIN))
-	{
-          playNote(1000, 1000);
-          delay(500);
-	}
+  prompter("Press OK if is beeping.");
+  while(!confirm(OK_PIN))
+  {
+    playNote(1000, 1000);
+    delay(500);
+  }
 
-	lcd.clear();
-	lcd.print("Piezo Testing Complete");
+  lcd.clear();
+  lcd.print("Piezo Testing Complete");
 }
 
 void prompter(char* str)
 {
-	playNote(750, 1000);
-	playNote(500, 1000);
-	playNote(1000, 1000);
+  playNote(750, 1000);
+  playNote(500, 1000);
+  playNote(1000, 1000);
 
-	lcd.clear();
-	lcd.print(str);
+  lcd.clear();
+  lcd.print(str);
 }
 
 bool confirm(byte pin)
 {
-	if (!digitalRead(pin))
-        {
-            delay(250);
-            while(!digitalRead(pin))
-              delay(1);
-	
-            delay(100);
-            
-            return true;
-        }
-	else
-		return false;
+  if (!digitalRead(pin))
+  {
+    delay(250);
+    while(!digitalRead(pin))
+      delay(1);
+
+    delay(100);
+
+    return true;
+  }
+  else
+    return false;
 }
 
 void playNote(int delayTime, int duration)
 {
-	int steps = duration*1000 / delayTime;
-	int halfTime = delayTime/2;
+  int steps = duration*1000 / delayTime;
+  int halfTime = delayTime/2;
 
-	for (int i=0; i<steps; i++)
-	{
-		digitalWrite(BUZZER_PIN, HIGH);
-		delayMicroseconds(halfTime);
-		digitalWrite(BUZZER_PIN, LOW);
-		delayMicroseconds(halfTime);
-	}
+  for (int i=0; i<steps; i++)
+  {
+    digitalWrite(BUZZER_PIN, HIGH);
+    delayMicroseconds(halfTime);
+    digitalWrite(BUZZER_PIN, LOW);
+    delayMicroseconds(halfTime);
+  }
 }
+
