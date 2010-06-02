@@ -201,12 +201,32 @@ void loop()
 
   prompter("Lets get testy.");
 
-  //test_interface();
-  //test_endstops();
-  //test_steppers();
-  //test_rs485();
-  test_sd_card();
-  //test_piezo();
+  if (digitalRead(OK_PIN))
+  {
+    test_interface();
+    test_endstops();
+    test_steppers();
+    test_rs485();
+    test_sd_card();
+    test_piezo();
+    test_psu();
+  }
+
+  if (digitalRead(X_PLUS_PIN))
+    test_interface();
+  if (digitalRead(X_MINUS_PIN))
+    test_endstops();
+  if (digitalRead(Y_PLUS_PIN))
+    test_steppers();
+  if (digitalRead(Y_MINUS_PIN))
+    test_rs485();
+  if (digitalRead(Z_PLUS_PIN))
+    test_sd_card();
+  if (digitalRead(Z_MINUS_PIN))
+    test_piezo();
+  if (digitalRead(ZERO_PIN))
+    test_psu();
+
 }
 
 void test_interface()
@@ -477,10 +497,10 @@ void test_sd_card()
         lcd.print("SD CARD UNLOCKED");
       }
     }
-    
+
     delay(100);
   }
-  
+
   /*
 	prompter("Remove SD Card\nPress OK");
    	while(!confirm(OK_PIN))
@@ -545,6 +565,24 @@ void test_piezo()
   lcd.print("Piezo Testing Complete");
 }
 
+void test_psu()
+{
+  prompter("Press OK to test PSU.");
+  while(!confirm(OK_PIN))
+  {
+    delay(1);
+  }
+
+  digitalWrite(PS_ON_PIN, HIGH);
+  delay(5000);
+  digitalWrite(PS_ON_PIN, LOW);
+  delay(5000); 
+
+  lcd.begin(16, 4);
+  lcd.clear();
+  lcd.print("PSU testing Complete");
+}
+
 void prompter(char* str)
 {
   playNote(750, 1000);
@@ -571,6 +609,7 @@ bool confirm(byte pin)
     return false;
 }
 
+
 void playNote(int delayTime, int duration)
 {
   int steps = duration*1000 / delayTime;
@@ -584,4 +623,6 @@ void playNote(int delayTime, int duration)
     delayMicroseconds(halfTime);
   }
 }
+
+
 
