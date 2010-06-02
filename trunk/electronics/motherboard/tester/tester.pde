@@ -182,6 +182,12 @@ void setup()
   digitalWrite(BAR_PIN, LOW);
   digitalWrite(DEBUG_PIN, LOW);
   digitalWrite(PS_ON_PIN, LOW);
+
+  chirp();
+  Serial.println("Motherboard v2.2 Tester Begin");
+
+  updateOptions();
+
 }
 
 void chirp()
@@ -193,40 +199,102 @@ void chirp()
   delay(500);
 }
 
+char* menuOptions[] = {
+  "1. All Tests",
+  "2. Interface",
+  "3. Endstops",
+  "4. Steppers",
+  "5. RS485",
+  "6. SD Card",
+  "7. Piezo",
+  "8. PSU"
+};
+
+int numOptions = 8;
+int myOption = 0;
+
 void loop()
 {
-  Serial.println("Motherboard v2.2 Tester Begin");
-
-  chirp();
-
-  prompter("Lets get testy.");
-
-  if (digitalRead(OK_PIN))
+  if (!digitalRead(OK_PIN))
   {
-    test_interface();
-    test_endstops();
-    test_steppers();
-    test_rs485();
-    test_sd_card();
-    test_piezo();
-    test_psu();
+    while (!digitalRead(OK_PIN))
+      delay(1);
+
+    if (myOption == 0)
+    {
+      test_interface();
+      test_endstops();
+      test_steppers();
+      test_rs485();
+      test_sd_card();
+      test_piezo();
+      test_psu();
+    }
+    else if(myOption == 1)
+      test_interface();
+    else if(myOption == 2)
+      test_endstops();
+    else if(myOption == 3)
+      test_steppers();
+    else if(myOption == 4)
+      test_rs485();
+    else if(myOption == 5)
+      test_sd_card();
+    else if(myOption == 6)
+      test_piezo();
+    else if(myOption == 7)
+      test_psu();
+
+    updateOptions();
   }
 
-  if (digitalRead(X_PLUS_PIN))
-    test_interface();
-  if (digitalRead(X_MINUS_PIN))
-    test_endstops();
-  if (digitalRead(Y_PLUS_PIN))
-    test_steppers();
-  if (digitalRead(Y_MINUS_PIN))
-    test_rs485();
-  if (digitalRead(Z_PLUS_PIN))
-    test_sd_card();
-  if (digitalRead(Z_MINUS_PIN))
-    test_piezo();
-  if (digitalRead(ZERO_PIN))
-    test_psu();
+  if (!digitalRead(Z_MINUS_PIN) || !digitalRead(Z_PLUS_PIN))
+  {
+    if (!digitalRead(Z_MINUS_PIN))
+    {
+      myOption++;
+      myOption = putInRange(myOption);
+    }
+    else if (!digitalRead(Z_PLUS_PIN))
+    {
+      myOption--;
+      myOption = putInRange(myOption);
+    }
 
+    updateOptions();
+
+    while (!digitalRead(Z_MINUS_PIN) || !digitalRead(Z_PLUS_PIN))
+      delay(100);
+  }
+
+}
+
+int putInRange(int option)
+{
+  if (option < 0)
+    option += numOptions;
+  if (option >= numOptions)
+    option -= numOptions;
+
+  return option;
+}
+
+void updateOptions()
+{
+  lcd.clear();
+  lcd.setCursor(0,1);
+  lcd.write('*');
+
+  int line = 0;
+  int option = 0;
+  for (int i=-1; i<=2; i++)
+  {
+    option = putInRange(myOption+i);
+    lcd.setCursor(1, line);
+    lcd.print(menuOptions[option]);
+
+    line++;
+  }
 }
 
 void test_interface()
@@ -477,75 +545,42 @@ void test_rs485()
 
 void test_sd_card()
 {
-  while(!confirm(OK_PIN))
-  {
-    if (confirm(SD_CARD_DETECT))
-    {
-      lcd.clear();
-      lcd.print("NO SD CARD");   
-    }
-    else
-    {
-      if (confirm(SD_CARD_WRITE))
-      {
-        lcd.clear();
-        lcd.print("SD CARD LOCKED");
-      }
-      else
-      {
-        lcd.clear();
-        lcd.print("SD CARD UNLOCKED");
-      }
-    }
+  prompter("EJECT CARD, OK=GO");
+  while (!confirm(OK_PIN)) delay(1);
 
-    delay(100);
+  prompter("OK = Test Lock");
+  while (!digitalRead(SD_CARD_WRITE))
+  {
+    while (!confirm(OK_PIN)) delay(1);
+    if (digitalRead(SD_CARD_WRITE))
+      break;
+    else
+      prompter("Fail. OK=RETRY");
+  }
+  
+  prompter("OK = Test Unlock");
+  while (digitalRead(SD_CARD_WRITE))
+  {
+    while (!confirm(OK_PIN)) delay(1);
+    if (!digitalRead(SD_CARD_WRITE))
+      break;
+    else
+      prompter("Fail. OK=RETRY");
   }
 
-  /*
-	prompter("Remove SD Card\nPress OK");
-   	while(!confirm(OK_PIN))
-   {
-   delay(1);
-   }
-   
-   
-   	prompter("Lock and Insert SD Card\nPress OK");
-   	while(!confirm(OK_PIN))
-   {
-   delay(1);
-   }
-   	while (digitalRead(SD_CARD_DETECT) && digitalRead(SD_CARD_WRITE))
-   	{
-   		delay(1);
-   	}
-   
-   	prompter("Remove SD Card\nPress OK");
-   	while(!confirm(OK_PIN))
-   {
-   delay(1);
-   }
-   	while (!digitalRead(SD_CARD_DETECT))
-   	{
-   		delay(1);
-   	}
-   
-   	prompter("Insert Unlocked SD Card\nPress OK");
-   	while(!confirm(OK_PIN))
-   {
-   delay(1);
-   }
-   	while (digitalRead(SD_CARD_DETECT))
-   	{
-   		if (digitalRead(SD_CARD_WRITE))
-   			break;
-   			
-   		delay(1);
-   	}
-   
-   	prompter("TODO: Test SD Read/Write");
-   	delay(1500);
-   
-   */
+  //this is where we do the read/write.
+
+  prompter("OK = Test Eject");
+  while (!digitalRead(SD_CARD_DETECT))
+  {
+    while (!confirm(OK_PIN)) delay(1);
+    if (digitalRead(SD_CARD_DETECT))
+      break;
+    else
+      prompter("Fail. OK=RETRY");
+  }
+
+  delay(100);
 
   lcd.clear();
   lcd.print("SD Card Testing Complete");
@@ -623,6 +658,15 @@ void playNote(int delayTime, int duration)
     delayMicroseconds(halfTime);
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 
