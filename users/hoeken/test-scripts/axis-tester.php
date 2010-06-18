@@ -1,7 +1,7 @@
 <?
-	$printLength = 1; //in hours 
+	$printLength = 24*7; //in hours 
 	$distance = 80; //in mm
-	$feedrate = 3000; // in mm/minute
+	$feedrate = 5000; // in mm/minute
 
 	$total_seconds = $printLength * 60 * 60;
 
