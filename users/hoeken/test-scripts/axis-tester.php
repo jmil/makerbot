@@ -1,21 +1,28 @@
 <?
-	$printLength = 24*7; //in hours 
-	$distance = 80; //in mm
+	$printLength = 7; //in days
+	$operations = 1000000; //number of moves
 	$feedrate = 5000; // in mm/minute
-
-	$total_seconds = $printLength * 60 * 60;
-
-	$target = $distance/2;
-	$movetime = $distance / ($feedrate / 60);
 	
-	echo "G90\n";
+	//calculate some variables.
+	$minutes = $printLength * 60 * 24;
+	$totalLength = $minutes * $feedrate;
+	$moveLength = $totalLength / $operations;
 	
-	while ($total_seconds > 0)
+	//output a bit of info.
+	echo "(Axis Tester Script)\n";
+	echo "(Runtime: {$printLength} days)\n";
+	echo "(Operations: {$operations})\n";
+	echo "(Move length: {$moveLength})\n";
+	echo "\n";
+	echo "G92 X0 Y0 Z0 (set to home)\n";
+	echo "G90 (absolute positioning)\n";
+	
+	//actually output the moves.
+	$target = $moveLength/2;
+	for ($i=0; $i<$operations; $i++)
 	{
-		$total_seconds -= $movetime;
+		echo "G1 X{$target} F{$feedrate} ({$i})\n";
 		$target = -$target;
-		
-		echo "G1 X{$target} F{$feedrate} ({$total_seconds})\n";
 	}
 	
 	echo "G1 X0 F{$feedrate} (end)\n";
