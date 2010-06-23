@@ -13,31 +13,23 @@
     </programmer>
     <firmware
        major="2"
+       minor="2"
+       relpath="firmware/MB-rrmbv12-v2.2r0.hex"
+       name="v2.2 release 0"
+       description="This update adds RS485 bus retries, which should improve reliability for many machines that have had trouble with dropped packets."
+       />
+    <firmware
+       major="2"
        minor="1"
        relpath="firmware/MB-rrmbv12-v2.1r1.hex"
        name="v2.1 release 1"
        description="This is the inital release of the v2.1 firmware for the motherboard.  This is a maintenance release and includes a number of small bug fixes which should improve reliability for very long print sessions and allow printing from SD cards with filesystem glitches."
        />
     <firmware
-       major="2"
-       minor="0"
-       relpath="firmware/MB-rrmbv12-v2.0r1.hex"
-       name="v2.0 release 1"
-       description="This is the inital release of the v2.0 firmware."
-       />
-    <firmware
        name="v1.6"
        major="1"
        minor="6"
        relpath="firmware/SanguinoMaster-v1.6.hex"/>
-    <firmware
-       major="1"
-       minor="5"
-       relpath="firmware/SanguinoMaster-v1.5.hex"/>
-    <firmware
-       major="1"
-       minor="4"
-       relpath="firmware/SanguinoMaster-v1.4.hex"/>
   </board>
   <board name="Extruder Controller v2.2">
     <version major="2" minor="2"/>
