@@ -1,7 +1,7 @@
 <?
 	$printLength = 7; //in days
-	$operations = 1000000; //number of moves
-	$feedrate = 5000; // in mm/minute
+	$operations = 250000; //number of moves
+	$feedrate = 250; // in mm/minute
 	
 	//calculate some variables.
 	$minutes = $printLength * 60 * 24;
@@ -23,7 +23,7 @@
 	$target = $axisLength/2;
 	for ($i=0; $i<$operations; $i++)
 	{
-		echo "G1 X{$target} Y{$target} F{$feedrate} ({$i})\n";
+		echo "G1 Z{$target} F{$feedrate} ({$i})\n";
 		$target = -$target;
 	}
 	
