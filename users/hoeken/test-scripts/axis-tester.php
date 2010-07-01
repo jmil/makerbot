@@ -1,7 +1,7 @@
 <?
 	$printLength = 7; //in days
-	$operations = 250000; //number of moves
-	$feedrate = 250; // in mm/minute
+	$operations = 1000000; //number of moves
+	$feedrate = 1000; // in mm/minute
 	
 	//calculate some variables.
 	$minutes = $printLength * 60 * 24;
