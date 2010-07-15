@@ -1,25 +1,25 @@
 EAGLE AutoRouter Statistics:
 
-Job           : /home/hoeken/Desktop/makerbot/trunk/electronics/mobo-shield/motherboard.brd
+Job           : C:/Users/Harry/Desktop/makerbot/trunk/electronics/motherboard/motherboard.brd
 
-Start at      : 15:02:46 (3/19/10)
-End at        : 15:04:19 (3/19/10)
-Elapsed time  : 00:01:33
+Start at      : 18:04:51 (7/14/2010)
+End at        : 18:05:01 (7/14/2010)
+Elapsed time  : 00:00:10
 
-Signals       :    93   RoutingGrid: 5 mil  Layers: 2
-Connections   :   185   predefined:  0 ( 0 Vias )
+Signals       :    84   RoutingGrid: 5 mil  Layers: 2
+Connections   :   198   predefined:  197 ( 26 Vias )
 
-Router memory :   4123904
+Router memory :   2808000
 
 Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:18  00:00:18  00:00:20  00:00:17  00:00:20
-Number of Ripups  :         4         0         0         0         0
-max. Level        :         1         0         0         0         0
-max. Total        :         7         0         0         0         0
+Time per pass     :  00:00:01  00:00:02  00:00:02  00:00:02  00:00:03
+Number of Ripups  :         0         0         0         0         0
+max. Level        :         0         0         0         0         0
+max. Total        :         0         0         0         0         0
 
-Routed            :       185       185       185       185       185
-Vias              :       128        83        69        61        56
+Routed            :         1         1         1         1         1
+Vias              :         1         0         0         0         0
 Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
 Final             : 100.0% finished
