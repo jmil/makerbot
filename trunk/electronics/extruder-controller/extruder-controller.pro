@@ -2,12 +2,12 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/Harry/Desktop/makerbot/trunk/electronics/extruder-controller/extruder-controller.brd
 
-Start at      : 15:03:56 (7/15/2010)
-End at        : 15:04:01 (7/15/2010)
+Start at      : 18:17:04 (7/16/2010)
+End at        : 18:17:08 (7/16/2010)
 Elapsed time  : 00:00:04
 
 Signals       :   235   RoutingGrid: 5 mil  Layers: 2
-Connections   :   197   predefined:  197 ( 220 Vias )
+Connections   :   203   predefined:  203 ( 218 Vias )
 
 Router memory :   1495368
 
