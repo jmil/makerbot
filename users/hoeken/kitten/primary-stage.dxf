@@ -47,7 +47,7 @@ Standard
   9
 $CLAYER
   8
-Drawings
+10 - Right End Top Cap
   9
 $DIMEXO
  40
@@ -59,7 +59,7 @@ $DIMTXT
   9
 $CLAYER
   8
-10 - Right End Top Cap
+Drawings - Y Travel
   0
 ENDSEC
   0
@@ -8843,7 +8843,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -8883,7 +8883,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -8923,7 +8923,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -8963,7 +8963,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -9003,7 +9003,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -9233,7 +9233,7 @@ standard
  50
 360.0
  73
-1
+0
  44
 1.0
   0
@@ -9273,7 +9273,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -9997,7 +9997,7 @@ standard
  50
 180.0
  73
-1
+0
  44
 1.0
   0
@@ -10477,7 +10477,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -24393,7 +24393,7 @@ standard
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -24855,39 +24855,9 @@ ByLayer
  31
 0.0
   0
-INSERT
-  5
-38F
-100
-AcDbEntity
-100
-AcDbBlockReference
-  8
-01 - Front
- 62
-256
-370
--1
-  6
-ByLayer
-  2
-Mechanical Endstop
- 10
-111.2999999999999829
- 20
--140.75
- 30
-0.0
- 50
-90.0
- 44
-1.0
- 45
-1.0
-  0
 ARC
   5
-390
+38F
 100
 AcDbEntity
   8
@@ -24915,65 +24885,9 @@ AcDbArc
  51
 360.0
   0
-LINE
-  5
-391
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--91.1933796515994999
- 20
-153.2499999999999432
- 30
-0.0
- 11
--91.1933796515995141
- 21
-148.2499999999999432
- 31
-0.0
-  0
-LINE
-  5
-392
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
--101.1933796515994999
- 20
-148.25
- 30
-0.0
- 11
--101.1933796515995425
- 21
-153.2499999999999716
- 31
-0.0
-  0
 CIRCLE
   5
-393
+390
 100
 AcDbEntity
 100
@@ -24997,7 +24911,7 @@ ByLayer
   0
 CIRCLE
   5
-394
+391
 100
 AcDbEntity
 100
@@ -25019,9 +24933,37 @@ ByLayer
  40
 2.0
   0
+INSERT
+  5
+392
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+10 - Right End Top Cap
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+Mechanical Endstop
+ 10
+178.2155460419002964
+ 20
+-42.5538355244723334
+ 30
+0.0
+ 44
+1.0
+ 45
+1.0
+  0
 LINE
   5
-395
+393
 100
 AcDbEntity
 100
@@ -25041,7 +24983,7 @@ ByLayer
  30
 0.0
  11
--101.1933796515995425
+-104.1933796515995141
  21
 153.2499999999999716
  31
@@ -25049,7 +24991,93 @@ ByLayer
   0
 LINE
   5
+394
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-101.1933796515994999
+ 20
+148.25
+ 30
+0.0
+ 11
+-101.1933796515995141
+ 21
+150.25
+ 31
+0.0
+  0
+ARC
+  5
+395
+100
+AcDbEntity
+  8
+10 - Right End Top Cap
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-104.1933796515995141
+ 20
+150.2499999999999716
+ 30
+0.0
+ 40
+3.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+LINE
+  5
 396
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-91.1933796515995141
+ 20
+150.25
+ 30
+0.0
+ 11
+-91.1933796515995141
+ 21
+148.2499999999999432
+ 31
+0.0
+  0
+LINE
+  5
+397
 100
 AcDbEntity
 100
@@ -25063,7 +25091,7 @@ AcDbLine
   6
 ByLayer
  10
--91.1933796515994999
+-88.1933796515995141
  20
 153.25
  30
@@ -25075,15 +25103,45 @@ ByLayer
  31
 0.0
   0
+ARC
+  5
+398
+100
+AcDbEntity
+  8
+10 - Right End Top Cap
+ 62
+256
+370
+-1
+  6
+ByLayer
+100
+AcDbCircle
+ 10
+-88.1933796515995141
+ 20
+150.25
+ 30
+0.0
+ 40
+3.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
 INSERT
   5
-397
+399
 100
 AcDbEntity
 100
 AcDbBlockReference
   8
-10 - Right End Top Cap
+08 - Left End Top Cap
  62
 256
 370
@@ -25093,9 +25151,9 @@ ByLayer
   2
 Mechanical Endstop
  10
-210.5499999999996703
+-321.0
  20
--35.5500000000002103
+-42.0
  30
 0.0
  44
@@ -25141,7 +25199,7 @@ E
   3
 AcDbVariableDictionary
 350
-398
+39A
   0
 DICTIONARY
   5
@@ -25605,7 +25663,7 @@ Layout2
   0
 DICTIONARY
   5
-398
+39A
 100
 AcDbDictionary
 281
@@ -25613,15 +25671,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-39A
+39C
   3
 HIDETEXT
 350
-399
+39B
   0
 DICTIONARYVAR
   5
-399
+39B
 100
 DictionaryVariables
 280
@@ -25631,7 +25689,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-39A
+39C
 100
 DictionaryVariables
 280
