@@ -61,6 +61,29 @@
        minor="4"
        relpath="firmware/SanguinoMaster-v1.4.hex"/>
   </board>
+  <board name="RepRap Motherboard v2.X">
+    <version major="2" minor="2"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>57600</speed>
+      <arch>m1280</arch>
+      <manualreset>true</manualreset>
+    </programmer>
+    <firmware
+       major="2"
+       minor="2"
+       relpath="firmware/MB-rrmbv12-v2.2.hex"
+       name="v2.2 release 0"
+       description="This update adds RS485 bus retries, which should improve reliability for many machines that have had trouble with dropped packets."
+       />
+    <firmware
+       major="2"
+       minor="1"
+       relpath="firmware/MB-rrmbv22-v2.1.hex"
+       name="v2.1 release 0"
+       description="This is the inital release of the v2.1 firmware for the motherboard.  This is a maintenance release and includes a number of small bug fixes which should improve reliability for very long print sessions and allow printing from SD cards with filesystem glitches."
+       />
+  </board>
   <board name="Extruder Controller v2.2">
     <version major="2" minor="2"/>
     <programmer class="replicatorg.uploader.AvrdudeUploader">
