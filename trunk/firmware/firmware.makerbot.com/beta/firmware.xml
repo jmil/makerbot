@@ -21,68 +21,15 @@
     <firmware
        major="2"
        minor="1"
-       relpath="firmware/MB-rrmbv12-v2.1r0.hex"
-       name="v2.1 release 0"
+       relpath="firmware/MB-rrmbv12-v2.1r1.hex"
+       name="v2.1 release 1"
        description="This is the inital release of the v2.1 firmware for the motherboard.  This is a maintenance release and includes a number of small bug fixes which should improve reliability for very long print sessions and allow printing from SD cards with filesystem glitches."
-       />
-    <firmware
-       major="2"
-       minor="0"
-       relpath="firmware/MB-rrmbv12-v2.0r1.hex"
-       name="v2.0 release 1"
-       description="This is the inital release of the v2.0 firmware."
-       />
-    <firmware
-       major="0"
-       minor="0"
-       relpath="firmware/MB-rrmbv12-v2.0a2.hex"
-       name="v2.0 BETA 2"
-       status="beta"
-       description="This is the beta release of the v2.0 firmware."
-       />
-    <firmware
-       major="2"
-       minor="0"
-       relpath="firmware/MB-rrmbv12-v2.0.hex"
-       status="beta"
-       description="This is the beta release of the v2.0 firmware."
        />
     <firmware
        name="v1.6"
        major="1"
        minor="6"
        relpath="firmware/SanguinoMaster-v1.6.hex"/>
-    <firmware
-       major="1"
-       minor="5"
-       relpath="firmware/SanguinoMaster-v1.5.hex"/>
-    <firmware
-       major="1"
-       minor="4"
-       relpath="firmware/SanguinoMaster-v1.4.hex"/>
-  </board>
-  <board name="RepRap Motherboard v2.X">
-    <version major="2" minor="2"/>
-    <programmer class="replicatorg.uploader.AvrdudeUploader">
-      <protocol>stk500v1</protocol>
-      <speed>57600</speed>
-      <arch>m1280</arch>
-      <manualreset>true</manualreset>
-    </programmer>
-    <firmware
-       major="2"
-       minor="2"
-       relpath="firmware/MB-rrmbv22-v2.2.hex"
-       name="v2.2 release 0"
-       description="This update adds RS485 bus retries, which should improve reliability for many machines that have had trouble with dropped packets."
-       />
-    <firmware
-       major="2"
-       minor="1"
-       relpath="firmware/MB-rrmbv22-v2.1.hex"
-       name="v2.1 release 0"
-       description="This is the inital release of the v2.1 firmware for the motherboard.  This is a maintenance release and includes a number of small bug fixes which should improve reliability for very long print sessions and allow printing from SD cards with filesystem glitches."
-       />
   </board>
   <board name="Extruder Controller v2.2">
     <version major="2" minor="2"/>
@@ -94,31 +41,39 @@
     <firmware
        major="2"
        minor="3"
-       relpath="firmware/EC-ecv22-v2.3r0.hex"
-       name="v2.3 release 0"
+       relpath="firmware/EC-ecv22-v2.3r1.hex"
+       name="v2.3 release 1"
        description="This release features a number of improvements, including more reliable extruder operation, an improved and tunable temperature control system, and support for valves on channel C.  You'll need this release installed if you plan on using the Mk2 Frostruder."
        />
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/EC-ecv22-v2.3r3-stepper.hex"
+       name="v2.3 release 3 w/ stepper support (beta)"
+       description="This firmware that uses a stepper motor instead of a DC motor to drive the filament.  The stepper is driven off the 1A/1B/2A/2B terminals, and half-steps at approx. 40Hz when the speed is set to 255.&lt;b&gt;This is beta firmware only for use with stepper extruders.&lt;/b&gt;"
+       />
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/EC-ecv22-v2.3r0-relays.hex"
+       name="v2.3 release 0 w/ relay support (beta)"
+       description="This firmware is for those using mk5 extruder with relay boards.&lt;br/&gt;&lt;b&gt;This is beta firmware only for use with relay boards.&lt;/b&gt;"
+       />
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/EC-ecv22-v2.3r4-stepper.hex"
+       name="v2.3 release 4 w/ stepper support (beta)"
+       description="This firmware that uses a stepper motor instead of a DC motor to drive the filament.&lt;br/&gt;&lt;b&gt;This is beta firmware only for use with stepper extruders.&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Note for r3 users: r4 will drive the steppers at a much higher (4x) rate than r3.&lt;/b&gt;"
+       />
+
     <firmware
        major="2"
        minor="2"
        relpath="firmware/EC-ecv22-v2.2r1.hex"
        name="v2.2 release 1"
+       status="beta"
        description="This is the first update to the v2 firmware."
-       />
-    <firmware
-       major="0"
-       minor="0"
-       relpath="firmware/EC-ecv22-v2.0a2.hex"
-       name="v2.0 BETA 2"
-       status="beta"
-       description="This is the beta release of the v2.0 firmware."
-       />
-    <firmware
-       major="2"
-       minor="0"
-       relpath="firmware/EC-ecv22-v2.0.hex"
-       status="beta"
-       description="This is the beta release of the v2.0 firmware."
        />
     <firmware
        major="1"
@@ -141,20 +96,5 @@
        major="1"
        minor="4"
        relpath="firmware/ArduinoSlaveExtruder-v1.4.hex"/>
-  </board>
-  <board name="Extruder Controller v3.4">
-    <version major="3" minor="4"/>
-    <programmer class="replicatorg.uploader.AvrdudeUploader">
-      <protocol>stk500v1</protocol>
-      <speed>57600</speed>
-      <arch>atmega328p</arch>
-    </programmer>
-    <firmware
-       major="2"
-       minor="3"
-       relpath="firmware/EC-ecv34-v2.3a1.hex"
-       name="v2.3 alpha 1"
-       description="This is the alpha release of the v2.3 extruder firmware for the forthcoming v3.4 extruder controller."
-       />
   </board>
 </boards>
