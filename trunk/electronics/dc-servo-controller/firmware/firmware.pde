@@ -82,17 +82,24 @@ void loop()
 			else
 				target--;
 		}
+
+                byte motor_speed = 0;
+                int distance = abs(position-target);
+                if (distance > 255)
+                  motor_speed = 255;
+                else
+                  motor_speed = distance;
 		
 		//super primitive control of the motor.
 		if (position > target)
 		{
 			digitalWrite(MOTOR_DIR_PIN, HIGH);
-			digitalWrite(MOTOR_SPEED_PIN, HIGH);
+			analogWrite(MOTOR_SPEED_PIN, motor_speed);
 		}
 		else if (position < target)
 		{
 			digitalWrite(MOTOR_DIR_PIN, LOW);
-			digitalWrite(MOTOR_SPEED_PIN, HIGH);
+			digitalWrite(MOTOR_SPEED_PIN, motor_speed);
 		}
 		else
 		{
