@@ -42,15 +42,15 @@
        major="2"
        minor="4"
        relpath="firmware/EC-ecv22-v2.4r0.hex"
-       name="v2.4 release 0"
-       description="This release is recommended for machines Mk IV extruders.  It includes separate PID settings for the heated platform and the extruder heater."
+       name="v2.4 for mk4"
+       description="This release is recommended for machines Mk. 4 extruders.  It includes separate PID settings for the heated platform and the extruder heater."
        />
     <firmware
        major="2"
        minor="4"
        relpath="firmware/EC-ecv22-v2.4r0-relays.hex"
-       name="v2.4 release 0"
-       description="This release is recommended for machines Mk V extruders, especially those using relay boards.  It includes separate PID settings for the heated platform and the extruder heater.&lt;br&gt;The default PID settings are usually not appropriate for Mk V extruders.  We recommend setting your PID parameters for the Mk V heaters to P=5,I=0,D=35."
+       name="v2.4 for mk5 w/ relays"
+       description="This release is recommended for machines Mk V extruders using relay boards.  It includes separate PID settings for the heated platform and the extruder heater.&lt;br&gt;We recommend setting your PID parameters for the Mk V heaters to P=5,I=0.03,D=35."
        />
 
     <firmware
