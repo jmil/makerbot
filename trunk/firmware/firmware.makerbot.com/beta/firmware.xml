@@ -2,6 +2,23 @@
   <!--
      Firmware for the RepRap Motherboard v1.1 and v1.2.
     -->
+  <board name="RepRap Motherboard v2.X">
+    <version major="2" minor="3"/>
+    <version major="2" minor="4"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>38400</speed>
+      <arch>m1280</arch>
+      <manualreset>true</manualreset>
+    </programmer>
+    <firmware
+       major="2"
+       minor="2"
+       relpath="firmware/MB-rrmbv22-v2.2r1.hex"
+       name="v2.2 release 1"
+       description="This release fixes the SD/UART port collision."
+       />
+  </board>
   <board name="RepRap Motherboard v1.X">
     <version major="1" minor="1"/>
     <version major="1" minor="2"/>
