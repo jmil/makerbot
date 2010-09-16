@@ -84,7 +84,7 @@ done
 rm $TO_DIR/pdf/*.ps
 
 #convert to png...
-echo "Converting to PDF..."
+echo "Converting to PNG..."
 cp -a "$TO_DIR/ps" "$TO_DIR/png"
 for PS in $TO_DIR/png/*.ps
 do
@@ -93,7 +93,6 @@ do
 	gs -dNOPAUSE -dBATCH -sDEVICE=png256 -sOutputFile=$TO_DIR/png/$TO_FILE $PS
 done
 rm $TO_DIR/png/*.ps
-
 
 #render our board with POVRay and eagle3d - high quality
 if [ -f ${BOARD}/${BOARD}.pov ]
@@ -110,6 +109,14 @@ fi
 #create our source dir
 cp $BOARD/*.brd "$TO_DIR/eagle/";
 cp $BOARD/*.sch "$TO_DIR/eagle/";
+
+#copy any docs over
+cp $BOARD/*.rtf "$TO_DIR/";
+cp $BOARD/*.pdf "$TO_DIR/";
+cp $BOARD/*.txt "$TO_DIR/";
+cp $BOARD/*.doc "$TO_DIR/";
+cp $BOARD/*.csv "$TO_DIR/";
+cp $BOARD/*.xls "$TO_DIR/";
 
 #create our archive
 echo "Archiving..."
