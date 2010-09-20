@@ -54,8 +54,14 @@
       <protocol>stk500v1</protocol>
       <speed>19200</speed>
       <arch>m168</arch>
-      <wipe>true</wipe>
     </programmer>
+    <firmware
+       major="2"
+       minor="4"
+       relpath="firmware/EC-ecv22-v2.4-unicorn.hex"
+       name="v2.4 w/ unicorn (beta)"
+       description="This firmware is for those using a Makerbot Unicorn toolhead."
+       />
     <firmware
        major="2"
        minor="3"
