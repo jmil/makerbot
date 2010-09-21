@@ -38,6 +38,7 @@
       <speed>19200</speed>
       <arch>m168</arch>
     </programmer>
+
     <firmware
        major="2"
        minor="4"
@@ -45,6 +46,7 @@
        name="v2.4 for mk4"
        description="This release is recommended for machines Mk. 4 extruders.  It includes separate PID settings for the heated platform and the extruder heater."
        />
+
     <firmware
        major="2"
        minor="4"
@@ -55,11 +57,12 @@
 
     <firmware
        major="2"
-       minor="3"
-       relpath="firmware/EC-ecv22-v2.3r1.hex"
-       name="v2.3 release 1"
-       description="This release features a number of improvements, including more reliable extruder operation, an improved and tunable temperature control system, and support for valves on channel C.  You'll need this release installed if you plan on using the Mk2 Frostruder."
+       minor="4"
+       relpath="firmware/EC-ecv22-v2.4-unicorn.hex"
+       name="v2.4 for unicorn"
+       description="This firmware is for those using a Unicorn pen plotter toolhead (or for those who want to experiment with servos on the D9 or D10 headers)."
        />
+
     <firmware
        major="2"
        minor="3"
