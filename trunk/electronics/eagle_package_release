@@ -45,6 +45,8 @@ mkdir -p "$TO_DIR/renders"
 #create our gerber files!
 echo "Creating Gerber Files..."
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/ComponentTraces.pho" $BOARD/*.brd Top Pads Vias
+eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/Layer2Copper.pho" $BOARD/*.brd GND
+eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/Layer3Copper.pho" $BOARD/*.brd POWER
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/CopperTraces.pho" $BOARD/*.brd Bottom Pads Vias
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/SolderMaskComponent.pho" $BOARD/*.brd tStop
 eagle -X -N -d GERBER_RS274X -o "$TO_DIR/gerber/SolderMaskCopper.pho" $BOARD/*.brd bStop
@@ -66,6 +68,8 @@ rm -rf $TO_DIR/gerber/*.dri
 echo "Creating PS Files..."
 eagle -X -N -d PS -o "$TO_DIR/ps/Schematic.ps" $BOARD/*.sch Nets Busses Symbols Names Values
 eagle -X -N -d PS -o "$TO_DIR/ps/ComponentTraces.ps" $BOARD/*.brd Top Pad Via Dimension tGND_GNDA
+eagle -X -N -d PS -o "$TO_DIR/ps/Layer2.ps" $BOARD/*.brd GND Dimension
+eagle -X -N -d PS -o "$TO_DIR/ps/Layer3.ps" $BOARD/*.brd POWER Dimension
 eagle -X -N -d PS -o "$TO_DIR/ps/ComponentSilkscreen.ps" $BOARD/*.brd Pad Via Dimension tPlace tNames tDocu tValues
 eagle -X -N -d PS -o "$TO_DIR/ps/CopperTraces.ps" $BOARD/*.brd Bottom Pad Via Dimension
 eagle -X -N -d PS -o "$TO_DIR/ps/CopperSilkscreen.ps" $BOARD/*.brd Pad Via Dimension bPlace bNames bDocu
