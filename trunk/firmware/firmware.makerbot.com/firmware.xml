@@ -13,6 +13,13 @@
     </programmer>
     <firmware
        major="2"
+       minor="3"
+       relpath="firmware/MB-rrmbv12-v2.3r0.hex"
+       name="v2.3 release 0"
+       description="This update adds addition bus retries for machines that still have packet dropouts."
+       />
+    <firmware
+       major="2"
        minor="2"
        relpath="firmware/MB-rrmbv12-v2.2r0.hex"
        name="v2.2 release 0"
@@ -38,7 +45,20 @@
       <speed>19200</speed>
       <arch>m168</arch>
     </programmer>
-
+    <firmware
+       major="2"
+       minor="5"
+       relpath="firmware/EC-ecv22-v2.5r0-mk5.hex"
+       name="v2.5 for mk5, release 0"
+       description="This firmware is for those using mk5 plastruders with relay boards."
+       />
+    <firmware
+       major="2"
+       minor="5"
+       relpath="firmware/EC-ecv22-v2.5r0-mk4.hex"
+       name="v2.5 for mk4, release 0"
+       description="This firmware is for those using old mk4 plastruders, or mk5s with no relay board."
+       />
     <firmware
        major="2"
        minor="4"
@@ -46,7 +66,6 @@
        name="v2.4 for mk4"
        description="This release is recommended for machines Mk. 4 extruders.  It includes separate PID settings for the heated platform and the extruder heater."
        />
-
     <firmware
        major="2"
        minor="4"
@@ -54,7 +73,6 @@
        name="v2.4 for mk5 w/ relays"
        description="This release is recommended for machines Mk V extruders using relay boards.  It includes separate PID settings for the heated platform and the extruder heater.&lt;br&gt;We recommend setting your PID parameters for the Mk V heaters to P=5,I=0.03,D=35."
        />
-
     <firmware
        major="2"
        minor="4"
