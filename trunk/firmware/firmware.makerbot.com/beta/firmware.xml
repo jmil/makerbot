@@ -2,7 +2,7 @@
   <!--
      Firmware for the RepRap Motherboard v1.1 and v1.2.
     -->
-  <board name="RepRap Motherboard v2.4" icon="icon-mb24.png">
+  <board name="MakerBot Motherboard v2.4" icon="icon-mb24.png">
     <version major="2" minor="4"/>
     <programmer class="replicatorg.uploader.AvrdudeUploader">
       <protocol>stk500v1</protocol>
@@ -14,22 +14,8 @@
        major="2"
        minor="4"
        relpath="firmware/MB-rrmbv24-v2.4a0.hex"
-       name="v2.4 alpha 0"
-       description="Alpha of production release."
-       />
-    <firmware
-       major="2"
-       minor="4"
-       relpath="firmware/MB-rrmbv24-v2.4a0.hex"
-       name="v2.4 alpha 0"
-       description="Alpha of production release."
-       />
-    <firmware
-       major="2"
-       minor="2"
-       relpath="firmware/MB-rrmbv22-v2.2r1.hex"
-       name="v2.2 release 1"
-       description="This release fixes the SD/UART port collision."
+       name="v2.4"
+       description="The v2.4 firmware for Generation 4 motherboards."
        />
   </board>
   <board name="RepRap Motherboard v1.X">
@@ -187,9 +173,8 @@
        major="2"
        minor="5"
        relpath="firmware/EC-ecv34-v2.5.hex"
-       name="v2.5 alpha 1"
-       description="This is the alpha release of the v2.5 extruder firmware for
- the forthcoming v3.4 extruder controller."
+       name="v2.5"
+       description="The v2.5 firmware for Generation 4 extruder controllers using DC gearmotors."
        />
   </board>
 </boards>
