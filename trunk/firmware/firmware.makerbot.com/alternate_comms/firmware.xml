@@ -18,6 +18,13 @@
        name="v2.4 alpha 0"
        description="This update includes 1.x style comms loopback support."
        />
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/MB-rrmbv12-v2.3r0.hex"
+       name="v2.3 release 0"
+       description="Baseline."
+       />
   </board>
 
   <board name="Extruder Controller v2.2">
@@ -43,5 +50,14 @@
        name="v2.6 without no relay support"
        description="This firmware is for those using extruders with PWM'd heaters.  It includes 1.x style comms loopback support."
        />
+
+    <firmware
+       major="2"
+       minor="5"
+       relpath="firmware/EC-ecv22-v2.5r0-mk5.hex"
+       name="v2.5 with relay support"
+       description="Baseline."
+       />
+
   </board>
 </boards>
