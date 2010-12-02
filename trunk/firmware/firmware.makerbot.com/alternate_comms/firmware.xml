@@ -27,6 +27,23 @@
        />
   </board>
 
+  <board name="MakerBot Motherboard v2.4" icon="icon-mb24.png">
+    <version major="2" minor="4"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>57600</speed>
+      <arch>m1280</arch>
+      <manualreset>true</manualreset>
+    </programmer>
+    <firmware
+       major="2"
+       minor="4"
+       relpath="firmware/MB-mb24-v2.4.hex"
+       name="v2.4"
+       description="v2.4 firmware for Generation 4 motherboards.  This update includes 1.x style comms loopback support."
+       />
+  </board>
+
   <board name="Extruder Controller v2.2">
     <version major="2" minor="2"/>
     <programmer class="replicatorg.uploader.AvrdudeUploader">
@@ -60,4 +77,28 @@
        />
 
   </board>
+
+  <board name="Extruder Controller v3.6" icon="icon-ec36.png">
+    <version major="3" minor="6"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>19200</speed>
+      <arch>m168</arch>
+    </programmer>
+    <firmware
+       major="2"
+       minor="6"
+       relpath="firmware/EC-ecv34-v2.6-relays.hex"
+       name="v2.6"
+       description="The v2.5 firmware for Generation 4 extruder controllers using DC gearmotors and relays.  This release includes support for the v1-style comms."
+       />
+    <firmware
+       major="2"
+       minor="6"
+       relpath="firmware/EC-ecv34-v2.6-no-relays.hex"
+       name="v2.6"
+       description="The v2.5 firmware for Generation 4 extruder controllers using DC gearmotors and PWM'd heaters.  This release includes support for the v1-style comms."
+       />
+  </board>
+
 </boards>
