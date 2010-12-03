@@ -13,6 +13,13 @@
     </programmer>
     <firmware
        major="2"
+       minor="4"
+       relpath="firmware/MB-rrmbv12-v2.4.hex"
+       name="v2.4"
+       description="This update uses an alternate RS485 strategy to improve reliability."
+       />
+    <firmware
+       major="2"
        minor="3"
        relpath="firmware/MB-rrmbv12-v2.3r0.hex"
        name="v2.3 release 0"
@@ -63,6 +70,22 @@
       <speed>19200</speed>
       <arch>m168</arch>
     </programmer>
+
+    <firmware
+       major="2"
+       minor="6"
+       relpath="firmware/EC-ecv22-v2.6-relays.hex"
+       name="v2.6 w/ relays"
+       description="This firmware is for those using extruders with relay boards."
+       />
+    <firmware
+       major="2"
+       minor="6"
+       relpath="firmware/EC-ecv22-v2.6-no-relays.hex"
+       name="v2.6 w/o relays"
+       description="This firmware is for those using extruders without relay boards."
+       />
+
     <firmware
        major="2"
        minor="5"
