@@ -53,8 +53,15 @@ const int numCols = 16;
 #define BAR_PIN 49
 #define DEBUG_PIN 13
 
+#define LCD_RS 33
+#define LCD_EN 34
+#define LCD_D4 38
+#define LCD_D5 39
+#define LCD_D6 40
+#define LCD_D7 41
+
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(17, 16, 9, 53, 10, 11);
+LiquidCrystal lcd(LCD_RS, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
 
 void setup() {
   // set up the LCD's number of rows and columns: 
