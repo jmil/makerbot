@@ -1,5 +1,6 @@
 #include "PrimitiveTests.hpp"
 
+
 int main() {
   PrimitivesTestSuite pt;
   Test::TextOutput output(Test::TextOutput::Verbose);
